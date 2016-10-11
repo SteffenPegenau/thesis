@@ -1,0 +1,280 @@
+\documentclass[accentcolor=tud1c,longdoc,nopartpage,table,oneside,bibtotoc, liststotoc,openright,colorbacktitle,inverttitle,numbersubsubsec,noresetcounter,11pt,noheadingspace,numbers=noenddot,article,parskip=half]{tudreport}
+
+% Babel-Paket f. neue deutsche Rechtschreibung
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+% Eingabekodierung auf latin1 setzen
+\usepackage[utf8]{inputenc}
+
+
+% Font-Encoding auf T1 setzen
+\usepackage[T1]{fontenc}
+% footmisc behebt u.a. Probleme mit Fu�noten in Abschnittstiteln
+\usepackage[stable]{footmisc}
+
+% Einbinden von Grafiken erm�glichen
+\usepackage{graphicx}
+
+\usepackage{newunicodechar}
+\newunicodechar{ß}{\ss}
+% Paket xtab erm�glicht Umbrechen von langen Tabellen
+\usepackage{xtab}
+
+% picins erlaubt das Umflie�en von Abbildungen durch Text
+% Untenstehendes renewcommand behebt den picins-bug, dass Abbildungen
+% nicht im Abbildungsverzeichnis auftauchen
+\usepackage{picins}
+\makeatletter
+\renewcommand\piccaption{\@dblarg{\@piccaption}}
+\makeatother
+
+\usepackage{verbatim}
+
+% Einr�ckung bei Zeilenumbruch vermeiden
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{9pt}
+% Tiefe des Inhaltsverzeichnis (paragraphen werden mit aufgenommen)
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%Überschriften 
+\addtokomafont{subsection}{\normalsize\bf}
+\addtokomafont{subsubsection}{\normalsize\bf}
+\addtokomafont{paragraph}{\small\bf}
+
+
+%Silbentrennung von zusammengesetzten w�rtern
+\usepackage[ngerman=ngerman-x-latest]{hyphsubst}
+% Paket setspace erlaubt Umschalten auf 1.5fachen Zeilenabstand
+\usepackage{setspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Anpassungen von Literaturverzeichnis und Zitierweise%
+\usepackage[hyphens]{url}
+\usepackage[commabeforerest,authorformat=year,see,dotafter=bibentry,pages=format]{jurabib} % , ibidem=strict 
+%\AddTo\bibsgerman{%
+%\renewcommand*{\ibidemname}{ebd.}
+%\renewcommand*{\ibidemmidname}{ebd.}
+%}
+%Trennzeichen zwischen Autoren im Zitat
+
+%\AddTo\bibsgerman{%
+%\def\jbpagename{S.}%
+%\def\jbpagesname{S}%
+%}
+
+\renewcommand*{\jbbtasep}{ \& }
+\renewcommand*{\jbbfsasep}{; }
+\renewcommand*{\jbbstasep}{; }
+
+%Trennzeichen zwischen Autoren im Literaturverzeichnis
+\renewcommand*{\bibbtasep}{ \& }
+\renewcommand*{\bibbfsasep}{; }
+\renewcommand*{\bibbstasep}{ \& }
+
+%Trennzeichen zwischen Herausgebern im Literaturverzeichnis
+\renewcommand*{\bibbtesep}{; }
+\renewcommand*{\bibbfsesep}{; }
+\renewcommand*{\bibbstesep}{; }
+
+%Unterdr�ckt, dass bei mehr als drei Autoren im Literaturverzeichnis
+%mit "et al." abgek�rzt wird --> myjureco.bst-Datei wird zus�zlich ben�tigt!
+\makeatletter
+\def\jb@use@fullcite{%
+\jbauthorfont{\jb@@author}\normalfont{\jbhowsepbeforetitle}\jb@@fulltitle}%
+\makeatother
+
+%In: erscheint vor dem Titel von Zeitschriften, Konferenzbeitr�gen, Sammelwerken
+%und Herausgeberb�nden
+%\AddTo\bibsall{\def\incollinname{\textbf{In:}}}
+\renewcommand{\bibbtsep}{In: }
+\renewcommand*{\bibjtsep}{In: }
+
+%Vor- und Nachname des Herausgebers werden nicht fett gedruckt
+\renewcommand*{\biblnfont}{} 
+\renewcommand*{\bibfnfont}{}
+
+%�ndert bei urldate das Pr�fix von "Zugriff am" zu "Abruf am"
+\AddTo\bibsgerman{\renewcommand*{\urldatecomment}{Letzter Abruf: }}
+
+%Setzt ein Komma zwischen der URL und "Abruf am"
+\renewcommand*{\bibbudcsep}{, }
+
+%Entfernt die Zeichen vor und nach der URL-Angabe im Literaturverzeichnis
+\renewcommand*{\biburlprefix}{}
+\renewcommand*{\biburlsuffix}{}
+
+%Entfernt das Komma zwischen Jahrgang und Ausgabe
+%und setzt die Ausgabe in Klammern
+\renewcommand*\artnumberformat[1]{\unskip\space (#1)}
+
+%Entfernt das Komma zwischen Adresse und Verlag
+%und setzt daf�r ein Leerzeichen. Dies ist n�tig,
+%da die Reihenfolge von Adresse und Verlag in myjureco vertauscht wird
+%und kein Zeichen nach der Adresse erscheinen soll.
+\renewcommand*\bpubaddr{}
+\renewcommand*{\bibtfont}{\textit}
+% Check if this gives errors
+\renewcommand*{\bibapifont}{\textit}
+\renewcommand*{\bibatsep}{,}
+\renewcommand*{\ajtsep}{,}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{hyperref}
+%Erm�glicht Hyperlinks zwischen Textstellen und zu externen Dokumenten
+%% breaklinks=true/false: Gibt an, ob Links umgebrochen werden d�rfen.
+%% linktocpage=true/false: im Inhaltsverzeichnis sind nur die Seitenzahlen
+%% links, nicht der Text
+%% colorlinks=true/false: Links werden eingef�rbt (Farben werden mit
+%% linkcolor, anchorcolor \dots festgelegt)
+%% linkcolor=Farbe: Farbe des verlinkten Textes, Dokument-interne Links
+%% citecolor=Farbe: Farbe des verlinkten Textes, Links zum
+%% Literaturverzeichnis
+%% filecolor=Farbe: Farbe des verlinkten Textes, Links auf lokale Dateien
+%% urlcolor=Farbe: Farbe des verlinkten Textes, externe URLs
+%% frenchlinks=true/false: Links werden als smallcaps, anstatt farbig
+%% dargestellt.
+%% breaklinks=true/false: Gibt an, ob Links umgebrochen werden d�rfen.
+\hypersetup{%
+bookmarks=true,
+unicode=false,
+pdftoolbar=true,
+pdfmenubar=true,
+pdffitwindow=true,
+pdfstartview={FitH}
+  filecolor=black,
+  breaklinks=true,
+  colorlinks=true,
+  citecolor=black,
+  urlcolor=black,
+  linkcolor=black,
+  pdfpagemode=UseThumbs,
+  pdftitle=Mustertitel,
+  pdfauthor=Max Mustermann,
+  pdfsubject=Musterthema,
+  %pdfkeywords=xy
+}
+
+
+
+
+% Eigene Pakete hier 
+\usepackage{rotating}
+\usepackage{booktabs,dcolumn}
+\usepackage{longtable}
+\usepackage{paralist}
+\usepackage{dcolumn}
+\usepackage{nameref}
+\usepackage[font=footnotesize ,font=bf]{caption}
+\usepackage{subcaption}
+%\usepackage{tex4ht}
+\usepackage{listings}
+\usepackage{etex}
+\usepackage{tikz}
+	\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+%	\pgfplotsset{compat=1.11}
+%	\usepgfplotslibrary{fillbetween}
+\usepackage{icomma}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+% Anpassungen der R�nder an die Vorgaben des Lehrstuhls
+% BACKUP \geometry{left=3cm, right=2cm, top=1.5cm, bottom=2cm}
+\geometry{left=3cm, right=1.9cm, top=1.7cm, bottom=1.9cm,headsep=5mm, nomarginpar, includeall}
+
+\hyphenation{In-for-ma-ti-on Apps}
+%Zitationsstil: \citepara{Quelle} => (Quelle Jahreszahl)
+\newcommand{\citepara}[1]{(\citealt{#1})}
+%Zitationsstil: \pcite{Vgl.}{342}{Quelle} => (Vgl. Quelle, S. 342)
+\newcommand*{\pcite}[3]{(\citealt[#1][#2]{#3})}
+\newcommand{\citeparapage}[2]{(\citealt[#2]{#1})}
+\newcommand{\citeflow}[1]{\citet{#1}}
+%\newcommand{\citeflowpage}[2]{\citeauthor[#2]{#1}}
+
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} \nameref*{#1}}}
+
+\newcommand{\paragraphnoindent}[1]{\paragraph{#1}\noindent}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%Tabellenkonfig
+\definecolor{lightgray}{gray}{0.9}
+\let\oldtabular\tabular
+\let\endoldtabular\endtabular
+\renewenvironment{tabular}{\rowcolors{2}{white}{lightgray}\oldtabular}{\endoldtabular}
+%Welche Ebenen bekommen die Linien des Desings in der Überschrift
+\setcounter{seclinedepth}{1}
+
+%Gepunktete Linien auch bei Verzeichnissen im Inhaltsverzeichnis
+\usepackage{tocstyle}
+\newtocstyle[KOMAlike][leaders]{alldotted}{}
+\usetocstyle{alldotted}
+
+%Kein Einzug in Verzeichnissen, Abbildung:/Tabelle: als Präfix vor Nummern            
+\usepackage[titles]{tocloft}                                         
+\setlength{\cftfigindent}{0cm}                                                     
+\setlength{\cfttabindent}{0cm} 
+
+\usepackage{tocstyle} 
+
+\makeatletter 
+\AfterTOCHead[lof]{% 
+	\let\SAVEDNUMBERLINE\tocstyle@numberline 
+	\renewcommand*{\tocstyle@numberline}[1]{% 
+		\SAVEDNUMBERLINE{\figurename\ #1}% 
+	}% 
+} 
+\AfterTOCHead[lot]{% 
+	\let\SAVEDNUMBERLINE\tocstyle@numberline 
+	\renewcommand*{\tocstyle@numberline}[1]{% 
+		\SAVEDNUMBERLINE{\tablename\ #1}% 
+	}% 
+} 
+\makeatother 
+
+\renewcaptionname{ngerman}\figurename{Abbildung} 
+\renewcaptionname{ngerman}\tablename{Tabelle}
+
+\addtocontents{lof}{\protect\def\protect\autodot{: }}
+\addtocontents{lot}{\protect\def\protect\autodot{: }}  

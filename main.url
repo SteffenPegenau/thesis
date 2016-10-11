@@ -1,0 +1,6 @@
+%%% jurabib url repository
+\expandafter\urldef\csname jburl@benlian2013\endcsname\url{http://www.ise.tu-darmstadt.de/ise/news_details_133825.de.jsp}
+\expandafter\urldef\csname jburl@eisenhardt1989\endcsname\url{http://search.ebscohost.com/login.aspx?direct=true&db=buh&AN=4308385&site=ehost-live}
+\expandafter\urldef\csname jburl@melao2000\endcsname\url{http://dx.doi.org/10.1046/j.1365-2575.2000.00075.x}
+\expandafter\urldef\csname jburl@sheffi2005\endcsname\url{http://search.ebscohost.com/login.aspx?direct=true&db=ecn&AN=0821721&site=ehost-live}
+\expandafter\urldef\csname jburl@welchering2013\endcsname\url{http://www.faz.net/aktuell/technik-motor/computer-internet/de-mail-einschreiben-im-klarsichtumschlag-12149204.html}
