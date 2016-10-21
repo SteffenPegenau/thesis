@@ -1,0 +1,12 @@
+﻿@book{softwareindustrie2015,
+   author = {Buxmann, Peter and Diefenbach, Heiner and Hess, Thomas},
+   title = {Die Softwareindustrie : ökonomische Prinzipien, Strategien, Perspektiven},
+   publisher = {Springer Gabler},
+   address = {Berlin u.a.},
+   edition = {3., vollst. überarb. u. erw. Aufl.},
+   ISBN = {3662455897},
+   url = {http://www.gbv.de/dms/zbw/821541447.pdf},
+   year = {2015},
+   type = {Book}
+}
+
