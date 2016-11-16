@@ -1,0 +1,25 @@
+{
+  "name": "thesis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.pegenau.com/steffen/bthesis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-watch": "^4.3.10"
+  },
+  "dependencies": {
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-exec": "^1.0.1",
+    "grunt-execute": "^0.2.2",
+    "grunt-shell": "^2.1.0",
+    "gulp": "^3.9.1"
+  }
+}
