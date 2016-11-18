@@ -202,3 +202,9 @@ TSWLatexianTemp*
 
 # Linux
 *~
+
+# node 
+node_modules/
+
+
+lib.Data/
