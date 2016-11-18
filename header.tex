@@ -37,9 +37,10 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 %Überschriften 
-\addtokomafont{subsection}{\normalsize\bf}
-\addtokomafont{subsubsection}{\normalsize\bf}
-\addtokomafont{paragraph}{\small\bf}
+%\addtokomafont{subsection}{\normalsize\bf}
+\addtokomafont{subsection}{\normalsize\normalfont\bfseries}
+\addtokomafont{subsubsection}{\normalsize\normalfont\bfseries}
+\addtokomafont{paragraph}{\small\normalfont\bfseries}
 
 
 %Silbentrennung von zusammengesetzten w�rtern
@@ -152,7 +153,7 @@ pdfstartview={FitH}
   linkcolor=black,
   pdfpagemode=UseThumbs,
   pdftitle=Mustertitel,
-  pdfauthor=Max Mustermann,
+  pdfauthor=Claus Steffen Pegenau,
   pdfsubject=Musterthema,
   %pdfkeywords=xy
 }
@@ -167,7 +168,7 @@ pdfstartview={FitH}
 \usepackage{paralist}
 \usepackage{dcolumn}
 \usepackage{nameref}
-\usepackage[font=footnotesize ,font=bf]{caption}
+\usepackage[font=footnotesize]{caption}%,font=bf
 \usepackage{subcaption}
 %\usepackage{tex4ht}
 \usepackage{listings}
