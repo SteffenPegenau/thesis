@@ -1,0 +1,8 @@
+@phdthesis {
+	author = "Méndez Fernández, Daniel",
+	title = "Requirements Engineering: Artefact-Based Customisation",
+	type = "Dissertation",
+	school = "Technische Universität München",
+	address = "München",
+	year = 2011
+}
