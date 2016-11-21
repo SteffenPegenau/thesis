@@ -10,7 +10,10 @@ module.exports = function (grunt) {
     
     exec: {
       latex: {
-		cmd: 'pdflatex main.tex'
+		cmd: 'bibtex main.aux ; pdflatex main.tex'
+	},
+	bibtex: {
+		cmd: 'cp bibliography/referenzen.txt bibliography/referenzen.bib'
 	}
     },
     watch: {
@@ -18,6 +21,10 @@ module.exports = function (grunt) {
         files: '**/*.tex',
         tasks: ['exec:latex']
       },
+      bibtex: {
+	files: 'bibliography/referenzen.txt',
+	tasks: ['exec:bibtex']
+	}
     }
   });
 
