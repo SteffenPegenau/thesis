@@ -3,6 +3,10 @@
  * <%= projectUrl %>
  * Licensed under <%= license %> License
  */
+
+
+var recompile = 'pdflatex -interaction=nonstopmode main.tex; bibtex main.aux ; pdflatex -interaction=nonstopmode main.tex';
+
 module.exports = function (grunt) {
   'use strict';
   // Project configuration
@@ -10,10 +14,10 @@ module.exports = function (grunt) {
     
     exec: {
       latex: {
-		cmd: 'bibtex main.aux ; pdflatex main.tex'
+		cmd: recompile
 	},
 	bibtex: {
-		cmd: 'cp bibliography/referenzen.txt bibliography/referenzen.bib'
+		cmd: 'cp bibliography/referenzen.txt bibliography/referenzen.bib ; ' + recompile
 	}
     },
     watch: {
