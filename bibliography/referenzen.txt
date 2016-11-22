@@ -34,11 +34,6 @@
 }
 
 @article{
-   title = {<A Comparison of On-Premise to Cloud Migration Approaches.pdf>},
-   type = {Journal Article}
-}
-
-@article{
    title = {<the_costs_of_cloud_migration.pdf>},
    type = {Journal Article}
 }
@@ -252,6 +247,25 @@
    type = {Journal Article}
 }
 
+@article{NIST,
+   author = {Mell, Peter and Grance, Tim},
+   title = {The NIST definition of cloud computing},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{Pahl2013,
+   author = {Pahl, Claus and Xiong, Huanhuan and Walshe, Ray},
+   title = {A Comparison of On-Premise to Cloud Migration Approaches},
+   journal = {Service-Oriented and Cloud Computing: Second European Conference, ESOCC 2013, Málaga, Spain, September 11-13, 2013. Proceedings},
+   pages = {212-226},
+   ISSN = {978-3-642-40651-5},
+   DOI = {10.1007/978-3-642-40651-5_18},
+   url = {http://dx.doi.org/10.1007/978-3-642-40651-5_18},
+   year = {2013},
+   type = {Journal Article}
+}
+
 @misc{   ISBN = {3642053580 (Sekundärausgabe)},
    url = {http://scans.hebis.de/HEBCGI/show.pl?22927883_aub.html},
    year = {2010},
@@ -261,7 +275,7 @@
 @article{fivephases,
    author = {Rashmi, Mehfuz S and Sahoo, G},
    title = {A five-phased approach for the cloud migration},
-   journal = {Int J Emerg Technol Adv Eng},
+   journal = {International Journal of Emerging Technology and Advanced Engineering},
    volume = {2},
    number = {4},
    pages = {286-291},
