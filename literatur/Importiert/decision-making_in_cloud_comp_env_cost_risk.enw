@@ -1,0 +1,16 @@
+%0 Journal Article
+%T Decision-making in cloud computing environments: A cost and risk based approach
+%A Martens, Benedikt
+%A Teuteberg, Frank
+%J Information Systems Frontiers
+%D 2012
+%V 14
+%N 4
+%@ 1572-9419
+%F Martens2012
+%X In this article a sophisticated formal mathematical decision model is developed that supports the selection of Cloud Computing services in a multisourcing scenario. The objective is to determine the selection of appropriate Cloud Computing services offered by different providers. In order to do so, we consider cost as well as risk factors which are relevant to the decision scope. For example, coordination costs, IT service costs, maintenance costs and the costs of taken risks were compared. Risks are modeled by means of the three common security objectives integrity, confidentiality and availability. The managerial implications of the model lie in the sustainable decision support and the comprehensive decision approach. The formal model is prototypically implemented using a software tool and examined with the help of a simulation study in three realistic scenarios and a sensitivity analysis.
+%9 journal article
+%R 10.1007/s10796-011-9317-x
+%U http://dx.doi.org/10.1007/s10796-011-9317-x
+%P 871-893
+
