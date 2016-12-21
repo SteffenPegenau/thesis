@@ -14,7 +14,8 @@
 In dieser Arbeit soll ein Vorgehensmodell für bestehende 
 Client-Server-Anwendungen in die Cloud zu 
 Salesforce entwickelt werden. Basis für diese Entwicklung ist das 
-Fünf-Phasen-Modell aus \citeflow{fivephases}. Bevor dieses Modell vorgestellt 
+Fünf-Phasen-Modell aus \citeflow{fivephases} und 
+\citeflow{exploring_the_factors}. Bevor dieses Modell vorgestellt 
 wird, soll zunächst der Begriff "`Cloud"' definiert und die Charakteristika 
 der Cloud vorgestellt werden. Um die Chancen und Risiken einer Migration 
 realistisch abschätzen 
@@ -235,6 +236,23 @@ Hinblick auf Leistungsfähigkeit, Verfügbarkeit und Sicherheit zu überwachen u
 gegebenenfalls Gegenmaßnahmen einleiten zu können.
 \end{description}
 
+\subsection{Migrationsformen}
+\citeflow{exploring_the_factors} identifizieren vier Formen, in denen eine 
+Migration ablaufen kann.
+\begin{description}
+	\item[Ersetzen] Einzelne Komponenten einer bestehenden Anwendung werden 
+durch Dienste in der Cloud ersetzt. Andere Komponenten, die mit diesen 
+ersetzten Komponenten interagieren werden umkonfiguriert.
+	\item[Partielle Migration] Anstatt Komponenten durch Cloud-Dienste zu 
+ersetzen, werden sie in die Cloud migriert.
+	\item[Migration der ganzen Anwendung] Häufig werden Anwendungen in die 
+Cloud migriert, indem die virtuellen Maschinen auf denen sie laufen in die 
+Cloud umgezogen werden, ohne dass größere Anpassungen nötig wären.
+	\item[Cloudify] Die Anwendung wird in Gänze an die Cloud und ihre 
+Charakteristika angepasst und mit Cloud Diensten neu entwickelt.
+\end{description}
+
+\subsection{Salesforce}
 
 \subsection{Ideen}
 \begin{description}
