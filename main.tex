@@ -5,6 +5,10 @@
 
 \newcommand{\abgabedatum}{15.03.2017}
 
+\usepackage{enumitem}
+
+\usepackage{amsthm}
+\newtheorem*{cloudcomputing}{Cloud-Computing}
 
 \begin{document}
 \noindent
@@ -24,7 +28,6 @@
 \newpage
 \listoftables
 \clearpage
-
 \setstretch{1.2}
 
 \newcounter{seitenzahlroemisch}
@@ -32,8 +35,8 @@
 
 \pagenumbering{arabic}
 \include{chapters/einleitung}%1
-%\include{chapters/grundlagen}%2
-%\include{chapters/entwicklung}%3
+\include{chapters/grundlagen}%2
+\include{chapters/entwicklung}%3
 %\include{chapters/forschungsmethode}%4
 %\include{chapters/forschungsergebnisse}%5
 %\include{chapters/diskussion}%6
@@ -42,10 +45,6 @@
 \bibliography{bibliography/referenzen}
 
 %\include{chapters/appendix}
-
-%
-% !!! VOR ABGABE ENTFERNEN!
-%
 %\include{chapters/ideen} 
 
 \end{document}

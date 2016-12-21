@@ -1,0 +1,7 @@
+%%% jurabib url repository
+\expandafter\urldef\csname jburl@benlian_saas_2010\endcsname\url{http://dx.doi.org/10.1007/978-3-8349-8731-0}
+\expandafter\urldef\csname jburl@softwareindustrie2015\endcsname\url{http://www.gbv.de/dms/zbw/821541447.pdf}
+\expandafter\urldef\csname jburl@Pahl2013\endcsname\url{http://dx.doi.org/10.1007/978-3-642-40651-5_18}
+\expandafter\urldef\csname jburl@Repschlaeger2010\endcsname\url{http://dx.doi.org/10.1007/BF03340507}
+\expandafter\urldef\csname jburl@salesforceannualreport\endcsname\url{http://s1.q4cdn.com/454432842/files/doc_financials/2016/Annual/Salesforce-FY-2016-Annual-Report.pdf}
+\expandafter\urldef\csname jburl@CloudUmsatzWeltweit\endcsname\url{https://de.statista.com/statistik/daten/studie/195760/umfrage/umsatz-mit-cloud-computing-weltweit-seit-2009/}

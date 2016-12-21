@@ -5,78 +5,245 @@
 %mehrerer verschiedener Quellen, um die Ausführungen zu belegen.
 
 %Nachfolgend werden einige Formalitäten der Arbeit dargestellt.
-\subsection{Cloud \-- Definitionen}
-Das US-amerikanischen National Institute of Standard and 
-Technology (NIST) von \pcite{}{}{NIST} definiert Cloud Computing als 
-"`model for enabling ubiquitous, convenient, on-demand 
-network access to a shared
-pool of configurable computing resources [\dots] that
-can be rapidly provisioned and released with minimal management effort or 
-service provider interaction."' Das Model der Cloud unterteilt es in fünf 
-Charakteristika, drei Service-Modelle und vier Deployment Modellen, die ich 
-hier lediglich (ins Deutsche übersetzt) wiedergebe.
+
+
+
+
+
+
+In dieser Arbeit soll ein Vorgehensmodell für bestehende 
+Client-Server-Anwendungen in die Cloud zu 
+Salesforce entwickelt werden. Basis für diese Entwicklung ist das 
+Fünf-Phasen-Modell aus \citeflow{fivephases}. Bevor dieses Modell vorgestellt 
+wird, soll zunächst der Begriff "`Cloud"' definiert und die Charakteristika 
+der Cloud vorgestellt werden. Um die Chancen und Risiken einer Migration 
+realistisch abschätzen 
+zu können, ist es zudem nötig, die Faktoren zu kennen, die den Erfolg einer 
+Migration bestimmen. 
+\subsection{Cloud-Computing}
+Da die Definition von "`Cloud-Computing"' des National Institute of Standards 
+and Technology (NIST) \pcite{}{}{NIST} in \citeflow{thoughtsOnCloud} als gute 
+Grundlage geschätzt wird und auch in \citeflow{fivephases}, in dem das 
+Fünf-Phasen-Modell vorgestellt wird, als Basis dient, übernehme ich die
+Definition in übersetzter Form aus \citeflow{softwareindustrie2015}:
+\begin{cloudcomputing}
+"`Ein Modell, das einen komfortablen, bedarfsabhängigen und netzbasierten 
+Zugriff auf eine gemeinsam benutzte Menge konfigurierbarer Rechenressourcen 
+ermöglicht, die schnell, mit geringem Verwaltungsaufwand und ohne (menschliche) 
+Interaktion mit einem Anbieter bereitgestellt und wieder freigegeben werden 
+können."'
+\end{cloudcomputing}
+Laut NIST besteht die "`Cloud"' als Modell neben fünf Charakteristika und drei 
+Service Modellen aus vier Einsatzmodellen (im Englischen: "`Deployment 
+Models"'). Da sie für das Verständnis des Fünf-Phasen-Modells nebensächlich 
+sind, wird hier nur kurz auf die Einsatzmodelle eingegangen. In ihnen geht es 
+darum, ob die Cloud ausschließlich von einer Organisation, von einer bestimmten 
+Gruppe von Organisationen oder von der Öffentlichkeit genutzt wird, wobei auch 
+Mischformen als Möglichkeit genannt werden. \pcite{}{}{NIST}
+
 \subsubsection{Charakteristika}
+Die fünf Charakteristika von Cloud-Computing, die in \citeflow{NIST} genannt 
+werden, lauten zusammengefasst:
+
 \begin{description}
 	\item[Selbstbedienung bei Bedarf:] Ein Nutzer kann ohne 
-zwischenmenschliche Interaktion mit dem Provider die automatische Zuteilung von 
-Rechenkapazitäten anstoßen.
+zwischenmenschliche Interaktion mit dem Dienstleister die automatische 
+Zuteilung von Rechenkapazitäten anstoßen.
 	\item[Umfassender Zugriff über das Netzwerk:] Die Dienstleistung ist 
-über das Netzwerk mit standardisierten Methoden von hetrogenenen Thin- oder 
-Thick-Client-Plattformen abrufbar.
-	\item[Geteilte Ressourcennutzung] Kunden eines Cloud-Anbieters teilen 
-sich physische oder virtuelle Rechenleistung die dynamisch und bedarfsgerecht 
-zugeteilt wird. Der Nutzer kann keinen Einfluss darauf nehmen, an welchem Ort 
-genau die Daten gespeichert werden. Dies kann bedeuten, dass der Kunde nicht 
-genau weiß auf welcher Festplatte in einem Rechenzentrum seine Daten liegen. 
-Diese Ungewissheit kann sich aber auch auf Städte, Staaten oder Kontinente 
-ausweiten.
+über das Netzwerk mit verschiedensten Geräten auf standardisierte Art und Weise 
+abrufbar, zum Beispiel mit einem Internet Browser.
+	\item[Geteilte Ressourcen] Kunden eines Cloud-Anbieters teilen 
+sich physische oder virtuelle Rechenleistung, die dynamisch und bedarfsgerecht 
+zugeteilt wird. Im Allgemeinen hat der Nutzer weder Kenntnis noch 
+Kontrolle über den Ort der Speicherung und Verarbeitung seiner Daten. Abhängig 
+vom Anbieter lassen sich Orte aber vertraglich festlegen. 
 	\item[Schnelle Anpassungsfähigkeit] Rechenkapazitäten können dem Bedarf 
 entsprechend, teilweise automatisch, schnell zugewiesen und entzogen werden. 
 Auf den Kunden wirkt die abrufbare Rechenleistung oftmals unbegrenzt.
-	\item[Messbare Dienstleistung] Cloud Systeme messen und optimieren 
-Ressourcennutzung automatisch und stellen die Auslastung sowohl dem Cloud 
-Anbieter als auch dem Nutzer zur Verfügung.
+	\item[Vermessene Dienstleistung] Cloud Systeme messen und optimieren 
+Ressourcennutzung automatisch und stellen die Auslastung und die Nutzung sowohl 
+dem Cloud Anbieter als auch dem Nutzer zur Verfügung, da sie 
+Berechnungsgrundlage für die Kosten sind.
 \end{description}
-\subsubsection{Service Modelle}
+
+\subsubsection{Service Modelle - XaaS}
+Service Modelle beschreiben, welche Leistungen "`as a Service"' angeboten 
+werden. Es gibt recht viele dieser Modelle - \citeflow{xAsAService} zählt 35 
+Varianten - die mehr oder weniger verbreitet sind und mit "`Everything as a 
+Service (XaaS)"' zusammengefasst werden. \pcite{}{95}{benlian_saas_2010} Nicht 
+zwangsläufig beschränkt er sich auf Technologien, die als Dienstleistung 
+angeboten werden. \pcite{}{872}{decision-making_in_cloud_computing_environments} 
+\\
+\citeflow{NIST} sieht drei Service Modelle vor, die sich im Anteil der 
+selbst zu verwaltenden, technologischen Anteile (Integrationstiefe) 
+unterscheiden und in dieser 
+Hinsicht in Abbildung ~\ref{xaas_im_vergleich} mit der herkömmlichen IT 
+verglichen werden. Die Wahl des Modells wirkt sich auf den 
+Migrationsprozess aus. \pcite{}{213}{Pahl2013}
+\begin{figure}[hb]
+\begin{center}
+\includegraphics[width=\textwidth]{images/XaaS_im_Vergleich.png}
+\caption{XaaS im Vergleich: Umfang von 
+Dienstleistung und Eigenverantwortung. Aus 
+\protect\citeflow{economics_of_the_cloud} }
+\label{xaas_im_vergleich}
+\end{center}
+\end{figure}
 \begin{description}
-	\item[Software as a Service (SaaS)] Der Kunde nutzt die Anwendungen des 
-Anbieters die über verschiedene Geräte abrufbar
-sind und in einer Cloud Infrastruktur liegen. Die Cloud Infrastruktur, 
-bestehend aus Netzwerken, Servern, Betriebssystemen, Speichern und sonstigen 
-anwendungsabhängigen Fähigkeiten, ist für den Kunden transparent; Details kann 
-er weder sehen noch verändern.
-	\item[Platform as a Service (PaaS)] Der Service-Anbieter stellt dem 
-Kunden eine Cloud-Infrastruktur zur Verfügung auf der der Kunde eine selbst 
-entwickelte Anwendung ausführen kann. Die zugrundeliegende Infrastruktur ist 
-wie bei SaaS transparent. Anpassbar sind lediglich bestimmte, die 
-Anwendungsausführung betreffende Optionen. 
-	\item[Infrastructure as a Service (IaaS)] Der Anbieter stellt dem 
-Kunden Rechenleistung, Speicher, 
-Netzwerkkapazitäten und sonstige, grundlegende Computerressourcen zur 
-Verfügung, auf der dieser beliebige Anwendungen bis hin zu Betriebssystemen 
-auswählen kann. Der Kunde hat keinen Einfluss auf die tatsächlich 
-bereitgestellte Hardware, kann jedoch auf Software-Seite einschließlich dem 
-Betriebssystem alle Parameter selbst bestimmen.
+	\item[Infrastructure as a Service (IaaS)] Dem Kunden werden Netzwerk, 
+Speicher und Rechenleistung zur Verfügung gestellt. Über die darauf laufende 
+Software, teilweise sogar über das Betriebssystem kann selbst verfügt werden. \\
+Kunden versprechen sich von IaaS vor allem Flexibilität in der Bereitstellung 
+und dem Betrieb von Servern, Datenspeichern und Netzwerkressourcen. 
+\pcite{}{213}{Pahl2013}
+	\item[Platform as a Service (PaaS)] Der Kunde kann bereitgestellte 
+oder selbst entwickelte Software in der Cloud laufen lassen und eventuell 
+Einfluss auf die Anwendungsumgebung nehmen. \\
+	\item[Software as a Service (SaaS)] Der Kunde kann eine vom Anbieter 
+bereitgestellte Software nutzen und in begrenztem Maße konfigurieren.
 \end{description}
 
-\subsubsection{Deployment Modelle}
+\subsection{Die Migration bestimmende Faktoren}
+\label{cha:migration_bestimmende_faktoren}
+\citeflow{fivephases} identifizieren wirtschaftliche und technische Faktoren, 
+die sowohl die Migrationseignung einer Anwendung als auch die Migration selbst 
+beeinflussen. \\
+\citeflow{decision-making_in_cloud_computing_environments} sehen viele 
+Parallelen zwischen dem Outsourcen von IT zu externen 
+Dienstleistern und dem Betrieb in der Cloud, weshalb sich Erfahrungen bei 
+Outsourcing-Projekten bei Cloud-Migrationen 
+anwenden lassen. Aus diesem Grund sind die folgenden Faktoren auch aus der
+Literatur über IT-Outsourcing zusammengetragen.
+\subsubsection{Wirtschaftliche Faktoren}
 \begin{description}
-	\item[Private Cloud] Die Cloud Infrastruktur steht nur einem einzigen 
-Kunden zur Verfügung. Über den Ort der Leistungserbringung, 
-Organisationsstruktur, sowie den Besitzer und Eigentümer wird dabei keine 
-Aussage getroffen. Die Cloud kann beim Nutzer "`lokal"' oder bei einem anderen 
-Cloud Anbieter betrieben werden.
-	\item[Community Cloud] Im Gegensatz zur Private Cloud steht die 
-Infrastruktur hier einer Gruppe ("`Community"') mit übereinstimmenden Zielen 
-zur Verfügung.
-	\item[Public Cloud] Die Nutzer der Cloud Infrastruktur kennen sich 
-nicht. 
-	\item[Hybrid Cloud] Die Cloud Infrastruktur besteht aus mindestens zwei 
-der oben genannten Formen, die nicht verschmolzen werden, sondern über 
-standardisierte Technologien Anwendungen und Daten austauschen.
+	\item[Bereits getätigte IT-Investitionen:]
+	In der Regel wachsen die bereits getätigten IT-Ausgaben mit dem 
+Unternehmen und mit ihnen die Komplexität der Migration. Deshalb ist es in 
+kleinen Unternehmen eher möglich, direkt zu migrieren, während bei 
+größeren Unternehmen der Übergang in die Cloud wesentlich mehr Planung und 
+gegebenenfalls einen parallelen Betrieb erforderlich macht.
+
+	\item[Kosten:] In der herkömmlichen IT bestehen Kosten aus der 
+"`kapitalintensiven Beschaffung der Hard- und Software sowie der Vorhaltung 
+eigener Personalressourcen"' \pcite{}{}{Repschlaeger2010}. Diese Kosten sind 
+zwar hoch, aber aufgrund der langjährigen Erfahrung auch vorhersagbar und in 
+Budgets eingeplant. Die Migration in die Cloud dagegen bedeutet den Umstieg zu 
+einem "`pay per use"'-Modell \pcite{}{}{elements_of_cloud_adoption}, von einem 
+von Fixkosten dominierten Modell zu einem, das von variablen Kosten bestimmt 
+ist. 
+Um zu verhindern, dass Kosteneinsparungen aufgezehrt werden, ist es nötig 
+den Umfang der Anwendungsnutzung und die Migrationskosten abzuschätzen.
+
+
+	\item[Datensicherheit:] Bevor eine Anwendung in die Cloud migriert 
+wird, sollte bedacht werden, wie kritisch die zugehörigen Daten für den 
+Unternehmenserfolg sind. 
+	\item[Rechtliche Restriktionen:] Vor der Migration sollte geprüft 
+werden, ob rechtliche Bestimmungen auch bei einem Betrieb in der Cloud 
+eingehalten werden können. 
+	\item[Zuteilung von Rechenleistungen:] Anwendungen, die kurzzeitig 
+große Rechenleistungen benötigen und gut skalierbar sein sollen, lassen sich in 
+der Cloud wahrscheinlich kostengünstiger betreiben als auf eigenen Servern, die 
+ganzjährig reserviert sind und die meiste Zeit im Leerlauf verbringen. 
 \end{description}
 
 
+\subsubsection{Technische Faktoren}
+\begin{description}
+	\item[Bestehende Infrastruktur:] Bereits die Migration einer 
+einzigen Anwendung kann Änderungen in der internen IT-Infrastruktur 
+erforderlich machen. Zum Beispiel wenn Daten zwischen verschiedenen Diensten 
+ausgetauscht werden soll. Auch die Arbeit des Supports könnte dur
+	
+	\item[Sicherheitsarchitektur:] Um die Daten im Cloud-Umfeld zu 
+schützen, muss das bestehende Sicherheitskonzept an die Gegebenheiten der Cloud 
+angepasst werden.
+
+	\item[Komplexität:]
+	Während einfache, standardisierte Anwendungen womöglich bereits in der 
+Cloud angeboten werden, steigt mit der Komplexität auch der Planungs-, 
+Implementierungs und Testbedarf bei der Migration.
+	
+	\item[Netzwerk und Support:] Je mehr Daten in der Cloud liegen, desto 
+höher ist die Abhängigkeit von einer funktionierenden Internetverbindung. Hier 
+können zusätzliche Kosten für redundante Verbindungen, Verbindungen mit höheren 
+Kapazitäten oder Verträge mit garantierten Reaktionszeiten im Störungsfall 
+anfallen. 
+
+	\item[IT-Fähigkeiten:] Auch wenn im Cloudbetrieb auf existierende 
+Technologien und idealerweise existierende Software zurückgegriffen wird, 
+erfordert die Migration dem IT-Team Fähigkeiten und Kenntnisse in den Bereichen 
+Architekturen, Implementierung, Entwicklung und Betrieb ab. Hinzu kommt, dass 
+der Umfang, in dem Kontrolle über die Systeme im Cloudbetrieb abgegeben wird, 
+von den verantwortlichen IT-Mitarbeitern eine "`kulturelle"' Herausforderung 
+darstellen kann.
+	
+	\item[Service Level Agreements (SLAs):] Geprüft werden sollte auch, ob 
+Cloud-Anbieter SLAs bieten können, die zum unternehmerischen Bedarf 
+hinsichtlich Verfügbarkeit, Vertraulichkeit und Integrität passen. Auch sollte 
+geregelt sein, welche Verantwortlichkeiten der Anbieter trägt und welche 
+Vertragsstrafen bei Nichteinhaltung drohen.
+\end{description}
+
+\subsection{Das Fünf-Phasen-Wasserfallmodell}
+Das in \citepara{fivephases} vorgeschlagene Vorgehensmodell zur Migration 
+einer Anwendung in die Cloud ähnelt dem aus der 
+Softwareentwicklung bekannten, iterativen Wasserfallmodell und besteht aus den 
+folgenden fünf Phasen, die in Abbildung 
+\ref{fuenf-phasen-wasserfall-modell}
+dargestellt sind.
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=\textwidth]{images/fuenf-phasen-wasserfall-modell.png}
+\caption{Das Fünf-Phasen-Wasserfallmodell aus \protect\citeflow{fivephases} }
+\label{fuenf-phasen-wasserfall-modell}
+\end{center}
+\end{figure}
+\begin{description}
+	\item[Phase 1 - Machbarkeitsstudie] In dieser Phase wird ergebnisoffen 
+geprüft, ob die Migration einer Anwendung technisch und wirtschaftlich möglich 
+und sinnvoll ist. Dabei wird nicht nur die Anwendung selbst analysiert, sondern 
+auch alle Rahmenbedingungen, die Einfluss auf das Verhalten des Systems ausüben 
+können. Außerdem wird eine detaillierte Kosten-Nutzen-Analyse erstellt.	
+
+	\item[Phase 2 - Anforderungsanalyse und -Planung] Um die zu migrierende 
+Anwendung und ihre Anforderungen zu verstehen, wird in der Planungsphase die 
+bestehende IT-Umgebung unter Berücksichtigung der genannten, die Migration 
+beeinflussenden Faktoren (siehe  Kapitel 
+\ref{cha:migration_bestimmende_faktoren}) 
+genau begutachtet. Gilt die Anwendung auch nach Begutachtung als zur Migration 
+geeignet, werden der Return on Investment (ROI) sowie die Total Cost of 
+Ownership (TCO) berechnet, um die durch die Migration entstehende 
+Kostenvorteile 
+zu verstehen.
+	
+	\item[Phase 3 - Migration] Die existierende Anwendung wird in die Cloud 
+portiert und in Hinblick auf Leistungsfähigkeit und Performanz strukturiert 
+getestet. Zum Schluss wird die neue Plattform in einem User Acceptance Testing 
+(UAT) validiert. 
+	
+	\item[Phase 4 - Tests und Auslieferung] Die Daten aus der Produktion 
+werden in die Cloud portiert. Anschließend wird die Software erneut getestet 
+und freigegeben. In dieser Phase ist ein hoher Grade an Überwachung und Support 
+nötig, um unvorhergesehene Probleme auffangen zu können. Unter Umständen wird 
+parallel zum Start der Cloud-Anwendung die Altsoftware zunächst weiter 
+betrieben.
+
+	\item[Phase 5 - Überwachung und Wartung] Nach der Migration in die 
+Cloud ist es naturgemäß notwendig, die Leistungserfüllung durch den Anbieter in 
+Hinblick auf Leistungsfähigkeit, Verfügbarkeit und Sicherheit zu überwachen um 
+gegebenenfalls Gegenmaßnahmen einleiten zu können.
+\end{description}
+
+
+\subsection{Ideen}
+\begin{description}
+	\item[Migration] Sicht eines Unternehmens, das seine 
+On-Promise-Software in die Cloud schiebt versus ISV
+\end{description}
+
+
+\begin{comment}
 
 \subsection{Herausforderungen in Migrationsprojekten als zu berücksichtigende 
 Faktoren}
@@ -90,102 +257,12 @@ ergänzen und diskutieren lässt. Aus diesem Grund soll es den Rahmen dieser
 Arbeit bilden.
 
 \subsubsection{Wirtschaftliche Faktoren}
-\begin{description}
-	\item[Bereits getätigte IT-Investitionen:]
-	Je größer das Unternehmen, das eine Anwendung in die Cloud migrieren 
-will, desto größer sind die bereits getätigten Investitionen in die 
-IT-Infrastruktur. Mit den Investitionen steigt in der Regel auch die 
-Komplexität, was eine Migration erschwert.
-	\item[Kosten:] Älteren Unternehmen fällt es aufgrund der langjährigen 
-Erfahrung leicht die Kosten für die bestehende Softwarelösung abzuschätzen. 
-Kosten, die zudem bereits genehmigt und eingeplant sind. Dem stehen die 
-nutzungsbezogenen, bisher unbekannten Kosten einer Cloudlösung gegenüber. Diese 
-Kosten sollten über eine Prognose der benötigten Rechen-, Speicher- und 
-Transferkapazitäten, den Betriebs-, Lizenz- und Migrationskosten abgeschätzt 
-werden, damit erhoffte Kosteneinsparungen auch tatsächlich realisiert werden 
-können.
-	\item[Datensicherheit:] Für den Unternehmenserfolg kritische Daten sind 
-auf unternehmenseigenen Servern eventuell besser aufgehoben.
-	\item[Rechtliche Restriktionen:] Das Unternehmen könnte rechtlichen 
-Rahmenbedingungen ausgesetzt sein, die eine Migration in die Cloud ausschließen.
-	\item[Zuteilung von Rechenleistungen:] Anwendungen, die kurzzeitig 
-große Rechenleistungen benötigen und gut skalierbar sein sollen, lassen sich in 
-der Cloud wahrscheinlich kostengünstiger betreiben als auf Servern die 
-ganzjährig reserviert sind und sind damit geeignetere Kandidaten für eine 
-Migration.
-\end{description}
 
 \subsubsection{Technische Faktoren}
-\begin{description}
-	\item[Bestehende Infrastruktur:] Mit der Infrastruktur, die sich im 
-Laufe einer Migration ändert, ändert sich auch die Art, wie Anwendungen an 
-Endnutzer ausgeliefert werden. Auch der Support wird möglicherweise nach der 
-Migration nicht mehr über den IT-Support im Haus abgewickelt, sondern über den 
-Cloud-Anbieter. 
-	\item[Sicherheitsarchitektur:] Um die Daten im Cloud-Umfeld zu 
-schützen, muss das bestehende Sicherheitskonzept an die Gegebenheiten der Cloud 
-angepasst werden.
-	\item[Komplexität:]
-	Während einfache Anwendungen womöglich bereits in der Cloud angeboten 
-werden, steigt mit der Komplexität auch der Planungs-, Implementierungs- 
-und Testbedarf bei der Migration.
-	\item[Netzwerk und Support:] Je mehr Daten in der Cloud liegen, desto 
-höher ist die Abhängigkeit von einer funktionierenden Internetverbindung. Hier 
-können zusätzliche Kosten für Verbindungen mit höheren Kapazitäten oder 
-Verträge mit garantierten Reaktionszeiten im Störungsfall anfallen. Bei der 
-Bewertung dieses Faktors schlage ich vor, die bereits vorhandene Abhängigkeit 
-als Referenz zu nutzen. 
-	\item[IT-Fähigkeiten:] Die Migration in die Cloud fordert dem IT-Team 
-andere Fähigkeiten ab, als der lokale Betrieb und ist daher mit einer steileren 
-Lernkurve verbunden. Sie geht außerdem regelmäßig mit einem Gefühl des 
-Kontrollverlustes einher. 
-	\item[Service Level Agreements (SLAs):] Geprüft werden sollte auch, ob 
-Cloud-Anbieter SLAs bieten können, die zum unternehmerischen Bedarf 
-hinsichtlich Verfügbarkeit, Vertraulichkeit und Integrität passen. Auch sollte 
-geregelt sein, welche Verantwortlichkeiten der Anbieter trägt und welche 
-Strafen bei Nichteinhaltung drohen.
-\end{description}
 
-\subsection{Das Fünf-Phasen-Wasserfallmodell}
-Das in \citepara{fivephases} vorgeschlagene Vorgehensmodell ähnelt dem aus der 
-Softwareentwicklung bekannten, klassischen Wasserfallmodell und besteht aus den 
-folgenden fünf Phasen, die in Abbildung 
-\ref{fuenf-phasen-wasserfall-modell}
-dargestellt sind.
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.6\textwidth]{images/fuenf-phasen-wasserfall-modell.png}
-\caption{Das Fünf-Phasen-Wasserfallmodell aus \protect\citeflow{fivephases} }
-\label{fuenf-phasen-wasserfall-modell}
-\end{center}
-\end{figure}
-\begin{enumerate}
-	\item Die technische und wirtschaftliche \textbf{Machbarkeitsstudie}
-analysiert die bestehende Anwendung in Hinblick auf Dateneingabe, 
-Datenverarbeitung, Datenausgabe und sonstige Randbedingungen und Erwartungen. 
-Das Ergebnis der Machtbarkeitsstudie ist eine detaillierte  
-Kosten-Nutzen-Analyse. Als Grundlage einer wirtschaftlich vernünftigen 
-Migrationsentscheidung muss sie ergebnisoffen verlaufen.
-	\item Die \textbf{Anforderungsanalyse und -Planung} konkretisiert die 
-Ergebnisse der Machtbarkeitsstudie weiter, indem sie die oben genannten 
-wirtschaftlichen und technischen Faktoren berücksichtigt. Außerdem wird der 
-Return on Investment sowie die Total Cost of Ownership berechnet.
-	\item Mit der \textbf{Migration} ist nicht nur die Entwicklung 
-beziehungsweise Einrichtung der Cloudsoftware gemeint, sie enthält auch Tests 
-der Funktionalität, Performanz und Nutzerakzeptanz.
-	\item Beim \textbf{Ausrollen (Go-Live) und Testen} wird die 
-Cloud-Anwendung mit den Betriebsdaten ausführlich getestet und 
-schließlich freigegeben. Die Freigabe ist mit intensiver Beobachtung und 
-verstärktem Support zu begleiten um auftretenden Problemen begegnen zu können. 
-Je nach Größe, Relevanz und Art der Anwendung ist zu prüfen, ob in der 
-Anfangsphase  ein paralleler Ansatz gewählt wird, bei dem die bestehende Lösung 
-weiter genutzt wird.
-	\item Naturgemäß ist man bei Nutzung der Cloud bei Performanz, 
-Verfügbarkeit und Sicherheit vom Anbieter abhängig. Die Einhaltung garantierter 
-Leistungen und Erwartungen sollte man \textbf{überwachen}. Abweichungen lassen 
-sich Idealerweise  \textbf{Wartungsarbeiten} an der Anwendung oder durch 
-Einforderung von Leistungen beim Anbieter beheben.
-\end{enumerate}
+
+
+
 \subsubsection{Organisationsform als Einflussfaktor}
 \citeflow{fivephases} identifizieren die Organisationsstruktur, beziehungsweise 
 deren Größe und Komplexität und insbesondere drei Formen als 
@@ -255,3 +332,4 @@ Verplichtungsgrad & \textit{STRING} & verplichtend \\
 \par\medskip
 
 Tabelle 1 stellt eine beispielhafte Tabelle dar
+\end{comment}
