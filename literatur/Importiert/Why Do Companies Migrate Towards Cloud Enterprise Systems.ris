@@ -1,0 +1,39 @@
+TY  - CONF
+TI  - Why Do Companies Migrate Towards Cloud Enterprise Systems? A Post-Implementation Perspective
+T2  - 2014 IEEE 16th Conference on Business Informatics
+SP  - 102
+EP  - 109
+AU  - T. Boillat
+AU  - C. Legner
+PY  - 2014
+KW  - cloud computing
+KW  - virtual enterprises
+KW  - SaaS
+KW  - Web technologies
+KW  - business-driven migration strategy
+KW  - cloud enterprise systems
+KW  - mobile technologies
+KW  - standardized IT platform
+KW  - Cloud computing
+KW  - Companies
+KW  - Interviews
+KW  - Mobile communication
+KW  - Software as a service
+KW  - Cloud computing
+KW  - Software as a Service
+KW  - adoption
+KW  - case study
+KW  - cloud enterprise systems
+KW  - migration
+DO  - 10.1109/CBI.2014.46
+JO  - 2014 IEEE 16th Conference on Business Informatics
+IS  - 
+SN  - 2378-1963
+VO  - 1
+VL  - 1
+JA  - 2014 IEEE 16th Conference on Business Informatics
+Y1  - 14-17 July 2014
+AB  - Despite the significant benefits of cloud computing, companies are still reluctant to migrate towards cloud solutions and fear the risks related to their security, performance, and availability. This is particularly true for enterprise systems, which play a strategic role and are both the core of companies' business processes and information systems. Prior research has studied opportunities and benefits of cloud computing and Software as a Service (SaaS) based on expert surveys and taking a pre-adoption perspective. Since these findings rely on perceptions, they risk reflecting public opinion rather than real-world experiences. Hence, more empirical research is required to analyze early adopter's migration strategies and practical experiences with cloud enterprise systems. Based on two case studies, this paper explores early implementations of cloud enterprise systems and compares them to the academic literature. As main contribution, we identify a business-driven migration strategy: Contrary to existing research, we find that companies do not implement cloud enterprise systems because of their attractive cost and delivery models, but leverage them as a standardized IT platform for innovating, and optimizing business processes based on mobile and web technologies. Moreover, our study reveals that cloud enterprise systems' scope, by offering comprehensive application and integration platforms and a set of novel IT capabilities, goes beyond SaaS.
+ER  - 
+
+

@@ -1,0 +1,47 @@
+TY  - CONF
+TI  - Cloud Service Brokers: An Emerging Trend in Cloud Adoption and Migration
+T2  - 2013 20th Asia-Pacific Software Engineering Conference (APSEC)
+SP  - 140
+EP  - 145
+AU  - B. Wadhwa
+AU  - A. Jaitly
+AU  - B. Suri
+PY  - 2013
+KW  - cloud computing
+KW  - costing
+KW  - resource allocation
+KW  - CSB categorization
+KW  - IaaS
+KW  - PaaS
+KW  - SaaS
+KW  - business needs
+KW  - capacity management
+KW  - cloud adoption
+KW  - cloud migration
+KW  - cloud service brokers
+KW  - cost management
+KW  - resource management
+KW  - Business
+KW  - Cloud computing
+KW  - Data security
+KW  - Interoperability
+KW  - Monitoring
+KW  - Scalability
+KW  - Aggregation
+KW  - CSB
+KW  - Integration
+KW  - Migration
+KW  - cloud broker
+KW  - utility
+DO  - 10.1109/APSEC.2013.129
+JO  - 2013 20th Asia-Pacific Software Engineering Conference (APSEC)
+IS  - 
+SN  - 1530-1362
+VO  - 2
+VL  - 2
+JA  - 2013 20th Asia-Pacific Software Engineering Conference (APSEC)
+Y1  - 2-5 Dec. 2013
+AB  - With the advent of cloud, a large number of cloud providers have surfaced in the market. Cloud Consumers are rapidly using cloud services(IaaS, PaaS, and SaaS) to meet their business needs while cloud providers are rapidly developing much needed tools and environments. This rapid growth however is creating a significant need to develop fast and controlled mechanisms for managing costs, capacity and resources at agreed service levels in order to have a smooth adoption, management and maintenance of cloud for both consumers and providers. Cloud Services Brokerages (CSBs), an intermediary between the consumer and providers, emerges as a solution to address above need. In this paper we focus on reviewing the significance, role and services of a CSB, followed by a categorization of CSBs on the basis of the services they provide, and a method to select a CSB from a pool of CSBs.
+ER  - 
+
+

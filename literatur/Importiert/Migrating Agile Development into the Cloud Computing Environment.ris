@@ -1,0 +1,49 @@
+TY  - CONF
+TI  - Migrating Agile Development into the Cloud Computing Environment
+T2  - 2014 IEEE 7th International Conference on Cloud Computing
+SP  - 818
+EP  - 825
+AU  - G. Mwansa
+AU  - E. Mnkandla
+PY  - 2014
+KW  - cloud computing
+KW  - small-to-medium enterprises
+KW  - software prototyping
+KW  - software quality
+KW  - SMME
+KW  - South African small-medium-and-microenterprises
+KW  - agile development migration
+KW  - agile software development methodologies
+KW  - cloud computing environment
+KW  - compliance
+KW  - computing service provisioning
+KW  - conceptual framework
+KW  - critical software application development
+KW  - critical software application implementation
+KW  - critical software application re-engineering
+KW  - internal engineering standards
+KW  - nontechnical issue
+KW  - quality software development
+KW  - security policies
+KW  - security regulations
+KW  - software development life cycles
+KW  - technical issue
+KW  - Cloud computing
+KW  - Companies
+KW  - Servers
+KW  - Software as a service
+KW  - Agile Development Methodologies
+KW  - Cloud Computing
+KW  - SMMEs
+DO  - 10.1109/CLOUD.2014.113
+JO  - 2014 IEEE 7th International Conference on Cloud Computing
+IS  - 
+SN  - 2159-6182
+VO  - 
+VL  - 
+JA  - 2014 IEEE 7th International Conference on Cloud Computing
+Y1  - June 27 2014-July 2 2014
+AB  - The emergence of cloud computing is influencing how businesses develop, re-engineer, and implement critical software applications. The cloud requires developers to elevate the importance of compliance with security policies, regulations and internal engineering standards in their software development life cycles. Cloud computing and agile development methodologies are new technologies that have come with new approaches in the way computing services are provisioned and development of quality software respectively. However, the synergy between the two is bonded with technical and non-technical challenges. In this paper, a conceptual framework is proposed to support the process of migration of South African small, medium and micro enterprises (SMMEs) who are using agile software development methodologies to cloud computing environment.
+ER  - 
+
+

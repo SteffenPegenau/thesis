@@ -1,0 +1,23 @@
+TY  - JOUR
+T1  - Cloud-Based Design, Engineering Analysis, and Manufacturing: A Cost-Benefit Analysis
+JO  - Procedia Manufacturing
+VL  - 1
+IS  - 
+SP  - 64
+EP  - 76
+PY  - 2015
+DA  - 2015/01/01
+T2  - 43rd North American Manufacturing Research Conference, NAMRC 43, 8-12 June 2015, UNC Charlotte, North Carolina, United States
+AU  - Wu, Dazhong
+AU  - Terpenny, Janis
+AU  - Gentzsch, Wolfgang
+SN  - 2351-9789
+DO  - http://dx.doi.org/10.1016/j.promfg.2015.09.061
+UR  - http://www.sciencedirect.com/science/article/pii/S2351978915010616
+KW  - Cloud-based design and manufacturing
+KW  - Cloud-based engineering analysis
+KW  - Cloud computing
+KW  - High performance computing
+KW  - Cost-benefit analysis
+AB  - From a business perspective, cloud computing has revolutionized the information and communication technology (ICT) industry by offering scalable and on-demand ICT services as well as innovative pricing plans such as pay-per-use and subscription. Considering the economic benefits of cloud computing, cloud-based design and manufacturing (CBDM) has been proposed as a new paradigm in digital manufacturing and design innovation. Although CBDM has the potential to reduce costs associated with high performance computing (HPC) and maintaining ICT infrastructures in the context of engineering design and manufacturing, it is challenging to justify the potential cost savings associated with HPC in the cloud because of the complexity in the cost-benefit analysis of migrating to CBDM. In response, this paper provides important insights into the economics of CBDM by identifying key cost factors and potential pricing models that can influence decision making on whether migrating to the cloud is economically justifiable. Specifically, the cost breakdown of adopting CBDM is presented. The general key benefits are demonstrated using real case studies. In addition, a hypothetical application example is presented to compare costs in CBDM with that of traditional in-house design and manufacturing. Finally, some of the key issues and road blocks are outlined.
+ER  - 

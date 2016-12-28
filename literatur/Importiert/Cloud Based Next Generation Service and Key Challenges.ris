@@ -1,0 +1,39 @@
+TY  - CONF
+TI  - Cloud Based Next Generation Service and Key Challenges
+T2  - 2012 Third International Conference on Services in Emerging Markets
+SP  - 20
+EP  - 29
+AU  - S. Sarkar
+AU  - R. Ganesan
+AU  - M. Srivastava
+AU  - S. Dharmasankar
+PY  - 2012
+KW  - cloud computing
+KW  - NIST
+KW  - National Institute of Standards and Technology
+KW  - cloud based next generation service
+KW  - cloud computing
+KW  - computing infrastructure
+KW  - on-demand access
+KW  - software as a service
+KW  - Cloud computing
+KW  - Information management
+KW  - NIST
+KW  - Next generation networking
+KW  - Software as a service
+KW  - Cloud Computing
+KW  - Engineering Challenges
+KW  - Service Definition
+KW  - Software as a Service
+DO  - 10.1109/ICSEM.2012.11
+JO  - 2012 Third International Conference on Services in Emerging Markets
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2012 Third International Conference on Services in Emerging Markets
+Y1  - 12-15 Dec. 2012
+AB  - The National Institute of Standards and Technology (NIST) defined cloud computing as a model that enables on-demand access of computing resources. These resources are provisioned rapidly, without unnecessary client-provider interaction or management. Consumers of cloud get everything, such as software, platform and even the computing infrastructure as a service, rather than an on-premise deployed product. The cloud is perceived to be the game-changer of this decade as it offers a flexible, on-demand and elastic delivery method for the business especially services.To realize the potential and promise of the cloud, we need to step back and revisit the entire lifecycle of a service from six dimensions, namely the way a service is i) designed, ii) engineered, iii) deployed, iv) measured, v) managed and vi) experienced. This will help us identify the key concerns and barriers to its wide scale adoption. In this paper, we propose the notion of "next generation service" that embraces cloud computing as its backbone. Then we describe each of these six aspects and identify a set of important technical challenges that hinders the complete realization of the next generation service. These challenges are still unresolved to a large extent. We believe that a satisfactory solution to these challenge will largely help in making the benefits of the next generation service available for a wider consumption.
+ER  - 
+
+

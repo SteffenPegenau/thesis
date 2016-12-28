@@ -1,0 +1,36 @@
+TY  - CONF
+TI  - A Survey and Taxonomy of Cloud Migration
+T2  - 2014 International Conference on Service Sciences
+SP  - 175
+EP  - 180
+AU  - Z. Wan
+AU  - P. Wang
+PY  - 2014
+KW  - cloud computing
+KW  - decision making
+KW  - software architecture
+KW  - cloud computing architecture
+KW  - cloud migration decision framework
+KW  - cloud migration taxonomy
+KW  - Business
+KW  - Computational modeling
+KW  - Computer architecture
+KW  - Platform as a service
+KW  - Security
+KW  - Taxonomy
+KW  - cloud computing
+KW  - cloud migration
+KW  - survey
+KW  - taxonomy
+DO  - 10.1109/ICSS.2014.46
+JO  - 2014 International Conference on Service Sciences
+IS  - 
+SN  - 2165-3828
+VO  - 
+VL  - 
+JA  - 2014 International Conference on Service Sciences
+Y1  - 22-23 May 2014
+AB  - Cloud computing has certainly gained attention and skyrocketed in the technical and economic world because of the appealing features. With decades of development there are lots of on-premises applications and systems in use. Consequently, the demand of migrating on-premises applications and systems to the cloud computing is gigantic. Thus, the cloud migration is not systematically reviewed with a proper taxonomy due to the variety of cloud computing architecture and the complexity of applications and systems. This paper surveys the cloud computing architectures and cloud migration decision frameworks by both the industry and the academia. Then, it proposes cloud migration taxonomy for a clear understanding of related approaches. Finally, it addresses the future challenges and direction as well.
+ER  - 
+
+

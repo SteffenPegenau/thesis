@@ -1,0 +1,27 @@
+TY  - JOUR
+T1  - Migrating To The Cloud: Lessons And Limitations Of ‘Traditional’ IS Success Models
+JO  - Procedia Computer Science
+VL  - 16
+IS  - 
+SP  - 737
+EP  - 746
+PY  - 2013
+DA  - 2013/01/01
+T2  - 2013 Conference on Systems Engineering Research
+AU  - Azeemi, Imran Khan
+AU  - Lewis, Mike
+AU  - Tryfonas, Theo
+SN  - 1877-0509
+DO  - http://dx.doi.org/10.1016/j.procs.2013.01.077
+UR  - http://www.sciencedirect.com/science/article/pii/S1877050913000781
+KW  - Cloud Computing
+KW  - Measuing Cloud Success
+KW  - System Thinking
+KW  - Success Model
+KW  - Cloud Success Metrics
+KW  - Information
+KW  - Systems
+KW  - Complex Systems
+KW  - High-Tech Technology Service Provider
+AB  - This paper uses the ‘traditional’ Information Systems (IS) success model literature (e.g. Grover, DeLone and McLean, Seddon, Alter etc.) as the starting point for developing a new model intended to support better outcomes when migrating/porting an IS functionality to a cloud. In simple terms ‘cloud’ refers to an IS functionality accessed (rented) by users through a thin client (web browser, mobile applications, etc.) while the software, hardware and data are stored on remote servers. Its popularity as an approach reflects claims that such ‘shared resources’ model (akin to a utility like the electricity grid) will allow organisation to access more advanced and flexible IS services at a lower aggregate cost. This paper argues that cloud migration requires organisations to consider a range of additional success factors, including how to accommodate new delivery modes (e.g. different pricing models) and manage new risks (e.g. data out side organisational firewalls, etc). Despite burgeoning interest in the topic, specific empirical research and, more importantly, specific practitioner guidance remains limited. This paper therefore concludes by presenting a preliminary conceptual model (informed by Systems Thinking) along with steps to operationalise it and suggests empirical options to test this model.
+ER  - 

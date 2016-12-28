@@ -1,0 +1,25 @@
+TY  - JOUR
+T1  - Cloud Computing and Inter-Clouds – Types, Topologies and Research Issues
+JO  - Procedia Computer Science
+VL  - 50
+IS  - 
+SP  - 24
+EP  - 29
+PY  - 2015
+DA  - 2015/01/01
+T2  - Big Data, Cloud and Computing Challenges
+AU  - Rani, B. Kezia
+AU  - Rani, B. Padmaja
+AU  - Babu, A. Vinaya
+SN  - 1877-0509
+DO  - http://dx.doi.org/10.1016/j.procs.2015.04.006
+UR  - http://www.sciencedirect.com/science/article/pii/S1877050915005074
+KW  - computing
+KW  - public cloud
+KW  - private cloud
+KW  - hybrid cloud
+KW  - Inter-Cloud
+KW  - federationcloud
+KW  - multicloud.
+AB  - Cloud computing has become the buzzword in the computing world. From the time that Internet took over, computing technologies have developed to a great extent. Computers were connected and networking among computers has led to distributed computing which further led to cluster computing and grid computing and cloud computing. The cloud provides an environment where the requirements like computing power, data storage, memory, licensed and latest software and software development platforms are provided to the customer as utility computing. The cloud has deployment models and service models. In this paper we will discuss the service models, the different types of clouds, need of Inter-Cloud, Inter-Cloud and their architecture, types of Inter-Clouds, topologies in Inter-Cloud and research issues in Inter-Cloud.
+ER  - 

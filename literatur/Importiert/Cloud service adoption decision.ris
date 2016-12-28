@@ -1,0 +1,43 @@
+TY  - CONF
+TI  - Cloud service adoption decision
+T2  - 2015 Portland International Conference on Management of Engineering and Technology (PICMET)
+SP  - 395
+EP  - 407
+AU  - G. Wease
+AU  - Chih-Jen Yu
+AU  - K. Boateng
+AU  - L. Chan
+PY  - 2015
+KW  - cloud computing
+KW  - computer centres
+KW  - decision making
+KW  - IT infrastructure
+KW  - IT organization
+KW  - Internet
+KW  - cloud computing
+KW  - cloud service adoption decision
+KW  - computer-hosting environments
+KW  - data center
+KW  - decision-making process
+KW  - hyrid public-private cloud
+KW  - in-house platform
+KW  - private cloud
+KW  - public cloud
+KW  - systems software
+KW  - Bibliographies
+KW  - Cloud computing
+KW  - Computational modeling
+KW  - Decision making
+KW  - Organizations
+DO  - 10.1109/PICMET.2015.7273033
+JO  - 2015 Portland International Conference on Management of Engineering and Technology (PICMET)
+IS  - 
+SN  - 2159-5100
+VO  - 
+VL  - 
+JA  - 2015 Portland International Conference on Management of Engineering and Technology (PICMET)
+Y1  - 2-6 Aug. 2015
+AB  - Many organizations with an IT infrastructure consisting of a combination of hardware and software, look for ways to achieve greater efficiencies, cost-savings associated with maintenance and upkeep, ease of use, while maintaining a great level of security. The main idea behind this research paper is to better understand the decision-making process with respect to how an IT organization evaluates its needs and chooses between different computer-hosting environments, i.e.: public cloud, private cloud, hybrid - combination of public and private cloud, lastly, an in-house platform, which is hosted internal to the organization and/or via a datacenter. A widely-accepted definition of &#x201C;Cloud Computing&#x201D; are Applications delivered as services over the Internet AND the hardware and systems software in the data centers that provide those services [1].
+ER  - 
+
+

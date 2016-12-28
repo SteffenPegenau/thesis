@@ -1,0 +1,44 @@
+TY  - CONF
+TI  - Trends and Directions in Cloud Service Selection
+T2  - 2016 IEEE Symposium on Service-Oriented System Engineering (SOSE)
+SP  - 423
+EP  - 432
+AU  - M. Eisa
+AU  - M. Younas
+AU  - K. Basu
+AU  - H. Zhu
+PY  - 2016
+KW  - cloud computing
+KW  - contracts
+KW  - knowledge management
+KW  - user interfaces
+KW  - SLA
+KW  - academic research
+KW  - cloud computing
+KW  - cloud service selection
+KW  - cloud users
+KW  - service level agreement
+KW  - user knowledge
+KW  - user requirements
+KW  - Cloud computing
+KW  - Elasticity
+KW  - Google
+KW  - Organizations
+KW  - Quality of service
+KW  - Software as a service
+KW  - Cloud
+KW  - Quality of Service
+KW  - Service Level Agreement
+KW  - Service Selection
+DO  - 10.1109/SOSE.2016.59
+JO  - 2016 IEEE Symposium on Service-Oriented System Engineering (SOSE)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2016 IEEE Symposium on Service-Oriented System Engineering (SOSE)
+Y1  - March 29 2016-April 2 2016
+AB  - With the growing popularity of cloud computing the number of cloud service providers and services have significantly increased. Thus selecting the best cloud services becomes a challenging task for prospective cloud users. The process of selecting cloud services involves various factors such as characteristics and models of cloud services, user requirements and knowledge, and service level agreement (SLA), to name a few. This paper investigates into the cloud service selection tools, techniques and models by taking into account the distinguishing characteristics of cloud services. It also reviews and analyses academic research as well as commercial tools in order to identify their strengths and weaknesses in the cloud services selection process. It proposes a framework in order to improve the cloud service selection by taking into account services capabilities, quality attributes, level of user's knowledge and service level agreements. The paper also envisions various directions for future research.
+ER  - 
+
+
