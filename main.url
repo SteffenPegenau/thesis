@@ -1,4 +1,5 @@
 %%% jurabib url repository
+\expandafter\urldef\csname jburl@formatvorlage\endcsname\url{http://www.ise.tu-darmstadt.de/ise/lehre_4/abschlussarbeiten_6/organisatorisches_1/organisatorisches.de.jsp}
 \expandafter\urldef\csname jburl@benlian_saas_2010\endcsname\url{http://dx.doi.org/10.1007/978-3-8349-8731-0}
 \expandafter\urldef\csname jburl@softwareindustrie2015\endcsname\url{http://www.gbv.de/dms/zbw/821541447.pdf}
 \expandafter\urldef\csname jburl@Pahl2013\endcsname\url{http://dx.doi.org/10.1007/978-3-642-40651-5_18}
