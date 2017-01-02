@@ -5,7 +5,7 @@
  */
 
 
-var recompile = 'pdflatex -interaction=nonstopmode main.tex; bibtex main.aux ; pdflatex -interaction=nonstopmode main.tex';
+var recompile = 'bibtex main.aux ; pdflatex -interaction=nonstopmode main.tex; bibtex main.aux ; pdflatex -interaction=nonstopmode main.tex';
 
 module.exports = function (grunt) {
   'use strict';
