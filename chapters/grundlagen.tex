@@ -7,87 +7,147 @@
 %Nachfolgend werden einige Formalitäten der Arbeit dargestellt.
 
 
+In dieser Arbeit soll für "`Independent Software Vendors"', also unabhängige 
+Softwarehersteller ein Vorgehensmodell für Cloud-Migrationen zu Salesforce 
+entwickelt werden. Aus diesem Ziel ergeben sich grundlegende Fragen, die in 
+diesem Kapitel beantwortet werden sollen:
+\begin{itemize}
+	\item Welche Vorteile bietet die Cloud und wie lassen sie sich 
+erzielen? Inwiefern unterscheiden sich Cloud-Migrationen von herkömmlichen 
+Migrationen in der IT und wie lassen sie sich zum Outsourcing abgrenzen? (siehe 
+Kapitel~\ref{cha:definition_cloud-migration})
+	\item Was wird in dieser Arbeit unter "`Independent Software Vendors"' 
+verstanden? Welche Besonderheiten weisen sie und ihre Projekte auf und welchen 
+Einfluss haben diese Besonderheiten auf Cloud-Migrationen? (siehe 
+Kapitel~\ref{cha:isv})
+	\item Warum ist Salesforce als Zielplattform für Migrationen 
+geeignet? (siehe Kapitel~\ref{cha:salesforce_als_zielplattform})
+	\item Welche Faktoren beeinflussen die Cloud-Migration und ihren 
+Erfolg? (siehe Kapitel~\ref{cha:migration_bestimmende_faktoren})
+\end{itemize}
+Das Kapitel wird von einer Vorstellung des Fünf-Phasen-Modells abgeschlossen, 
+auf dem das entwickelte Vorgehensmodell basiert. Auch wird die Wahl für dieses 
+Modell als Arbeitsgrundlage begründet. (Siehe Kapitel~\ref{cha:five_phases})
 
+\subsection{(Cloud-)Migrationen und Outsourcing}
+\label{cha:definition_cloud-migration}
+Die Migration von Software, wird in der Norm ISO/IEC 14764 "`Software 
+Engineering -- Software Life Cycle Processes -- Maintenance"' als spezielle 
+Form der Wartung, als anpassende Wartung ("`Adaptive Maintenance"') und 
+Weiterentwicklung definiert, bei der eine Software nach Auslieferung geändert 
+wird, um das Produkt in geänderten oder sich ändernden Umgebung nutzbar zu 
+halten. \pcite{}{}{characterizing_software_architecture_changes} \\ 
+Beispiel für eine solche Migration könnte der Umzug einer Software auf neue 
+Hardware mit aktualisiertem Betriebssystem sein. Grund für den Umzug könnte ein 
+technischer sein, wie etwa dass keine Ersatzteile mehr für die vorhandene 
+Hardware angeboten werden, dass der Support des Herstellers für das laufende 
+Betriebssystem ausläuft. Aber auch wirtschaftliche Gründe, wie etwa eine höhere 
+Leistungsfähigkeit oder ein geringerer Energieverbrauch des neuen Systems sind 
+denkbar. \\
+Um die Software lauffähig zu halten, muss sie 
+gegebenenfalls an das aktualisierte Betriebssystem oder die Laufzeitumgebung 
+angepasst werden. Je standardisierter und verbreiteter die Anforderung der zu 
+migrierenden Software, desto geringer werden die nötigen Anpassungen an der 
+Software ausfallen, womit die Migration einfacher und kostengünstiger wird. 
+Eventuell wird lediglich eine virtuelle Maschine auf einen neuen Server 
+gestartet. \\
 
+Eine solche virtuelle Maschine ließe sich auch in der Cloud starten. Auf 
+diese Weise ließen sich die Vorteile der Cloud jedoch nicht optimal nutzen. Um 
+zu zeigen, welche Änderungen nötig sind, werden nun zunächst die Vorteile 
+herausgestellt, daran anschließend wieso diese Änderungen die Cloud-Migration 
+zu mehr machen, als die oben genannte Weiterentwicklung. 
 
-
-In dieser Arbeit soll ein Vorgehensmodell für bestehende 
-Client-Server-Anwendungen in die Cloud zu 
-Salesforce entwickelt werden. Basis für diese Entwicklung ist das 
-Fünf-Phasen-Modell aus \citeflow{fivephases} und 
-\citeflow{exploring_the_factors}. Bevor dieses Modell vorgestellt 
-wird, soll zunächst der Begriff "`Cloud"' definiert und die Charakteristika 
-der Cloud vorgestellt werden. Um die Chancen und Risiken einer Migration 
-realistisch abschätzen 
-zu können, ist es zudem nötig, die Faktoren zu kennen, die den Erfolg einer 
-Migration bestimmen. 
-\subsection{Cloud-Computing}
-Da die Definition von "`Cloud-Computing"' des National Institute of Standards 
-and Technology (NIST) \pcite{}{}{NIST} in \citeflow{thoughtsOnCloud} als gute 
-Grundlage geschätzt wird und auch in \citeflow{fivephases}, in dem das 
-Fünf-Phasen-Modell vorgestellt wird, als Basis dient, übernehme ich die
-Definition in übersetzter Form aus \citeflow{softwareindustrie2015}:
-\begin{cloudcomputing}
-"`Ein Modell, das einen komfortablen, bedarfsabhängigen und netzbasierten 
-Zugriff auf eine gemeinsam benutzte Menge konfigurierbarer Rechenressourcen 
-ermöglicht, die schnell, mit geringem Verwaltungsaufwand und ohne (menschliche) 
-Interaktion mit einem Anbieter bereitgestellt und wieder freigegeben werden 
-können."'
-\end{cloudcomputing}
-Laut NIST besteht die "`Cloud"' als Modell neben fünf Charakteristika und drei 
-Service Modellen aus vier Einsatzmodellen (im Englischen: "`Deployment 
-Models"'). Da sie für das Verständnis des Fünf-Phasen-Modells nebensächlich 
-sind, wird hier nur kurz auf die Einsatzmodelle eingegangen. In ihnen geht es 
-darum, ob die Cloud ausschließlich von einer Organisation, von einer bestimmten 
-Gruppe von Organisationen oder von der Öffentlichkeit genutzt wird, wobei auch 
-Mischformen als Möglichkeit genannt werden. \pcite{}{}{NIST}
-
-\subsubsection{Charakteristika}
-Die fünf Charakteristika von Cloud-Computing, die in \citeflow{NIST} genannt 
-werden, lauten zusammengefasst:
-
+\subsubsection{Vorteile der Cloud und ihre Realisierung}
+\label{cha:vorteile_der_cloud}
+\citeflow{exploring_the_factors} identifizieren im Rahmen ihrer 
+Literaturrecherche die vier Hauptgründe für eine Cloud-Migration, die hier als 
+Rahmen dienen sollen, um die Vorteile, die die Cloud-Nutzung hat, zu 
+beschreiben und aufzuzeigen wie sie zu realisieren sind.
 \begin{description}
-	\item[Selbstbedienung bei Bedarf:] Ein Nutzer kann ohne 
-zwischenmenschliche Interaktion mit dem Dienstleister die automatische 
-Zuteilung von Rechenkapazitäten anstoßen.
-	\item[Umfassender Zugriff über das Netzwerk:] Die Dienstleistung ist 
-über das Netzwerk mit verschiedensten Geräten auf standardisierte Art und Weise 
-abrufbar, zum Beispiel mit einem Internet Browser.
-	\item[Geteilte Ressourcen] Kunden eines Cloud-Anbieters teilen 
-sich physische oder virtuelle Rechenleistung, die dynamisch und bedarfsgerecht 
-zugeteilt wird. Im Allgemeinen hat der Nutzer weder Kenntnis noch 
-Kontrolle über den Ort der Speicherung und Verarbeitung seiner Daten. Abhängig 
-vom Anbieter lassen sich Orte aber vertraglich festlegen. 
-	\item[Schnelle Anpassungsfähigkeit] Rechenkapazitäten können dem Bedarf 
-entsprechend, teilweise automatisch, schnell zugewiesen und entzogen werden. 
-Auf den Kunden wirkt die abrufbare Rechenleistung oftmals unbegrenzt.
-	\item[Vermessene Dienstleistung] Cloud Systeme messen und optimieren 
-Ressourcennutzung automatisch und stellen die Auslastung und die Nutzung sowohl 
-dem Cloud Anbieter als auch dem Nutzer zur Verfügung, da sie 
-Berechnungsgrundlage für die Kosten sind.
+	\item[Kosteneinsparungen] Cloud-Anbieter, die große Rechenzentren  
+mit vielen Servern betreiben können die Total Cost of Ownership pro Server um 
+bis zu 80\% reduzieren (Vgl. Abbildung~\ref{fig:tco_reduction}). 
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{images/tco_reduction.png}
+\caption{Total Cost of Ownership/Server 
+aus \protect\citeflow{economics_of_the_cloud}}
+\label{fig:tco_reduction}
+\end{center}
+\end{figure}
+ Hauptsächlich geschieht dies über die Faktoren Energie-, Lohn- und 
+Hardwarekosten. Energiekosten lassen sich durch die Wahl eines Standortes 
+mit günstigem Strom niedrigen Umgebungstemperaturen senken. Durch 
+Automatisierungstechniken lässt sich die Zahl der Server, die ein Administrator 
+betreibt verzehnfachen, wodurch die Lohnkosten sinken. Hardwarekosten fallen 
+durch bessere Verhandlugspositionen großer Cloud-Anbieter niedriger aus. 
+\pcite{}{}{cloud_migration}
+
+Die niedrigeren Kosten werden über den Markt teilweise an die Kunden weiter 
+gegeben, die die kapitalintensive Beschaffung der Hard- und Software sowie die 
+Vorhaltung eigener Personalressourcen zur Entwicklung und Wartung reduzieren 
+können. \pcite{}{}{Repschlaeger2010} 
+
+	\item[Effiziente Ressourcennutzung] In der konventionellen IT-Welt 
+werden geschätzte 80\% der Ressourcen dazu verwendet, bestehende Infrastruktur 
+und Dienstleistungen zu betreiben, wodurch wenig Kapazität für wertstiftende 
+Tätigkeiten, wie die Entwicklung neuer Geschäftsfelder oder die Umsetzung von 
+Kundenwünschen bleibt. Cloud-Nutzung kann 
+dieses Verhältnis der Innovation verschieben. \pcite{}{}{economics_of_the_cloud}
+
+	\item[Automatisierte, schnelle und unbegrenzte Skalierbarkeit der 
+Ressourcen] Die Zuteilung zusätzlicher, auf den Kunden unbegrenzt wirkender  
+Rechenleistung erfolgt in der Cloud entweder über ein einfaches Webformular oder 
+ausgerichtet am momentanen Bedarf voll automatisch. Da der Kunde nur das 
+bezahlen muss, was er benötigt, ist die Cloud gerade für Start-ups, kleine und 
+mittlere Unternehmen, sowie Unternehmen interessant, die entweder einen stark 
+schwankenden oder nicht abschätzbaren Bedarf haben; die Gefahr zu viel 
+Rechenleistung vorzuhalten, was zu unnötig hohen Kosten führt oder zu wenig 
+Rechenleistung, was Kunden abschrecken könnte, 
+sinkt. 
+\pcite{}{}{
+economics_of_the_cloud, a_holistic_model_for_making_cloud_migration_decision}
+
+Das schnelle Deployment in der Cloud ermöglicht es, neue Ideen sehr 
+schnell zu implementieren, zu testen (falls gewünscht sogar im Vergleich zu 
+anderen Lösungen) und auszuwerten. Dadurch kann die Innovationsgeschwindigkeit, 
+Flexibilität und die "`Time to Market"' beachtlich gesteigert werden. 
+\pcite{}{}{factors_in_development_and_adoption, 
+decision-making_in_cloud_computing_environments, cloud_migration}
+
+	\item[Geringerer Wartungsaufwand] Die Cloud treibt die Standardisierung 
+von Schnittstellen voran, sodass bestehende Funktionalitäten leichter 
+wiederverwendet werden können. Dadurch wird die Weiterentwicklung und Wartung 
+von Software reduziert. \pcite{}{}{economics_of_the_cloud}
 \end{description}
 
-\subsubsection{Service Modelle - XaaS}
-Service Modelle beschreiben, welche Leistungen "`as a Service"' angeboten 
-werden. Es gibt recht viele dieser Modelle - \citeflow{xAsAService} zählt 35 
+Der Grad, in dem diese Vorteile realisiert werden, hängt davon ab, in welchem 
+Umfang Leistungen in der Cloud in Anspruch genommen werden, was wiederum 
+Einfluss auf den Migrationsprozess hat. \pcite{}{213}{Pahl2013}
+
+Zur Kategorisierung des Leistungsumfangs dienen "`as a Service"'-Modelle. Es 
+gibt recht viele dieser Modelle - \citeflow{xAsAService} zählt 35 
 Varianten - die mehr oder weniger verbreitet sind und mit "`Everything as a 
-Service (XaaS)"' zusammengefasst werden. \pcite{}{95}{benlian_saas_2010} Nicht 
-zwangsläufig beschränkt er sich auf Technologien, die als Dienstleistung 
-angeboten werden. \pcite{}{872}{decision-making_in_cloud_computing_environments} 
+Service"', abgekürzt als EaaS oder XaaS zusammengefasst werden. Dabei werden 
+nicht nur Technologien als Dienstleistung angeboten, sondern auch Ziele; so gibt 
+es beispielsweise auch "`Hardware-as-a-Service (HaaS)"' und 
+"`Business-Process-as-a-Service (BPaaS)"'. 
+\pcite{}{}{emerging_paradigms_and_areas_for_expansion, benlian_saas_2010}
 \\
-\citeflow{NIST} sieht drei Service Modelle vor, die sich im Anteil der 
+
+Das National Institute of Standards and Technology sieht drei 
+Service Modelle anerkannte vor, die sich im Anteil der 
 selbst zu verwaltenden, technologischen Anteile (Integrationstiefe) 
-unterscheiden und in dieser 
-Hinsicht in Abbildung ~\ref{xaas_im_vergleich} mit der herkömmlichen IT 
-verglichen werden. Die Wahl des Modells wirkt sich auf den 
-Migrationsprozess aus. \pcite{}{213}{Pahl2013}
-\begin{figure}[hb]
+unterscheiden und in dieser Hinsicht in Abbildung~\ref{fig:xaas_im_vergleich} 
+mit der herkömmlichen IT verglichen werden. \pcite{}{}{NIST,thoughtsOnCloud} \\
+\begin{figure}%[h]
 \begin{center}
 \includegraphics[width=\textwidth]{images/XaaS_im_Vergleich.png}
 \caption{XaaS im Vergleich: Umfang von 
 Dienstleistung und Eigenverantwortung. Aus 
 \protect\citeflow{economics_of_the_cloud} }
-\label{xaas_im_vergleich}
+\label{fig:xaas_im_vergleich}
 \end{center}
 \end{figure}
 \begin{description}
@@ -103,6 +163,42 @@ Einfluss auf die Anwendungsumgebung nehmen. \\
 	\item[Software as a Service (SaaS)] Der Kunde kann eine vom Anbieter 
 bereitgestellte Software nutzen und in begrenztem Maße konfigurieren.
 \end{description}
+
+
+
+
+\subsubsection{Cloud-Migration}
+Das für die Migration genannte Beispiel, eine virtuelle Maschine zu 
+verschieben, lässt sich mit Abbildung~\ref{fig:xaas_im_vergleich} für den 
+Cloud-Fall dem Modell IaaS zuordnen. Der Cloud-Kunde muss sich in diesem Fall 
+neben der eigentlichen Anwendung nach wie vor um das virtualisierte 
+Betriebssystem, Middleware, Laufzeitumgebung und Datenhaltung kümmern. Um die 
+Vorteile der Cloud besser auszuschöpfen, müsste die Anwendung entweder so 
+angepasst werden, dass sie auf einer zur Verfügung gestellten, fremdverwalteten 
+Laufzeitumgebung läuft (PaaS). Oder es wird eine bestehende Anwendung in der 
+Cloud genutzt und gegebenenfalls angepasst (SaaS). Beide Optimierungen 
+machen das Treffen konsequenzenreicher, kritischer Entscheidungen nötig, 
+die nicht nur technische, sondern auch betriebswirtschaftliche und strategische 
+Fragen beantworten müssen. \pcite{}{}{migration_to_paas_clouds} 
+Aus diesem Grund ist eine Cloud-Migration\footnote{Der Vollständigkeit halber 
+eine formale Definition der Cloud-Migration: "`Prozess der anteiligen 
+oder 
+vollständigen Bereitstellung von digitalen Gütern, Dienstleistungen, 
+IT-Ressourcen oder Anwendungen in der Cloud"'} 
+\pcite{}{}{Pahl2013}} in ihrem Umfang viel größer als 
+herkömmliche Migration und erfordert entsprechend eine viel umfangreichere 
+Planung. \pcite{}{}{framework_for_architecture-driven_migration, 
+a_review_of_the_current_level_of_support_to_aid_decisions_for_migrating}
+
+
+\subsubsection{Abgrenzung zum Outsourcing}
+
+\subsection{Independent Software Vendor (ISV)}
+\label{cha:isv}
+
+\subsection{Salesforce als Zielplattform}
+\label{cha:salesforce_als_zielplattform}
+
 
 \subsection{Die Migration bestimmende Faktoren}
 \label{cha:migration_bestimmende_faktoren}
@@ -186,7 +282,9 @@ geregelt sein, welche Verantwortlichkeiten der Anbieter trägt und welche
 Vertragsstrafen bei Nichteinhaltung drohen.
 \end{description}
 
+
 \subsection{Das Fünf-Phasen-Wasserfallmodell}
+\label{cha:five_phases}
 Das in \citepara{fivephases} vorgeschlagene Vorgehensmodell zur Migration 
 einer Anwendung in die Cloud ähnelt dem aus der 
 Softwareentwicklung bekannten, iterativen Wasserfallmodell und besteht aus den 
@@ -236,7 +334,106 @@ Hinblick auf Leistungsfähigkeit, Verfügbarkeit und Sicherheit zu überwachen u
 gegebenenfalls Gegenmaßnahmen einleiten zu können.
 \end{description}
 
-\subsection{Migrationsformen}
+
+
+
+\begin{comment}
+
+\subsection{Cloud-Computing}
+Da die Definition von "`Cloud-Computing"' des National Institute of Standards 
+and Technology (NIST) \pcite{}{}{NIST} in \citeflow{thoughtsOnCloud} als gute 
+Grundlage geschätzt wird und auch in \citeflow{fivephases}, in dem das 
+Fünf-Phasen-Modell vorgestellt wird, als Basis dient, übernehme ich die
+Definition in übersetzter Form aus \citeflow{softwareindustrie2015}:
+\begin{cloudcomputing}
+"`Ein Modell, das einen komfortablen, bedarfsabhängigen und netzbasierten 
+Zugriff auf eine gemeinsam benutzte Menge konfigurierbarer Rechenressourcen 
+ermöglicht, die schnell, mit geringem Verwaltungsaufwand und ohne (menschliche) 
+Interaktion mit einem Anbieter bereitgestellt und wieder freigegeben werden 
+können."'
+\end{cloudcomputing}
+Laut NIST besteht die "`Cloud"' als Modell neben fünf Charakteristika und drei 
+Service Modellen aus vier Einsatzmodellen (im Englischen: "`Deployment 
+Models"'). Da sie für das Verständnis des Fünf-Phasen-Modells nebensächlich 
+sind, wird hier nur kurz auf die Einsatzmodelle eingegangen. In ihnen geht es 
+darum, ob die Cloud ausschließlich von einer Organisation, von einer bestimmten 
+Gruppe von Organisationen oder von der Öffentlichkeit genutzt wird, wobei auch 
+Mischformen als Möglichkeit genannt werden. \pcite{}{}{NIST}
+
+\subsubsection{Charakteristika}
+Die fünf Charakteristika von Cloud-Computing, die in \citeflow{NIST} genannt 
+werden, lauten zusammengefasst:
+
+\begin{description}
+	\item[Selbstbedienung bei Bedarf:] Ein Nutzer kann ohne 
+zwischenmenschliche Interaktion mit dem Dienstleister die automatische 
+Zuteilung von Rechenkapazitäten anstoßen.
+	\item[Umfassender Zugriff über das Netzwerk:] Die Dienstleistung ist 
+über das Netzwerk mit verschiedensten Geräten auf standardisierte Art und Weise 
+abrufbar, zum Beispiel mit einem Internet Browser.
+	\item[Geteilte Ressourcen] Kunden eines Cloud-Anbieters teilen 
+sich physische oder virtuelle Rechenleistung, die dynamisch und bedarfsgerecht 
+zugeteilt wird. Im Allgemeinen hat der Nutzer weder Kenntnis noch 
+Kontrolle über den Ort der Speicherung und Verarbeitung seiner Daten. Abhängig 
+vom Anbieter lassen sich Orte aber vertraglich festlegen. 
+	\item[Schnelle Anpassungsfähigkeit] Rechenkapazitäten können dem Bedarf 
+entsprechend, teilweise automatisch, schnell zugewiesen und entzogen werden. 
+Auf den Kunden wirkt die abrufbare Rechenleistung oftmals unbegrenzt.
+	\item[Vermessene Dienstleistung] Cloud Systeme messen und optimieren 
+Ressourcennutzung automatisch und stellen die Auslastung und die Nutzung sowohl 
+dem Cloud Anbieter als auch dem Nutzer zur Verfügung, da sie 
+Berechnungsgrundlage für die Kosten sind.
+\end{description}
+
+\subsubsection{Service Modelle - XaaS}
+Service Modelle beschreiben, welche Leistungen "`as a Service"' angeboten 
+werden. Es gibt recht viele dieser Modelle - \citeflow{xAsAService} zählt 35 
+Varianten - die mehr oder weniger verbreitet sind und mit "`Everything as a 
+Service (XaaS)"' zusammengefasst werden. \pcite{}{95}{benlian_saas_2010} Nicht 
+zwangsläufig beschränkt er sich auf Technologien, die als Dienstleistung 
+angeboten werden. \pcite{}{872}{decision-making_in_cloud_computing_environments} 
+\\
+\citeflow{NIST} sieht drei Service Modelle vor, die sich im Anteil der 
+selbst zu verwaltenden, technologischen Anteile (Integrationstiefe) 
+unterscheiden und in dieser 
+Hinsicht in Abbildung ~\ref{xaas_im_vergleich} mit der herkömmlichen IT 
+verglichen werden. Die Wahl des Modells wirkt sich auf den 
+Migrationsprozess aus. \pcite{}{213}{Pahl2013}
+\begin{figure}[hb]
+\begin{center}
+\includegraphics[width=\textwidth]{images/XaaS_im_Vergleich.png}
+\caption{XaaS im Vergleich: Umfang von 
+Dienstleistung und Eigenverantwortung. Aus 
+\protect\citeflow{economics_of_the_cloud} }
+\label{xaas_im_vergleich}
+\end{center}
+\end{figure}
+\begin{description}
+	\item[Infrastructure as a Service (IaaS)] Dem Kunden werden Netzwerk, 
+Speicher und Rechenleistung zur Verfügung gestellt. Über die darauf laufende 
+Software, teilweise sogar über das Betriebssystem kann selbst verfügt werden. \\
+Kunden versprechen sich von IaaS vor allem Flexibilität in der Bereitstellung 
+und dem Betrieb von Servern, Datenspeichern und Netzwerkressourcen. 
+\pcite{}{213}{Pahl2013}
+	\item[Platform as a Service (PaaS)] Der Kunde kann bereitgestellte 
+oder selbst entwickelte Software in der Cloud laufen lassen und eventuell 
+Einfluss auf die Anwendungsumgebung nehmen. \\
+	\item[Software as a Service (SaaS)] Der Kunde kann eine vom Anbieter 
+bereitgestellte Software nutzen und in begrenztem Maße konfigurieren.
+\end{description}
+
+
+
+\subsecti
+Als "`Cloud-Migration"' lässt sich der Begriff als  Diese Bereitstellung in der 
+Cloud ist zwar unter Umständen 
+mit keinen oder wenigen Änderungen zu erreichen, sollen aber Vorteile wie 
+Skalierbarkeit, Kosteneffizienz und Leistung erreicht werden, 
+
+
+Damit ist eine 
+Cloud-Migration viel mehr als eine Weiterentwicklung. 
+\pcite{}{}{framework_for_architecture-driven_migration}on{Migrationsformen}
 \citeflow{exploring_the_factors} identifizieren vier Formen, in denen eine 
 Migration ablaufen kann.
 \begin{description}
@@ -255,6 +452,8 @@ Charakteristika angepasst und mit Cloud Diensten neu entwickelt.
 \subsection{Salesforce}
 
 \subsection{Anforderungen eines Independent Software Vendors (ISV)}
+
+
 
 \subsection{Ideen}
 \begin{description}
