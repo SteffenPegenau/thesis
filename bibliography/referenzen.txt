@@ -63,6 +63,13 @@
    type = {Journal Article}
 }
 
+@article{above_the_clouds,
+   author = {Armbrust, Michael and Fox, Armando and Griffith, Rean and Joseph, Anthony D and Katz, Randy H and Konwinski, Andrew and Lee, Gunho and Patterson, David A and Rabkin, Ariel and Stoica, Ion},
+   title = {Above the clouds: A berkeley view of cloud computing},
+   year = {2009},
+   type = {Journal Article}
+}
+
 @article{
    author = {Aron, Ravi and Clemons, Eric K and Reddi, Sashi},
    title = {Just right outsourcing: understanding and managing risk},
@@ -84,6 +91,17 @@
    pages = {9-28},
    ISSN = {0095-0033},
    year = {2005},
+   type = {Journal Article}
+}
+
+@article{
+   author = {Avram, Maricela-Georgiana},
+   title = {Advantages and challenges of adopting cloud computing from an enterprise perspective},
+   journal = {Procedia Technology},
+   volume = {12},
+   pages = {529-534},
+   ISSN = {2212-0173},
+   year = {2014},
    type = {Journal Article}
 }
 
@@ -163,6 +181,18 @@
    type = {Generic}
 }
 
+@article{
+   author = {Berrocal, Javier and Alonso, Jose Garcia and Chicote, Cristina Vicente and Murillo, Juan Manuel},
+   title = {A Model-Driven Approach for Documenting Business and Requirements Interdependencies for Architectural Decision Making},
+   journal = {IEEE Latin America Transactions},
+   volume = {12},
+   number = {2},
+   pages = {227-235},
+   ISSN = {1548-0992},
+   year = {2014},
+   type = {Journal Article}
+}
+
 @inproceedings{
    author = {Bohn, Robert B and Messina, John and Liu, Fang and Tong, Jin and Mao, Jian},
    title = {NIST cloud computing reference architecture},
@@ -196,6 +226,13 @@
    type = {Journal Article}
 }
 
+@article{towards_modelling_a_cloud_applications_life_cycle,
+   author = {Butterfield, Reginald and Maksuti, Silia and Tauber, Markus and Wagner, Christian and Bicaku, Ani},
+   title = {Towards Modelling a Cloud Application's Life Cycle},
+   year = {2016},
+   type = {Journal Article}
+}
+
 @book{softwareindustrie2015,
    author = {Buxmann, Peter and Diefenbach, Heiner and Hess, Thomas},
    title = {Die Softwareindustrie : ökonomische Prinzipien, Strategien, Perspektiven},
@@ -217,6 +254,28 @@
    pages = {500-503},
    ISSN = {0937-6429},
    year = {2008},
+   type = {Journal Article}
+}
+
+@inbook{RN194,
+   author = {Carroll, Noel and Helfert, Markus and Lynn, Theo},
+   title = {Towards the development of a cloud service capability assessment framework},
+   booktitle = {Continued Rise of the Cloud},
+   publisher = {Springer},
+   pages = {289-336},
+   year = {2014},
+   type = {Book Section}
+}
+
+@article{
+   author = {Chang, Victor and Walters, Robert John and Wills, Gary},
+   title = {The development that leads to the Cloud Computing Business Framework},
+   journal = {International Journal of Information Management},
+   volume = {33},
+   number = {3},
+   pages = {524-538},
+   ISSN = {0268-4012},
+   year = {2013},
    type = {Journal Article}
 }
 
@@ -243,6 +302,14 @@
    type = {Generic}
 }
 
+@article{practical_guide_to_cloud_computing,
+   author = {Council, Cloud Standards Customer},
+   title = {Practical Guid to Cloud Computing},
+   url = {http://www.cloud-council.org/deliverables/CSCC-Practical-Guide-to-Cloud-Computing.pdf},
+   year = {2014},
+   type = {Journal Article}
+}
+
 @article{undertaking_a_literature_review,
    author = {Cronin, Patricia and Ryan, Frances and Coughlan, Michael},
    title = {Undertaking a literature review: a step-by-step approach},
@@ -252,6 +319,18 @@
    pages = {38},
    ISSN = {0966-0461},
    year = {2008},
+   type = {Journal Article}
+}
+
+@article{disruptive_technologies_a_business_model_perspective,
+   author = {DaSilva, Carlos M and Trkman, Peter and Desouza, Kevin and Lindič, Jaka},
+   title = {Disruptive technologies: a business model perspective on cloud computing},
+   journal = {Technology Analysis & Strategic Management},
+   volume = {25},
+   number = {10},
+   pages = {1161-1173},
+   ISSN = {0953-7325},
+   year = {2013},
    type = {Journal Article}
 }
 
@@ -294,12 +373,48 @@
 }
 
 @article{
+   author = {Garrison, Gary and Wakefield, Robin L and Kim, Sanghyun},
+   title = {The effects of IT capabilities and delivery model on cloud computing success and firm performance for cloud supported processes and operations},
+   journal = {International Journal of Information Management},
+   volume = {35},
+   number = {4},
+   pages = {377-393},
+   ISSN = {0268-4012},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{
    author = {Goel, Neha and Aggarwal, Abhishek},
    title = {Cloud Computing Platform: A Perspective Overview},
    journal = {International Journal of Scientific and Research Publications},
    volume = {3},
    number = {6},
    pages = {1-4},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{
+   author = {Gomes, Aaron},
+   title = {CLOUD COMPUTING: PLATFORM AS A SERVICE},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@inproceedings{
+   author = {Haag, Steffi and Eckhardt, Andreas and Krönung, Julia},
+   title = {From the Ground to the Cloud--A Structured Literature Analysis of the Cloud Service Landscape around the Public and Private Sector},
+   booktitle = {2014 47th Hawaii International Conference on System Sciences},
+   publisher = {IEEE},
+   pages = {2127-2136},
+   ISBN = {1530-1605},
+   type = {Conference Proceedings}
+}
+
+@article{
+   author = {Hahn, Christopher and Repschläger, Jonas and Erek, Koray and Zarnekow, Rüdiger},
+   title = {An exploratory study on cloud strategies},
    year = {2013},
    type = {Journal Article}
 }
@@ -563,6 +678,14 @@
    type = {Journal Article}
 }
 
+@article{
+   author = {Mosbah, Mohamed Magdy and Soliman, Hany and El-Nasr, Mohamad Abou},
+   title = {Current Services In Cloud Computing: A Survey},
+   journal = {arXiv preprint arXiv:1311.3319},
+   year = {2013},
+   type = {Journal Article}
+}
+
 @article{an_analysis_of_salesforce.com,
    author = {Muller, DBA and William, J},
    title = {An Analysis of Salesforce. Com, a Cloud Based Solutions Provider, Best Known for Its Customer Relationship Management (CRM) Products},
@@ -579,6 +702,17 @@
    ISBN = {2159-6182},
    DOI = {10.1109/CLOUD.2014.113},
    type = {Conference Proceedings}
+}
+
+@article{
+   author = {Oredo, John Otieno and Njihia, James},
+   title = {Challenges of cloud computing in business: Towards new organizational competencies},
+   journal = {International Journal of Business and Social Science},
+   volume = {5},
+   number = {3},
+   ISSN = {2219-1933},
+   year = {2014},
+   type = {Journal Article}
 }
 
 @inproceedings{
@@ -632,6 +766,13 @@
    type = {Journal Article}
 }
 
+@article{
+   author = {Prasad, Acklesh and Green, Peter and Heales, Jon and Finau, Glen},
+   title = {On cloud computing service considerations for the small and medium enterprises},
+   year = {2014},
+   type = {Journal Article}
+}
+
 @article{a_new_way_of_developing,
    author = {Pullarao, K and Thirupathirao, K},
    title = {A new way of developing applications in cloud environment using force. com (salesforce. com)},
@@ -650,6 +791,18 @@
    pages = {116-123},
    ISBN = {1479975486},
    type = {Conference Proceedings}
+}
+
+@article{towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy,
+   author = {Qian, Ruoning and Palvia, Prashant},
+   title = {Towards an understanding of cloud computing's impact on organizational it strategy},
+   journal = {Journal of Information Technology Case and Application Research},
+   volume = {15},
+   number = {4},
+   pages = {34-54},
+   ISSN = {1522-8053},
+   year = {2013},
+   type = {Journal Article}
 }
 
 @article{fivephases,
@@ -712,6 +865,16 @@
    type = {Journal Article}
 }
 
+@article{
+   author = {Ray, Deepa},
+   title = {Cloud Adoption Decisions: Benefitting from an Integrated Perspective},
+   journal = {Electronic Journal Information Systems Evaluation Volume},
+   volume = {19},
+   number = {1},
+   year = {2016},
+   type = {Journal Article}
+}
+
 @book{replycompprofile,
    author = {Reply},
    title = {Reply Company Profile},
@@ -741,6 +904,18 @@
    type = {Journal Article}
 }
 
+@article{cloud_computing_the_nexus_of_strategy_and_tech,
+   author = {Ross, Peter and Blumenstein, Michael},
+   title = {Cloud computing: the nexus of strategy and technology},
+   journal = {Journal of Business Strategy},
+   volume = {34},
+   number = {4},
+   pages = {39-47},
+   ISSN = {0275-6668},
+   year = {2013},
+   type = {Journal Article}
+}
+
 @article{
    author = {Ross, P. E. and Romero, T. S. and Jones, W. D. and Bleicher, A. and Calamia, J. and Middleton, J. and Stevenson, R. and Moore, S. K. and Upson, S. and Schneider, D. and Jones, W. D. and Guizzo, E. and Perry, T. S. and Zorpette, G.},
    title = {Top 11 technologies of the decade},
@@ -751,6 +926,18 @@
    ISSN = {0018-9235},
    DOI = {10.1109/MSPEC.2011.5676379},
    year = {2011},
+   type = {Journal Article}
+}
+
+@article{
+   author = {Ross, Peter K and Blumenstein, Michael},
+   title = {Cloud computing as a facilitator of SME entrepreneurship},
+   journal = {Technology Analysis & Strategic Management},
+   volume = {27},
+   number = {1},
+   pages = {87-101},
+   ISSN = {0953-7325},
+   year = {2015},
    type = {Journal Article}
 }
 
@@ -831,6 +1018,16 @@
    url = {http://www.oldenbourg-link.com/isbn/9783486711615},
    year = {2011},
    type = {Generic}
+}
+
+@inbook{RN169,
+   author = {Shawish, Ahmed and Salama, Maria},
+   title = {Cloud computing: paradigms and technologies},
+   booktitle = {Inter-cooperative Collective Intelligence: Techniques and Applications},
+   publisher = {Springer},
+   pages = {39-67},
+   year = {2014},
+   type = {Book Section}
 }
 
 @article{
@@ -1035,7 +1232,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{the_strategic_value_of_the_cloud,
    author = {Weinman, J.},
    title = {The Strategic Value of the Cloud},
    journal = {IEEE Cloud Computing},
@@ -1084,7 +1281,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{migrating_to_or_away_from_the_public_cloud,
    author = {Weinman, Joe},
    title = {Migrating to--or away from--the Public Cloud},
    journal = {IEEE Cloud Computing},
@@ -1093,6 +1290,18 @@
    pages = {6-10},
    ISSN = {2325-6095},
    year = {2016},
+   type = {Journal Article}
+}
+
+@article{
+   author = {West, Barry C and Battleson, Douglas A and Kim, Jongwoo and Ramesh, Balasubramaniam},
+   title = {Achieving Dynamic Capabilities with Cloud Computing},
+   journal = {IT Professional},
+   volume = {16},
+   number = {6},
+   pages = {18-24},
+   ISSN = {1520-9202},
+   year = {2014},
    type = {Journal Article}
 }
 
@@ -1117,6 +1326,18 @@
    type = {Thesis}
 }
 
+@article{theoretical_perspectives_for_strategic_human_resource_management,
+   author = {Wright, Patrick M and McMahan, Gary C},
+   title = {Theoretical perspectives for strategic human resource management},
+   journal = {Journal of management},
+   volume = {18},
+   number = {2},
+   pages = {295-320},
+   ISSN = {0149-2063},
+   year = {1992},
+   type = {Journal Article}
+}
+
 @article{
    author = {Wu, Dazhong and Terpenny, Janis and Gentzsch, Wolfgang},
    title = {Cloud-Based Design, Engineering Analysis, and Manufacturing: A Cost-Benefit Analysis},
@@ -1127,6 +1348,30 @@
    DOI = {http://dx.doi.org/10.1016/j.promfg.2015.09.061},
    url = {http://www.sciencedirect.com/science/article/pii/S2351978915010616},
    year = {2015},
+   type = {Journal Article}
+}
+
+@article{
+   author = {Wu, Yun and Cegielski, Casey G and Hazen, Benjamin T and Hall, Dianne J},
+   title = {Cloud computing in support of supply chain information system infrastructure: understanding when to go to the cloud},
+   journal = {Journal of Supply Chain Management},
+   volume = {49},
+   number = {3},
+   pages = {25-41},
+   ISSN = {1745-493X},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{
+   author = {Yasrab, Robail and Farhan, Muhammad and Mohsin, Abdul Qahhar and Iqbal, Muhammad Munwar},
+   title = {Support for Goal Oriented Requirements Engineering in Elastic Cloud Applications},
+   journal = {International Journal of Computer Science and Network Security (IJCSNS)},
+   volume = {13},
+   number = {4},
+   pages = {74},
+   ISSN = {1738-7906},
+   year = {2013},
    type = {Journal Article}
 }
 
