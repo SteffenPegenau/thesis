@@ -4,21 +4,26 @@
  * Licensed under <%= license %> License
  */
 
+var pdfLatex = "pdflatex -interaction=nonstopmode main.tex ; "
+var latex = "latex -interaction=nonstopmode main.tex ; ";
+var bibtex = "bibtex main.aux ; "
 
-var recompile = 'bibtex main.aux ; pdflatex -interaction=nonstopmode main.tex; bibtex main.aux ; pdflatex -interaction=nonstopmode main.tex';
 
-module.exports = function (grunt) {
+var recompile = bibtex + pdfLatex + bibtex + pdfLatex;
+
+module.exports = function(grunt) {
   'use strict';
   // Project configuration
   grunt.initConfig({
-    
+
     exec: {
       latex: {
-		cmd: recompile
-	},
-	bibtex: {
-		cmd: 'cp bibliography/referenzen.txt bibliography/referenzen.bib ; ' + recompile
-	}
+        cmd: recompile
+      },
+      bibtex: {
+        cmd: 'cp bibliography/referenzen.txt bibliography/referenzen.bib ; ' +
+          recompile
+      }
     },
     watch: {
       latex: {
@@ -26,9 +31,9 @@ module.exports = function (grunt) {
         tasks: ['exec:latex']
       },
       bibtex: {
-	files: 'bibliography/referenzen.txt',
-	tasks: ['exec:bibtex']
-	}
+        files: 'bibliography/referenzen.txt',
+        tasks: ['exec:bibtex']
+      }
     }
   });
 
