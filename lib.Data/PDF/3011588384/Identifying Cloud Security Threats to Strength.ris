@@ -1,0 +1,23 @@
+TY  - JOUR
+T1  - Identifying Cloud Security Threats to Strengthen Cloud Computing Adoption Framework
+JO  - Procedia Computer Science
+VL  - 94
+IS  - 
+SP  - 485
+EP  - 490
+PY  - 2016///
+T2  - The 11th International Conference on Future Networks and Communications (FNC 2016) / The 13th International Conference on Mobile Systems and Pervasive Computing (MobiSPC 2016) / Affiliated Workshops
+AU  - Khan, Nabeel
+AU  - Al-Yasiri, Adil
+SN  - 1877-0509
+DO  - http://dx.doi.org/10.1016/j.procs.2016.08.075
+UR  - http://www.sciencedirect.com/science/article/pii/S1877050916318257
+KW  - Cloud Computing
+KW  - Security
+KW  - Vulnerabilities
+KW  - Threats
+AB  - Abstract
+Cloud Computing allows firms to outsource their entire information technology (IT) process, allowing them to concentrate more on their core business to enhance their productivity and innovation in offering services to customers. It allows businesses to cut down heavy cost incurred over IT infrastructure without losing focus on customer needs. However, to a certain limit adopting Cloud computing has struggled to grow among many established and growing organizations due to several security and privacy related issues. Throughout the course of this study several interviews were conducted, with cloud developers and security experts, and the literature was reviewed. This study enabled us to understand, current and future, security and privacy challenges with cloud computing. The outcome of this study led to identification of total 18, current and future, security issues affecting several attributes of cloud computing.
+ER  - 
+
+
