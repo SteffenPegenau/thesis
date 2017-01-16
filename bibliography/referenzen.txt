@@ -493,6 +493,18 @@
    type = {Book}
 }
 
+@book{marketingmanagement,
+   author = {Homburg, Christian},
+   title = {Marketingmanagement : Strategie - Instrumente - Umsetzung - Unternehmensführung},
+   publisher = {Imprint: Springer Gabler},
+   address = {Wiesbaden},
+   edition = {6. Aufl. 2017},
+   ISBN = {3658136561 (Sekundärausgabe)},
+   url = {http://dx.doi.org/10.1007/978-3-658-13656-7},
+   year = {2017},
+   type = {Book}
+}
+
 @article{
    author = {Iorga, Michaela and Karmel, Anil},
    title = {Managing Risk in a Cloud Ecosystem},
@@ -687,7 +699,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{cloud-computing_the_business_perspective,
    author = {Marston, Sean and Li, Zhi and Bandyopadhyay, Subhajyoti and Zhang, Juheng and Ghalsasi, Anand},
    title = {Cloud computing—The business perspective},
    journal = {Decision support systems},
@@ -780,7 +792,7 @@
    type = {Conference Proceedings}
 }
 
-@article{
+@article{challenges_of_cloud_computing_in_business,
    author = {Oredo, John Otieno and Njihia, James},
    title = {Challenges of cloud computing in business: Towards new organizational competencies},
    journal = {International Journal of Business and Social Science},
