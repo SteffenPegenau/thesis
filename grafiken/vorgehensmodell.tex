@@ -1,0 +1,121 @@
+% PDCA cycle
+% Author: tikzanfaenger, Helmut, and Bartman
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{calc}
+\definecolor{mygray}{RGB}{208,208,208}
+\definecolor{mymagenta}{RGB}{226,0,116}
+
+\pgfmathsetmacro{\cubex}{0.4cm}
+\pgfmathsetmacro{\cubey}{0.15cm}
+\pgfmathsetmacro{\cubez}{0.15cm}
+
+
+
+
+\newcommand*{\mytextstyle}{\sffamily\Large\bfseries\color{black!85}}
+\newcommand{\arcarrow}[3]{%
+   % inner radius, middle radius, outer radius, start angle,
+   % end angle, tip protusion angle, options, text
+   \pgfmathsetmacro{\rin}{1.7}
+   \pgfmathsetmacro{\rmid}{2.2}
+   \pgfmathsetmacro{\rout}{2.7}
+   \pgfmathsetmacro{\astart}{#1}
+   \pgfmathsetmacro{\aend}{#2}
+   \pgfmathsetmacro{\atip}{5}
+   \fill[mygray, very thick] (\astart+\atip:\rin)
+                         arc (\astart+\atip:\aend:\rin)
+      -- (\aend-\atip:\rmid)
+      -- (\aend:\rout)   arc (\aend:\astart+\atip:\rout)
+      -- (\astart:\rmid) -- cycle;
+   \path[
+      decoration = {
+         text along path,
+         text = {|\mytextstyle|#3},
+         text align = {align = center},
+         raise = -1.0ex
+      },
+      decorate
+   ](\astart+\atip:\rmid) arc (\astart+\atip:\aend+\atip:\rmid);
+}
+
+
+\newcommand{\cube}[1]{
+\definecolor{front-gray}{gray}{0.80}
+\definecolor{top-gray}{gray}{0.9}
+\definecolor{right-gray}{gray}{0.9}
+
+\draw[black,fill=front-gray] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,-\cubey,0) -- 
+++(\cubex,0,0) -- cycle;
+\draw[black,fill=right-gray] (0,0,0) -- ++(0,0,-\cubez) -- ++(0,-\cubey,0) -- 
+++(0,0,\cubez) -- cycle;
+\draw[black,fill=top-gray] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,0,-\cubez) -- 
+++(\cubex,0,0) -- cycle;
+\draw (-0.5*\cubex,-0.5*\cubey) node {\Huge #1};
+}
+
+\newcommand{\trichter}{
+\newcommand{\hObenMitte}{4.5cm}
+\newcommand{\hMitteUnten}{4cm}
+\newcommand{\ellipsenFaktor}{0.1}
+\newcommand{\rObenX}{7.5cm}
+\newcommand{\rObenY}{\ellipsenFaktor*\rObenX}
+\newcommand{\rMitteX}{3cm}
+\newcommand{\rMitteY}{\ellipsenFaktor*\rMitteX}
+
+\coordinate (obenCenter) at (-0.4*\cubex,-1.4*\cubey);
+\coordinate (obenLinks) at ($ (obenCenter) + (-\rObenX,0) $);
+\coordinate (obenRechts) at ($ (obenCenter) + (+\rObenX,0) $);
+
+\coordinate (mitteCenter) at ($ (obenCenter) + (0,-\hObenMitte) $);
+\coordinate (mitteLinks) at ($ (mitteCenter) + (-\rMitteX,0) $);
+\coordinate (mitteRechts) at ($ (mitteCenter) + (+\rMitteX,0) $);
+
+\coordinate (untenCenter) at ($ (mitteCenter) + (0,-\hMitteUnten) $);
+\coordinate (untenLinks) at ($ (untenCenter) + (-\rMitteX,0) $);
+\coordinate (untenRechts) at ($ (untenCenter) + (+\rMitteX,0) $);
+
+\draw (obenCenter) ellipse[x radius=\rObenX,y radius=\rObenY];
+\draw (mitteCenter) ellipse[x radius=\rMitteX,y radius=\rMitteY];
+\draw (untenCenter) ellipse[x radius=\rMitteX,y radius=\rMitteY];
+
+\draw (obenLinks) -- (mitteLinks);
+\draw (obenRechts) -- (mitteRechts);
+
+\draw (mitteLinks) -- (untenLinks);
+\draw (mitteRechts) -- (untenRechts);
+}
+
+\begin{document}
+
+
+
+\begin{tikzpicture}[join=round]
+
+\cube{On-Premise-L\"osung}
+\trichter
+\begin{scope}[xshift=-11*\cubex,yshift=-52\cubey,scale=1.5]
+   \tikzstyle{conefill} = [fill=blue!20,fill opacity=1]
+    \tikzstyle{ann} = [fill=white,font=\footnotesize,inner sep=1pt]
+    \tikzstyle{ghostfill} = [fill=white]
+    \tikzstyle{ghostdraw} = [draw=black!50]
+    \filldraw[conefill](-.775,1.922)--(-1.162,.283)--(-.274,.5)
+                        --(-.183,2.067)--cycle;
+    \filldraw[conefill](-.183,2.067)--(-.274,.5)--(.775,.424)
+                        --(.516,2.016)--cycle;
+    \filldraw[conefill](.516,2.016)--(.775,.424)--(1.369,.1)
+                        --(.913,1.8)--cycle;
+    \filldraw[conefill](-.913,1.667)--(-1.369,-.1)--(-1.162,.283)
+                        --(-.775,1.922)--cycle;
+    \filldraw[conefill](.913,1.8)--(1.369,.1)--(1.162,-.283)
+                        --(.775,1.545)--cycle;
+    \filldraw[conefill](-.516,1.45)--(-.775,-.424)--(-1.369,-.1)
+                        --(-.913,1.667)--cycle;
+    \filldraw[conefill](.775,1.545)--(1.162,-.283)--(.274,-.5)
+                        --(.183,1.4)--cycle;
+    \filldraw[conefill](.183,1.4)--(.274,-.5)--(-.775,-.424)
+                        --(-.516,1.45)--cycle;
+    \node[ann] at (-.456,2.307) {Vision};
+\end{scope}
+\end{tikzpicture}
+\end{document}

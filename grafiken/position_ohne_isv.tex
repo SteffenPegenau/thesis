@@ -1,0 +1,43 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{calc}
+\definecolor{mygray}{RGB}{208,208,208}
+\definecolor{mymagenta}{RGB}{226,0,116}
+
+\pgfmathsetmacro{\cubex}{0.4cm}
+\pgfmathsetmacro{\cubey}{0.15cm}
+\pgfmathsetmacro{\cubez}{0.15cm}
+
+\definecolor{front-gray}{gray}{.9}
+
+
+
+\begin{document}
+\begin{tikzpicture}[join=round,
+	trans/.style={
+		ultra thick,
+		<->,
+		shorten >=2pt,
+		shorten <=2pt,
+		>=stealth},
+	ultra thick/.style= {line width=3pt}
+	]
+
+
+
+
+
+\draw[black,fill=front-gray] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,-\cubey,0) -- 
+++(\cubex,0,0) -- cycle coordinate (csp);
+\draw (-0.5*\cubex,-0.5*\cubey) node {\Huge Cloud-Service Provider};
+
+\draw[black,fill=front-gray] (3*\cubex,0,0) -- ++(-\cubex,0,0) -- 
+++(0,-\cubey,0) -- 
+++(\cubex,0,0) -- cycle coordinate (client);
+\draw (2.5*\cubex,-0.5*\cubey) node {\Huge Kunde};
+
+\draw[trans] ($ (csp) + (0 , -0.5*\cubey) $) -- ($ (client) + (-\cubex, 
+-0.5*\cubey) $) node {};
+
+\end{tikzpicture}
+\end{document}
