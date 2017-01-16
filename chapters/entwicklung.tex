@@ -1,9 +1,21 @@
 %\section{Entwicklung eines konzeptuellen Rahmens}
 \section{Vorgehensmodell für Cloud-Migrationen zu Salesforce}
 \label{cha:entwickelung_vorgehensmodell}
-In diesem Kapitel soll das Fünf-Phasen-Modell angepasst und erweitert werden, um den Anforderungen eines Independent Software Vendors (ISV) zu entsprechen. \\
+In diesem Kapitel soll das Fünf-Phasen-Modell angepasst und erweitert werden, 
+um den Anforderungen eines Independent Software Vendors (ISV) zu entsprechen. \\
 
-Das Fünf-Phasen-Modell beginnt mit einer technischen und wirtschaftlichen Machbarkeitsstudie. Die Migration einer On-Premise-Software in die Cloud bedeutet für das migrierende Unternehmen die Erschließung eines ganz neuen Marktes, der sich grundlegend vom bekannten Markt unterscheidet. Aus diesem Grund kann das Cloud-Produkt sich grundlegend vom bisherigen On-Premise-Produkt unterscheiden. Deshalb wird \citeflow{how_saas_changes_an_isvs_business} und \citeflow{towards_modelling_a_cloud_applications_life_cycle} eine zusätzliche Phase vorgeschlagen, in der eine Vision der künftigen Cloud-Lösung entworfen wird. Mit dieser Vision kann der Leistungsumfang abgeschätzt werden und auch, wie sich das Unternehmen verändern muss, um dieser Vision zu entsprechen. (Kapitel~\ref{cha:phaseI})\\
+Das Fünf-Phasen-Modell beginnt mit einer technischen und 
+wirtschaftlichenMachbarkeitsstudie. Die Migration einer On-Premise-Software in 
+die Cloud bedeutet für das migrierende Unternehmen die Erschließung eines ganz 
+neuen Marktes, der sich grundlegend vom bekannten Markt unterscheidet. Aus 
+diesem Grund kann das Cloud-Produkt sich grundlegend vom bisherigen 
+On-Premise-Produkt unterscheiden. Deshalb wird 
+\citeflow{how_saas_changes_an_isvs_business} und 
+\citeflow{towards_modelling_a_cloud_applications_life_cycle} eine zusätzliche 
+Phase vorgeschlagen, in der eine Vision der künftigen Cloud-Lösung entworfen 
+wird. Mit dieser Vision kann der Leistungsumfang abgeschätzt werden und auch, 
+wie sich das Unternehmen verändern muss, um dieser Vision zu entsprechen. 
+(Kapitel~\ref{cha:phaseI})\\
 
 Anschließend kann in Phase II... \\
 
@@ -15,21 +27,128 @@ In Phase V... \\
 
 In Phase VI... \\
 
-\subsection{Phase I: Business, Strategie und Struktur neu gestalten}
+\subsection{Phase I: Vision, Strategie und Organisation}
 \label{cha:phaseI}
-Die Cloud wird als ``disruptive innovation'' gesehen, als neuer Markt, auf dem qualitativ hochwertige, teilweise hoch spezialisierte IT-Dienstleistungen gehandelt werden. \pcite{}{}{towards_modelling_a_cloud_applications_life_cycle} Durch das pay-per-use-Preismodell werden Unternehmen unabhängig von ihrer Größe in die Lage versetzt, weit fortgeschrittene Technologien zur Unterstützung und Umsetzung ihres Geschäftsmodells zu nutzen. \pcite{}{156}{cloud_migration} \\
-Damit eine Ressource einem Unternehmen einen anhaltenden Wettbewerbsvorteil bieten kann, muss sie
-\citeflow{theoretical_perspectives_for_strategic_human_resource_management} zufolge
+
+Als "`disruptive innovation"' ist die Cloud auch ein neuer Markt, auf dem 
+qualitativ hochwertige, teilweise hoch spezialisierte IT-Dienstleistungen 
+gehandelt werden. 
+\pcite{}{}{towards_modelling_a_cloud_applications_life_cycle} \\
+Durch das pay-per-use-Preismodell sind auch kleine Unternehmen in der Lage, 
+diese Technologien und Dienstleistungen zu nutzen. 
+\pcite{}{156}{cloud_migration} Dementsprechend ist die Nutzung der Cloud per se 
+weder  innovativ -- da jeder Mitbewerber die Technologie nutzen kann -- noch 
+ein Wettbewerbsvorteil: Sie ist ein wirtschaftliches Erfordernis, um den 
+Wettbewerb nicht zu verlieren. 
+\pcite{}{}{challenges_of_cloud_computing_in_business} 
+
+
+Damit die in die Cloud migrierte Software dem Unternehmen auch einen anhaltenden 
+Wettbewerbsvorteil bieten kann, muss sie einen Wert für den Kunden schaffen, 
+unter aktuellen und möglichen zukünftigen Konkurrenten einzigartig oder 
+wenigstens selten sein, annähernd unnachahmlich und schwer substituierbar sein.
+\pcite{}{}{theoretical_perspectives_for_strategic_human_resource_management} 
+\begin{comment}
+zufolge
 \begin{itemize}
   \item dem Unternehmen einen positiven Wert hinzufügen
-  \item unter aktuellen oder möglichen zukünftigen Konkurrenten einzigartig oder selten sein
+  \item unter aktuellen oder möglichen zukünftigen Konkurrenten einzigartig oder 
+selten sein
   \item annähernd unnachahmlich
   \item durch Konkurrenten schwer substituierbar sein
 \end{itemize}
+\end{comment}
+Um diesen Anforderungen gerecht zu werden, bedarf es einer geschickten 
+Integration standardisierter, in der Cloud verfügbaren Komponenten zu einer 
+innovativen Gesamtlösung. Gelingt dies nicht, ist eine Differenzierung von 
+konkurrierenden, sich gleichenden Produkten nur über einen niedrigeren Preis 
+möglich. \pcite{}{}{towards_modelling_a_cloud_applications_life_cycle} \\
 
-Die standardisierten Dienstleistungen (Ressourcen), die Unternehmen über die Cloud beziehen können, erfüllen diese Anforderungen nicht: Sie können ebenso von Mitbewerbern genutzt werden. Geschieht dies entstehen sich gleichende Produkte, die sich nur über den Preis voneinander differenzieren lassen. \pcite{}{}{towards_modelling_a_cloud_applications_life_cycle} \\
-Daraus lässt sich ableiten, dass Produkte, die auf Cloud-Komponenten zurück greifen nicht automatisch innovativ sind, da der Innovationsgrad nur im Vergleich zum Wettbewerb festgestellt werden kann und dieser die gleichen Komponenten zur Verfügung hat. Um einzigartige und innovative Produkte zu schaffen, muss sich ein Unternehmen auf seine Kernkompetenzen konzentrieren und das Thema IT neu betrachten. Anstatt hauptsächlich die bestehende IT-Infrastruktur zu unterhalten, werden IT-Abteilungen zu strategischen Partnern in der Weiterentwicklung der Produkte \pcite{}{}{how_saas_changes_an_isvs_business}: Mitarbeiter aus der IT müssen genutzt werden, um qualitativ hochwertige, nutzbare Cloud-Dienstleistungen früzeitig zu erkennen und kreativ in das Produkt einfließen zu lassen oder Business-Prozesse bestmöglich zu unterstützen. \\
-Die genannten Notwendigkeiten machen eine Neugestaltung in der Strategie, dem Business Modell und der Organisationsstruktur erforderlich.
+Diese Anforderungen berücksichtigend, sollen -- angelehnt an die Methode der 
+SWOT-Analyse \pcite{}{501}{marketingmanagement} -- Chancen und Risiken der 
+Cloud betrachtet werden und schließlich in eine Vision. \\
+
+Auch wenn in diesem Modell, als Ergebnis dieser Phase nur die Vision des 
+Produktes in den folgenden Phasen weiter verfolgt wird, sollten Chancen und 
+Risiken -- ob technischer oder wirtschaftlicher Natur -- auch in Hinblick auf 
+ihre Auswirkungen auf das Geschäftsmodell und die 
+Unternehmensorganisation des ISV hin untersucht werden. \\
+
+\subsubsection{Geschäftsmodell}
+Aus einer technologischen Innovation wird für ein Unternehmen erst ein Wert, 
+wenn es mit einem erfolgreichen Geschäftsmodell vermarktet werden kann. Gerade 
+beim Auftreten von "`disruptives innovations"' scheitern viele Unternehmen, 
+weil sie nicht in der Lage oder willens sind, ihr Geschäftsmodell in 
+ausreichendem Maße zu 
+ändern. \pcite{}{}{disruptive_technologies_a_business_model_perspective} Um ein 
+wirtschaftlich nachhaltiges, an die Realitäten des Marktes angepasstes, 
+wettbewerbsfähiges Geschäftsmodell für den Cloud-Markt zu entwickeln, sollte 
+der ISV unter Berücksichtigung der Chancen und Risiken die folgenden Fragen 
+beantworten \citeflow{disruptive_technologies_a_business_model_perspective}:
+\begin{enumerate}
+	\item Wie entsteht für den Kunden Wert in Form eines Produktes oder 
+		einer Dienstleistung?
+	\item In welcher Form und Höhe und mit welchem Preismodell wird Umsatz 
+generiert? 
+	\item Wie können bereits bestehende und kommende standardisierte 
+Komponenten und Dienstleistungen in das Produkt integriert werden?
+	\item Wie lassen sich bestehende oder zu erwerbende Ressourcen und 
+Fähigkeiten (andersartig) nutzen, um neue Produkte oder Dienstleistungen zu 
+erzeugen?
+	\item Mit welchen strategischen Entscheidungen lassen sich 
+Wettbewerbsvorteile (auch gegenüber On-Premise-Lösungen und 
+zugehörigen Preismodellen) erlangen?
+\end{enumerate}
+
+\begin{comment}
+\subsubsection{Organisationsstruktur}
+Da der Kunde des ISV keine Serverinfrastruktur betreiben muss, um die 
+Cloud-Lösung zu nutzen und auch auf den Rechnern der Endbenutzer nichts 
+installiert werden muss, entfallen im Idealfall Verhandlungen zwischen ISV und 
+der IT-Abteilung des Kunden; Entscheidungen werden in kleineren Kreisen, direkt 
+von Fachabteilungen getroffen. Für den ISV hat dies zur Folge, dass er mit 
+
+Als Abstraktionsschicht ermöglicht es Cloud-Computing Unternehmen die 
+Wertschöpfungskette zu verschlanken und sich auf ihr Kerngeschäft zu 
+konzentrieren.
+
+Cloud-Computing wird im Ideal als Abstraktionsschicht gesehen, die 
+Komplexitäten 
+vor Fachabteilungen und Führungskräften verbirgt und es ihnen ermöglicht ohne 
+Entwickler. Wo in der Vergangenheit Empfehlungen, Design, Entwicklung, 
+Deployment und Wartung in den Händen von IT-Abteilungen lagen, ist es im 
+Cloud-Computing nötig, dass Führungskräfte
+
+Auf dem Weg zum einzigartigen, innovativen und wettbewerbsfähigen Produkt, muss 
+sich ein Unternehmen auf seine Kernkompetenzen konzentrieren und 
+das Thema IT neu betrachten, um die Flexibilität und Agilität der Cloud nutzen 
+zu können. Anstatt sich in der Hauptsache die bestehende 
+IT-Infrastruktur zu unterhalten, werden IT-Abteilungen zu strategischen 
+Partnern 
+in der Weiterentwicklung der Produkte 
+\pcite{}{}{how_saas_changes_an_isvs_business}: Mitarbeiter aus der IT müssen 
+genutzt werden, um qualitativ hochwertige, nutzbare 
+Trends bei Cloud-Dienstleistungen frühzeitig zu erkennen und kreativ in das 
+Produkt einfließen zu lassen oder Business-Prozesse bestmöglich zu 
+unterstützen.
+\end{comment}
+
+
+\subsubsection{Chancen}
+\input{tabellen/chancen_der_cloud}
+
+
+
+\subsubsection{Risiken}
+\input{tabellen/risiken_der_cloud}
+
+
+
+
+
+\begin{comment}
+
+\subsection{Phase I: Business, Strategie und Struktur neu gestalten}
 
 \subsubsection{IT-Strategie}
 Unter einer IT-Strategie 
@@ -69,55 +188,14 @@ oder wenn On-Premise- und Cloud-Lösung zunächst parallel betrieben werden,
 sind zu berücksichtigen. \\
 \end{description}
 
-\subsubsection{Business Modell}
-Damit aus Technologie ein Wert wird, braucht es ein Business Modell mit dem die 
-Technologie vermarktet wird. Ein erfolgreiches Business Modell muss 
-wirtschaftlich nachhaltig, an Realitäten des Marktes angepasst, Kundenwünsche 
-erfüllend und der Konkurrenz standhaltend sein. 
-\pcite{}{}{disruptive_technologies_a_business_model_perspective}
-
-Ein Business Modell besteht nach 
-\citeflow{disruptive_technologies_a_business_model_perspective} aus fünf 
-Elementen, die der ISV bei seinem Produkt berücksichtigen sollte.
-\begin{enumerate}
-	\item Wert für den Kunden in Form eines Produktes oder einer 
-Dienstleistung
-	\item Umsatzgenerierung für ein nachhaltiges Unternehmen
-	\item Ein Wertschöpfendes Netzwerk aus Partnern
-	\item Das (andersartige) Nutzen bestehender oder neu 
-erworbener Ressourcen und Fähigkeiten um neue Produkte oder Dienstleistungen zu 
-erzeugen
-	\item Strategische Entscheidungen, um einen Wettbewerbsvorteil zu 
-erlangen
-\end{enumerate}
-
-Wie können Wettbewerbsvorteile gegenüber herkömmlichen Preismodellen erzielt 
-werden?\pcite{}{}{disruptive_technologies_a_business_model_perspective}
 
 
 
-\subsubsection{Organisationsstruktur}
-Da der Kunde des ISV keine Serverinfrastruktur betreiben muss, um die 
-Cloud-Lösung zu nutzen und auch auf den Rechnern der Endbenutzer nichts 
-installiert werden muss, entfallen im Idealfall Verhandlungen zwischen ISV und 
-der IT-Abteilung des Kunden; Entscheidungen werden in kleineren Kreisen, direkt 
-von Fachabteilungen getroffen. Für den ISV hat dies zur Folge, dass er mit 
 
-Als Abstraktionsschicht ermöglicht es Cloud-Computing Unternehmen die 
-Wertschöpfungskette zu verschlanken und sich auf ihr Kerngeschäft zu 
-konzentrieren.
 
-Cloud-Computing wird im Ideal als Abstraktionsschicht gesehen, die Komplexitäten 
-vor Fachabteilungen und Führungskräften verbirgt und es ihnen ermöglicht ohne 
-Entwickler. Wo in der Vergangenheit Empfehlungen, Design, Entwicklung, 
-Deployment und Wartung in den Händen von IT-Abteilungen lagen, ist es im 
-Cloud-Computing nötig, dass Führungskräfte
 
-\subsubsection{Vision}
-Bei der Entwicklung der Produktvision, sollte sich das Unternehmen fragen, ob und wie die drei charakteristische Merkmale der Cloud -- sozial, analytisch, mobil -- das Produkt verbessern können. \pcite{}{}{cloud_based_next_generation_service_and_key_challenges} \\
-Das soziale Element entsteht durch die Möglichkeiten des Austausches: zwischen Nutzern innerhalb eines Unternehmens, zwischen verschiedenen Unternehmen oder mit den Entwicklern. Die Weiterentwicklung wird dadurch inklusiver; Nutzer lassen sich einbeziehen. \\
-Da sich alle Benutzer auf der Cloud bewegen, fallen viel mehr Informationen, die analysiert werden sollten, um künftige Entscheidungen fundierter treffen zu können. \\
-Cloud-Lösungen sind häufig auf mobile Bedienbarkeit ausgelegt. Um nicht nur diese Erwartung zu erfüllen, sondern zu begeistern, sollte die Vision Mobilität genau für ihren Anwendungsfall nutzen.
+
+
 \begin{comment}
 Hauptmotivation die Cloud zu Nutzen, sollte nicht die Reduktion von Kosten
 sein, sondern strategische Vorteile, wie eine Konzentration auf das
@@ -135,7 +213,20 @@ Migration in die Cloud sollten deshalb strategische Ziele sein, mit denen der
 Umsatz ausgebaut oder zumindest behauptet wer
 \end{comment}
 
-
+\begin{comment}
+\subsubsection{SWOT-Analyse}
+Aus \pcite{}{}{cloud-computing_the_business_perspective}
+\begin{description}
+	\item[Strengths] \hfill \\
+	\begin{itemize}
+		\item Skalierbarkeit
+		\item 
+	\end{itemize}
+	\item[Weaknesses] \hfill \\
+	\item[Opportunities] \hfill \\
+	\item[Threats] \hfill \\
+	
+\end{description}
 
 
 
