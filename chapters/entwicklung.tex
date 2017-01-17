@@ -27,7 +27,7 @@ In Phase V... \\
 
 In Phase VI... \\
 
-\subsection{Phase I: Vision, Strategie und Organisation}
+\subsection{Phase I: Entwicklung einer Vision}
 \label{cha:phaseI}
 
 Als "`disruptive innovation"' ist die Cloud auch ein neuer Markt, auf dem 
@@ -134,16 +134,77 @@ unterstützen.
 \end{comment}
 
 
-\subsubsection{Chancen}
+\subsubsection{Chancen \& Risiken der Cloud-Migration}
+\label{cha:chancen_und_risken}
+Chancen und Risiken einer Cloud-Migration für einen Independent Software 
+Vendor sind Ergebnis der Literaturrecherche und finden sich in den
+Tabellen~\ref{tab:chancen_der_cloud} und \ref{tab:risiken_der_cloud}. Die 
+Spalte "`Fragen \& Aufgaben für den ISV"' soll dabei helfen, eine 
+Produktvision zu entwickeln, die dem Unternehmen einen anhaltenden 
+Wettbewerbsvorteil bescheren soll.
 \input{tabellen/chancen_der_cloud}
-
-
-
-\subsubsection{Risiken}
 \input{tabellen/risiken_der_cloud}
 
+\subsubsection{Produktvision}
+\citeflow{fivephases} schlagen ihr Fünf-Phasen-Modell für eine vollständige 
+Migration einer Software und der Gesamtheit ihrer Funktionalität vor. Von 
+dieser Vorgabe wird in dem hier vorgestellten Modell aus zweierlei Gründen 
+abgewichen. \\
+Erstens wird es mit einer 1:1-Migration weder möglich sein die in 
+Kapitel~\ref{cha:chancen_und_risken} genannten Vorteile zu realisieren, noch 
+die Risiken zu umschiffen. \\
+Eine vollständige Migration und eine erst daran anschließende Vermarktung würde 
+viel Zeit in Anspruch nehmen, in der keine Umsätze generiert werden. Dadurch 
+steigt zweitens das finanzielle Risiko und das Unternehmen läuft Gefahr das 
+gesetzte Cloud-Ziel von mehr Flexibilität, höherer Agilität und schnellere 
+Innovationsgeschwindigkeit zu verfehlen. Denn dabei würde ein Vorteil der 
+Cloud vollkommen ignoriert: Die Software lässt sich leicht aktualisieren, 
+während der Kunde bereits mit ihr arbeitet. Dies ermöglicht eine Agilität, wie 
+sie nicht möglich ist, wenn Software erst ausgeliefert und vom Kunde installiert 
+werden muss. Es wäre denkbar, dass Erfahrungen des Kunden im Umgang mit dem 
+jeweils aktuellen Stand der Software in die Sprint-Planung eingehen. Die 
+Weiterentwicklung der Software wäre damit eng an die tatsächlichen Bedürfnisse 
+der Kunden gekoppelt. \\
+
+Aus den genannten Gründen wird in dieser Arbeit sprintweise Migration und 
+Weiterentwicklung vorgeschlagen, die mit einer Produktvision beginnt. Diese 
+Vision sollte
+\begin{itemize}
+	\item die genannten Chancen und Risiken berücksichtigen
+	\item so klein wie möglich, so umfangreich wie nötig sein, um 
+frühestmöglich eine auslieferbare Software erzeugen zu können
+	\item dennoch erweiterbar sein, in Hinblick auf zusätzliche 
+Cloud-Komponenten, Dienstleistungen und das Datenmodell
+\end{itemize} 
+
+Aus \citeflow{the_power_of_vision}:
+\begin{itemize}
+	\item Vision ist strategische Überlegung um wettbewerbsfähiges Produkt 
+zu schaffen
+	\item Unterscheidung nötig zwischen starken und schwachen Visionen, 
+positiven und negativen
+	\item Eigenschaften guter Visionen: \\
+	\begin{itemize}
+		\item conciseness - kurz
+		\item clarity - prime goal, easy (in 5 minutes) to understand
+		\item future orientation - long term
+		\item stability - Vision reagiert nicht auf kurzfristige Trends
+		\item challenge - high but achievable difficulty
+		\item abstractness
+		\item desirability or ability to inspire
+	\end{itemize}
+	\item Notwendigkeiten um Vision zu realisieren: \\
+	\begin{itemize}
+		\item communicating the vision
+		\item aligning organizational processes and systems to suit the 
+vision
+		\item empowering others to act to achieve the vision
+		\item motivating staff
+	\end{itemize}
+	\item Charakterisitika eng mit Unternehmenserfolg verbunden
 
 
+\end{itemize}
 
 
 \begin{comment}
@@ -227,10 +288,15 @@ Aus \pcite{}{}{cloud-computing_the_business_perspective}
 	\item[Threats] \hfill \\
 	
 \end{description}
+\end{comment}
 
 
 
 \subsection{Phase II: Machbarkeitsstudie}
+In Phase II wird die Produktvision einer technischen und wirtschaftlichen 
+Machbarkeitsstudie unterzogen.
+Auf der technischen Seite muss geprüft werden, ob 
+\begin{comment}
 \subsubsection{Technische Machbarkeit}
 
 
@@ -261,6 +327,7 @@ welches auf Cloud-Computing setzt."'
 die Höhe der Kostenreduktion und die Verbesserung des Servicelevels zeigt."'
 \pcite{}{158}{cloud_migration}
 
+\begin{comment}
 \subsection{Phase III: Anforderungsanalyse und -Planung}
 \subsubsection{Anforderungsermittlung}
 \subsubsection{Return on Investment (ROI)}
