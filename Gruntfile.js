@@ -23,6 +23,9 @@ module.exports = function(grunt) {
       bibtex: {
         cmd: 'cp bibliography/referenzen.txt bibliography/referenzen.bib ; ' +
           recompile
+      },
+      addLiteratur: {
+        cmd: 'git add bibliography lib.Data lib.enl literatur && git commit -m "Literatur und Stichwoerter" && git push'
       }
     },
     watch: {
@@ -47,4 +50,5 @@ module.exports = function(grunt) {
 
   // Default task
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('addLiteratur', ['exec:addLiteratur']);
 };
