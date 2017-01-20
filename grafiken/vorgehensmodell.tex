@@ -55,35 +55,35 @@
 }
 
 \newcommand{\trichter}{
-\newcommand{\hObenMitte}{4.5cm}
-\newcommand{\hMitteUnten}{4cm}
-\newcommand{\ellipsenFaktor}{0.1}
-\newcommand{\rObenX}{7.5cm}
-\newcommand{\rObenY}{\ellipsenFaktor*\rObenX}
-\newcommand{\rMitteX}{3cm}
-\newcommand{\rMitteY}{\ellipsenFaktor*\rMitteX}
+	\newcommand{\hObenMitte}{4.5cm}
+	\newcommand{\hMitteUnten}{4cm}
+	\newcommand{\ellipsenFaktor}{0.1}
+	\newcommand{\rObenX}{7.5cm}
+	\newcommand{\rObenY}{\ellipsenFaktor*\rObenX}
+	\newcommand{\rMitteX}{3cm}
+	\newcommand{\rMitteY}{\ellipsenFaktor*\rMitteX}
 
-\coordinate (obenCenter) at (-0.4*\cubex,-1.4*\cubey);
-\coordinate (obenLinks) at ($ (obenCenter) + (-\rObenX,0) $);
-\coordinate (obenRechts) at ($ (obenCenter) + (+\rObenX,0) $);
+	\coordinate (obenCenter) at (-0.4*\cubex,-1.4*\cubey);
+	\coordinate (obenLinks) at ($ (obenCenter) + (-\rObenX,0) $);
+	\coordinate (obenRechts) at ($ (obenCenter) + (+\rObenX,0) $);
 
-\coordinate (mitteCenter) at ($ (obenCenter) + (0,-\hObenMitte) $);
-\coordinate (mitteLinks) at ($ (mitteCenter) + (-\rMitteX,0) $);
-\coordinate (mitteRechts) at ($ (mitteCenter) + (+\rMitteX,0) $);
+	\coordinate (mitteCenter) at ($ (obenCenter) + (0,-\hObenMitte) $);
+	\coordinate (mitteLinks) at ($ (mitteCenter) + (-\rMitteX,0) $);
+	\coordinate (mitteRechts) at ($ (mitteCenter) + (+\rMitteX,0) $);
 
-\coordinate (untenCenter) at ($ (mitteCenter) + (0,-\hMitteUnten) $);
-\coordinate (untenLinks) at ($ (untenCenter) + (-\rMitteX,0) $);
-\coordinate (untenRechts) at ($ (untenCenter) + (+\rMitteX,0) $);
+	\coordinate (untenCenter) at ($ (mitteCenter) + (0,-\hMitteUnten) $);
+	\coordinate (untenLinks) at ($ (untenCenter) + (-\rMitteX,0) $);
+	\coordinate (untenRechts) at ($ (untenCenter) + (+\rMitteX,0) $);
 
-\draw (obenCenter) ellipse[x radius=\rObenX,y radius=\rObenY];
-\draw (mitteCenter) ellipse[x radius=\rMitteX,y radius=\rMitteY];
-\draw (untenCenter) ellipse[x radius=\rMitteX,y radius=\rMitteY];
+	\draw (obenCenter) ellipse[x radius=\rObenX,y radius=\rObenY];
+	\draw (mitteCenter) ellipse[x radius=\rMitteX,y radius=\rMitteY];
+	\draw (untenCenter) ellipse[x radius=\rMitteX,y radius=\rMitteY];
 
-\draw (obenLinks) -- (mitteLinks);
-\draw (obenRechts) -- (mitteRechts);
+	\draw (obenLinks) -- (mitteLinks);
+	\draw (obenRechts) -- (mitteRechts);
 
-\draw (mitteLinks) -- (untenLinks);
-\draw (mitteRechts) -- (untenRechts);
+	\draw (mitteLinks) -- (untenLinks);
+	\draw (mitteRechts) -- (untenRechts);
 }
 
 \begin{document}
@@ -94,7 +94,10 @@
 
 \cube{On-Premise-L\"osung}
 \trichter
-\begin{scope}[xshift=-11*\cubex,yshift=-52\cubey,scale=1.5]
+
+
+
+\begin{scope}[xshift=-11*\cubex,yshift=-104\cubey,scale=1.5] %52y
    \tikzstyle{conefill} = [fill=blue!20,fill opacity=1]
     \tikzstyle{ann} = [fill=white,font=\footnotesize,inner sep=1pt]
     \tikzstyle{ghostfill} = [fill=white]

@@ -167,14 +167,17 @@ Weiterentwicklung der Software wäre damit eng an die tatsächlichen Bedürfniss
 der Kunden gekoppelt. \\
 
 Aus den genannten Gründen wird in dieser Arbeit sprintweise Migration und 
-Weiterentwicklung vorgeschlagen, die mit einer Produktvision beginnt. Diese 
-Vision sollte
+Weiterentwicklung vorgeschlagen, die mit einer Produktvision beginnt. 
+Abgeleitet aus den Eigenschaften, die Unternehmensvisionen laut 
+\citeflow{the_power_of_vision} aufweisen sollten, werden die folgenden Merkmale 
+für eine Produktvision vorgeschlagen:
 \begin{itemize}
-	\item die genannten Chancen und Risiken berücksichtigen
-	\item so klein wie möglich, so umfangreich wie nötig sein, um 
-frühestmöglich eine auslieferbare Software erzeugen zu können
-	\item dennoch erweiterbar sein, in Hinblick auf zusätzliche 
-Cloud-Komponenten, Dienstleistungen und das Datenmodell
+	\item Sie sollte die genannten Chancen und Risiken berücksichtigen.
+	\item Der Umfang des Produktes sollte so klein wie möglich, so 
+umfangreich wie nötig sein, um frühestmöglich einen auslieferbaren Wert zu 
+schaffen. 
+	\item Die Architektur sollte -- in Hinblick auf zusätzliche 
+Cloud-Komponenten, Dienstleistungen und das Datenmodell -- erweiterbar sein.
 \end{itemize} 
 
 Aus \citeflow{the_power_of_vision}:
@@ -206,6 +209,8 @@ vision
 
 \end{itemize}
 
+\subsubsection{TODO: Preismodell, frühe Vermarktung eines Produktes mit 
+geringerem Umfang}
 
 \begin{comment}
 
@@ -293,9 +298,49 @@ Aus \pcite{}{}{cloud-computing_the_business_perspective}
 
 
 \subsection{Phase II: Machbarkeitsstudie}
-In Phase II wird die Produktvision einer technischen und wirtschaftlichen 
-Machbarkeitsstudie unterzogen.
-Auf der technischen Seite muss geprüft werden, ob 
+Phase II entspricht weitgehend der ersten Phase aus \citeflow{fivephases}: 
+Durchführung einer technischen und wirtschaftlichen Machbarkeitsstudie. Objekt 
+der beiden Machbarkeitsstudien ist hier jedoch die Produktvision, nicht die 
+On-Premise-Software.\\
+Dies wirkt sich vor allem auf die Prüfung der Wirtschaftlichkeit aus. Der 
+Vorschlag des Fünf-Phasen-Modells an dieser Stelle eine "`detaillierte 
+Kosten-Nutzen-Analyse"' durchzuführen, wird hier nicht 
+befolgt. Um diese Entscheidung zu begründen, sollen die beiden 
+Migrationsansätze noch einmal verglichen werden.\\
+\input{grafiken/funktionsumfang_wasserfallmodell}
+In Abbildung~\ref{fig:funktionsumfang_wasserfallmodell} ist der Ansatz aus dem 
+Fünf-Phasen-Modell dargestellt. Dabei wird die bestehende Anwendung in ihrem 
+gesamten Umfang in die PaaS/SaaS-Cloud migriert und erst daran anschließend 
+vermarktet. Zumindest die Chance, eine agile Cloud-Lösung zu schaffen, die 
+bereits früh einen Wert für Kunden schafft und sich schnell und an 
+Kundenwünschen orientiert weiterentwickelt, wird verschenkt. Der ISV 
+läuft aber auch Gefahr weitere Vorteile nicht zu realisieren, wenn er bei der 
+Migration zunächst die Herstellung aller Funktionalitäten der Altsoftware in 
+den Vordergrund stellt und dabei vernachlässigt, über Möglichkeiten 
+nachzudenken, die Vorteile und Chancen der Cloud umzusetzen. Deshalb hat die 
+Menge der Chancen nur zu einem geringen Teil in der Cloud-Lösung enthalten -- 
+im Gegensatz zu den Risiken, die Teil der Cloud-Lösung werden, wenn man sich 
+ihrer nicht bewusst ist und sie daher nicht vermeiden kann. \\
+Abbildung~\ref{fig:funktionsumfang_agil} zeigt die in dieser Arbeit 
+vorgeschlagene Vorgehensweise. Hier ist die Cloud-Lösung in ihrem Umfang sehr 
+viel kleiner als die bestehende On-Premise-Software, sodass sie gerade das 
+enthält, was für die Vermarktung nötig ist. Die Beschränkung des Umfangs 
+begünstigt eine schnelle Fertigstellung und Vermarktung. Fehlendes Features 
+werden agil nachentwickelt und in kurzen Abständen freigegeben. In der 
+Cloud-Lösung werden von Anfang an Chancen und Risiken berücksichtigt und 
+maximiert beziehungsweise minimiert. \\
+
+Im Ergebnis ist das hier vorgestellte Vorgehen weniger riskant, da nötige 
+Investitionen geringer sind und Fehler wie Erfolge schneller sichtbar werden. 
+Da in diesem Modell zudem nicht die Kosteneinsparungen sondern strategische 
+Ziele im Vordergrund stehen und der zeitliche Horizont viel kleiner ist, kann 
+die Wirtschaftlichkeitsprüfung weniger detailliert ausfallen. Es sollte geprüft 
+geprüft werden, ob nötige Umsätze mit dem Funktionsumfang der Vision generiert 
+werden können. \\
+
+\input{grafiken/funktionsumfang_agil}
+
+
 \begin{comment}
 \subsubsection{Technische Machbarkeit}
 

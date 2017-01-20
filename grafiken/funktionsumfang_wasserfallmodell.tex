@@ -1,0 +1,44 @@
+\usetikzlibrary{arrows}
+\begin{figure}[bh]
+\begin{center}
+\begin{tikzpicture}
+\newcommand{\rechts}{6}
+\newcommand{\radius}{1.9cm}
+\coordinate (centerTop) at (\rechts,3.5);
+\coordinate (centerLinks) at (0,0);
+\coordinate (centerRechts) at (\rechts,0);
+\coordinate (centerBottom) at (\rechts,-1);
+
+% Linker Kreis
+\draw (centerLinks) circle (\radius) node [text=black] 
+{On-Premise-Lösung};
+
+
+% Oberer Kreis
+\draw[fill=green] (centerTop) circle (\radius);
+\node[align=left] at ($ (centerTop) + (3.5,0)$) {Chancen};
+
+%Unterer Kreis mit Schrift
+\draw[fill=red] (centerBottom) circle (\radius);
+\node[align=left] at ($ (centerBottom) + (3.5,-1)$) {Risiken};
+
+
+% Rechte Mitte
+\draw (centerRechts) circle (\radius);
+\node[align=left] at ($ (centerRechts) + (3.5,0)$) 
+{\st{On-Premise-}\\Cloud-Lösung};
+
+% Pfeil
+\path[draw=black,solid,line width=1mm,fill=black,
+preaction={-triangle 90,thin,draw,shorten >=-1mm}
+] ($ (centerLinks) + (1.2 * \radius,0) $) -- ($ (centerRechts) + 
+(-1.2 * \radius,0) $);
+
+%\draw \secondcircle node [text=black,left] {On-Premise-Software};
+%\draw \thirdcircle node [text=black,right] {$C$};
+\end{tikzpicture}
+\caption{Funktionsumfang vor und nach der Migration im Wasserfallmodell. 
+Selbsterstellte Grafik.}
+\label{fig:funktionsumfang_wasserfallmodell}
+\end{center}
+\end{figure}
