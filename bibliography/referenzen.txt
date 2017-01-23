@@ -646,6 +646,17 @@
    type = {Journal Article}
 }
 
+@article{adapting_the_software_engineering_process,
+   author = {Kumar, Sandeep and Sangwan, Satyaveer},
+   title = {Adapting the software engineering process to web engineering process},
+   journal = {International Journal of Computing and Business Research},
+   volume = {2},
+   number = {1},
+   pages = {2011},
+   year = {2011},
+   type = {Journal Article}
+}
+
 @inproceedings{literaturuebersicht_von_geschaeftsmodellen_in_der_cloud,
    author = {Labes, Stine and Erek, Koray and Zarnekow, Rüdiger},
    title = {Literaturübersicht von Geschäftsmodellen in der Cloud},
@@ -659,6 +670,16 @@
    title = {Wirtschaftlichkeitsbetrachtungen beim Einsatz von Cloud Computing},
    booktitle = {Vom Projekt zum Produkt},
    pages = {123-136},
+   type = {Conference Proceedings}
+}
+
+@inproceedings{service-oriented_migration,
+   author = {Lewis, Grace and Morris, Edwin and Smith, Dennis},
+   title = {Service-oriented migration and reuse technique (smart)},
+   booktitle = {Software Technology and Engineering Practice, 2005. 13th IEEE International Workshop on},
+   publisher = {IEEE},
+   pages = {222-229},
+   ISBN = {076952639X},
    type = {Conference Proceedings}
 }
 
@@ -801,6 +822,16 @@
    pages = {818-825},
    ISBN = {2159-6182},
    DOI = {10.1109/CLOUD.2014.113},
+   type = {Conference Proceedings}
+}
+
+@inproceedings{transitioning_to_saas,
+   author = {Olsen, Eric R},
+   title = {Transitioning to software as a service: Realigning software engineering practices with the new business model},
+   booktitle = {Service Operations and Logistics, and Informatics, 2006. SOLI'06. IEEE International Conference on},
+   publisher = {IEEE},
+   pages = {266-271},
+   ISBN = {1424403189},
    type = {Conference Proceedings}
 }
 
@@ -1088,7 +1119,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{changes_in_requirements_engineering,
    author = {Schäfer, Johannes and Lichter, Horst},
    title = {Changes in Requirements Engineering After Migrating to the Software as a Service Model},
    journal = {Full-scale Software Engineering/Current Trends in Release Engineering},
@@ -1243,6 +1274,16 @@
    url = {https://de.statista.com/statistik/daten/studie/195760/umfrage/umsatz-mit-cloud-computing-weltweit-seit-2009/},
    year = {2016},
    type = {Journal Article}
+}
+
+@inproceedings{requirements_engineering_process_for_saas_cloud_env,
+   author = {Tariq, Anum and Khan, Shoab Ahmed and Iftikhar, Sundas},
+   title = {Requirements Engineering process for Software-as-a-Service (SaaS) cloud environment},
+   booktitle = {Emerging Technologies (ICET), 2014 International Conference on},
+   publisher = {IEEE},
+   pages = {13-18},
+   ISBN = {1479960896},
+   type = {Conference Proceedings}
 }
 
 @article{
