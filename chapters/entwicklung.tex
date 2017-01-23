@@ -371,13 +371,150 @@ welches auf Cloud-Computing setzt."'
 "`Alle Empfehlungen sollten mit einem Business Case hinterlegt werden, der
 die Höhe der Kostenreduktion und die Verbesserung des Servicelevels zeigt."'
 \pcite{}{158}{cloud_migration}
+\end{comment}
 
-\begin{comment}
+
 \subsection{Phase III: Anforderungsanalyse und -Planung}
+Der Software Engineering Prozess bei der Migration zu einem 
+Software-as-a-Service-Modell ändert sich. 
+\citepara{changes_in_requirements_engineering}
+
+Anforderungsermittlung oder Requirementsengineering hat das Ziel Anforderungen 
+eines Softwaresystem oder eines Features zu erheben, zu strukturieren, 
+priorisieren und zu koordinieren. 
+\pcite{}{}{changes_in_requirements_engineering} Auch die Identifizierung von 
+Indiskrepanzen zwischen Ergebnis und Ziel gehört dazu. 
+\pcite{}{}{requirements_engineering_process_for_saas_cloud_env}
+
+Die Migration in die Cloud macht ein Überdenken der Software Engineering 
+Prozesse notwendig. \pcite{}{}{transitioning_to_saas}
+
+Besseres Requirements Engineering kann Kosten für die Fehlbehebung um 20\% 
+senken.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{images/soa_architecture.png}
+\caption{Service-oriented architecture. Aus 
+\protect\citeflow{changes_in_requirements_engineering}}
+\label{fig:soa_architecture}
+\end{center}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{images/iterative_se_process.png}
+\caption{Iterativer Software Engineering Prozess. Aus 
+\protect\citeflow{changes_in_requirements_engineering}}
+\label{fig:iterative_se_process}
+\end{center}
+\end{figure}
+
+Aus \citepara{changes_in_requirements_engineering}
+\begin{itemize}
+	\item Vergleich zwischen zwei Modellen des RE.
+	\item Während Updates früher kostenlos (kleinere Updates) oder größere 
+Updates (kostenpflichtiger Neuerwerb) waren, mieten Kunden im Cloud Umfeld eine 
+Software und erwarten Updates.
+	\item Bei einer Migration zu einem Service-Oriented-Architecture 
+Modell, werden Teile aus einer Software geschnitten und über eine Schnittstelle 
+als Dienstleistung angeboten. Daher wird in der Regel versucht, die meisten 
+Funktionalitäten zu übernehmen. Für mehr Informationen: 
+\pcite{}{}{service-oriented_migration}
+	\item Es gibt drei Nicht-Funktionale Anforderungen die aus SaaS 
+entstehen: 
+\begin{enumerate}
+	\item Software muss in einer Cloud-Umgebung gehostet werden. Dies 
+hat Einfluss auf die Themen Sicherheit, Vertraulichkeit, Verschwiegenheit, 
+Compliance.
+	\item In der Regel eine webbasierte Anwendung, d.h. es werden übliche 
+Internetprotokolle verwendet. Dies hat Einfluss auf die Themen: Multi-Tenancy, 
+User Concurrency, Konfigurierbarkeit, Skalierbarkeit, Verlässlichkeit, 
+Leistungsfähigkeit, Verfügbarkeit, Kompatibilität, Interoperabilität, 
+Portabilität, Effizienz, Direktheit
+	\item In der Regel ist eine Bedienung über den Browser möglich, die 
+Installation einer zusätzlichen Anwendung nicht erforderlich
+\end{enumerate}
+	\item Business Changes erforderlich. Näheres 
+\pcite{}{}{transitioning_to_saas}. Update Mechanismen, Non-disruptive Upgrade 
+Modelle
+	\item \pcite{}{}{requirements_engineering_process_for_saas_cloud_env} 
+Neuer Stakeholder: Cloud Service Provider. Schlagen Checkliste für neue 
+Stakeholder vor.
+	\item Noch mehr Stakeholder Analysten, Grafik Designer, Kunden, 
+Marketing, Sicherheitsexperten 
+\pcite{}{}{adapting_the_software_engineering_process}
+\end{itemize}
+
+\subsubsection{Transformation des bisherigen Requirements-Engineering}
+\citeflow{changes_in_requirements_engineering} schlagen die folgenden Schritte 
+vor, um die Anforderungsermittlung an die Cloud anzupassen:
+\begin{enumerate}
+	\item Paradigma sich schnell ändernder Anforderungen etablieren. Die 
+Nähe zur agilen Entwicklung und neuen Methoden der Anforderungsermittlung 
+sorgen für eine Volatilität der Anforderungen.
+	\item Integrieren der Anforderungsermittlung in einen iterativen, 
+inkrementellen Software Engineering Prozess. Nicht typisch für die Cloud, aber 
+besonders erforderlich aufgrund der volatilen Anforderungen.
+	\item Identifizierung und Priorisierung der Stakeholder mit 
+systematischen Methoden
+	\item Einbeziehung der Kunden in die Anforderungsermittlung mittels 
+Feature Requests und Bug Reports sind essentiell um Vorteil aus der 
+Cloud-Migration zu ziehen. Nutzer müssen das Gefühl bekommen, Einfluss auf die 
+Entwicklung nehmen zu können.
+	\item Implementierung von Feedbackmöglichkeiten. Entweder automatisiert 
+über die Auswertung von Daten oder über Formulare. 
+	\item Nutzen von Mechanismen für unterbrechungsfreie Updates. Nicht 
+Administratoren, sondern Entwickler bestimmen den Updatezeitpunkt.
+	\item Entwicklung von Möglichkeiten, Software an kleineren 
+Nutzergruppen zu testen.
+\end{enumerate}
+
+
+\subsubsection{Unterschiede im Requirements Engineering}
+\input{tabellen/unterschiede_im_re}
+
+\subsubsection{Kategorien und Anforderungen}
+Aus \citeflow{requirements_engineering_process_for_saas_cloud_env}:
+\begin{description}
+	\item[Anforderungen an die Architektur] Passendes Auslieferungsmodell, 
+Sicherheit, Privatsspähre, Hohe Verfügbarkeit und Anpassbarkeit. Verschiedene 
+Levels von Service Level Agreements (SLA). Sollte zustandslos (niedrige Kosten, 
+hohe Zuverlässigkeit und Performanz) sein. Fehlertolerant, umfassende 
+Redundanz und Uptime, Strategien für den Fehlerfall. Wiederbenutzbare 
+Komponenten. Integration mit Altsystemen, API Anforderungen. 
+	\item[Anforderungen aus dem Operativen/an das Verhalten] Leichte 
+Anpassbarkeit und Erweiterbarkeit der Interfaces, Daten- und Businessprozesse, 
+User Experience, Designanforderungen, Sicherheit und Privatsspähre, 
+Verfügabarkeit, Performanz, Interoperabilität, häufige und nicht unterbrechende 
+Upgrades. Kapazitätsplanung, Datenmigration, 
+	\item[Anforderungen des Managements] Zentralisierte Berichte, 
+Monitoring über Einhaltung der SLAs, Rechnungen, Hosting, User Management, 
+Kapazitätsplanung und Zuteilung, Datenmanagement, Speicherung, Verarbeitung
+	\item[Anforderungen aus Technik/Implementierung] Recruitment, 
+Rollenwechsel, 
+\end{description}
+
+Schritte, die laut 
+\citeflow{requirements_engineering_process_for_saas_cloud_env} im klassischen 
+Requirements Engineering ergänzt werden sollten:
+\begin{description}
+	\item[Testen der Eignung der Cloud-Architektur mit initialen 
+Anforderungen]
+	\item[Public oder Private Cloud?]
+	\item[Passende Cloud Service Provider identifizieren]
+	\item[Kosten der Cloud-Lösung abschätzen] Cloudonomics
+	\item[Anforderungen dokumentieren] Wekcge Art von physischer und 
+persönlicher Sicherheit bietet die CLoud? Wie würden Anwendungen überwacht, die 
+in einer Public Cloud? Wie skalierbar wäre die Cloud?
+\end{description}
+
+
+
 \subsubsection{Anforderungsermittlung}
 \subsubsection{Return on Investment (ROI)}
 \subsubsection{Total Cost of Ownership (TCO)}
-
+\begin{comment}
 \subsection{Phase IV: Migration}
 \subsection{Phase V: Tests und Auslieferung}
 \subsection{Phase VI: Überwachung und Wartung}
