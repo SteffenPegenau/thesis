@@ -996,7 +996,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{cloud_adoption_decisions,
    author = {Ray, Deepa},
    title = {Cloud Adoption Decisions: Benefitting from an Integrated Perspective},
    journal = {Electronic Journal Information Systems Evaluation Volume},
@@ -1047,7 +1047,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{integrating_soa_design_principles,
    author = {Roche, Jonathan},
    title = {Integrating Service Orientated Architecture design principles into Software as a Service applications},
    year = {2014},
@@ -1152,7 +1152,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{new_se_requirements_in_clouds,
    author = {Schubert, Lutz and Jeffery, Keith},
    title = {New Software Engineering Requirements in Clouds and Large-Scale Systems},
    journal = {IEEE Cloud Computing},
@@ -1180,7 +1180,7 @@
    type = {Book Section}
 }
 
-@article{
+@article{cloud_standards_and_the_spectrum_of_dev,
    author = {Sill, Alan},
    title = {Cloud Standards and the Spectrum of Development},
    journal = {IEEE Cloud Computing},
@@ -1295,10 +1295,16 @@
    type = {Journal Article}
 }
 
-@misc{   ISBN = {3642294324 (Sekundärausgabe)},
+@book{re_und_pm,
+   author = {Valentini, Uwe and Weißbach, Rüdiger and Fahney, Ralf and Gartung, Thomas and Glunde, Jörg and Herrmann, Andrea and Hoffmann, Anne and Knauss, Eric and Herrmann, Andrea and Knauss, Eric},
+   title = {Requirements Engineering und Projektmanagement},
+   publisher = {Imprint: Springer},
+   address = {Berlin, Heidelberg},
+   series = {Xpert.press},
+   ISBN = {3642294324 (Sekundärausgabe)},
    url = {http://scans.hebis.de/HEBCGI/show.pl?31496163_toc.html},
    year = {2013},
-   type = {Generic}
+   type = {Book}
 }
 
 @inproceedings{
@@ -1498,7 +1504,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{cloud-based_design,
    author = {Wu, Dazhong and Terpenny, Janis and Gentzsch, Wolfgang},
    title = {Cloud-Based Design, Engineering Analysis, and Manufacturing: A Cost-Benefit Analysis},
    journal = {Procedia Manufacturing},
