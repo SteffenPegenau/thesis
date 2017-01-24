@@ -1,0 +1,159 @@
+%\documentclass[border=10pt]{standalone}
+
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,positioning} 
+\pgfmathsetmacro{\cubex}{4}
+\pgfmathsetmacro{\cubey}{2}
+
+\definecolor{light-gray}{gray}{0.80}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=7em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           very thick,
+           shorten <=5pt,
+           shorten >=5pt,},
+}
+
+
+
+
+%\begin{document}
+\begin{figure}[bh]
+\begin{center}
+\begin{tikzpicture}
+
+
+
+
+% Punkte
+\newcommand{\boxNO}{(0,0)}
+\newcommand{\boxNW}{(-\cubex,0)}
+\newcommand{\boxSO}{(0,-\cubey)}
+\newcommand{\boxSW}{(-\cubex,-\cubey)}
+
+
+% On-Premise-Produkt
+\draw[black,fill=light-gray,very thick] \boxNW -- \boxNO -- \boxSO -- \boxSW -- 
+cycle;
+\draw (-0.5*\cubex,-0.5*\cubey) node {\textbf{On-Premise-Produkt}};
+
+% Trichter
+\newcommand{\trichterBreiteO}{1.5*\cubex}
+\newcommand{\trichterBreiteM}{0.33*\cubex}
+\newcommand{\trichterAbstand}{0.5*(\trichterBreite - \trichterBreiteM)}
+
+\newcommand{\trX}{-1.25*\cubex}
+\newcommand{\trY}{-1.25*\cubey}
+\newcommand{\trichterNW}{ (\trX, \trY) }
+\newcommand{\trichterNO}{ (\trX+\trichterBreiteO, \trY) }
+
+\newcommand{\trichterMW}{ ( \trX + 0.33*\trichterBreiteO, \trY-0.75*\cubey ) }
+\newcommand{\trichterMO}{ ( \trX + 0.66*\trichterBreiteO, \trY-0.75*\cubey ) }
+
+\newcommand{\trichterSW}{ ( \trX + 0.33*\trichterBreiteO, \trY-1.75*\cubey) }
+\newcommand{\trichterSO}{ ( \trX + 0.66*\trichterBreiteO, \trY-1.75*\cubey) }
+
+\newcommand{\trichterC}{ ( \trX + 0.5*\trichterBreiteO, \trY-0.5*0.75*\cubey) }
+
+\draw[black,thick] %,fill=SkyBlue 
+	\trichterNW -- 
+	\trichterNO -- 
+	\trichterMO --
+	\trichterSO --
+	\trichterSW --
+	\trichterMW --
+	\trichterNW;
+% Uncomment for text in Trichter
+%\draw \trichterC node {};
+
+
+% Diamond
+
+
+
+\newcommand{\diamondX}{\trX + 0.5*\trichterBreiteO}
+\newcommand{\diamondY}{\trY-2.3*\cubey}
+%star point height=.9cm, minimum size=0.7*\cubey,draw,
+\node [starburst, fill=Goldenrod,draw,starburst points=13] (VISION)
+at (\diamondX,\diamondY) {Vision};
+	
+\newcommand{\boxREx}{\diamondX}
+\newcommand{\boxREy}{\diamondY - 1.2*\cubey}
+\newcommand{\boxRo}{1.8*\cubey}
+\newcommand{\boxRm}{2*\cubey}
+\newcommand{\boxRu}{1.2*\cubey}
+\newcommand{\boxHEins}{.9*\cubey}
+\newcommand{\boxHZwei}{2*\cubey}
+\newcommand{\boxHDrei}{3*\cubey}
+
+
+ \node[punkt] (RE) at (\boxREx,\boxREy) {Requirements Engineering} ;  
+\node[punkt] (PL) at (\boxREx-\boxRo,\boxREy -\boxHEins)  {Planning}
+ edge[pil] (RE.west) ;
+ 
+ \node[punkt] (EVAL) at (\boxREx-\boxRm,\boxREy -\boxHZwei)  {Evaluation} 
+edge[pil] (PL.south);
+ 
+ 
+ \node[punkt] (T) at (\boxREx-\boxRu,\boxREy -\boxHDrei)  {Testing}
+ edge[pil] (EVAL.south) ;
+ 
+ 
+ \node[punkt] (DEPL) at (\boxREx+\boxRu,\boxREy -\boxHDrei)  {Deployment}
+ edge[pil] (T.east);
+ 
+ 
+ \node[punkt] (I) at (\boxREx+\boxRm,\boxREy -\boxHZwei)  {Implementation}
+ edge[pil] (DEPL.north);
+ 
+ \node[punkt] (AD) at (\boxREx+\boxRo,\boxREy -\boxHEins)  {Analysis \& Design}
+edge[pil] (I.north);
+
+\draw[pil]
+  (RE.east) edge (AD.north);
+  
+\draw[pil] (VISION) edge (RE.north);
+
+ 
+\node [cloud, draw,cloud puffs=10,cloud puff arc=120, aspect=2, inner 
+ysep=3*\cubex,fill=Goldenrod] (CLOUD) at (\boxREx,\boxREy-0.8*\boxHZwei) 
+{\textbf{Cloud L\"osung}};
+ 
+ 
+ %\node[punkt, inner sep=5pt,below=0.5cm of RE]
+ %(formidler) {Intermediaries (c)};
+ % We make a dummy figure to make everything look nice.
+ %\node[above=of RE] (dummy) {};
+ %\node[right=of dummy] (t) {Ultimate borrower}
+  %edge[pil,bend left=45] (RE.east) % edges are used to connect two nodes
+  % edge[pil, bend left=45] (I.east); % .east since we want
+                                             % consistent style
+ %\node[left=of dummy] (g) {Ultimate lender}
+   %edge[pil, bend right=45] (RE.west)
+   %edge[pil,<->, bend left=45] node[auto] {Direct (a)} (t);
+	
+\end{tikzpicture}
+\caption{Darstellung des Vorgehensmodells. Der iterative Software Engineering 
+Kreislauf wurde \cite{changes_in_requirements_engineering} entnommen.}
+\label{fig:vorgehensmodell}
+\end{center}
+\end{figure}
+
+%\end{document}
+
+
