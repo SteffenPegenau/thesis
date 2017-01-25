@@ -1,12 +1,39 @@
 %\section{Entwicklung eines konzeptuellen Rahmens}
-\section{Vorgehensmodell für Cloud-Migrationen zu Salesforce}
+\section{Vorgehensmodell für Cloud-Migrationen}
 \label{cha:entwickelung_vorgehensmodell}
-In diesem Kapitel soll das Fünf-Phasen-Modell angepasst und erweitert werden, 
-um den Anforderungen eines Independent Software Vendors (ISV) zu entsprechen. \\
-
+In diesem Kapitel wird ein dreistufiges Vorgehensmodell (Vgl. 
+Abbildung~\ref{fig:vorgehensmodell}) für Cloud-Migrationen entwickelt, das sich 
+an Independent Software Vendors mit ihren Bedürfnissen und Anforderungen 
+richtet. \\
 \input{grafiken/vorgehensmodell2d}
+Das Vorgehen in jeder Phase ist von dem grundlegenden Ziel geprägt, Chancen der 
+Cloud zu realisieren und spezifische Risiken zu vermeiden. Deshalb werden 
+zunächst Chancen und Risiken identifiziert und mit den aus ihnen resultierenden 
+Fragen, Problemstellungen und Herausforderungen vorgestellt. Um der 
+Cloud mit ihren Chancen und Risiken bestmöglich zu begegnen sind auch 
+weitreichende Änderungen am Unternehmen selbst zu bedenken.\\
+
+In Phase I wird anhand des bestehenden On-Premise-Produktes eine Vision 
+geformt, die unter Umständen einen sehr viel kleineren Funktionsumfang als die 
+On-Premise-Software aufweisen wird, dabei aber Chancen und Risiken des 
+Cloud-Marktes berücksichtigt und so Wettbewerbsfähigkeit und einen schnellen 
+Markteintritt zu ermöglicht. \\
+
+Anschließend wird in Phase II die Machbarkeit der Vision in technischer und 
+wirtschaftlicher Hinsicht geprüft. Maßgeblich ist die Frage, ob innerhalb 
+eines bestimmten Kostenrahmens auf gegebener
+Plattform ein konkurrenzfähiges Produkt geschaffen werden kann. \\
+
+Schließlich wird die Vision in Phase III in einem an die Cloud 
+angepassten, agilen, iterativen Entwicklungsprozess realisiert. Es wird 
+gezeigt, in welchen Aspekten bekannte agile Modelle angepasst werden müssen, um 
+mit der besonders hohen Agilität der Cloud Schritt halten zu können. \\
+
+Bevor sie im Detail vorgestellt wird, wird jede Phase zunächst begründet 
+und zur Orientierung vom Fünf-Phasen-Modell abgegrenzt. 
 
 
+\begin{comment}
 Das Fünf-Phasen-Modell beginnt mit einer technischen und 
 wirtschaftlichen Machbarkeitsstudie. Die Migration einer On-Premise-Software in 
 die Cloud bedeutet für das migrierende Unternehmen die Erschließung eines ganz 
@@ -19,16 +46,14 @@ Phase vorgeschlagen, in der eine Vision der künftigen Cloud-Lösung entworfen
 wird. Mit dieser Vision kann der Leistungsumfang abgeschätzt werden und auch, 
 wie sich das Unternehmen verändern muss, um dieser Vision zu entsprechen. 
 (Kapitel~\ref{cha:phaseI})\\
+\end{comment}
 
-Anschließend kann in Phase II... \\
+\subsection{Chancen der Cloud}
+\input{tabellen/chancen_der_cloud}
+\subsection{Risiken der Cloud}
+\input{tabellen/risiken_der_cloud}
 
-In Phase III... \\
 
-In Phase IV... \\
-
-In Phase V... \\
-
-In Phase VI... \\
 
 \subsection{Phase I: Entwicklung einer Vision}
 \label{cha:phaseI}
@@ -41,49 +66,66 @@ Durch das pay-per-use-Preismodell sind auch kleine Unternehmen in der Lage,
 diese Technologien und Dienstleistungen zu nutzen. 
 \pcite{}{156}{cloud_migration} Dementsprechend ist die Nutzung der Cloud per se 
 weder  innovativ -- da jeder Mitbewerber die Technologie nutzen kann -- noch 
-ein Wettbewerbsvorteil: Sie ist ein wirtschaftliches Erfordernis, um den 
-Wettbewerb nicht zu verlieren. 
+automatisch ein Wettbewerbsvorteil: Sie ist ein wirtschaftliches Erfordernis, 
+um den Wettbewerb nicht zu verlieren. 
 \pcite{}{}{challenges_of_cloud_computing_in_business} 
 
+Um mit der Cloud-Migration nicht nur das Erfordernis zu bewältigen, sondern 
+einen Wettbewerbsvorteil zu erringen, muss nach der Migration ein Wert für den 
+Kunden geschaffen sein. Die Software muss unter aktuellen und möglichen 
+zukünftigen Konkurrenten einzigartig oder wenigstens selten sein, annähernd 
+unnachahmlich und schwer substituierbar sein.
+\pcite{}{}{theoretical_perspectives_for_strategic_human_resource_management}
+Es bedarf es der geschickten Integration standardisierter, in der Cloud 
+verfügbarer Komponenten zu einer innovativen Gesamtlösung. 
+%Gelingt dies nicht, ist eine Differenzierung von 
+%konkurrierenden, sich gleichenden Produkten nur über einen niedrigeren Preis 
+%möglich. \pcite{}{}{towards_modelling_a_cloud_applications_life_cycle} \\
 
-Damit die in die Cloud migrierte Software dem Unternehmen auch einen anhaltenden 
-Wettbewerbsvorteil bieten kann, muss sie einen Wert für den Kunden schaffen, 
-unter aktuellen und möglichen zukünftigen Konkurrenten einzigartig oder 
-wenigstens selten sein, annähernd unnachahmlich und schwer substituierbar sein.
-\pcite{}{}{theoretical_perspectives_for_strategic_human_resource_management} 
-\begin{comment}
-zufolge
+\citeflow{fivephases} gehen in ihrem Fünf-Phasen-Modell von einer vollständigen 
+Migration mit der Gesamtheit aller Funktionalität aus. Davon wird in dem hier 
+vorgestellten Modell bewusst abgewichen. Bei einer vollständigen Migration 
+dauert es aufgrund der höheren Entwicklungsdauer länger, bis Umsätze generiert 
+werden; benötigte Investitionen steigen immens und mit ihnen das Risiko. Des 
+Weiteren wäre es mit einer 1:1-Migration weder möglich die Chancen der 
+Cloud zu realisieren, noch die Risiken zu umschiffen. Dies betrifft das 
+Produkt selbst -- so kann es beispielsweise versäumt werden, zu bedenken, wie 
+mobile Nutzung einen besonderen Wert für den Kunden schaffen kann -- aber auch 
+den Entwicklungsprozess. Möglichkeiten, wie die der schnellen, unkomplizierten 
+Releases und der frühen Nutzerrückmeldung und die besondere Agilität die sich 
+daraus gewinnen lässt, werden verschenkt.
+
+Aus diesen Gründen wird eine sprintweise Migration und 
+Weiterentwicklung vorgeschlagen, die mit der Vision eines Produktes beginnt. 
+Das Verständnis des Begriffes "`Produktvision"' ist ein Strategisches und wurde 
+aus den Eigenschaften abgeleitet, die \citeflow{the_power_of_vision} 
+Unternehmensvisionen attestieren.
+
+Um ein wettbewerbsfähiges Produkt zu schaffen, sollte eine Produktvision...
 \begin{itemize}
-  \item dem Unternehmen einen positiven Wert hinzufügen
-  \item unter aktuellen oder möglichen zukünftigen Konkurrenten einzigartig oder 
-selten sein
-  \item annähernd unnachahmlich
-  \item durch Konkurrenten schwer substituierbar sein
+	\item ...die genannten Chancen und Risiken - angelehnt an die 
+Methode der 
+SWOT-Analyse \pcite{}{501}{marketingmanagement} - berücksichtigen. 
+	\item ...den Umfang des Produktes so klein wie möglich, doch so 
+umfangreich wie nötig halten, um frühestmöglich einen auslieferbaren Wert zu 
+schaffen.
+	\item ...stabil, zukunftsorientiert und langfristig ausgelegt sein.
+	\item ...herausfordernd aber erreichbar sein.
+	\item ...abstrakt genug sein, um Freiheiten bei der Umsetzung zu 
+lassen.
+	\item ...das Potential haben, Kunden und Mitarbeiter zu begeistern.
+	\item ...klar und deutlich zu verstehen sein.
 \end{itemize}
-\end{comment}
-Um diesen Anforderungen gerecht zu werden, bedarf es einer geschickten 
-Integration standardisierter, in der Cloud verfügbaren Komponenten zu einer 
-innovativen Gesamtlösung. Gelingt dies nicht, ist eine Differenzierung von 
-konkurrierenden, sich gleichenden Produkten nur über einen niedrigeren Preis 
-möglich. \pcite{}{}{towards_modelling_a_cloud_applications_life_cycle} \\
+Damit die Vision realisiert werden kann, müssen Prozesse und 
+Unternehmensorganisation an ihr ausgerichtet werden; sie muss kommuniziert 
+werden und Mitarbeiter in die Lage versetzt werden, sie zu erreichen. 
+\pcite{}{}{the_power_of_vision}
 
-Diese Anforderungen berücksichtigend, sollen -- angelehnt an die Methode der 
-SWOT-Analyse \pcite{}{501}{marketingmanagement} -- Chancen und Risiken der 
-Cloud betrachtet werden und schließlich in eine Vision. \\
-
-Auch wenn in diesem Modell, als Ergebnis dieser Phase nur die Vision des 
-Produktes in den folgenden Phasen weiter verfolgt wird, sollten Chancen und 
-Risiken -- ob technischer oder wirtschaftlicher Natur -- auch in Hinblick auf 
-ihre Auswirkungen auf das Geschäftsmodell und die 
-Unternehmensorganisation des ISV hin untersucht werden. \\
-
-\subsubsection{Geschäftsmodell}
-Aus einer technologischen Innovation wird für ein Unternehmen erst ein Wert, 
-wenn es mit einem erfolgreichen Geschäftsmodell vermarktet werden kann. Gerade 
-beim Auftreten von "`disruptives innovations"' scheitern viele Unternehmen, 
+Die Vision muss auch Einfluss auf das Geschäftsmodell nehmen. Gerade beim 
+Auftreten von "`disruptives innovations"' scheitern viele Unternehmen, 
 weil sie nicht in der Lage oder willens sind, ihr Geschäftsmodell in 
-ausreichendem Maße zu 
-ändern. \pcite{}{}{disruptive_technologies_a_business_model_perspective} Um ein 
+ausreichendem Maße zu ändern. 
+\pcite{}{}{disruptive_technologies_a_business_model_perspective} Um ein 
 wirtschaftlich nachhaltiges, an die Realitäten des Marktes angepasstes, 
 wettbewerbsfähiges Geschäftsmodell für den Cloud-Markt zu entwickeln, sollte 
 der ISV unter Berücksichtigung der Chancen und Risiken die folgenden Fragen 
@@ -102,6 +144,30 @@ erzeugen?
 Wettbewerbsvorteile (auch gegenüber On-Premise-Lösungen und 
 zugehörigen Preismodellen) erlangen?
 \end{enumerate}
+
+\begin{comment}
+Aus \citeflow{the_power_of_vision}:
+\begin{itemize}
+	\item Notwendigkeiten um Vision zu realisieren: \\
+	\begin{itemize}
+		\item communicating the vision
+		\item aligning organizational processes and systems to suit the 
+vision
+		\item empowering others to act to achieve the vision
+		\item motivating staff
+	\end{itemize}
+	\item Charakterisitika eng mit Unternehmenserfolg verbunden
+
+
+\end{itemize}
+\end{comment}
+%\subsubsection{TODO: Preismodell}
+
+
+%Aus einer technologischen Innovation wird für ein Unternehmen erst ein Wert, 
+%wenn es mit einem erfolgreichen Geschäftsmodell vermarktet werden kann.
+
+
 
 \begin{comment}
 \subsubsection{Organisationsstruktur}
@@ -137,84 +203,6 @@ unterstützen.
 \end{comment}
 
 
-\subsubsection{Chancen \& Risiken der Cloud-Migration}
-\label{cha:chancen_und_risken}
-Chancen und Risiken einer Cloud-Migration für einen Independent Software 
-Vendor sind Ergebnis der Literaturrecherche und finden sich in den
-Tabellen~\ref{tab:chancen_der_cloud} und \ref{tab:risiken_der_cloud}. Die 
-Spalte "`Fragen \& Aufgaben für den ISV"' soll dabei helfen, eine 
-Produktvision zu entwickeln, die dem Unternehmen einen anhaltenden 
-Wettbewerbsvorteil bescheren soll.
-\input{tabellen/chancen_der_cloud}
-\input{tabellen/risiken_der_cloud}
-
-\subsubsection{Produktvision}
-\citeflow{fivephases} schlagen ihr Fünf-Phasen-Modell für eine vollständige 
-Migration einer Software und der Gesamtheit ihrer Funktionalität vor. Von 
-dieser Vorgabe wird in dem hier vorgestellten Modell aus zweierlei Gründen 
-abgewichen. \\
-Erstens wird es mit einer 1:1-Migration weder möglich sein die in 
-Kapitel~\ref{cha:chancen_und_risken} genannten Vorteile zu realisieren, noch 
-die Risiken zu umschiffen. \\
-Eine vollständige Migration und eine erst daran anschließende Vermarktung würde 
-viel Zeit in Anspruch nehmen, in der keine Umsätze generiert werden. Dadurch 
-steigt zweitens das finanzielle Risiko und das Unternehmen läuft Gefahr das 
-gesetzte Cloud-Ziel von mehr Flexibilität, höherer Agilität und schnellere 
-Innovationsgeschwindigkeit zu verfehlen. Denn dabei würde ein Vorteil der 
-Cloud vollkommen ignoriert: Die Software lässt sich leicht aktualisieren, 
-während der Kunde bereits mit ihr arbeitet. Dies ermöglicht eine Agilität, wie 
-sie nicht möglich ist, wenn Software erst ausgeliefert und vom Kunde installiert 
-werden muss. Es wäre denkbar, dass Erfahrungen des Kunden im Umgang mit dem 
-jeweils aktuellen Stand der Software in die Sprint-Planung eingehen. Die 
-Weiterentwicklung der Software wäre damit eng an die tatsächlichen Bedürfnisse 
-der Kunden gekoppelt. \\
-
-Aus den genannten Gründen wird in dieser Arbeit sprintweise Migration und 
-Weiterentwicklung vorgeschlagen, die mit einer Produktvision beginnt. 
-Abgeleitet aus den Eigenschaften, die Unternehmensvisionen laut 
-\citeflow{the_power_of_vision} aufweisen sollten, werden die folgenden Merkmale 
-für eine Produktvision vorgeschlagen:
-\begin{itemize}
-	\item Sie sollte die genannten Chancen und Risiken berücksichtigen.
-	\item Der Umfang des Produktes sollte so klein wie möglich, so 
-umfangreich wie nötig sein, um frühestmöglich einen auslieferbaren Wert zu 
-schaffen. 
-	\item Die Architektur sollte -- in Hinblick auf zusätzliche 
-Cloud-Komponenten, Dienstleistungen und das Datenmodell -- erweiterbar sein.
-\end{itemize} 
-
-Aus \citeflow{the_power_of_vision}:
-\begin{itemize}
-	\item Vision ist strategische Überlegung um wettbewerbsfähiges Produkt 
-zu schaffen
-	\item Unterscheidung nötig zwischen starken und schwachen Visionen, 
-positiven und negativen
-	\item Eigenschaften guter Visionen: \\
-	\begin{itemize}
-		\item conciseness - kurz
-		\item clarity - prime goal, easy (in 5 minutes) to understand
-		\item future orientation - long term
-		\item stability - Vision reagiert nicht auf kurzfristige Trends
-		\item challenge - high but achievable difficulty
-		\item abstractness
-		\item desirability or ability to inspire
-	\end{itemize}
-	\item Notwendigkeiten um Vision zu realisieren: \\
-	\begin{itemize}
-		\item communicating the vision
-		\item aligning organizational processes and systems to suit the 
-vision
-		\item empowering others to act to achieve the vision
-		\item motivating staff
-	\end{itemize}
-	\item Charakterisitika eng mit Unternehmenserfolg verbunden
-
-
-\end{itemize}
-
-\subsubsection{TODO: Preismodell, frühe Vermarktung eines Produktes mit 
-geringerem Umfang}
-
 \begin{comment}
 
 \subsection{Phase I: Business, Strategie und Struktur neu gestalten}
@@ -239,31 +227,8 @@ towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}
 identifizieren einige Auswirkungen einer Cloud-Migrationen auf die IT-Strategie 
 für Unternehmen. Aus den allgemein gehaltenen Auswirkungen, werden Vorschläge 
 abgeleitet, die sich an Independent Software Vendors richtet.
-\begin{description}
-  \item[Architektur] Bei klassischen On-Premise-Anwendung war es in der Regel 
-nötig, Änderungen äußerst sorgfältig und langfristig zu planen, da sich Fehler 
-aufgrund monolithischer Architekturen auf das gesamte System ausgewirkt hätten. 
-Die geringe Geschwindigkeit verhindert schnelle Release-Zyklen von 
-wenigen Wochen, die in der Cloud erwartet werden. In der Cloud lassen sich neue 
-Funktionalitäten durch die lose Kopplung vorgefertigter Komponenten ergänzen. 
-\pcite{}{}{cloud_based_next_generation_service_and_key_challenges} Da die 
-Komplexität mit zunehmender Zahl von Komponenten -- gerade von verschiedenen 
-Anbietern -- trotzdem zunimmt, sollten zukünftige Anforderungen bedacht werden.
-  \item[Datenverarbeitung und -Speicherung] Der ISV sollte frühzeitig bedenken, 
-welche Daten seiner Kunden in welchem Umfang auf welche Weise in die Cloud 
-migriert werden müssen. Inkonsistenzen in den Daten, die auftreten können, wenn 
-Daten inkrementell übertragen werden müssen, die Übertragung zeitintensiv ist 
-oder wenn On-Premise- und Cloud-Lösung zunächst parallel betrieben werden, 
-sind zu berücksichtigen. \\
+\begin{description}.
 \end{description}
-
-
-
-
-
-
-
-
 
 \begin{comment}
 Hauptmotivation die Cloud zu Nutzen, sollte nicht die Reduktion von Kosten
@@ -404,14 +369,6 @@ senken.
 \end{center}
 \end{figure}
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.8\textwidth]{images/iterative_se_process.png}
-\caption{Iterativer Software Engineering Prozess. Aus 
-\protect\citeflow{changes_in_requirements_engineering}}
-\label{fig:iterative_se_process}
-\end{center}
-\end{figure}
 
 Aus \citepara{changes_in_requirements_engineering}
 \begin{itemize}
@@ -519,11 +476,6 @@ in einer Public Cloud? Wie skalierbar wäre die Cloud?
 \subsubsection{Return on Investment (ROI)}
 \subsubsection{Total Cost of Ownership (TCO)}
 \begin{comment}
-\subsection{Phase IV: Migration}
-\subsection{Phase V: Tests und Auslieferung}
-\subsection{Phase VI: Überwachung und Wartung}
-\subsection{Gesamtbetrachtung}
-\subsubsection{Agilität}
 
 
 

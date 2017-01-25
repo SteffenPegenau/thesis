@@ -1,0 +1,10 @@
+%%% jurabib url repository
+\expandafter\urldef\csname jburl@migrating_to_the_cloud_lessons_and_limitations\endcsname\url{http://www.sciencedirect.com/science/article/pii/S1877050913000781}
+\expandafter\urldef\csname jburl@formatvorlage\endcsname\url{http://www.ise.tu-darmstadt.de/ise/lehre_4/abschlussarbeiten_6/organisatorisches_1/organisatorisches.de.jsp}
+\expandafter\urldef\csname jburl@benlian_saas_2010\endcsname\url{http://dx.doi.org/10.1007/978-3-8349-8731-0}
+\expandafter\urldef\csname jburl@softwareindustrie2015\endcsname\url{http://www.gbv.de/dms/zbw/821541447.pdf}
+\expandafter\urldef\csname jburl@marketingmanagement\endcsname\url{http://dx.doi.org/10.1007/978-3-658-13656-7}
+\expandafter\urldef\csname jburl@Pahl2013\endcsname\url{http://dx.doi.org/10.1007/978-3-642-40651-5_18}
+\expandafter\urldef\csname jburl@Repschlaeger2010\endcsname\url{http://dx.doi.org/10.1007/BF03340507}
+\expandafter\urldef\csname jburl@salesforceannualreport\endcsname\url{http://s1.q4cdn.com/454432842/files/doc_financials/2016/Annual/Salesforce-FY-2016-Annual-Report.pdf}
+\expandafter\urldef\csname jburl@CloudUmsatzWeltweit\endcsname\url{https://de.statista.com/statistik/daten/studie/195760/umfrage/umsatz-mit-cloud-computing-weltweit-seit-2009/}
