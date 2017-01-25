@@ -1,67 +1,77 @@
-\begin{table}[ht!]
-\centering
-\begin{longtable}{|p{0.15\textwidth}|p{0.38\textwidth}|p{0.38\textwidth}|}
-\hline
-\textbf{Bezeichnung} & \textbf{Beschreibung \& Quelle} & \textbf{Fragen \& 
-Aufgaben für den ISV} \\
-\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Soziales Element & Das soziale Element entsteht durch neue Möglichkeiten 
+
+
+\newcommand{\cloudFeature}[4]{
+\item[#1] \hfill \\
+\textbf{Beschreibung:} #2 \\
+\textbf{Quelle(n):} \pcite{}{}{#3} \\
+\textbf{Fragen \& Herausforderungen:} #4
+}
+
+\begin{description}
+	\cloudFeature{Soziales Element}
+	{Das soziale Element entsteht durch neue Möglichkeiten 
 des Austausches, die durch die Nutzung einer gemeinsamen Cloud-Plattform 
 entstehen: zwischen Nutzern innerhalb eines Unternehmens, zwischen 
 verschiedenen Unternehmen oder mit den Entwicklern. Die Weiterentwicklung wird 
-dadurch inklusiver, Nutzer lassen sich einbeziehen. 
-\pcite{}{}{cloud_based_next_generation_service_and_key_challenges, 
-changes_in_requirements_engineering} &
-Wie lässt sich der Kontakt zu und zwischen Kunden und ihren Fachabteilungen so 
+dadurch inklusiver, Nutzer lassen sich einbeziehen.}
+	{cloud_based_next_generation_service_and_key_challenges, 
+changes_in_requirements_engineering}
+	{Wie lässt sich der Kontakt zu und zwischen Kunden und ihren 
+Fachabteilungen so 
 direkt, einfach und produktiv wie möglich gestalten? Lassen sich Communities 
-aufbauen? \\
-\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Analyse\-möglich\-keiten & Da sich alle Benutzer auf der Cloud 
-bewegen, fallen viel mehr Informationen an, die analysiert werden können
-\pcite{}{}{cloud_based_next_generation_service_and_key_challenges,
-changes_in_requirements_engineering} & Wie lassen 
+aufbauen?}
+
+	\cloudFeature{Analysemöglichkeiten}{Da sich alle Benutzer auf der Cloud 
+bewegen, fallen viel mehr Informationen an, die analysiert werden 
+können}{cloud_based_next_generation_service_and_key_challenges,
+changes_in_requirements_engineering}{Wie lassen 
 sich künftige Entscheidungen mit den gewonnenen Informationen fundierter 
-treffen? \\
-\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Mobilität & Lösungen aus SaaS-Bereich sind häufig bereits im Standard auf 
+treffen?}
+
+\cloudFeature{Mobilität }{ Lösungen aus SaaS-Bereich sind häufig bereits im 
+Standard auf 
 mobile Bedienbarkeit 
-ausgelegt. \pcite{}{}{cloud_based_next_generation_service_and_key_challenges} & 
+ausgelegt. }{cloud_based_next_generation_service_and_key_challenges} { 
 Um bezüglich Mobilität nicht nur Erwartungen zu erfüllen, sondern 
 Begeisterung zu wecken, sollte geprüft werden, wie die gewonnene Mobilität im 
-konkreten Fall den Kundenwert steigern kann. \\
-\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Reduzierte Markteintrittskosten \& Skalierte Märkte & Durch pay-per-use-Modelle 
+konkreten Fall den Kundenwert steigern kann. }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cloudFeature{Reduzierte Markteintrittskosten, Skalierte Märkte }{ Durch 
+pay-per-use-Modelle 
 sind die Markteintrittskosten drastisch reduziert.
-\pcite{}{}{cloud-computing_the_business_perspective} & Mit welchen Produkten 
+}{cloud-computing_the_business_perspective} { Mit welchen Produkten 
 lassen sich neue Märkte erschließen? Welche unerschlossenen Märkte gibt es? Wie 
-lassen sich geographisch weit entfernte Märkte erschließen? \\
-\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Skalierung der Leistung & In der Cloud stehen -- dynamisch an den aktuellen 
+lassen sich geographisch weit entfernte Märkte erschließen? }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cloudFeature{Skalierung der Leistung }{ In der Cloud stehen -- dynamisch an den 
+aktuellen 
 Bedarf angepasst -- unbegrenzte Ressourcen bereit.
-\pcite{}{}{cloud-computing_the_business_perspective} & Wie lassen sich die 
-Ressourcen nutzen, um gegenüber On-Premise-Anwendungen im Vorteil zu sein? \\
-\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}{cloud-computing_the_business_perspective} { Wie lassen sich die 
+Ressourcen nutzen, um gegenüber On-Premise-Anwendungen im Vorteil zu sein? }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Time to market \& kürzere Releasezyklen & 
+\cloudFeature{Time to market, kürzere Releasezyklen }{ 
 Die Software und auch Updates lassen sich schneller auf den Markt bringen. 
-\pcite{}{}{changes_in_requirements_engineering} &
-\\
-\hline
+}{changes_in_requirements_engineering,
+towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}{}
 
-Alternativen testen & 
+\cloudFeature{Alternativen testen }{ 
 In der Cloud lassen sich alternative Implementierungen 
-testen und direkt auswerten. \pcite{}{}{changes_in_requirements_engineering} &
-\\ \hline
+testen und direkt auswerten.}{changes_in_requirements_engineering} {} 
 
-Sparen der Wartung älterer Versionen & 
+\cloudFeature{Sparen der Wartung älterer Versionen }{ 
 Kapazitäten werden frei, da es in der Cloud nur eine aktuelle Version gibt, in 
 die alle Entwicklungsarbeit fließen kann und keine Altversionen gewartet und 
-berücksichtigt werden müssen. \pcite{}{}{changes_in_requirements_engineering, 
-transitioning_to_saas} &
-\\ \hline
-\end{longtable}
-\caption{Chancen durch die Migration in die Cloud}
-\label{tab:chancen_der_cloud}
-\end{table}
-\addtocounter{table}{-1}
+berücksichtigt werden müssen. 
+}{changes_in_requirements_engineering,transitioning_to_saas} {}
+
+\cloudFeature{Standardisierte Komponenten}{Mit in der Cloud verfügbaren, 
+standardisierten Komponenten lassen und loser Kopplung lassen sich 
+Funktionen relativ leicht 
+ergänzen}
+{towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy,
+cloud_based_next_generation_service_and_key_challenges}{}
+\end{description}
 
