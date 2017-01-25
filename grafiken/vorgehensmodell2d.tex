@@ -18,7 +18,7 @@
            rectangle,
            rounded corners,
            draw=black, very thick,
-           text width=7em,
+           text width=8em,
            minimum height=2em,
            text centered},
     % Define arrow style
@@ -27,6 +27,10 @@
            very thick,
            shorten <=5pt,
            shorten >=5pt,},
+    sepLine/.style={
+	dashed,
+	very thick
+    }
 }
 
 
@@ -35,10 +39,16 @@
 %\begin{document}
 \begin{figure}[bh]
 \begin{center}
+\scalebox{.8}{
 \begin{tikzpicture}
 
 
-
+\newcommand{\gear}[5]{%
+    \foreach \i in {1,...,#1}
+    {   [rotate=(\i-1)*360/#1] (0:#2) arc (0:#4:#2) {[rounded corners=0.5pt] -- 
+(#4+#5:#3)  arc (#4+#5:360/#1-#5:#3)} --  (360/#1:#2)
+    }
+}      
 
 % Punkte
 \newcommand{\boxNO}{(0,0)}
@@ -82,18 +92,20 @@ cycle;
 %\draw \trichterC node {};
 
 
+
+
 % Diamond
 
 
 
 \newcommand{\diamondX}{\trX + 0.5*\trichterBreiteO}
-\newcommand{\diamondY}{\trY-2.3*\cubey}
+\newcommand{\diamondY}{\trY-2.4*\cubey}
 %star point height=.9cm, minimum size=0.7*\cubey,draw,
 \node [starburst, fill=Goldenrod,draw,starburst points=13] (VISION)
 at (\diamondX,\diamondY) {Vision};
 	
 \newcommand{\boxREx}{\diamondX}
-\newcommand{\boxREy}{\diamondY - 1.2*\cubey}
+\newcommand{\boxREy}{\diamondY - 1.5*\cubey}
 \newcommand{\boxRo}{1.8*\cubey}
 \newcommand{\boxRm}{2*\cubey}
 \newcommand{\boxRu}{1.2*\cubey}
@@ -127,13 +139,75 @@ edge[pil] (I.north);
 \draw[pil]
   (RE.east) edge (AD.north);
   
-\draw[pil] (VISION) edge (RE.north);
+% Pfeil+Text Vision -> RE
+\draw[pil] (VISION) edge (RE.north);% {Wie sieht es hier aus?};
 
+%\node (UMSETZBARKEIT) at (\diamondX+0.25*\cubex,\diamondY-0.6*\cubey) 
+%{\Large{1001 ?}};
+ %(formidler) {Intermediaries (c)};
  
+% given
+\pgfmathsetmacro{\rOne}{0.2}% inner radius
+\pgfmathsetmacro{\nOne}{11}% num teeth
+\pgfmathsetmacro{\nTwo}{15}
+\pgfmathsetmacro{\nThree}{19}
+\pgfmathsetmacro{\toothHeight}{0.4*\rOne}
+\pgfmathsetmacro{\toothFall}{1}% degrees where radius drops from inner 
+to %outer
+\pgfmathsetmacro{\aOneTwo}{120}% angle from first to second
+\pgfmathsetmacro{\aTwoThree}{40}% angle from first to second
+
+% computed
+\pgfmathsetmacro{\rTwo}{\rOne*\nTwo/\nOne}% via equating tooth lengths
+\pgfmathsetmacro{\rThree}{\rOne*\nThree/\nOne}% 
+\pgfmathsetmacro{\ROne}{\rOne+\toothHeight}% outer radius
+\pgfmathsetmacro{\RTwo}{\rTwo+\toothHeight}
+\pgfmathsetmacro{\RThree}{\rThree+\toothHeight}
+\pgfmathsetmacro{\dOne}{(360/\nOne-\toothFall)/2}% degrees for a tooth; here 
+inner deg = outer deg
+\pgfmathsetmacro{\dTwo}{(360/\nTwo-\toothFall)/2}
+\pgfmathsetmacro{\dThree}{(360/\nThree-\toothFall)/2}
+\pgfmathsetmacro{\distOneTwo}{\rOne+\rTwo+\toothHeight+0.05}
+\pgfmathsetmacro{\distTwoThree}{\rTwo+\rThree+\toothHeight+0.05}
+
+\coordinate (A) at (\diamondX+0.5*\cubex,\diamondY-0.8*\cubey);
+\coordinate (B) at ($(A)+(\aOneTwo:\distOneTwo)$);
+\coordinate (C) at ($(B)+(\aTwoThree:\distTwoThree)$);  
+
+\draw[thick, rotate=10] node[align=center] {} ;
+%\gear{\nOne}{\rOne}{\ROne}{\dOne}{\toothFall} ;
+
+\draw[thick, shift={(B)}, rotate=18] node[align=center] {} 
+\gear{\nTwo}{\rTwo}{\RTwo}{\dTwo}{\toothFall};
+\draw[thick, shift={(C)}, rotate=8] node[align=center] {} 
+\gear{\nThree}{\rThree}{\RThree}{\dThree}{\toothFall};
+
+\node[scale=1.5] (TECHQ) at ($ (A) + (0.3*\cubex,0.4*\cubey) $) {\Huge{?}};
+\node[scale=1.5] (WIRTQ) at (\diamondX-0.6*\cubex,\diamondY-0.4*\cubey) 
+{\Huge{€?}};
+ 
+% Cloud 
 \node [cloud, draw,cloud puffs=10,cloud puff arc=120, aspect=2, inner 
 ysep=3*\cubex,fill=Goldenrod] (CLOUD) at (\boxREx,\boxREy-0.8*\boxHZwei) 
 {\textbf{Cloud L\"osung}};
  
+% Linien
+\newcommand{\firstLineY}{\trY - 1.9 * \cubey}
+\draw[sepLine] (\trX-\boxRm, \firstLineY) -- (\trX + 2.3*\boxRm, 
+\firstLineY);
+
+\newcommand{\secondLineY}{\diamondY - .85 * \cubey}
+\draw[sepLine] (\trX-\boxRm, \secondLineY) -- (\trX + 2.3*\boxRm, 
+\secondLineY);
+
+% Phasen
+\newcommand{\circlesX}{\diamondX-1.5*\boxRm}
+\draw (\circlesX,\diamondY + 1.2*\cubey) circle [radius=0.4*\cubey] node 
+{\Huge{I}};
+\draw (\circlesX,\diamondY - 0.2*\cubey) circle [radius=0.4*\cubey] node 
+{\Huge{II}};
+\draw (\circlesX,\diamondY - 1.5*\cubey) circle [radius=0.4*\cubey] node 
+{\Huge{III}};
  
  %\node[punkt, inner sep=5pt,below=0.5cm of RE]
  %(formidler) {Intermediaries (c)};
@@ -148,6 +222,7 @@ ysep=3*\cubex,fill=Goldenrod] (CLOUD) at (\boxREx,\boxREy-0.8*\boxHZwei)
    %edge[pil,<->, bend left=45] node[auto] {Direct (a)} (t);
 	
 \end{tikzpicture}
+}
 \caption{Darstellung des Vorgehensmodells. Der iterative Software Engineering 
 Kreislauf wurde \cite{changes_in_requirements_engineering} entnommen.}
 \label{fig:vorgehensmodell}
