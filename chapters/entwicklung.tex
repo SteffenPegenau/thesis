@@ -4,30 +4,30 @@
 In diesem Kapitel wird ein dreistufiges Vorgehensmodell (Vgl. 
 Abbildung~\ref{fig:vorgehensmodell}) für Cloud-Migrationen entwickelt, das sich 
 an Independent Software Vendors mit ihren Bedürfnissen und Anforderungen 
-richtet. \\
+richtet.
 \input{grafiken/vorgehensmodell2d}
 Das Vorgehen in jeder Phase ist von dem grundlegenden Ziel geprägt, Chancen der 
 Cloud zu realisieren und spezifische Risiken zu vermeiden. Deshalb werden 
 zunächst Chancen und Risiken identifiziert und mit den aus ihnen resultierenden 
 Fragen, Problemstellungen und Herausforderungen vorgestellt. Um der 
 Cloud mit ihren Chancen und Risiken bestmöglich zu begegnen sind auch 
-weitreichende Änderungen am Unternehmen selbst zu bedenken.\\
+weitreichende Änderungen am Unternehmen selbst zu bedenken.
 
 In Phase I wird anhand des bestehenden On-Premise-Produktes eine Vision 
 geformt, die unter Umständen einen sehr viel kleineren Funktionsumfang als die 
 On-Premise-Software aufweisen wird, dabei aber Chancen und Risiken des 
 Cloud-Marktes berücksichtigt und so Wettbewerbsfähigkeit und einen schnellen 
-Markteintritt zu ermöglicht. \\
+Markteintritt zu ermöglicht. 
 
 Anschließend wird in Phase II die Machbarkeit der Vision in technischer und 
 wirtschaftlicher Hinsicht geprüft. Maßgeblich ist die Frage, ob innerhalb 
 eines bestimmten Kostenrahmens auf gegebener
-Plattform ein konkurrenzfähiges Produkt geschaffen werden kann. \\
+Plattform ein konkurrenzfähiges Produkt geschaffen werden kann.
 
 Schließlich wird die Vision in Phase III in einem an die Cloud 
 angepassten, agilen, iterativen Entwicklungsprozess realisiert. Es wird 
 gezeigt, in welchen Aspekten bekannte agile Modelle angepasst werden müssen, um 
-mit der besonders hohen Agilität der Cloud Schritt halten zu können. \\
+mit der besonders hohen Agilität der Cloud Schritt halten zu können. 
 
 Bevor sie im Detail vorgestellt wird, wird jede Phase zunächst begründet 
 und zur Orientierung vom Fünf-Phasen-Modell abgegrenzt. 
@@ -266,15 +266,16 @@ Aus \pcite{}{}{cloud-computing_the_business_perspective}
 
 
 \subsection{Phase II: Machbarkeitsstudie}
-Phase II entspricht weitgehend der ersten Phase aus \citeflow{fivephases}: 
-Durchführung einer technischen und wirtschaftlichen Machbarkeitsstudie. Objekt 
-der beiden Machbarkeitsstudien ist hier jedoch die Produktvision, nicht die 
-On-Premise-Software.\\
+Phase II entspricht weitgehend der ersten Phase aus \citeflow{fivephases}, 
+nämlich der Durchführung einer technischen und wirtschaftlichen 
+Machbarkeitsstudie. Objekt der beiden Machbarkeitsstudien ist hier jedoch die 
+Produktvision, nicht die On-Premise-Software.\\
 Dies wirkt sich vor allem auf die Prüfung der Wirtschaftlichkeit aus. Der 
 Vorschlag des Fünf-Phasen-Modells an dieser Stelle eine "`detaillierte 
 Kosten-Nutzen-Analyse"' durchzuführen, wird hier nicht 
 befolgt. Um diese Entscheidung zu begründen, sollen die beiden 
-Migrationsansätze noch einmal verglichen werden.\\
+Migrationsansätze noch einmal verglichen werden.
+
 \input{grafiken/funktionsumfang_wasserfallmodell}
 In Abbildung~\ref{fig:funktionsumfang_wasserfallmodell} ist der Ansatz aus dem 
 Fünf-Phasen-Modell dargestellt. Dabei wird die bestehende Anwendung in ihrem 
@@ -285,28 +286,38 @@ Kundenwünschen orientiert weiterentwickelt, wird verschenkt. Der ISV
 läuft aber auch Gefahr weitere Vorteile nicht zu realisieren, wenn er bei der 
 Migration zunächst die Herstellung aller Funktionalitäten der Altsoftware in 
 den Vordergrund stellt und dabei vernachlässigt, über Möglichkeiten 
-nachzudenken, die Vorteile und Chancen der Cloud umzusetzen. Deshalb hat die 
+nachzudenken, die Vorteile und Chancen der Cloud umzusetzen. Deshalb ist die 
 Menge der Chancen nur zu einem geringen Teil in der Cloud-Lösung enthalten -- 
 im Gegensatz zu den Risiken, die Teil der Cloud-Lösung werden, wenn man sich 
-ihrer nicht bewusst ist und sie daher nicht vermeiden kann. \\
+ihrer nicht bewusst ist und sie daher nicht vermeiden kann.
+
+\input{grafiken/funktionsumfang_agil}
 Abbildung~\ref{fig:funktionsumfang_agil} zeigt die in dieser Arbeit 
 vorgeschlagene Vorgehensweise. Hier ist die Cloud-Lösung in ihrem Umfang sehr 
 viel kleiner als die bestehende On-Premise-Software, sodass sie gerade das 
 enthält, was für die Vermarktung nötig ist. Die Beschränkung des Umfangs 
-begünstigt eine schnelle Fertigstellung und Vermarktung. Fehlendes Features 
+begünstigt eine schnelle Fertigstellung und Vermarktung. Fehlende Features 
 werden agil nachentwickelt und in kurzen Abständen freigegeben. In der 
 Cloud-Lösung werden von Anfang an Chancen und Risiken berücksichtigt und 
-maximiert beziehungsweise minimiert. \\
+maximiert beziehungsweise minimiert. 
 
 Im Ergebnis ist das hier vorgestellte Vorgehen weniger riskant, da nötige 
-Investitionen geringer sind und Fehler wie Erfolge schneller sichtbar werden. 
+Investitionen geringer sind und Fehler wie Erfolge frühzeitig sichtbar werden. 
 Da in diesem Modell zudem nicht die Kosteneinsparungen sondern strategische 
 Ziele im Vordergrund stehen und der zeitliche Horizont viel kleiner ist, kann 
-die Wirtschaftlichkeitsprüfung weniger detailliert ausfallen. Es sollte geprüft 
-geprüft werden, ob nötige Umsätze mit dem Funktionsumfang der Vision generiert 
-werden können. \\
+die Wirtschaftlichkeitsprüfung weniger detailliert ausfallen. Es sollte 
+lediglich geprüft geprüft werden, ob nötige Umsätze mit dem Funktionsumfang der 
+Vision generiert werden können. 
 
-\input{grafiken/funktionsumfang_agil}
+Auf diesen letztgenannten Aspekt sollte ebenfalls die technische 
+Machbarkeitsstudie abzielen: Ist mit der gewählten Cloud-Plattform die 
+Umsetzung eines vermarktbaren Leistungsumfangs der Vision möglich? Dabei soll 
+gerade nicht die gesamte Vision direkt umgesetzt werden. Sobald Kunden eine 
+erste Version der Cloud-Lösung von Kunden genutzt wird, lässt sich erfragen 
+oder ermitteln, wie die Entwicklung weitergehen soll; womöglich wird 
+festgestellt, dass ein in der Vision vorgesehenes Feature gar keinen Anklang 
+fände oder aber, dass die Vision in eine neue Richtung weiter gedacht werden 
+muss.
 
 
 \begin{comment}
@@ -319,96 +330,52 @@ wie Outsourcing, welches nicht auf das Geschäftsmodell des Unternehmens wirken
 will. Durch neue Anwendungsszenarien kann mit Cloud-Computing ein beachtlicher
 Mehrwert geschaffen werden."' \pcite{}{154}{cloud_migration}
 
-"`Cloud-Computing verändert die Preisgestaltung von IT-Services und kann als
-eine Reaktion  auf das straffere Kostenmanagement im Nachgang der Finanzkrise
-2008 verwendet werden. Unternehmenskunden wollen sich nicht mehr mit fixen
-IT-Kosten binden. Sie wollen auch in der IT des Unternehmens die Capital
-Expenditures (CAPEX) in Operational Expenditures (OPEX) umwandeln. Dies ist der
-Hauptgrund, wieso das 'Pay-per-Use-Pricing' von Cloud-Services bei den
- Unternehmen so viel Interesse geweckt hat."' \pcite{}{156}{cloud_migration}
-
-
-"`Mögliche betriebswirtschaftliche Vorteile: bessere Nutzung des
-Ressourcen-Pools des Unternehmens, Verbesserung der Zeit zur Markteinführung
-neuer Produkte und Dienstleistungen, Steigerung der Agilität und letztlich
-Verbesserung der Erfahrungen der Kunden im Umgang mit dem Unternehmen,
-welches auf Cloud-Computing setzt."'
-\pcite{}{157}{cloud_migration}
-
-
 "`Alle Empfehlungen sollten mit einem Business Case hinterlegt werden, der
 die Höhe der Kostenreduktion und die Verbesserung des Servicelevels zeigt."'
 \pcite{}{158}{cloud_migration}
 \end{comment}
 
 
-\subsection{Phase III: Anforderungsanalyse und -Planung}
-Der Software Engineering Prozess bei der Migration zu einem 
-Software-as-a-Service-Modell ändert sich. 
-\citepara{changes_in_requirements_engineering}
+\subsection{Phase III: Agiler, iterativer Entwicklungsprozess}
+Die dritte Phase dieses Modells fasst die Phasen zwei bis fünf 
+(Anforderungsanalyse und -Planung, Migration, Testen und Go-Live sowie 
+Überwachung und Wartung) aus dem Fünf-Phasen-Modell zu einer Phase zusammen. In 
+dieser Phase wird anstatt eines iterativen Wasserfallmodells ein agiles, 
+sprintweise iteratives Modell verfolgt. Der Modellwechsel wird 
+notwendig, weil sich in der Cloud die Art und Weise sowie der Rhythmus ändern, 
+in der neue Versionen und Updates ausgeliefert werden. Bei konventioneller 
+Software wurden Fehlerbehebungen häufig in Form kleiner Updates in festen 
+Zyklen, beispielsweise halbjährlich ausgeliefert. Neue Funktionalitäten kamen 
+hingegen in Form von neuen Softwareversionen (Upgrades) zum Kunden, für die 
+erneut gezahlt werden musste. Im Cloud-Betrieb gibt es regelmäßig  nur eine 
+Version der Software, in der nicht nur kontinuierlich Fehler behoben 
+sondern auch neue Funktionen ergänzt werden, ohne, dass dies für die Nutzer mit 
+Unterbrechungen verbunden wäre. 
+\pcite{}{}{changes_in_requirements_engineering,transitioning_to_saas} Unter 
+dieser Anforderung ist ein agiles Vorgehen im Sinne der Wettbewerbsfähigkeit 
+besonders wichtig.
 
-Anforderungsermittlung oder Requirementsengineering hat das Ziel Anforderungen 
-eines Softwaresystem oder eines Features zu erheben, zu strukturieren, 
-priorisieren und zu koordinieren. 
-\pcite{}{}{changes_in_requirements_engineering} Auch die Identifizierung von 
-Indiskrepanzen zwischen Ergebnis und Ziel gehört dazu. 
-\pcite{}{}{requirements_engineering_process_for_saas_cloud_env}
+Der agile, iterative Entwicklungsprozess beginnt, wie in 
+Abbildung~\ref{fig:vorgehensmodell} dargestellt, mit dem Requirements 
+Engineering und der Produktvision als Input.
 
-Die Migration in die Cloud macht ein Überdenken der Software Engineering 
-Prozesse notwendig. \pcite{}{}{transitioning_to_saas}
+Das Requirements Engineering (Anforderungsmanagement) hat das Ziel 
+Anforderungen eines Softwaresystem oder eines Features zu erheben, zu 
+strukturieren, priorisieren und zu 
+koordinieren. \pcite{}{}{changes_in_requirements_engineering} Auch die 
+Identifizierung von Diskrepanzen zwischen Ergebnis und Ziel gehört dazu. 
+\pcite{}{}{requirements_engineering_process_for_saas_cloud_env} Auch wenn sich 
+an dieser Definition bei der Entwicklung in der Cloud nichts Grundsätzliches 
+ändert, machen die Charakterisitika der Cloud doch ein Überdenken der Prozesse 
+im Rahmen des Requirements Engineering notwendig. 
+\pcite{}{}{changes_in_requirements_engineering,transitioning_to_saas}
+Die Unterschiede zwischen Requirements Engineering bei On-Premise-Projekten im 
+Vergleich zu SaaS-Projekten ist in Tabelle~\ref{tab:unterschiede_im_re} 
+aufgeführt.
+\input{tabellen/unterschiede_im_re}
 
-Besseres Requirements Engineering kann Kosten für die Fehlbehebung um 20\% 
-senken.
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.8\textwidth]{images/soa_architecture.png}
-\caption{Service-oriented architecture. Aus 
-\protect\citeflow{changes_in_requirements_engineering}}
-\label{fig:soa_architecture}
-\end{center}
-\end{figure}
-
-
-Aus \citepara{changes_in_requirements_engineering}
-\begin{itemize}
-	\item Vergleich zwischen zwei Modellen des RE.
-	\item Während Updates früher kostenlos (kleinere Updates) oder größere 
-Updates (kostenpflichtiger Neuerwerb) waren, mieten Kunden im Cloud Umfeld eine 
-Software und erwarten Updates.
-	\item Bei einer Migration zu einem Service-Oriented-Architecture 
-Modell, werden Teile aus einer Software geschnitten und über eine Schnittstelle 
-als Dienstleistung angeboten. Daher wird in der Regel versucht, die meisten 
-Funktionalitäten zu übernehmen. Für mehr Informationen: 
-\pcite{}{}{service-oriented_migration}
-	\item Es gibt drei Nicht-Funktionale Anforderungen die aus SaaS 
-entstehen: 
-\begin{enumerate}
-	\item Software muss in einer Cloud-Umgebung gehostet werden. Dies 
-hat Einfluss auf die Themen Sicherheit, Vertraulichkeit, Verschwiegenheit, 
-Compliance.
-	\item In der Regel eine webbasierte Anwendung, d.h. es werden übliche 
-Internetprotokolle verwendet. Dies hat Einfluss auf die Themen: Multi-Tenancy, 
-User Concurrency, Konfigurierbarkeit, Skalierbarkeit, Verlässlichkeit, 
-Leistungsfähigkeit, Verfügbarkeit, Kompatibilität, Interoperabilität, 
-Portabilität, Effizienz, Direktheit
-	\item In der Regel ist eine Bedienung über den Browser möglich, die 
-Installation einer zusätzlichen Anwendung nicht erforderlich
-\end{enumerate}
-	\item Business Changes erforderlich. Näheres 
-\pcite{}{}{transitioning_to_saas}. Update Mechanismen, Non-disruptive Upgrade 
-Modelle
-	\item \pcite{}{}{requirements_engineering_process_for_saas_cloud_env} 
-Neuer Stakeholder: Cloud Service Provider. Schlagen Checkliste für neue 
-Stakeholder vor.
-	\item Noch mehr Stakeholder Analysten, Grafik Designer, Kunden, 
-Marketing, Sicherheitsexperten 
-\pcite{}{}{adapting_the_software_engineering_process}
-\end{itemize}
-
-\subsubsection{Transformation des bisherigen Requirements-Engineering}
-\citeflow{changes_in_requirements_engineering} schlagen die folgenden Schritte 
-vor, um die Anforderungsermittlung an die Cloud anzupassen:
+Um die Änderungen im Requirements Engineering zu reagieren, empfehlen 
+\citeflow{changes_in_requirements_engineering} die folgenden Schritte:
 \begin{enumerate}
 	\item Paradigma sich schnell ändernder Anforderungen etablieren. Die 
 Nähe zur agilen Entwicklung und neuen Methoden der Anforderungsermittlung 
@@ -431,8 +398,36 @@ Nutzergruppen zu testen.
 \end{enumerate}
 
 
-\subsubsection{Unterschiede im Requirements Engineering}
-\input{tabellen/unterschiede_im_re}
+\begin{comment}
+Aus \citepara{changes_in_requirements_engineering}
+\begin{itemize}
+	\item Bei einer Migration zu einem Service-Oriented-Architecture 
+Modell, werden Teile aus einer Software geschnitten und über eine Schnittstelle 
+als Dienstleistung angeboten. Daher wird in der Regel versucht, die meisten 
+Funktionalitäten zu übernehmen. Für mehr Informationen: 
+\pcite{}{}{service-oriented_migration}
+	\item Es gibt drei Nicht-Funktionale Anforderungen die aus SaaS 
+entstehen: 
+\begin{enumerate}
+	\item Software muss in einer Cloud-Umgebung gehostet werden. Dies 
+hat Einfluss auf die Themen Sicherheit, Vertraulichkeit, Verschwiegenheit, 
+Compliance.
+	\item In der Regel eine webbasierte Anwendung, d.h. es werden übliche 
+Internetprotokolle verwendet. Dies hat Einfluss auf die Themen: Multi-Tenancy, 
+User Concurrency, Konfigurierbarkeit, Skalierbarkeit, Verlässlichkeit, 
+Leistungsfähigkeit, Verfügbarkeit, Kompatibilität, Interoperabilität, 
+Portabilität, Effizienz, Direktheit
+	\item In der Regel ist eine Bedienung über den Browser möglich, die 
+Installation einer zusätzlichen Anwendung nicht erforderlich
+\end{enumerate}
+	\item \pcite{}{}{requirements_engineering_process_for_saas_cloud_env} 
+Neuer Stakeholder: Cloud Service Provider. Schlagen Checkliste für neue 
+Stakeholder vor.
+	\item Noch mehr Stakeholder Analysten, Grafik Designer, Kunden, 
+Marketing, Sicherheitsexperten 
+\pcite{}{}{adapting_the_software_engineering_process}
+\end{itemize}
+
 
 \subsubsection{Kategorien und Anforderungen}
 Aus \citeflow{requirements_engineering_process_for_saas_cloud_env}:
@@ -469,13 +464,10 @@ persönlicher Sicherheit bietet die CLoud? Wie würden Anwendungen überwacht, d
 in einer Public Cloud? Wie skalierbar wäre die Cloud?
 \end{description}
 
-\cite{changes_in_requirements_engineering}
-
-
+\begin{comment}
 \subsubsection{Anforderungsermittlung}
 \subsubsection{Return on Investment (ROI)}
 \subsubsection{Total Cost of Ownership (TCO)}
-\begin{comment}
 
 
 
