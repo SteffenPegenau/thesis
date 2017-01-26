@@ -9,7 +9,7 @@ var latex = "latex -interaction=nonstopmode main.tex ; ";
 var bibtex = "bibtex main.aux ; "
 
 
-var recompile = bibtex + pdfLatex + bibtex + pdfLatex;
+var recompile = pdfLatex + bibtex; // + bibtex + pdfLatex;
 
 module.exports = function(grunt) {
   'use strict';
