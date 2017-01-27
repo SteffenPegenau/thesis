@@ -298,8 +298,11 @@
    type = {Journal Article}
 }
 
-@misc{   year = {2016},
-   type = {Generic}
+@article{migrating_applications_to_public_cloud_services,
+   author = {Council, CSC},
+   title = {Migrating applications to public cloud services: roadmap for success},
+   year = {2016},
+   type = {Journal Article}
 }
 
 @article{practical_guide_to_cloud_computing,
