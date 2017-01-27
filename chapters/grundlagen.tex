@@ -1,4 +1,5 @@
 \section{Grundlagen}
+\label{cha:grundlagen}
 %Im Grundlagenkapitel stellen Sie das Basiswissen für die weiteren Kapitel vor.
 %Hierzu können neben theoretischen Konzepten auch die historische Entwicklung
 %und aktuelle Forschungsvorhaben gehören. Idealerweise bedient man sich hier
@@ -14,34 +15,25 @@ diesem Kapitel beantwortet werden sollen:
 \begin{itemize}
 	\item Welche Vorteile bietet die Cloud und wie lassen sie sich
 erzielen? Inwiefern unterscheiden sich Cloud-Migrationen von herkömmlichen
-Migrationen in der IT und wie lassen sie sich zum Outsourcing abgrenzen? (siehe
-Kapitel~\ref{cha:definition_cloud-migration})
+Migrationen in der IT und wie lassen sie sich zum Outsourcing abgrenzen? 
 	\item Was wird in dieser Arbeit unter "`Independent Software Vendors"'
 verstanden? Welche Besonderheiten weisen sie und ihre Projekte auf und welchen
-Einfluss haben diese Besonderheiten auf Cloud-Migrationen? (siehe
-Kapitel~\ref{cha:isv})
+Einfluss haben diese Besonderheiten auf Cloud-Migrationen?
 	\item Warum ist Salesforce als Zielplattform für Migrationen
-geeignet? (siehe Kapitel~\ref{cha:salesforce_als_zielplattform})
+geeignet?
 	\item Welche Faktoren beeinflussen die Cloud-Migration und ihren
-Erfolg? (siehe Kapitel~\ref{cha:migration_bestimmende_faktoren})
+Erfolg?
 \end{itemize}
-Das Kapitel wird von einer Vorstellung eines Fünf-Phasen-Modells abgeschlossen,
+Das Kapitel wird von der Vorstellung des Fünf-Phasen-Modells abgeschlossen,
 auf dem das entwickelte Vorgehensmodell basiert. Auch wird die Wahl für dieses
-Modell als Arbeitsgrundlage begründet. (Siehe Kapitel~\ref{cha:five_phases})
+Modell als Arbeitsgrundlage begründet.
 
-\subsection{(Cloud-)Migrationen und Outsourcing}
+\subsection{Migration und Cloud-Migration}
 \label{cha:definition_cloud-migration}
-
-\subsubsection{TODO: On-Premise Definition (hier) einbauen}
-Software as a Product (SaaP) entnommen aus 
-\citeflow{changes_in_requirements_engineering}
-
-Software as a Good aus \citeflow{transitioning_to_saas}
-
 
 Die Migration von Software, wird in der Norm ISO/IEC 14764 "`Software
 Engineering -- Software Life Cycle Processes -- Maintenance"' als spezielle
-Form der Wartung, als anpassende Wartung ("`Adaptive Maintenance"') und
+Form der Wartung, nämlich als anpassende Wartung ("`Adaptive Maintenance"') und
 Weiterentwicklung definiert, bei der eine Software nach Auslieferung geändert
 wird, um das Produkt in geänderten oder sich ändernden Umgebungen nutzbar zu
 halten. \pcite{}{}{characterizing_software_architecture_changes} \\
@@ -58,20 +50,12 @@ Je standardisierter und verbreiteter die Anforderung der zu migrierenden
 Software, desto geringer werden die nötigen Anpassungen an der
 Software ausfallen, womit die Migration einfacher und kostengünstiger wird.
 Eventuell wird lediglich eine virtuelle Maschine auf einen neuen Server
-gestartet. \\
+gestartet. 
 
-Eine solche virtuelle Maschine ließe sich auch in der Cloud starten. Auf
-diese Weise ließen sich die Vorteile der Cloud jedoch nicht optimal nutzen. Um
-zu zeigen, welche Änderungen nötig sind, werden nun zunächst die Vorteile
-herausgestellt, daran anschließend wieso diese Änderungen die Cloud-Migration
-zu mehr machen, als die oben genannte Weiterentwicklung.
-
-\subsubsection{Vorteile der Cloud und ihre Realisierung}
-\label{cha:vorteile_der_cloud}
-\citeflow{exploring_the_factors} identifizieren im Rahmen ihrer
-Literaturrecherche die vier Hauptgründe für eine Cloud-Migration, die hier als
-Rahmen dienen sollen, um die Vorteile, die die Cloud-Nutzung hat, zu
-beschreiben und aufzuzeigen wie sie zu realisieren sind.
+Eine solche virtuelle Maschine ließe sich auch in der Cloud starten. Auf diese 
+Weise ließen sich jedoch nicht die folgenden Vorteile realisieren, die 
+\citeflow{exploring_the_factors} als Hauptgründe für eine Migration in die 
+Cloud identifiziert haben:
 \begin{description}
 	\item[Kosteneinsparungen] Cloud-Anbieter, die große Rechenzentren
 mit vielen Servern betreiben können die Total Cost of Ownership pro Server um
@@ -131,11 +115,20 @@ wiederverwendet werden können. Dadurch wird die Weiterentwicklung und Wartung
 von Software reduziert. \pcite{}{}{economics_of_the_cloud}
 \end{description}
 
-Der Grad, in dem diese Vorteile realisiert werden, hängt davon ab, in welchem
-Umfang Leistungen in der Cloud in Anspruch genommen werden, was wiederum
-Einfluss auf den Migrationsprozess hat. \pcite{}{213}{Pahl2013}
+\begin{comment}
+Um von diesen Vorteilen profitieren zu können müssen 
+die Software selbst, sowie Arbeitsprozesse und Geschäftsmodell angepasst 
+werden. Da Umfang der Änderungen nicht mehr unter die oben genannte 
+"`Weiterentwicklung"' fällt, wird von Cloud-Migrationen als Abgrenzung zu 
+herkömmlichen Migrationen gesprochen. 
+\pcite{}{}{framework_for_architecture-driven_migration}
+\end{comment}
 
-Zur Kategorisierung des Leistungsumfangs dienen "`as a Service"'-Modelle. Es
+
+Der Grad, in dem diese Vorteile realisiert werden, davon ab, 
+in welchem Umfang Leistungen in der Cloud in Anspruch genommen werden, was 
+wiederum Einfluss auf den Migrationsprozess hat. \pcite{}{213}{Pahl2013}Zur 
+Kategorisierung des Leistungsumfangs dienen "`as a Service"'-Modelle. Es
 gibt recht viele dieser Modelle - \citeflow{xAsAService} zählt 35
 Varianten - die mehr oder weniger verbreitet sind und mit "`Everything as a
 Service"', abgekürzt als EaaS oder XaaS zusammengefasst werden. Dabei werden
@@ -143,13 +136,6 @@ nicht nur Technologien als Dienstleistung angeboten, sondern auch Ziele; so gibt
 es beispielsweise auch "`Hardware-as-a-Service (HaaS)"' und
 "`Business-Process-as-a-Service (BPaaS)"'.
 \pcite{}{}{emerging_paradigms_and_areas_for_expansion, benlian_saas_2010}
-\\
-
-Das National Institute of Standards and Technology sieht drei
-Service Modelle anerkannte vor, die sich im Anteil der
-selbst zu verwaltenden, technologischen Anteile (Integrationstiefe)
-unterscheiden und in dieser Hinsicht in Abbildung~\ref{fig:xaas_im_vergleich}
-mit der herkömmlichen IT verglichen werden. \pcite{}{}{NIST,thoughtsOnCloud} \\
 \begin{figure}%[h]
 \begin{center}
 \includegraphics[width=\textwidth]{images/XaaS_im_Vergleich.png}
@@ -159,6 +145,12 @@ Dienstleistung und Eigenverantwortung. Aus
 \label{fig:xaas_im_vergleich}
 \end{center}
 \end{figure}
+
+Das National Institute of Standards and Technology sieht drei
+Service Modelle anerkannte vor, die sich im Anteil der
+selbst zu verwaltenden, technologischen Anteile (Integrationstiefe)
+unterscheiden und in dieser Hinsicht in Abbildung~\ref{fig:xaas_im_vergleich}
+mit der herkömmlichen IT verglichen werden. \pcite{}{}{NIST,thoughtsOnCloud} 
 \begin{description}
 	\item[Infrastructure as a Service (IaaS)] Dem Kunden werden Netzwerk,
 Speicher und Rechenleistung zur Verfügung gestellt. Über die darauf laufende
@@ -168,15 +160,11 @@ und dem Betrieb von Servern, Datenspeichern und Netzwerkressourcen.
 \pcite{}{213}{Pahl2013}
 	\item[Platform as a Service (PaaS)] Der Kunde kann bereitgestellte
 oder selbst entwickelte Software in der Cloud laufen lassen und eventuell
-Einfluss auf die Anwendungsumgebung nehmen. \\
+Einfluss auf die Anwendungsumgebung nehmen. 
 	\item[Software as a Service (SaaS)] Der Kunde kann eine vom Anbieter
 bereitgestellte Software nutzen und in begrenztem Maße konfigurieren.
 \end{description}
 
-
-
-
-\subsubsection{Cloud-Migration}
 Das für die Migration genannte Beispiel, eine virtuelle Maschine zu
 verschieben, lässt sich mit Abbildung~\ref{fig:xaas_im_vergleich} für den
 Cloud-Fall dem Modell IaaS zuordnen. Der Cloud-Kunde muss sich in diesem Fall
@@ -186,38 +174,54 @@ Vorteile der Cloud besser auszuschöpfen, müsste die Anwendung entweder so
 angepasst werden, dass sie auf einer zur Verfügung gestellten, fremdverwalteten
 Laufzeitumgebung läuft (PaaS). Oder es wird eine bestehende Anwendung in der
 Cloud genutzt und gegebenenfalls angepasst (SaaS). Beide Optimierungen
-machen das Treffen konsequenzenreicher, kritischer Entscheidungen nötig,
-die nicht nur technische, sondern auch betriebswirtschaftliche und strategische
-Fragen beantworten müssen. \pcite{}{}{migration_to_paas_clouds}
+machen das Treffen konsequenzenreicher, kritischer Entscheidungen nötig, die 
+nicht nur technische, sondern auch betriebswirtschaftliche und 
+strategische Aspekte betreffen. \pcite{}{}{migration_to_paas_clouds}
 Aus diesem Grund ist eine Cloud-Migration\footnote{Der Vollständigkeit halber
 eine formale Definition der Cloud-Migration: "`Prozess der anteiligen
 oder
 vollständigen Bereitstellung von digitalen Gütern, Dienstleistungen,
 IT-Ressourcen oder Anwendungen in der Cloud"'}
-\pcite{}{}{Pahl2013} in ihrem Umfang viel größer als
-herkömmliche Migration und erfordert entsprechend eine viel umfangreichere
+\pcite{}{}{Pahl2013} in ihrem Umfang viel mehr als eine Weiterentwicklung 
+herkömmlicher Migrationen und erfordert eine dementsprechende, viel 
+umfangreichere
 Planung. \pcite{}{}{framework_for_architecture-driven_migration,
 a_review_of_the_current_level_of_support_to_aid_decisions_for_migrating}
 
-\citeflow{exploring_the_factors} identifizieren vier Formen, in denen eine
-Migration ablaufen kann.\label{cha:migrationsformen}
+Für die zu migrierende Software gibt es zahlreiche Namen, zum Beispiel 
+"`Software as a Product"' (SaaP) 
+\pcite{}{}{changes_in_requirements_engineering}, "`Software as a Good"' 
+\pcite{}{}{transitioning_to_saas} oder "`Legacy System"' 
+\pcite{}{}{framework_for_architecture-driven_migration}. In dieser Arbeit wird 
+der Begriff "`On-Premise-Software"' verwendet.
+
+Der Ablauf von Cloud-Migrationen lässt sich in die folgenden Kategorien 
+unterteilen: \citeflow{exploring_the_factors} 
 \begin{description}
 	\item[Ersetzen] Einzelne Komponenten einer bestehenden Anwendung werden
 durch Dienste in der Cloud ersetzt. Andere Komponenten, die mit diesen
-ersetzten Komponenten interagieren werden umkonfiguriert.
+ersetzten Komponenten interagieren werden umkonfiguriert. Buzzwörter zu dieser 
+Kategorie sind "`Service Oriented Architecture"' (SOA) und "`Microservices"': 
+Anstatt Anwendungen als Monolithen gewaltigen Umfangs zu entwerfen, werden sie 
+aus wiederverwertbaren Diensten konstruiert, die über Schnittstellen 
+verbunden werden.
 	\item[Partielle Migration] Anstatt Komponenten durch Cloud-Dienste zu
 ersetzen, werden sie in die Cloud migriert.
-	\item[Migration der ganzen Anwendung] Häufig werden Anwendungen in die
-Cloud migriert, indem die virtuellen Maschinen auf denen sie laufen in die
-Cloud umgezogen werden, ohne dass größere Anpassungen nötig wären.
+	\item[Migration der ganzen Anwendung] Diesem Typus entspricht das 
+Beispiel von oben: Eine Anwendung wird in ihrer virtuellen Maschine in die 
+Cloud umgezogen.
 	\item[Cloudify] Die Anwendung wird in Gänze an die Cloud und ihre
-Charakteristika angepasst und mit Cloud Diensten neu entwickelt.
+Charakteristika angepasst und mit Cloud Diensten neu entwickelt. Dieser Maxime 
+folgt das in dieser Arbeit vorgestellte Modell.
 \end{description}
 
-\subsubsection{Abgrenzung zum Outsourcing}
+%\subsubsection{Abgrenzung zum Outsourcing}
 
-\subsection{Independent Software Vendor (ISV)}
+\subsection{Softwarehersteller: Independent Software Vendor (ISV)}
 \label{cha:isv}
+Unter dem Begriff "`Independent Software Vendor"' werden Softwarehersteller 
+zusammengefasst, die Software für von ihnen unabhängige Plattformen, zum 
+Beispiel Microsoft Windows oder Salesforce entwickeln.
 
 \begin{figure}[!h]
 \begin{center}

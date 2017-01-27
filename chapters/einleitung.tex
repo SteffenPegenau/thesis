@@ -110,25 +110,67 @@ den Umsatz mit durchschnittlich 31\% von 2,267 Milliarden US-Dollar auf
 viele Unternehmen eine Option sein.
 \end{comment}
 
-In der Literatur wurden 
+In der Literatur finden sich zahlreiche Vorgehensmodelle, die 
+versuchen, die Migration eines Altsystems beziehungsweise einer Altsoftware im 
+weitesten Sinne zu strukturieren. In einigen, wie in dem von 
+\citeflow{framework_for_architecture-driven_migration} entwickelten Modell wird 
+ein technischer Schwerpunkt gesetzt; wirtschaftliche Aspekte bleiben weitgehend 
+unberücksichtigt. Andere fokussieren sich lediglich auf den Kosten-Faktor 
+(\citeflow{fivephases}). Umfassendere Modelle 
+(\citeflow{migrating_applications_to_public_cloud_services}) betonen die 
+markt-strategischen Folgen einer Cloud-Migration für Unternehmen. 
 
+Zielgruppe der Modelle sind in der Regel Unternehmen, die Teile ihrer 
+IT-Landschaft in die Cloud migrieren wollen, zum Beispiel ein Unternehmen, das 
+seine Lagerhaltung in die Cloud verlagern will. Eine Literaturrecherche ergab, 
+dass Softwarehersteller als Zielgruppe bisher vernachlässigt wurden. Der 
+Unterschied zwischen den beiden Gruppen ist gravierend: Während im Beispiel die 
+Lagerhaltung in Form einer Software lediglich das Kerngeschäft unterstützt, 
+besteht für den Softwarehersteller das Kerngeschäft aus Software. Er wird nicht 
+in die Cloud migrieren, um Kosten zu senken, sondern um auf dem Markt weiter zu 
+bestehen. Für den Erfolg im Wettbewerb ist eine strategische Neuausrichtung 
+unabdingbar, unterscheidet sich in ihrer Tragweite und ihrem Umfang jedoch 
+erheblich von den strategischen Überlegungen, die ein Unternehmen einer anderen 
+Branche bei der Cloud Migration treffen muss. 
 
-Diese Arbeit richtet sich vor allem an kleine und mittlere Unternehmen, die 
-eine gewachsene Anwendung in die Cloud migrieren wollen. In ihr soll ein 
-Vorgehensmodell entwickelt werden, 
+Um diese Forschungslücke zu schließen, soll ein Modell entwickelt werden, das 
+Softwarehersteller bei der Migration in die Cloud unterstützen soll. Grundlage 
+ist eine Literaturrecherche, die die folgenden Fragen klären soll.
+\begin{enumerate}
+	\item Welche Merkmale (Chancen und Risiken) der Cloud sind bei der 
+Migration zu berücksichtigen?
+	\item Wie beeinflussen die gefundenen Merkmale die strategische 
+Ausrichtung und das Geschäftsmodell eines Softwareherstellers?
+	\item Wie beeinflussen die gefundenen Merkmale den Migrationsprozess 
+eines Softwareherstellers?
+\end{enumerate}
 
+Bevor in Kapitel~\ref{cha:entwickelung_vorgehensmodell} diese Fragen 
+beantwortet werden und in der Entwicklung eines Vorgehensmodells resultieren, 
+wird in Kapitel ~\ref{cha:grundlagen} auf grundlegende Fragen eingegangen: 
+Welche Vorteile verspricht die Cloud und wie lassen sie sich erzielen? Auf 
+welche Weise unterschiedet sich eine Cloud-Migration von herkömmlichen 
+Migrationen in der IT? Was wird in dieser Arbeit unter einem Softwarehersteller 
+verstanden und welche Annahmen werden getroffen? Wie wirken sich dessen 
+Charakteristika auf die Migration aus? \\ Das Grundlagenkapitel schließt mit 
+der Vorstellung des Fünf-Phasen-Modells, das als Basis und Orientierung für das 
+in dieser Arbeit entwickelte Modell dient.
 
-das drüber Auskunft gibt, wie die technische 
-und wirtschaftliche Machbarkeit der Migration geprüft wird, das neue Produkt 
-mit seinen Funktionalitäten definiert, entwickelt, getestet, ausgerollt, 
-überwacht und gewartet wird.
+Kapitel~\ref{cha:method} beschreibt die Literaturrecherche mit der die 
+Forschungsfragen beantwortet wurden. Um Erfahrungen aus der Praxis in der 
+Modell einzubeziehen, wurde das entwickelte Modell in Zusammenarbeit mit einem 
+Beratungsunternehmen auf ein reales Projekt angewendet. In diesem Rahmen wurden 
+Gespräche mit erfahrenen Mitarbeitern geführt, deren Ablauf ebenfalls in diesem 
+Kapitel geschildert werden.
 
-Diese Arbeit versucht die in Tabelle \ref{tab:forschungsfragen} genannten 
-Fragen zu beantworten; die beigefügten Stichwörter sind Grundlage der 
-Literaturrecherche.
+Die Zusammenführung von Modell und Praxis in Kapitel~\ref{cha:result} beginnt 
+mit einer Vorstellung des Projekt und stellt im Hauptteil Übereinstimmungen und 
+Unterschiede zwischen vorgeschlagenem und tatsächlichen Vorgehen heraus, die in 
+Kapitel~\ref{cha:diskussion} diskutiert werden.
 
-\input{tabellen/forschungsfragen}
-
+Die Ergebnisse dieser Diskussion werden anschließend in Kapitel~\ref{cha:fazit} 
+zusammengefasst, offene Fragestellungen, Herausforderungen und Forschungsfragen 
+formuliert.
 \begin{comment}
 Reply, das Unternehmen mit dem in Kooperation diese 
 Bachelor-Thesis 
