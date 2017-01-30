@@ -51,7 +51,7 @@
    type = {Conference Proceedings}
 }
 
-@article{
+@article{a_view_of_cloud_computing,
    author = {Armbrust, Michael and Fox, Armando and Griffith, Rean and Joseph, Anthony D and Katz, Randy and Konwinski, Andy and Lee, Gunho and Patterson, David and Rabkin, Ariel and Stoica, Ion},
    title = {A view of cloud computing},
    journal = {Communications of the ACM},
@@ -70,7 +70,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{just_right_outsourcing,
    author = {Aron, Ravi and Clemons, Eric K and Reddi, Sashi},
    title = {Just right outsourcing: understanding and managing risk},
    journal = {Journal of Management Information Systems},
@@ -82,7 +82,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{a_framework_for_information_technology,
    author = {Aubert, Benoit A and Patry, Michel and Rivard, Suzanne},
    title = {A framework for information technology outsourcing risk management},
    journal = {ACM SIGMIS Database},
@@ -94,7 +94,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{advantages_and_challenges_of_adopting_cloud_computing,
    author = {Avram, Maricela-Georgiana},
    title = {Advantages and challenges of adopting cloud computing from an enterprise perspective},
    journal = {Procedia Technology},
@@ -130,7 +130,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{an_interdisciplinary_perspective_on_it,
    author = {Bardhan, Indranil R and Demirkan, Haluk and Kannan, PK and Kauffman, Robert J and Sougstad, Ryan},
    title = {An interdisciplinary perspective on IT services management and service science},
    journal = {Journal of Management Information Systems},
@@ -150,7 +150,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{opportunities_and_risks_of_saas,
    author = {Benlian, Alexander and Hess, Thomas},
    title = {Opportunities and risks of software-as-a-service: Findings from a survey of IT executives},
    journal = {Decision Support Systems},
@@ -181,7 +181,7 @@
    type = {Generic}
 }
 
-@article{
+@article{a_model-driven_approach_for_documenting,
    author = {Berrocal, Javier and Alonso, Jose Garcia and Chicote, Cristina Vicente and Murillo, Juan Manuel},
    title = {A Model-Driven Approach for Documenting Business and Requirements Interdependencies for Architectural Decision Making},
    journal = {IEEE Latin America Transactions},
@@ -193,7 +193,7 @@
    type = {Journal Article}
 }
 
-@inproceedings{
+@inproceedings{nist_cloud_computing_reference,
    author = {Bohn, Robert B and Messina, John and Liu, Fang and Tong, Jin and Mao, Jian},
    title = {NIST cloud computing reference architecture},
    booktitle = {2011 IEEE World Congress on Services},
@@ -267,7 +267,7 @@
    type = {Book Section}
 }
 
-@article{
+@article{1,
    author = {Chang, Victor and Walters, Robert John and Wills, Gary},
    title = {The development that leads to the Cloud Computing Business Framework},
    journal = {International Journal of Information Management},
@@ -337,7 +337,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{2,
    author = {Denecken, Sven and Schulze, Bert},
    title = {Von der Unternehmenskonsolidierung zu Innovation und Flexibilität},
    journal = {HMD Praxis der Wirtschaftsinformatik},
@@ -365,7 +365,7 @@
    type = {Conference Proceedings}
 }
 
-@article{
+@article{3,
    author = {Ercolani, Giuseppe},
    title = {Cloud Computing Services Potential Analysis. An integrated model for evaluating Software as a Service},
    journal = {Cloud Computing},
@@ -375,7 +375,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{4,
    author = {Fylaktopoulos, G and Goumas, G and Skolarikis, M and Sotiropoulos, A and Maglogiannis, I},
    title = {An overview of platforms for cloud based development},
    journal = {SpringerPlus},
@@ -387,7 +387,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{5,
    author = {Garrison, Gary and Wakefield, Robin L and Kim, Sanghyun},
    title = {The effects of IT capabilities and delivery model on cloud computing success and firm performance for cloud supported processes and operations},
    journal = {International Journal of Information Management},
@@ -399,7 +399,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{6,
    author = {Goel, Neha and Aggarwal, Abhishek},
    title = {Cloud Computing Platform: A Perspective Overview},
    journal = {International Journal of Scientific and Research Publications},
@@ -410,7 +410,7 @@
    type = {Journal Article}
 }
 
-@article{
+@article{7,
    author = {Gomes, Aaron},
    title = {CLOUD COMPUTING: PLATFORM AS A SERVICE},
    year = {2014},
@@ -427,7 +427,7 @@
    type = {Conference Proceedings}
 }
 
-@article{
+@article{8,
    author = {Hahn, Christopher and Repschläger, Jonas and Erek, Koray and Zarnekow, Rüdiger},
    title = {An exploratory study on cloud strategies},
    year = {2013},
@@ -1029,6 +1029,13 @@
    type = {Book}
 }
 
+@article{ifms_liegenschaftsmanager,
+   author = {Reply, Syskoplan},
+   title = {iFMS Liegenschaftsmanager},
+   year = {2011},
+   type = {Journal Article}
+}
+
 @article{
    author = {Repschläger, Jonas},
    title = {Entscheidungsfindung im Cloud Computing},
@@ -1321,14 +1328,15 @@
    type = {Conference Proceedings}
 }
 
-@inproceedings{a_survey_and_taxonomy_of_cloud_migration,
+@article{a_survey_and_taxonomy_of_cloud_migration,
    author = {Wan, Z. and Wang, P.},
    title = {A Survey and Taxonomy of Cloud Migration},
-   booktitle = {2014 International Conference on Service Sciences},
+   journal = {2014 International Conference on Service Sciences},
    pages = {175-180},
-   ISBN = {2165-3828},
+   ISSN = {2165-3828},
    DOI = {10.1109/ICSS.2014.46},
-   type = {Conference Proceedings}
+   year = {2014},
+   type = {Journal Article}
 }
 
 @inproceedings{
