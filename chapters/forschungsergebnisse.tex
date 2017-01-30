@@ -1,3 +1,88 @@
-\section{Forschungsergebnisse}
+\section{Das Projekt: iFMS@Salesforce}
+%\section{Forschungsergebnisse}
 \label{cha:result}
-In Kapitel „Forschungsergebnisse“ stellen Sie die Ergebnisse ihrer Arbeit dar. An dieser Stelle nehmen Sie noch keine Interpretation oder Erläuterung der Ergebnisse vor, sondern beschreiben rein deskriptiv ihre Befunde. Eine Auswertung findet im nachfolgenden Kapitel statt.
+\begin{comment}
+In Kapitel „Forschungsergebnisse“ stellen Sie die Ergebnisse ihrer Arbeit dar.
+An dieser Stelle nehmen Sie noch keine Interpretation oder Erläuterung der 
+Ergebnisse vor, sondern beschreiben rein deskriptiv ihre Befunde. Eine 
+Auswertung findet im nachfolgenden Kapitel statt.
+\end{comment}
+
+Das entwickelte Vorgehensmodell soll nun auf ein Migrationsprojekt aus der 
+Praxis angewendet werden. Dazu werden zunächst die Firma sowie die 
+Rahmenbedingungen des Projektes vorgestellt. 
+
+\subsection{Beteiligte Unternehmen und das On-Premise-Produkt}
+\input{grafiken/arlanis_reply.tex}
+
+Reply ist ein an der italienischen Börse gehandeltes 
+IT-Beratungsunternehmen und betrachtet sich als "`Living network"'\ aus 
+hochspezialisierten Tochterunternehmen. Seit der Gründung 1996 konnte Reply 
+seinen Umsatz auf über 705 Millionen Euro bei 5.245 Angestellten im Jahr 2015 
+steigern. Das Netzwerk wuchs und wächst rasch: 2016 wurden bis November drei 
+neue Firmen aquiriert. Zwei Tochtergesellschaften, die schon seit mehreren 
+Jahren Teil von Reply sind, 
+möchte ich genauer vorstellen, da ihre Unternehmensprofile das 
+Migrationsprojekt in besonderem Maße beeinflussen.
+
+Die vormalige syskoplan AG, seit dem Erwerb 2010 \pcite{}{12}{replycompprofile} 
+Syskoplan Reply, ist ein Spezialist für SAP-Applikationen und 
+-Plattformen \pcite{}{10}{replycompprofile} und entwickelt seit 1999 das 
+integrierte Facility Management System (iFMS). iFMS verbindet die in SAP 
+hinterlegten Daten mit Gebäudeplänen und versucht Prozesse rund um die 
+Verwaltung von Immobilien zu unterstützen. Die gewachsene 
+Java-Anwendung mit einer Client-Server-Architektur lässt sich inzwischen nur 
+noch schwer um von Kunden gewünschte Funktionen erweitern. Auch die Bedienung 
+über 
+eine zusätzlich zu installierenden Anwendung wirkt in Zeiten, in denen Nutzer 
+es gewohnt sind, auch umfangreiche Software über den Webbrowser zu bedienen, 
+anachronstisch. Beide Aspekte schränken die zukünftige
+Wettbewerbsfähigkeit der Software ein. 
+
+Die ehemalige Arlanis Software AG wurde 2012 von Reply übernommen und ist 
+Spezialist für Lösungen auf Basis des Cloud Anbieters Salesforce. Mit 
+Salesforce lassen sich Lösungen häufig ganz ohne eigenen Code auf einer 
+SaaS-Basis zusammen klicken. Ist doch Code erforderlich lässt er sich auf der 
+PaaS-Plattform (Force.com und Heroku) entwickeln, wobei auf per SaaS angelegte 
+Datenmodelle und Daten zugegriffen werden kann, auf die externe Anwendungen per 
+Web Service zugreifen können. Mit Salesforce1 steht eine App für mobile Geräte 
+zur Verfügung; jede Salesforce-Anwendung lässt sich über diese App bedienen. 
+
+Über das Unternehmensnetzwerk von Reply sollen die Stärken beider 
+Tochterunternehmen verbunden werden; mit dem Know-How im Bereich Facility 
+Management und SAP soll auf Salesforce eine innovative, wettbewerbsfähige 
+Anwendung geschaffen werden: iFMS@Salesforce.
+
+Die On-Premise-Anwendung iFMS dient dem Facility Management. Mit ihr lassen 
+sich Gebäude, Etagen und Räume verwalten, mieten und vermieten. Dabei werden in 
+SAP hinterlegte Informationen wie Raumgrößen, Nutzungsarten, Adressen und 
+Kontaktinformationen mit CAD Plänen verknüpft. Um iFMS zu nutzen, müssen 
+Unternehmen einen Server bereitstellen und warten, auf dem der Serverteil der 
+Anwendung läuft. Außerdem wird ein Datenbankserver benötigt, auf dem iFMS seine 
+Daten speichern kann. Auf dem Rechner eines jeden Nutzers muss ebenfalls eine 
+Anwendung installiert werden. Ein Screenshot aus Anwendersicht ist in Abbildung 
+~\ref{fig:ifms_liegenschaftsbaum} dargestellt. Sie soll nicht im Detail erklärt 
+werden, sondern nur die Art und Komplexität der Anwendung andeuten. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=\textwidth]{images/iFMS_liegenschaftsbaum.png}
+\caption{Screenshot iFMS aus der 
+Benutzerdokumentation (\protect\citeflow{ifms_liegenschaftsmanager}) }
+\label{fig:ifms_liegenschaftsbaum}
+\end{center}
+\end{figure}
+
+Auf der linken Seite lassen sich die Immobilien in einer quasi beliebig 
+verzweigten Baumstruktur organisieren. So könnten zu den Kategorien in der 
+Abbildung Land, Stadt, Gebäude, Etagen und Räume zum Beispiel noch Kontinente, 
+Ländergruppen, Halbetagen oder Raumteile kommen.
+
+Auf der rechten Seite ist der CAD-Plan des Gebäudes bis auf Arbeitsplatzebene 
+dargestellt. Arbeitsplätzen können Mitarbeiter, Telefonanschlüsse und beliebige 
+Ausrüstungsgegenstände zugeordnet sein. Der Raumplan lässt sich ändern: 
+Zwischenwände können gezogen oder entfernt werden. Vertragszugehörigkeiten, 
+Raumnutzungsarten und Bodenbeläge lassen sich - auch für jeden Zeitpunkt in der 
+Vergangenheit - visualisieren.
+
+\subsection{Vision}

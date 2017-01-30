@@ -219,10 +219,51 @@ folgt das in dieser Arbeit vorgestellte Modell.
 
 \subsection{Softwarehersteller: Independent Software Vendor (ISV)}
 \label{cha:isv}
-Unter dem Begriff "`Independent Software Vendor"' werden Softwarehersteller 
+Unter dem Begriff "`Independent Software Vendor"' (ISV) werden 
+Softwarehersteller 
 zusammengefasst, die Software für von ihnen unabhängige Plattformen, zum 
-Beispiel Microsoft Windows oder Salesforce entwickeln.
+Beispiel Microsoft Windows, Google oder Salesforce entwickeln. Sofern der ISV 
+in der Cloud agiert, wird er in der Literatur als "`Cloud Carrier"'
+\pcite{}{}{nist_cloud_computing_reference}, "`Cloud Service Partner"', 
+"`Cloud Service Developer"' 
+\pcite{}{}{a_survey_and_taxonomy_of_cloud_migration} oder "`Cloud Service 
+Vendor"' \pcite{}{}{how_saas_changes_an_isvs_business} bezeichnet. Diese 
+Unterscheidung wird getroffen, weil der Wechsel in die Cloud nicht nur mit 
+technischen sondern auch wirtschaftlichen Neuerungen einhergeht. Da sich noch 
+kein Begriff durchsetzen konnte, wird der Softwarehersteller in dieser Arbeit 
+auch wenn er im Cloud-Bereich agiert, als ISV bezeichnet.
 
+\input{grafiken/cloud_oekosystem}
+
+Wie in Abbildung~\ref{fig:cloud_oekosystem} dargestellt ist der ISV Teil einer 
+Dreiecksbeziehung. Er entwickelt Software für die Plattform des Betreibers, 
+veröffentlich sie gegebenenfalls auf einem Marktplatz der Plattform. 
+Beispielhaft dafür seien hier Apples App Store oder AppExchange von Salesforce 
+genannt. Die Wahl der passenden Plattform ist essentiell für den 
+Unternehmenserfolg, da Funktionsausfälle und Performanzprobleme können auf den 
+ISV zurückfallen können. Um den passenden Betreiber zu wählen, schlägt 
+\citeflow{how_saas_changes_an_isvs_business} vier zu berücksichtigende Aspekte 
+vor: Anbietergröße, geografische Lage, Zuverlässigkeit und gesetzliche 
+Vorgaben. \\
+
+Der Kontakt zum Kunden hängt vom Markt und insbesondere vom Verkaufspreis ab 
+(Vgl. Abbildung~\ref{fig:einfluss_des_preises_auf_business}). Im Beispiel des 
+App Stores wird es bei kostenlosen oder sehr günstigen Apps keinen oder kaum 
+Kundenkontakt in Form von Anwerbungen, Verkaufsgesprächen, Support oder  
+Training geben. Pauschal gesagt, steigen mit dem Preis die Erwartungen des 
+Kunden in Bezug auf Ansprechkeit und Anpassbarkeit der Software. 
+\pcite{}{}{how_saas_changes_an_isvs_business}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\textwidth]{images/einfluss_des_preises_auf_business.png}
+\caption{Der Einfluss des Preises auf das Geschäft. Aus
+\protect\citeflow{how_saas_changes_an_isvs_business} }
+\label{fig:einfluss_des_preises_auf_business}
+\end{center}
+\end{figure}
+
+\begin{comment}
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{images/soa_architecture.png}
@@ -231,56 +272,19 @@ Beispiel Microsoft Windows oder Salesforce entwickeln.
 \label{fig:soa_architecture}
 \end{center}
 \end{figure}
+\end{comment}
 
-\subsection{TODO: Synonyme für ISV}
-Aus NIST cloud computing reference architecture "`Cloud Carrier"', 
-"`Cloud Service Partner"' oder "`Cloud Service Developer"' (die letzten beiden 
-aus \pcite{}{}{a_survey_and_taxonomy_of_cloud_migration})
-
-
-Aus \citeflow{how_saas_changes_an_isvs_business}
-\subsubsection{Vorteile für ISV}
-\begin{itemize}
-	\item Der Cloud-Markt ist größer und hat das Potential neue Kunden zu
-erreichen, zum Beispiel kleinere Unternehmen für die eine Cloud-Lösung
-günstiger ist oder Kunden in geographisch großer Distanz.
-	\item Lösungen können direkt an Manager verkauft werden; Verhandlungen
-mit den IT Abteilungen des Kunden werden minimiert. Inkompatibilitäten in Hard-
-und Software beim Kunden werden vermieden.
-	\item Monatliche oder jährliche Lizenzierungsgebühren stellen einen
-kontinuierlicheren Umsatzstrom dar als Kaufverträge.
-	\item Anstatt Support für viele Instanzen in unterschiedlichen
-Umgebungen bei Kunden muss nur noch Support für die Cloud-Anwendung
-geleistet werden.
-	\item Da sich alle Kunden in der Cloud bewegen, weiß der ISV viel mehr
-über sie und ihre Nutzungsart.
-\end{itemize}
-
-\subsubsection{Risiken für ISV}
-\begin{itemize}
-	\item Der Wechsel in der Cloud erfordert viele neue Ansätze, zum
-Beispiel bei der Lizenzierung oder dem Verkauf und stellt einen großen Umbruch
-dar.
-	\item Da der Kunde die Cloud-Lösung in der Regel vor
-Vertragsabschluss ausprobieren kann, muss der Anbieter einen echten Wert
-bieten.
-	\item Umsätze kommen zwar stetig aber in viel geringerer Höhe als bei
-einem Kauf.
-	\item Durch die Standardisierung bei SaaS kann die Anpassbarkeit
-der Softwarelösung leiden.
-\end{itemize}
-
-\subsubsection{Auswirkungen auf das Geschäft durch SaaS}
-Aus \citeflow{how_saas_changes_an_isvs_business}
+Die Erschließung des Cloud-Marktes wirkt sich auf das Geschäftsmodell des ISV 
+aus \pcite{}{}{how_saas_changes_an_isvs_business}:
 \begin{description}
-	\item[Markt] Das Angebot einer SaaS-Lösung könnte darauf abzielen,
+	\item[Markt] Das Angebot einer Cloud-Lösung könnte darauf abzielen,
 bestehende Kunden und Märkte besser zu erreichen; möglicherweise unter
 Kannibalisierung des bestehenden On-Premise-Produktes. Ziel könnte aber auch
 sein, neue Märkte zu erschließen. Beide Ziele sind nicht exklusiv. Es ist
 jedoch wichtig, sich der Möglichkeit der Schwerpunktbildung in dieser Frage
 bewusst zu sein.
-	\item[Preisgestaltung] Die meisten Preismodelle für SaaS-Anwendungen
-haben eines der drei folgenden Modelle als Grundlage:
+	\item[Preisgestaltung] Die meisten Preismodelle haben eines der drei 
+folgenden Modelle als Grundlage:
 	\begin{itemize}
 		\item Abonnement -- Nutzer pro Monat oder Gerät pro Jahr. Dies
 ist das verbreitetste Modell. Durch Vergünstigungen bei Vorauszahlung für einen
@@ -293,30 +297,15 @@ wird durch Werbeeinblendungen finanziert; Premiumfunktionen müssen bezahlt
 werden
 	\end{itemize}
 	Die Wahl der Preisgestaltung hat bedeutenden Einfluss auf den Cashflow
-des Unternehmens und ist in
-Abbildung~\ref{fig:vergleich_umsatz_on-premise_cloud} dargestellt. Gerade die
-Anfangsinvestition ist bei SaaS-Anwendungen häufig größer als bei
-On-Premise-Anwendungen, gerade wenn das Unternehmen noch keine Erfahrungen mit
-der Umsetzung hat. Diese Anfangsinvestition müssen ISV häufig leisten, bevor
-Kunden akquiriert wurden. \\
+des Unternehmens. Gerade die Anfangsinvestition ist bei Cloud-Anwendungen 
+häufig größer als bei On-Premise-Anwendungen, gerade wenn das Unternehmen noch 
+keine Erfahrungen mit der Umsetzung hat. Diese Anfangsinvestition müssen ISV 
+häufig leisten, bevor Kunden akquiriert wurden. \\
 Der Einfluss, den die Höhe des Preises auf das Geschäft hat, ist in
 Abbildung~\ref{fig:einfluss_des_preises_auf_business} dargestellt. Bei der
-Umstellung auf SaaS sollte darauf geachtet werden, dass Preis und die
-Ausprägungen der anderen Aspekte in der gleichen Zeile liegen. So wird es sich
-in der Regel für eine sehr günstige Anwendung nicht lohnen, einen externen
-Verkaufsdienst in Anspruch zu nehmen oder eine persönliche Kundenbetreuung zu
-garantieren. \\
-
-
-\begin{figure}%[h]
-\begin{center}
-\includegraphics[width=\textwidth]{images/einfluss_des_preises_auf_business.png}
-\caption{Der Einfluss des Preises auf das Geschäft. Aus
-\protect\citeflow{how_saas_changes_an_isvs_business} }
-\label{fig:einfluss_des_preises_auf_business}
-\end{center}
-\end{figure}
-
+Migration in die Cloud sollte darauf geachtet werden, dass Preis und die
+Ausprägungen der anderen Aspekte in der gleichen Zeile liegen.
+\begin{comment}
 \begin{figure}%[h]
 \begin{center}
 \includegraphics[width=\textwidth]{images/vergleich_umsatz_on-premise_cloud.png}
@@ -326,11 +315,11 @@ Anwendungen. Aus
 \label{fig:vergleich_umsatz_on-premise_cloud}
 \end{center}
 \end{figure}
-
+\end{comment}
 	\item[Verkauf] Bei On-Premise-Anwendungen kann der Kunde die Anwendung
 häufig erst nach dem Kauf in seiner Unternehmensumgebung testen und damit den
 wahren Produktwert festellen, weil die Inbetriebnahme für Tests vor dem Kauf zu
-aufwändig wäre. Bei SaaS-Anwendungen ist ein ausführliches Testen schon vor
+aufwändig wäre. Bei Cloud-Anwendungen ist ein ausführliches Testen schon vor
 Abschluss eines großen Lizenzvertrages möglich. Für den ISV kann dies ein
 Vorteil sein, da die Einstiegshürden für Kunden vermindert sind: Mögliche
 Fehlinvestitionen lassen sich reduzieren oder vermeiden, weshalb
@@ -339,35 +328,19 @@ getroffen werden können. Ist das Produkt im Unternehmen, lassen sich benötigte
 oder gewünschte Features leichter ermitteln. Der Kunde erhält ein Produkt nach
 seinen Wünschen, der ISV Projektverträge um die Anwendung anzupassen oder
 weiterzuentwickeln. Dieser Ansatz wird als "`land and expand"' bezeichnet.
-
 \end{description}
 
-\subsubsection{Entwicklung}
-Da SaaS-Anwendungen werden typischerweise sehr viel häufiger geupdatet, als
-On-Premise-Anwendungen. \pcite{}{}{how_saas_changes_an_isvs_business}
-
-Die hohe Updatefrequenz macht agile Entwicklungsmodelle erforderlich, zum
-Beispiel DevOps. \pcite{}{}{how_saas_changes_an_isvs_business}
-
-\subsubsection{Organisationsstrukturen}
-Was die Unternehmensstruktur angeht, gibt es für ISV, die ins SaaS-Geschäft
-einsteigen wollen, drei Optionen, die in
-Abbildung~\ref{fig:organisationsstrukturen} dargestellt sind.
-\pcite{}{}{how_saas_changes_an_isvs_business}
-\begin{enumerate}
-	\item SaaS-Anwendungen entwickeln, ohne die bestehende
-Unternehmensstruktur anzupassen hält den organisatorischen Aufwand zunächst
-gering. Sollte das bestehende On-Premise-Geschäft weiterbetrieben werden, ist
-es allerdings aufgrund der genannten Unterschiede zwischen den Modellen
-schwierig, beides gut zu machen.
-	\item Um dieses Problem zu lösen, kann eine Gruppe im Unternehmen
-gegründet werden, dass sich ausschließlich mit dem Thema SaaS befasst.
-	\item Manche Firmen lagern ihre SaaS-Bemühungen in eine wirtschaftlich
-selbstständige Einheit aus. Dieser Ansatz erfordert unter Umständen die größten
-strukturellen Änderungen, weil mit dem neuen Unternehmen erheblicher
-Verwaltungsoverhead (Personalmanagement, Buchhaltung, etc.) einhergeht.
-\end{enumerate}
-
+Die Erschließung der Cloud kann mit drei Organisationsstrukturen erfolgen 
+\pcite{}{}{how_saas_changes_an_isvs_business}. Die erste Option besteht darin, 
+die Struktur nicht zu verändern, womit der organisatorische Aufwand zunächst 
+minimiert wird. Soll das On-Premise-Geschäft jedoch weiter betrieben werden, 
+ist es schwierig, beides gut zu machen. Bei Option zwei wird eine Gruppe im 
+Unternehmen gebildet, die sich ausschließlich mit dem Thema Cloud befasst. Die 
+letzte Option besteht darin, diese Gruppe in eine wirtschaftlich selbstständige 
+Einheit auszulagern. Mit dieser letzten Option ist der größte Aufwand 
+verbunden, da mit dem neuen Unternehmen erheblicher Overhead in der Verwaltung 
+(zum Beispiel Personalmanagement und Buchhaltung) einhergeht.
+\begin{comment}
 \begin{figure}%[h]
 \begin{center}
 \includegraphics[width=\textwidth]{images/organisationsstrukturen.png}
@@ -377,45 +350,16 @@ Verwaltungsoverhead (Personalmanagement, Buchhaltung, etc.) einhergeht.
 \end{center}
 \end{figure}
 
-\subsubsection{Wahl des Cloud-Anbieters}
-\citeflow{how_saas_changes_an_isvs_business} identifiziert vier Faktoren, die
-bei der Entscheidung für einen CLoud-Anbieter zur Realisierung einer
-SaaS-Anwendung berücksichtigt werden sollten:
-\begin{description}
-	\item[Anbietergröße] Wie in Kapitel~\ref{cha:vorteile_der_cloud}
-geschildert, haben große Cloud-Anbieter Vorteile gegenüber kleinen. Vorhandene
-Beziehungen und persönlichere Betreuung könnten dennoch für einen kleineren
-Anbieter sprechen.
-	\item[Geografische Verteilung] Um die Antwortzeiten für Kunden bei
-Benutzung der SaaS-Anwendung niedrig zu halten, sollten Serverzentren
-geografisch nah liegen. Entsprechend sollte ein weltweit agierender
-Cloud-Provider gewählt werden, wenn ein weltweiter Markt adressiert werden
-soll. Auch die Sicherheit vor Katastrophen spricht für eine möglichst breite
-Verteilung.
-	\item[Zuverlässigkeit] Mangelnde Zuverlässigkeit des Cloud-Providers
-wird auf den ISV zurückfallen, weshalb ein in Backup-Mechanismen erfahrener
-Provider gewählt werden sollte. Auch hier kann geografische Streuung ein
-positiver Einflussfaktor sein.
-	\item[Regulatorische Vorschriften] Gesetzliche Vorgaben können
-erforderlich machen, dass der Cloud-Provider Nachweise über ihre Einhaltung
-führt oder sogar, dass Daten in einem bestimmten Land gehalten werden. Nicht
-alle Anbieter können dies leisten.
-\end{description}
-
-
 Die Änderungen, die SaaS für das Geschäft bringt überwiegen die
 technischen. Da Änderungen aber
 sowieso erforderlich sind, um auf
 dem Markt zu bestehen, gibt es aber
 eigentlich keine Wahl. \pcite{}{}{how_saas_changes_an_isvs_business}
+\end{comment}
 
-Weil der Umstieg auf die Cloud nicht nur ein technisches Umdenken erforderlich
-macht, sondern auch ein wirtschaftliches spricht
-\citeflow{how_saas_changes_an_isvs_business} von einem ganz neuen Anbieter, dem
-Cloud Service Vendors (CSV) anstatt ISV.
-\pcite{}{3}{how_saas_changes_an_isvs_business}
 
-\subsection{TODO: Devops als Entwicklungsmodell?}
+
+%\subsection{TODO: Devops als Entwicklungsmodell?}
 
 \subsection{Salesforce als Zielplattform}
 \label{cha:salesforce_als_zielplattform}

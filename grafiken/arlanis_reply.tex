@@ -1,0 +1,80 @@
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,positioning} 
+\pgfmathsetmacro{\cubex}{4}
+\pgfmathsetmacro{\cubey}{2}
+
+\definecolor{light-gray}{gray}{0.80}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=8em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           very thick,
+           shorten <=5pt,
+           shorten >=5pt,},
+    Line/.style={
+	dashed,
+	very thick
+    }
+}
+
+
+
+
+%\begin{document}
+\begin{figure}[bh]
+\begin{center}
+\scalebox{1}{
+\begin{tikzpicture}
+
+\newcommand{\yOffset}{-1.9*\cubey}
+\newcommand{\yOffsetLineBottom}{\yOffset + 0.35*\cubey}
+\newcommand{\yOffsetTop}{-0.9*\cubey}
+\newcommand{\imgWidthSmall}{0.17\textwidth}
+\newcommand{\xOffsetBottom}{0.23*\textwidth}
+
+\coordinate (RO) at (0,0);
+\coordinate (LO) at (-\cubex,0);
+\coordinate (RU) at (0,-\cubey);
+\coordinate (LU) at (-\cubex,-\cubey);
+%\draw (RO) -- (RU) -- (LU) -- (LO) -- (RO);
+\node[] (reply) at (0,0) 
+{\includegraphics[width=0.45\textwidth]{images/reply.png} };
+
+
+\node[] (syskoplan) at (0,\yOffset) 
+{\includegraphics[width=\imgWidthSmall]{images/syskoplan.jpg} };
+\draw[Line] (0,\yOffsetTop) -- (0,\yOffsetLineBottom);
+
+
+\node[] (arlanis) at (-\xOffsetBottom,\yOffset) 
+{\includegraphics[width=\imgWidthSmall]{images/arlanis.jpg} };
+\draw[Line] (-\xOffsetBottom,\yOffsetTop) -- 
+(-\xOffsetBottom,\yOffsetLineBottom);
+
+\node (others) at (\xOffsetBottom,\yOffset) {\Huge{...}};
+\draw[Line] (\xOffsetBottom,\yOffsetTop) -- 
+(\xOffsetBottom,\yOffsetLineBottom);
+
+\end{tikzpicture}
+}
+\caption{Das Reply Unternehmensnetzwerk. Eigene Grafik.}
+\label{fig:reply}
+
+\end{center}
+
+\end{figure}
+
