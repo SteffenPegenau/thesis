@@ -1,0 +1,18 @@
+%0 Journal Article
+%T Adoption and use of cloud-based testing in practice
+%A Riungu-Kalliosaari, Leah
+%A Taipale, Ossi
+%A Smolander, Kari
+%A Richardson, Ita
+%J Software Quality Journal
+%D 2016
+%V 24
+%N 2
+%@ 1573-1367
+%F Riungu-Kalliosaari2016
+%X This qualitative study addresses the adoption, utilization and effects of cloud-based testing in different organizational contexts. We approached the research problem by conducting thirty-five interviews with professionals in 20 organizations and applied grounded theory as the research method. The results indicate that cloud-based testing provides viable solutions to meet the testing needs within organizations. Cloud-based resources can be applied in performing various testing activities such as performance and multiplatform testing as well supporting practitioners in involving users during iterative development and testing. Cloud-based testing also adds value to practitioners by enabling easier management of the cloud-based testing resources and helping to produce improved end products. We use the results of the study to propose a strategy that can be used to assist practitioners in their decision-making processes towards adoption of cloud-based testing.
+%9 journal article
+%R 10.1007/s11219-014-9256-0
+%U http://dx.doi.org/10.1007/s11219-014-9256-0
+%P 337-364
+

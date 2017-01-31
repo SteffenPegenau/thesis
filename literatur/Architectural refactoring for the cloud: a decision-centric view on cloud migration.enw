@@ -1,0 +1,15 @@
+%0 Journal Article
+%T Architectural refactoring for the cloud: a decision-centric view on cloud migration
+%A Zimmermann, Olaf
+%J Computing
+%D 2017
+%V 99
+%N 2
+%@ 1436-5057
+%F Zimmermann2017
+%X Unlike code refactoring of programs, architectural refactoring of systems is not commonly practiced yet. However, legacy systems typically have to be refactored when migrating them to the cloud; otherwise, these systems may run in the cloud, but cannot fully benefit from cloud properties such as elasticity. One reason for the lack of adoption of architectural refactoring is that many of the involved artefacts are intangible—architectural refactoring therefore is harder to grasp than code refactoring. To overcome this inhibitor, we take a task-centric view on the subject and introduce an architectural refactoring template that highlights the architectural decisions to be revisited when refactoring application architectures for the cloud; in this approach, architectural smells are derived from quality stories. We also present a number of common architectural refactorings and evaluate existing patterns regarding their cloud affinity. The final contribution of this paper is the identification of an initial catalog of architectural refactorings for cloud application design. This refactoring catalog was compiled from the cloud patterns literature as well as project experiences. Cloud knowledge and supporting templates have been validated via action research and implementation in cooperation with practitioners.
+%9 journal article
+%R 10.1007/s00607-016-0520-y
+%U http://dx.doi.org/10.1007/s00607-016-0520-y
+%P 129-145
+

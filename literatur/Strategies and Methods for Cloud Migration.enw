@@ -1,0 +1,16 @@
+%0 Journal Article
+%T Strategies and Methods for Cloud Migration
+%A Zhao, Jun-Feng
+%A Zhou, Jian-Tao
+%J International Journal of Automation and Computing
+%D 2014
+%V 11
+%N 2
+%@ 1751-8520
+%F Zhao2014
+%X Legacy system migration to the cloud brings both great challenges and benefits, so there exist various academic research and industrial applications on legacy system migration to the cloud. By analyzing the research achievements and application status, we divide the existing migration methods into three strategies according to the cloud service models integrally. Different processes need to be considered for different migration strategies, and different tasks will be involved accordingly. The similarities and differences between the migration strategies are discussed, and the challenges and future work about legacy system migration to the cloud are proposed. The aim of this paper is to provide an overall presentation for legacy system migration to the cloud and identify important challenges and future research directions.
+%9 journal article
+%R 10.1007/s11633-014-0776-7
+%U http://dx.doi.org/10.1007/s11633-014-0776-7
+%P 143-152
+

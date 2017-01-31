@@ -1,0 +1,17 @@
+%0 Journal Article
+%T Enterprise cloud service architectures
+%A Wang, Heyong
+%A He, Wu
+%A Wang, Feng-Kwei
+%J Information Technology and Management
+%D 2012
+%V 13
+%N 4
+%@ 1573-7667
+%F Wang2012
+%X As a new computing paradigm, cloud computing has received a lot of attention from enterprises and has being integrated or applied to enterprise architectures. This paper surveys the state of the art of enterprise cloud service architectures. Specifically, this paper discusses enterprise cloud service architectural requirements, design approaches, architectural styles, emerging cloud service platforms, applications and related challenges in an enterprise context. This paper also identifies research trends and opportunities for researchers and practitioners in this fast moving field.
+%9 journal article
+%R 10.1007/s10799-012-0139-4
+%U http://dx.doi.org/10.1007/s10799-012-0139-4
+%P 445-454
+

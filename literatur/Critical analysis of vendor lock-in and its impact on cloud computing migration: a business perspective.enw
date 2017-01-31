@@ -1,0 +1,17 @@
+%0 Journal Article
+%T Critical analysis of vendor lock-in and its impact on cloud computing migration: a business perspective
+%A Opara-Martins, Justice
+%A Sahandi, Reza
+%A Tian, Feng
+%J Journal of Cloud Computing
+%D 2016
+%V 5
+%N 1
+%@ 2192-113X
+%F Opara-Martins2016
+%X Vendor lock-in is a major barrier to the adoption of cloud computing, due to the lack of standardization. Current solutions and efforts tackling the vendor lock-in problem are predominantly technology-oriented. Limited studies exist to analyse and highlight the complexity of vendor lock-in problem in the cloud environment. Consequently, most customers are unaware of proprietary standards which inhibit interoperability and portability of applications when taking services from vendors. This paper provides a critical analysis of the vendor lock-in problem, from a business perspective. A survey based on qualitative and quantitative approaches conducted in this study has identified the main risk factors that give rise to lock-in situations. The analysis of our survey of 114 participants shows that, as computing resources migrate from on-premise to the cloud, the vendor lock-in problem is exacerbated. Furthermore, the findings exemplify the importance of interoperability, portability and standards in cloud computing. A number of strategies are proposed on how to avoid and mitigate lock-in risks when migrating to cloud computing. The strategies relate to contracts, selection of vendors that support standardised formats and protocols regarding standard data structures and APIs, developing awareness of commonalities and dependencies among cloud-based solutions. We strongly believe that the implementation of these strategies has a great potential to reduce the risks of vendor lock-in.
+%9 journal article
+%R 10.1186/s13677-016-0054-z
+%U http://dx.doi.org/10.1186/s13677-016-0054-z
+%P 4
+

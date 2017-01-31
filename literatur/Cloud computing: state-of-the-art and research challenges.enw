@@ -1,0 +1,17 @@
+%0 Journal Article
+%T Cloud computing: state-of-the-art and research challenges
+%A Zhang, Qi
+%A Cheng, Lu
+%A Boutaba, Raouf
+%J Journal of Internet Services and Applications
+%D 2010
+%V 1
+%N 1
+%@ 1869-0238
+%F Zhang2010
+%X Cloud computing has recently emerged as a new paradigm for hosting and delivering services over the Internet. Cloud computing is attractive to business owners as it eliminates the requirement for users to plan ahead for provisioning, and allows enterprises to start from the small and increase resources only when there is a rise in service demand. However, despite the fact that cloud computing offers huge opportunities to the IT industry, the development of cloud computing technology is currently at its infancy, with many issues still to be addressed. In this paper, we present a survey of cloud computing, highlighting its key concepts, architectural principles, state-of-the-art implementation as well as research challenges. The aim of this paper is to provide a better understanding of the design challenges of cloud computing and identify important research directions in this increasingly important area.
+%9 journal article
+%R 10.1007/s13174-010-0007-6
+%U http://dx.doi.org/10.1007/s13174-010-0007-6
+%P 7-18
+

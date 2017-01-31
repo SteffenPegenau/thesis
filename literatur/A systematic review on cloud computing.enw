@@ -1,0 +1,18 @@
+%0 Journal Article
+%T A systematic review on cloud computing
+%A Durao, Frederico
+%A Carvalho, Jose Fernando S.
+%A Fonseka, Anderson
+%A Garcia, Vinicius Cardoso
+%J The Journal of Supercomputing
+%D 2014
+%V 68
+%N 3
+%@ 1573-0484
+%F Durao2014
+%X Cloud computing is an ascending technology that has introduced a new paradigm by rendering a rational computational model possible. It has changed the dynamics of IT consumption by means of a model that provides on-demand services over the Internet. Unlike the traditional hosting service, cloud computing services are paid for per usage and may expand or shrink based on demand. Such services are, in general, fully managed by cloud providers that require users nothing but a personal computer and an Internet access. In recent years, this model has attracted the attention of researchers, investors and practitioners, many of whom have proposed a number of applications, structures and fundamentals of cloud computing, resulting in various definitions, requirements and models. Despite the interest and advances in the field, issues such as security and privacy, service layer agreement, resource sharing, and billing have opened up new questions about the real gains of the model. Although cloud computing is based on a 50-year-old business model, evidence from this study indicates that cloud computing still needs to expand and overcome present limitations that prevent the full use of its potential. In this study, we critically review the state of the art in cloud computing with the aim of identifying advances, gaps and new challenges.
+%9 journal article
+%R 10.1007/s11227-014-1089-x
+%U http://dx.doi.org/10.1007/s11227-014-1089-x
+%P 1321-1346
+

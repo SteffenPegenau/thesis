@@ -1,0 +1,19 @@
+%0 Journal Article
+%T Issues on developing interoperable cloud applications: definitions, concepts, approaches, requirements, characteristics and evaluation models
+%A Nogueira, Elias
+%A Moreira, Ana
+%A Lucrédio, Daniel
+%A Garcia, Vinícius
+%A Fortes, Renata
+%J Journal of Software Engineering Research and Development
+%D 2016
+%V 4
+%N 1
+%@ 2195-1721
+%F Nogueira2016
+%X Among research opportunities in software engineering for cloud computing model, interoperability stands out. We found that the dynamic nature of cloud technologies and the battle for market domination make cloud applications locked-id, i.e, proprietary, non-portable and non-interoperable. In general context of cloud computing, interoperability goes beyond communication between systems like in other fields, it goes in direction of more dynamic, heterogeneous, complex and composed applications that take advantage of best features from different providers and services simultaneously. Interoperability in cloud constitutes a great challenge that must be overcome for that, in the future, software be more dynamic and improved.
+%9 journal article
+%R 10.1186/s40411-016-0033-6
+%U http://dx.doi.org/10.1186/s40411-016-0033-6
+%P 7
+
