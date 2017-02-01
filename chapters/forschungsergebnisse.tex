@@ -10,7 +10,8 @@ Auswertung findet im nachfolgenden Kapitel statt.
 
 Das entwickelte Vorgehensmodell soll nun auf ein Migrationsprojekt aus der 
 Praxis angewendet werden. Dazu werden zunächst die Firma sowie die 
-Rahmenbedingungen des Projektes vorgestellt. 
+Rahmenbedingungen des Projektes vorgestellt. Anschließend wird exemplarisch 
+eine Vision für das Projekt entwickelt.
 
 \subsection{Beteiligte Unternehmen und das On-Premise-Produkt}
 \input{grafiken/arlanis_reply.tex}
@@ -86,3 +87,75 @@ Raumnutzungsarten und Bodenbeläge lassen sich - auch für jeden Zeitpunkt in de
 Vergangenheit - visualisieren.
 
 \subsection{Vision}
+\subsubsection{Realisierung von Chancen}
+\begin{description}
+	\item[Soziales Element: Vernetzung und Einbeziehung von Nutzern] Die 
+Vernetzung zwischen den Nutzern einer Firma erfolgt über Chatter, dem 
+Salesforce Äquivalent von Facebook. Der ISV bietet Kundensupport über die 
+Salesforce Service Cloud. Entwickler sind für Kunden direkter erreichbar. Durch 
+die dort gesammelten Erfahrung können zukünftige Entwicklungsarbeiten 
+zielgerichteter erfolgen.
+	\item[Analysemöglichkeiten] Der ISV hat Zugriff auf die 
+Salesforceinstanzen seiner Kunden. Dadurch kann er Fehlkonfigurationen 
+und Fehlbedienungen erkennen, Supportangebote verbessern oder 
+Benutzeroberflächen intuitiver gestalten.
+	\item[Mobile Nutzung] Mit der Mobile App Salesforce1 ist die Salesforce 
+Anwendung auch auf Mobilgeräten nutzbar. Damit ein echter Mehrwert entsteht, 
+sollen sich
+\begin{itemize}
+	\item Rauminformationen wie Belegungen und Ansprechpartner abrufen 
+lassen.
+	\item Räume buchen lassen.
+	\item Schadensmeldungen eingeben lassen und nach Freigabe durch einen 
+verantwortlichen Mitarbeiter in einem Auftrag an einen Dienstleister 
+resultieren.
+	\item über Anwesenheitserkennung Raumtemperatur und Licht regeln lassen.
+	\item Räume über ein Indoornavigationssystem finden lassen.
+	\item Reiningungspläne einsehen und ändern sowie Sonderreinigungen 
+anfordern lassen.
+\end{itemize}
+
+	\item[Reduzierte Markteintrittskosten \& Skalierte Märkte] Um die 
+Hürden für potentielle Kunden gering zu halten und das Produkt auf diese Weise 
+auch für kleine und mittlere Unternehmen attraktiv zu machen, ist die 
+SAP-Anbindung optional. Durch die Nutzung des Salesforce Marktplatzes für Apps 
+können Kunden das Produkt leicht beziehen und testen.
+	\item[Skalierung der Leistung] CAD-Pläne werden nicht mehr lokal 
+sondern in der Cloud konvertiert.
+	\item[Time to market \& kürzere Releasezyklen] Ein vermarktbares 
+Minimum mit einem Bruchteil der Funktionalitäten der komplexen Altsoftware soll 
+rasch entwickelt und vermarktet werden. Indem weitere Entwicklung auf den 
+Markterfahrungen beruht, wird schnell viel Wert für Kunden geschaffen.
+	\item[Alternativen am Kunden testen] 
+	\item[Wartung einer einzigen Version] Es gibt einen einzigen 
+Softwarestand auf Salesforce der in besonderem Service für Kunden angepasst 
+wird. 
+	\item[Standardisierte Komponenten] Standardisierte Komponenten lassen 
+sich auf dem Salesforce App Marktplatz beziehen. Beispiel dafür ist die 
+nahtlose Anbindung an Amazons Dateispeicher S3. Zu prüfen ist auch, ob sich 
+Import, Anzeige, Veränderung, Export von CAD Dateien über eine eingekaufte 
+Komponente realisieren lassen, da das Unternehmen in diesem Bereich keine 
+Kernkompetenz besitzt.
+	\item[Stetige Umsätze] Durch ein Preismodell in dem pro Nutzer und 
+Monat abgerechnet wird, lassen sich stetige Umsätze generieren.
+	\item[Verkauf an Fachabteilungen] Im Marketing soll ein Schwerpunkt 
+darauf gelegt werden, Fachabteilungen direkt zu erreichen, zum Beispiel bei 
+Fachtagungen einschlägiger Themen. Idealerweise lassen sich kleine Firmen 
+erreichen, die das Thema Liegenschaftsmanagement bisher ohne 
+Softwareunterstützung bewältigt haben. Sind Fachabteilungen überzeugt lässt 
+sich das Produkt ohne Eingriffe in die IT-Landschaft vor Ort nutzen.
+\end{description}
+
+\subsubsection{Vermeidung von Risiken}
+\begin{description}
+	\item[Hohe Kosten durch Pay-per-Use] Da das Produkt wie Salesforce auch 
+pro Nutzer und Monat abgerechnet werden soll, sind Kosten absehbar.
+	\item[Lock-in Effekte]
+	\item[Komplexität unbedacht gekoppelter Komponenten]
+	\item[Datenmigration]
+	\item[Leistungstransparenz]
+	\item[Geringere Umsätze]
+	\item[Geringere Anpassbarkeit]
+	\item[Organisatorische und strukturelle Umbrüche]
+	\item[Updatefrequenz und Agilität]
+\end{description}
