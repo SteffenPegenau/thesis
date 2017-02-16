@@ -1,0 +1,55 @@
+\begin{figure}[h]
+\begin{center}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=7em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           very thick,
+           shorten <=5pt,
+           shorten >=5pt,},
+    sepLine/.style={
+	dashed,
+	very thick
+    }
+}
+\scalebox{1.0}{
+\begin{tikzpicture}[align=center,node distance=2.2em and 0.6em] 
+	\node[punkt] (Machbarkeitsstudie) {Mach\-bar\-keits\-studie} ; 
+	\node[punkt] (RE)[below right= of Machbarkeitsstudie]
+{An\-for\-der\-ungs\-analyse und Planung};
+	\node[punkt] (Migration) [below right= of RE] 
+{Migration};
+	\node[punkt] (TD) [below right= of Migration] {Test \& De\-ploy\-ment};
+	\node[punkt] (Monitoring) [below right= of TD] {Über\-wachung \& 
+Wartung};
+
+	\draw[pil] (Machbarkeitsstudie.east) -| (RE.north);
+	\draw[pil] (RE.east) -| (Migration.north);
+	\draw[pil] (Migration.east) -| (TD.north);
+	\draw[pil] (TD.east) -| (Monitoring.north);
+	
+	\draw[pil] (Monitoring.south) -- ++(0,-5em)coordinate(end);
+	\draw[pil] (end) -| (TD.south);
+	\draw[pil] (end) -| (Migration.south);
+	\draw[pil] (end) -| (RE.south);
+	
+	
+	
+
+\end{tikzpicture}
+}
+\caption{Das Fünf-Phasen-Wasserfallmodell aus \protect\citeflow{fivephases}}
+\label{fig:fuenf-phasen-wasserfall-modell}
+\end{center}
+\end{figure}
