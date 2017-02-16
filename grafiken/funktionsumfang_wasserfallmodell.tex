@@ -1,10 +1,35 @@
 \usetikzlibrary{arrows}
 \begin{figure}[bh]
 
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           %rounded corners,
+           draw=black, very thick,
+           text width=10em,
+           minimum height=10em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           very thick,
+           shorten <=5pt,
+           shorten >=5pt,},
+    sepLine/.style={
+	dashed,
+	very thick
+    }
+}
+
 \begin{center}
 
-\scalebox{.8}{
+\scalebox{1}{
 \begin{tikzpicture}
+
+
 \newcommand{\rechts}{6}
 \newcommand{\radius}{1.9cm}
 \coordinate (centerTop) at (\rechts,3.5);
@@ -12,9 +37,12 @@
 \coordinate (centerRechts) at (\rechts,0);
 \coordinate (centerBottom) at (\rechts,-1);
 
+\node[punkt] {On-Premise-Lösung} ; 
+
+%\draw[punkt] at (centerLinks) {On-Premise-Lösung};
 % Linker Kreis
-\draw (centerLinks) circle (\radius) node [text=black] 
-{On-Premise-Lösung};
+%\draw (centerLinks) circle (\radius) node [text=black] 
+%{On-Premise-Lösung};
 
 
 % Oberer Kreis
@@ -27,9 +55,11 @@
 
 
 % Rechte Mitte
-\draw (centerRechts) circle (\radius);
+%\draw (centerRechts) circle (\radius);
 \node[align=left] at ($ (centerRechts) + (3.5,0)$) 
 {\st{On-Premise-}\\Cloud-Lösung};
+
+\node[punkt] at (centerRechts) {};
 
 % Pfeil
 \path[draw=black,solid,line width=1mm,fill=black,

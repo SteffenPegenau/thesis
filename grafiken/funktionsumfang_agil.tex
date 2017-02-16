@@ -2,19 +2,42 @@
 \begin{figure}[h]
 \begin{center}
 
-\scalebox{.8}{
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           %rounded corners,
+           draw=black, very thick,
+           text width=10em,
+           minimum height=10em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           very thick,
+           shorten <=5pt,
+           shorten >=5pt,},
+    sepLine/.style={
+	dashed,
+	very thick
+    }
+}
+
+\scalebox{1}{
 \begin{tikzpicture}
-\newcommand{\rechts}{6}
+\newcommand{\rechts}{7}
 \newcommand{\radius}{1.9cm}
 \coordinate (centerTop) at (\rechts,1.2);
 \coordinate (centerLinks) at (0,0);
 \coordinate (centerRechts) at (\rechts,0);
-\coordinate (centerBottom) at (\rechts,-3.2);
+\coordinate (centerBottom) at (\rechts,-3);
 
 % Linker Kreis
-\draw (centerLinks) circle (1.5*\radius) node [text=black] 
-{On-Premise-Lösung};
-
+%\draw (centerLinks) circle (1.5*\radius) node [text=black] 
+%{On-Premise-Lösung};
+\node[punkt] {On-Premise-Lösung} ; 
 
 % Oberer Kreis
 \draw[fill=green] (centerTop) circle (\radius);
@@ -26,14 +49,18 @@
 
 
 % Rechte Mitte
-\draw (centerRechts) circle (0.8*\radius);
-\node[align=left] at ($ (centerRechts) + (3.5,0)$) {Cloud-Lösung};
+%\draw (centerRechts) circle (0.8*\radius);
+\node[align=left] at ($ (centerRechts) + (3.7,0)$) {Cloud-Lösung};
+\node [cloud, draw,cloud puffs=10,cloud puff arc=120, aspect=2, inner 
+ysep=2em] (CLOUD) at (centerRechts) 
+{};
+
 
 % Pfeil
 \path[draw=black,solid,line width=1mm,fill=black,
 preaction={-triangle 90,thin,draw,shorten >=-1mm}
 ] ($ (centerLinks) + (1.6 * \radius,0) $) -- ($ (centerRechts) + 
-(-1.1 * \radius,0) $);
+(-1.4 * \radius,0) $);
 
 %\draw \secondcircle node [text=black,left] {On-Premise-Software};
 %\draw \thirdcircle node [text=black,right] {$C$};
