@@ -466,61 +466,6 @@ Vertragsstrafen bei Nichteinhaltung drohen.
 \end{description}
 
 
-\subsection{Das Fünf-Phasen-Wasserfallmodell}
-\label{cha:five_phases}
-Das in \citepara{fivephases} vorgeschlagene Vorgehensmodell zur Migration
-einer Anwendung in die Cloud ähnelt dem aus der
-Softwareentwicklung bekannten, iterativen Wasserfallmodell und besteht aus den
-folgenden fünf Phasen, die in Abbildung
-\ref{fig:fuenf-phasen-wasserfall-modell}
-dargestellt sind.
-\input{grafiken/5phasenwasserfallmodell}
-\begin{comment}
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=\textwidth]{images/fuenf-phasen-wasserfall-modell.png}
-\caption{Das Fünf-Phasen-Wasserfallmodell aus \protect\citeflow{fivephases} }
-\label{fuenf-phasen-wasserfall-modell}
-\end{center}
-\end{figure}
-\end{comment}
-
-\begin{description}
-	\item[Phase 1 - Machbarkeitsstudie] In dieser Phase wird ergebnisoffen
-geprüft, ob die Migration einer Anwendung technisch und wirtschaftlich möglich
-und sinnvoll ist. Dabei wird nicht nur die Anwendung selbst analysiert, sondern
-auch alle Rahmenbedingungen, die Einfluss auf das Verhalten des Systems ausüben
-können. Außerdem wird eine detaillierte Kosten-Nutzen-Analyse erstellt.
-
-	\item[Phase 2 - Anforderungsanalyse und -Planung] Um die zu migrierende
-Anwendung und ihre Anforderungen zu verstehen, wird in der Planungsphase die
-bestehende IT-Umgebung unter Berücksichtigung der genannten, die Migration
-beeinflussenden Faktoren (siehe  Kapitel
-\ref{cha:migration_bestimmende_faktoren})
-genau begutachtet. Gilt die Anwendung auch nach Begutachtung als zur Migration
-geeignet, werden der Return on Investment (ROI) sowie die Total Cost of
-Ownership (TCO) berechnet, um die durch die Migration entstehende
-Kostenvorteile
-zu verstehen.
-
-	\item[Phase 3 - Migration] Die existierende Anwendung wird in die Cloud
-portiert und in Hinblick auf Leistungsfähigkeit und Performanz strukturiert
-getestet. Zum Schluss wird die neue Plattform in einem User Acceptance Testing
-(UAT) validiert.
-
-	\item[Phase 4 - Tests und Auslieferung] Die Daten aus der Produktion
-werden in die Cloud portiert. Anschließend wird die Software erneut getestet
-und freigegeben. In dieser Phase ist ein hoher Grade an Überwachung und Support
-nötig, um unvorhergesehene Probleme auffangen zu können. Unter Umständen wird
-parallel zum Start der Cloud-Anwendung die Altsoftware zunächst weiter
-betrieben.
-
-	\item[Phase 5 - Überwachung und Wartung] Nach der Migration in die
-Cloud ist es naturgemäß notwendig, die Leistungserfüllung durch den Anbieter in
-Hinblick auf Leistungsfähigkeit, Verfügbarkeit und Sicherheit zu überwachen um
-gegebenenfalls Gegenmaßnahmen einleiten zu können.
-\end{description}
-
 \subsection{Beteiligte Unternehmen und das On-Premise-Produkt iFMS}
 \label{cha:replyundifms}
 
@@ -595,11 +540,64 @@ Zwischenwände können gezogen oder entfernt werden. Vertragszugehörigkeiten,
 Raumnutzungsarten und Bodenbeläge lassen sich - auch für jeden Zeitpunkt in der 
 Vergangenheit - visualisieren.
 
-\subsection{TODO: Einschränkungen dieser Arbeit}
-
-
+\subsection{Das Fünf-Phasen-Wasserfallmodell}
+\label{cha:five_phases}
+Das in \citepara{fivephases} vorgeschlagene Vorgehensmodell zur Migration
+einer Anwendung in die Cloud ähnelt dem aus der
+Softwareentwicklung bekannten, iterativen Wasserfallmodell und besteht aus den
+folgenden fünf Phasen, die in Abbildung~\ref{fig:fuenf-phasen-wasserfall-modell}
+dargestellt sind.
+\input{grafiken/5phasenwasserfallmodell}
 \begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=\textwidth]{images/fuenf-phasen-wasserfall-modell.png}
+\caption{Das Fünf-Phasen-Wasserfallmodell aus \protect\citeflow{fivephases} }
+\label{fuenf-phasen-wasserfall-modell}
+\end{center}
+\end{figure}
+\end{comment}
+\begin{description}
+	\item[Phase 1 - Machbarkeitsstudie] In dieser Phase wird ergebnisoffen
+geprüft, ob die Migration einer Anwendung technisch und wirtschaftlich möglich
+und sinnvoll ist. Dabei wird nicht nur die Anwendung selbst analysiert, sondern
+auch alle Rahmenbedingungen, die Einfluss auf das Verhalten des Systems ausüben
+können. Außerdem wird eine detaillierte Kosten-Nutzen-Analyse erstellt.
 
+	\item[Phase 2 - Anforderungsanalyse und -Planung] Um die zu migrierende
+Anwendung und ihre Anforderungen zu verstehen, wird in der Planungsphase die
+bestehende IT-Umgebung unter Berücksichtigung der genannten, die Migration
+beeinflussenden Faktoren (siehe  Kapitel
+\ref{cha:migration_bestimmende_faktoren})
+genau begutachtet. Gilt die Anwendung auch nach Begutachtung als zur Migration
+geeignet, werden der Return on Investment (ROI) sowie die Total Cost of
+Ownership (TCO) berechnet, um die durch die Migration entstehende
+Kostenvorteile
+zu verstehen.
+
+	\item[Phase 3 - Migration] Die existierende Anwendung wird in die Cloud
+portiert und in Hinblick auf Leistungsfähigkeit und Performanz strukturiert
+getestet. Zum Schluss wird die neue Plattform in einem User Acceptance Testing
+(UAT) validiert.
+
+	\item[Phase 4 - Tests und Auslieferung] Die Daten aus der Produktion
+werden in die Cloud portiert. Anschließend wird die Software erneut getestet
+und freigegeben. In dieser Phase ist ein hoher Grade an Überwachung und Support
+nötig, um unvorhergesehene Probleme auffangen zu können. Unter Umständen wird
+parallel zum Start der Cloud-Anwendung die Altsoftware zunächst weiter
+betrieben.
+
+	\item[Phase 5 - Überwachung und Wartung] Nach der Migration in die
+Cloud ist es naturgemäß notwendig, die Leistungserfüllung durch den Anbieter in
+Hinblick auf Leistungsfähigkeit, Verfügbarkeit und Sicherheit zu überwachen um
+gegebenenfalls Gegenmaßnahmen einleiten zu können.
+\end{description}
+Das Fünf-Phasen-Wasserfallmodell, eine Weiterentwicklung des allgemeinen 
+Wasserfallmodells, wird in dieser Arbeit als eine dem Leser vermutlich bekannte 
+Grundlage genutzt; durch Vergleiche lassen sich die Ideen des in dieser Arbeit 
+entwickelten Modells ordnen. \\ 
+Um in dieses Modell Erfahrungen aus der Praxis einfließen lassen zu können
+\begin{comment}
 \subsection{Cloud-Computing}
 Da die Definition von "`Cloud-Computing"' des National Institute of Standards
 and Technology (NIST) \pcite{}{}{NIST} in \citeflow{thoughtsOnCloud} als gute

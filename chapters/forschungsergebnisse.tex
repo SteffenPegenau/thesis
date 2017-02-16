@@ -8,86 +8,14 @@ Ergebnisse vor, sondern beschreiben rein deskriptiv ihre Befunde. Eine
 Auswertung findet im nachfolgenden Kapitel statt.
 \end{comment}
 
-Das entwickelte Vorgehensmodell soll nun auf ein Migrationsprojekt aus der 
-Praxis angewendet werden. Dazu werden zunächst die Firma sowie die 
-Rahmenbedingungen des Projektes vorgestellt. Anschließend wird exemplarisch 
-eine Vision für das Projekt entwickelt.
+Mit dem entwickelten Vorgehensmodell soll nun beispielhaft ein Geschäftsmodell 
+und eine Vision für die Migration des in Kapitel~\ref{cha:replyundifms} 
+vorgestellten iFMS entstehen. Die Cloudversion dieser Software wird hier 
+"`iFMS@Salesforce"' genannt und von iFMS abgegrenzt. Aus dem Namen geht die 
+gewählte Cloud-Plattform hervor -- eine strategische Entscheidung, die im selben 
+Kapitel begründet wurde.
 
-\subsection{Beteiligte Unternehmen und das On-Premise-Produkt}
-\input{grafiken/arlanis_reply.tex}
-
-Reply ist ein an der italienischen Börse gehandeltes 
-IT-Beratungsunternehmen und betrachtet sich als "`Living network"'\ aus 
-hochspezialisierten Tochterunternehmen. Seit der Gründung 1996 konnte Reply 
-seinen Umsatz auf über 705 Millionen Euro bei 5.245 Angestellten im Jahr 2015 
-steigern. Das Netzwerk wuchs und wächst rasch: 2016 wurden bis November drei 
-neue Firmen aquiriert. Zwei Tochtergesellschaften, die schon seit mehreren 
-Jahren Teil von Reply sind, 
-möchte ich genauer vorstellen, da ihre Unternehmensprofile das 
-Migrationsprojekt in besonderem Maße beeinflussen.
-
-Die vormalige syskoplan AG, seit dem Erwerb 2010 \pcite{}{12}{replycompprofile} 
-Syskoplan Reply, ist ein Spezialist für SAP-Applikationen und 
--Plattformen \pcite{}{10}{replycompprofile} und entwickelt seit 1999 das 
-integrierte Facility Management System (iFMS). iFMS verbindet die in SAP 
-hinterlegten Daten mit Gebäudeplänen und versucht Prozesse rund um die 
-Verwaltung von Immobilien zu unterstützen. Die gewachsene 
-Java-Anwendung mit einer Client-Server-Architektur lässt sich inzwischen nur 
-noch schwer um von Kunden gewünschte Funktionen erweitern. Auch die Bedienung 
-über 
-eine zusätzlich zu installierenden Anwendung wirkt in Zeiten, in denen Nutzer 
-es gewohnt sind, auch umfangreiche Software über den Webbrowser zu bedienen, 
-anachronstisch. Beide Aspekte schränken die zukünftige
-Wettbewerbsfähigkeit der Software ein. 
-
-Die ehemalige Arlanis Software AG wurde 2012 von Reply übernommen und ist 
-Spezialist für Lösungen auf Basis des Cloud Anbieters Salesforce. Mit 
-Salesforce lassen sich Lösungen häufig ganz ohne eigenen Code auf einer 
-SaaS-Basis zusammen klicken. Ist doch Code erforderlich lässt er sich auf der 
-PaaS-Plattform (Force.com und Heroku) entwickeln, wobei auf per SaaS angelegte 
-Datenmodelle und Daten zugegriffen werden kann, auf die externe Anwendungen per 
-Web Service zugreifen können. Mit Salesforce1 steht eine App für mobile Geräte 
-zur Verfügung; jede Salesforce-Anwendung lässt sich über diese App bedienen. 
-
-Über das Unternehmensnetzwerk von Reply sollen die Stärken beider 
-Tochterunternehmen verbunden werden; mit dem Know-How im Bereich Facility 
-Management und SAP soll auf Salesforce eine innovative, wettbewerbsfähige 
-Anwendung geschaffen werden: iFMS@Salesforce.
-
-Die On-Premise-Anwendung iFMS dient dem Facility Management. Mit ihr lassen 
-sich Gebäude, Etagen und Räume verwalten, mieten und vermieten. Dabei werden in 
-SAP hinterlegte Informationen wie Raumgrößen, Nutzungsarten, Adressen und 
-Kontaktinformationen mit CAD Plänen verknüpft. Um iFMS zu nutzen, müssen 
-Unternehmen einen Server bereitstellen und warten, auf dem der Serverteil der 
-Anwendung läuft. Außerdem wird ein Datenbankserver benötigt, auf dem iFMS seine 
-Daten speichern kann. Auf dem Rechner eines jeden Nutzers muss ebenfalls eine 
-Anwendung installiert werden. Ein Screenshot aus Anwendersicht ist in Abbildung 
-~\ref{fig:ifms_liegenschaftsbaum} dargestellt. Sie soll nicht im Detail erklärt 
-werden, sondern nur die Art und Komplexität der Anwendung andeuten. 
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=\textwidth]{images/iFMS_liegenschaftsbaum.png}
-\caption{Screenshot iFMS aus der 
-Benutzerdokumentation (\protect\citeflow{ifms_liegenschaftsmanager}) }
-\label{fig:ifms_liegenschaftsbaum}
-\end{center}
-\end{figure}
-
-Auf der linken Seite lassen sich die Immobilien in einer quasi beliebig 
-verzweigten Baumstruktur organisieren. So könnten zu den Kategorien in der 
-Abbildung Land, Stadt, Gebäude, Etagen und Räume zum Beispiel noch Kontinente, 
-Ländergruppen, Halbetagen oder Raumteile kommen.
-
-Auf der rechten Seite ist der CAD-Plan des Gebäudes bis auf Arbeitsplatzebene 
-dargestellt. Arbeitsplätzen können Mitarbeiter, Telefonanschlüsse und beliebige 
-Ausrüstungsgegenstände zugeordnet sein. Der Raumplan lässt sich ändern: 
-Zwischenwände können gezogen oder entfernt werden. Vertragszugehörigkeiten, 
-Raumnutzungsarten und Bodenbeläge lassen sich - auch für jeden Zeitpunkt in der 
-Vergangenheit - visualisieren.
-
-\subsection{Vision}
-\subsubsection{Realisierung von Chancen}
+\subsection{Realisierung von Chancen}
 \begin{description}
 	\item[Soziales Element: Vernetzung und Einbeziehung von Nutzern] Die 
 Vernetzung zwischen den Nutzern einer Firma erfolgt über Chatter, dem 
@@ -120,8 +48,9 @@ Hürden für potentielle Kunden gering zu halten und das Produkt auf diese Weise
 auch für kleine und mittlere Unternehmen attraktiv zu machen, ist die 
 SAP-Anbindung optional. Durch die Nutzung des Salesforce Marktplatzes für Apps 
 können Kunden das Produkt leicht beziehen und testen.
-	\item[Skalierung der Leistung] CAD-Pläne werden nicht mehr lokal 
-sondern in der Cloud konvertiert.
+	\item[Skalierung der Leistung] Raumbelegungen lassen sich über die 
+verfügbare Leistung in akzeptabler Zeit optimieren. CAD-Pläne werden nicht 
+mehr lokal sondern in der Cloud konvertiert.
 	\item[Time to market \& kürzere Releasezyklen] Ein vermarktbares 
 Minimum mit einem Bruchteil der Funktionalitäten der komplexen Altsoftware soll 
 rasch entwickelt und vermarktet werden. Indem weitere Entwicklung auf den 
@@ -146,16 +75,95 @@ Softwareunterstützung bewältigt haben. Sind Fachabteilungen überzeugt lässt
 sich das Produkt ohne Eingriffe in die IT-Landschaft vor Ort nutzen.
 \end{description}
 
-\subsubsection{Vermeidung von Risiken}
+\subsection{Vermeidung von Risiken}
 \begin{description}
-	\item[Hohe Kosten durch Pay-per-Use] Da das Produkt wie Salesforce auch 
-pro Nutzer und Monat abgerechnet werden soll, sind Kosten absehbar.
-	\item[Lock-in Effekte]
+	\item[Hohe Kosten durch Pay-per-Use] Salesforce rechnet pro Nutzer und 
+Monat ab, sodass weder für Arlanis Reply noch für den Kunden mit unerwartet 
+hohen Kosten zu rechnen ist.
+	\item[Lock-in Effekte] Arlanis Reply hat sich strategisch an Salesforce 
+gebunden; der Lock-in Effekt wird in Kauf genommen.
 	\item[Komplexität unbedacht gekoppelter Komponenten]
 	\item[Datenmigration]
 	\item[Leistungstransparenz]
-	\item[Geringere Umsätze]
-	\item[Geringere Anpassbarkeit]
-	\item[Organisatorische und strukturelle Umbrüche]
-	\item[Updatefrequenz und Agilität]
+	\item[Geringere Umsätze] Stetige, aber geringere Umsätze werden durch 
+einmalige Zahlungen für Anpassungen ergänzt. 
+	\item[Geringere Anpassbarkeit] Mit Heroku wird Salesforce um PaaS 
+ergänzt; Features, die sich nicht mit der Kernfunktionalität oder Erweiterungen 
+umsetzen lassen, lassen sich auf diese Weise nahezu ohne Einschränkungen 
+realisieren.
+	\item[Organisatorische und strukturelle Umbrüche] Da
+	\item[Updatefrequenz erfordert Agilität] 
 \end{description}
+
+\subsection{Geschäftsmodell \& Strategie}
+\begin{comment}
+In Orientierung an Abbildung~\ref{fig:einfluss_des_preises_auf_business} soll 
+in Tabelle~\ref{} zunächst iFMS in Preis und davon abhängigen Dimensionen 
+analysiert werden. 
+
+
+\begin{table}[bh]
+\newcommand{\colBreite}{0.135\textwidth}
+\newcommand{\theColor}{blue!25}
+\centering
+\begin{tabular}[width=0.95\textwidth]
+{|p{\colBreite}|p{\colBreite}|p{\colBreite}|p{\colBreite}|p{
+\colBreite} |p{\colBreite}|}
+\hline
+\textbf{Verkaufs\-preis} & \textbf{Kosten für Kun\-den\-aqui\-si\-tion} & 
+\textbf{Vertrieb} & \textbf{Kun\-den\-be\-ziehungen} & \textbf{Vertretbare 
+Nutzerschulungen} & \textbf{Ziel\-gruppen} \\
+\hline
+€€€€€ & Hoch & Extern & \cellcolor{\theColor}Persönlich\newline iFMS & 
+\cellcolor{\theColor}Erheblich\newline iFMS & 
+\cellcolor{\theColor}Unterneh\-men\newline iFMS \\
+\hline
+\cellcolor{\theColor}€€€\newline iFMS & \cellcolor{\theColor}Moderat\newline 
+iFMS & \cellcolor{\theColor}Intern\newline iFMS & Telefonisch & Moderat & 
+Abteilungen, 
+KMU \\
+\hline
+€ & Niedrig & Keinen & Web & Minimal & KMU, Personen \\
+\hline
+\end{tabular}
+\caption{Kosten für iFMS und iFMS@Salesforce aus Kundensicht und Folgerungen 
+auf die Zielgruppe.}
+\label{tab:analyse_preis}
+\end{table}
+\end{comment}
+Die Bedeutung für das Geschäftsmodell und die Strategie soll beispielhaft an 
+einem Aspekt gezeigt werden, der Zielgruppe. Die Zielgruppe von iFMS bestand 
+aus großen Unternehmen mit einer bestimmten 
+Zahl von Liegenschaften, für deren Verwaltung sich Einrichtungs-, Wartungs- und 
+Schulungsaufwände lohnen. Die Beschränkung auf diese Zielgruppe ließe sich 
+falls gewünscht mit den Mitteln der Cloud aufheben. Eine Basisversion könnte 
+durch eine einfache Installation und begeisternde Cloud-Features zu einer 
+relativ niedrigen monatlichen Gebühr in einer Art Freemium-Modell Neukunden 
+erreichen. Die Unterstützung für SAP und CAD, spezielle Anpassungen der 
+Software, Integration weiterer Systeme, Support sowie Schulungen ließen sich 
+durch Kunden hinzubuchen und machten die Hauptumsatzquelle für das Unternehmen 
+aus. Dabei wäre darauf zu achten, den persönlichen Kontakt zu Kunden nicht zu 
+verlieren: Das Verarbeiten von CAD-Plänen mit sicherheitsrelevanten Daten oder 
+Finanzdaten aus SAP mit personenbezogenen Daten in der Cloud und macht es 
+erforderlich, dass der Kunde Salesforce und dem ISV vertraut.
+
+\begin{comment}
+Um mögliche Strategien, Geschäftsmodelle und 
+Zielgruppen für iFMS@Salesforce aufzuzeigen, sollen diese Aufwände in Anlehnung 
+an Abbildung~\ref{fig:einfluss_des_preises_auf_business} zunächst analysiert 
+werden; die Zusammenfassung der Ergebnisse ist in 
+Tabelle~\ref{tab:kosten_fuer_ifms} zu finden.
+\input{tabellen/kosten_fur_ifms}
+Die Einstiegshürden
+
+Die infrastrukturellen Aufwände werden sich reduzieren. Auf Seite des Kunden, 
+weil die Software nicht auf eigenen Servern sondern bei Salesforce läuft und 
+für die Nutzung ein Pauschalbetrag pro Nutzer und Monat fällig ist. Auf Seite 
+des ISV, weil es nur noch eine zu unterstützende Plattform gibt.
+
+
+Auch wenn sich mit einer Realisierung auf 
+Salesforce Einrichtungs- und Wartungskosten für die Software auf 
+Kundenseite deutlich reduzieren lassen, bleiben Aufwände für CAD-Plan- und 
+Datenpflege. 
+\end{comment}

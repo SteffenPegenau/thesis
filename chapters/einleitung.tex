@@ -30,17 +30,20 @@ Cloud-Markt zu verlagern. Dabei ist es intuitiv vernünftig, vorhandene
 Kernkompetenzen durch Migrationen bestehender Produkte zu nutzen, um 
 Wettbewerbsvorteile auf dem neuen Markt zu erlangen. \\
 Doch nicht nur die Umsatzentwicklung des Marktes setzt die Softwarehersteller 
-unter Druck. Die Kunden haben sich an Anwendungen in der Cloud gewöhnt und 
+unter Druck: Ihre Kunden haben sich an Anwendungen in der Cloud gewöhnt und
 erwarten sich - von ihr - eine günstigere, schnellere, einfachere, flexiblere 
-und 
-effizientere IT. Günstiger, weil bei der Beschaffung, der Wartung und dem 
+und effizientere IT im Allgemeinen. \pcite{}{}{economics_of_the_cloud}
+\begin{comment}
+Günstiger, weil bei der Beschaffung, der Wartung und dem 
 Betrieb des Rechenzentrums Skalenerträge erzielt werden können. Schneller, weil 
 Cloud-Anbieter Leistungsreserven in einem Umfang bilden können und müssen, wie 
 es für einzelne Firmen in ihren IT-Landschaften kaum möglich ist. Einfacher, 
 weil Cloud-Dienste in der Regel auch mit Mobilgeräten gut bedienbar sind. 
 Flexibler, weil sich Leistungen unkompliziert über das Internet buchen lassen 
 und automatisch skalieren. Effizienter, weil nur der Umfang bezahlt wird, 
-der auch genutzt wird. \pcite{}{}{economics_of_the_cloud} \\
+der auch genutzt wird. \pcite{}{}{economics_of_the_cloud} \\ 
+\end{comment}
+
 Diese bei den Nutzern geweckten Erwartungen sorgen bei den Softwareherstellern 
 für zusätzlichen Migrationsdruck, sie setzen aber auch einen neuen, höheren 
 Maßstab für Software im Allgemeinen.
@@ -48,10 +51,11 @@ Maßstab für Software im Allgemeinen.
 Entschließt sich ein Softwarehersteller dazu, seine Produkte 
 als Dienstleistungen in der Cloud anzubieten, ändert sich nicht nur die 
 technologische, sondern auch die wirtschaftliche Umgebung erheblich, da ein 
-neuer Markt erschlossen wird und die Positionierung der Software auf dem Markt 
-zu bedenken ist. Die hat nicht nur für das Vertriebsmodell  Auswirkungen - man 
+neuer Markt erschlossen wird und bedacht werden muss, wie und wo die 
+Cloud-Lösung auf dem Markt zu positionieren ist. Die Position im Wettbewerb hat 
+nicht nur für das Vertriebsmodell  Auswirkungen - man 
 denke an Fragen der Lizenzierung und Preismodelle - sondern auch den 
-Leistungsumfang, denn je standardisierter eine Software ist, je 
+Leistungsumfang. Denn je standardisierter eine Software ist, je 
 geringer die nötige Anpassbarkeit, desto wahrscheinlicher lassen sich bei einem 
 Betrieb in der 
 Cloud die genannten Vorteile realisieren. \pcite{}{}{saasBuxmann2008} Dies 
@@ -111,7 +115,8 @@ viele Unternehmen eine Option sein.
 \end{comment}
 
 In der Literatur finden sich zahlreiche Vorgehensmodelle, die 
-versuchen, die Migration eines Altsystems beziehungsweise einer Altsoftware im 
+versuchen, die Migration eines Altsystems beziehungsweise einer Altsoftware 
+in die Cloud im 
 weitesten Sinne zu strukturieren. In einigen, wie in dem von 
 \citeflow{framework_for_architecture-driven_migration} entwickelten Modell wird 
 ein technischer Schwerpunkt gesetzt; wirtschaftliche Aspekte bleiben weitgehend 
@@ -121,21 +126,24 @@ unberücksichtigt. Andere fokussieren sich lediglich auf den Kosten-Faktor
 markt-strategischen Folgen einer Cloud-Migration für Unternehmen. 
 
 Zielgruppe der Modelle sind in der Regel Unternehmen, die Teile ihrer 
-IT-Landschaft in die Cloud migrieren wollen, zum Beispiel ein Unternehmen, das 
-seine Lagerhaltung in die Cloud verlagern will. Eine Literaturrecherche ergab, 
+IT-Landschaft in die Cloud migrieren wollen. Dies kann zum Beispiel ein 
+Unternehmen sein, das 
+seine Lagerhaltung in die Cloud verlagern will. Eine in 
+dieser Arbeit durchgeführte Literaturrecherche ergab, 
 dass Softwarehersteller als Zielgruppe bisher vernachlässigt wurden. Der 
-Unterschied zwischen den beiden Gruppen ist gravierend: Während im Beispiel die 
+Unterschied zwischen den beiden Gruppen ist gravierend: Während im oben 
+genannten Beispiel die 
 Lagerhaltung in Form einer Software lediglich das Kerngeschäft unterstützt, 
-besteht für den Softwarehersteller das Kerngeschäft aus Software. Er wird nicht 
-in die Cloud migrieren, um Kosten zu senken, sondern um auf dem Markt weiter zu 
-bestehen. Für den Erfolg im Wettbewerb ist eine strategische Neuausrichtung 
+besteht für den Softwarehersteller das Kerngeschäft in der zu migrierenden 
+Software. Für den Erfolg im Wettbewerb ist eine strategische 
+Neuausrichtung 
 unabdingbar, unterscheidet sich in ihrer Tragweite und ihrem Umfang jedoch 
 erheblich von den strategischen Überlegungen, die ein Unternehmen einer anderen 
 Branche bei der Cloud Migration treffen muss. 
 
 Um diese Forschungslücke zu schließen, soll ein Modell entwickelt werden, das 
 Softwarehersteller bei der Migration in die Cloud unterstützen soll. Grundlage 
-ist eine Literaturrecherche, die die folgenden Fragen klären soll.
+ist eine Literaturrecherche, die die folgenden Fragen klären soll:
 \begin{enumerate}
 	\item Welche Merkmale (Chancen und Risiken) der Cloud sind bei der 
 Migration zu berücksichtigen?
@@ -145,28 +153,33 @@ Ausrichtung und das Geschäftsmodell eines Softwareherstellers?
 eines Softwareherstellers?
 \end{enumerate}
 
-Bevor in Kapitel~\ref{cha:entwickelung_vorgehensmodell} diese Fragen 
+Bevor diese Fragen in Kapitel~\ref{cha:entwickelung_vorgehensmodell}  
 beantwortet werden und in der Entwicklung eines Vorgehensmodells resultieren, 
 wird in Kapitel ~\ref{cha:grundlagen} auf grundlegende Fragen eingegangen: 
 Welche Vorteile verspricht die Cloud und wie lassen sie sich erzielen? Auf 
 welche Weise unterschiedet sich eine Cloud-Migration von herkömmlichen 
 Migrationen in der IT? Was wird in dieser Arbeit unter einem Softwarehersteller 
 verstanden und welche Annahmen werden getroffen? Wie wirken sich dessen 
-Charakteristika auf die Migration aus? \\ Das Grundlagenkapitel schließt mit 
-der Vorstellung des Fünf-Phasen-Modells, das als Basis und Orientierung für das 
-in dieser Arbeit entwickelte Modell dient.
+Charakteristika auf die Migration aus?
+Um Erfahrungen aus der Praxis in das 
+Modell einzubeziehen, wurde das entwickelte Modell in Zusammenarbeit mit einem 
+Beratungsunternehmen auf ein reales Projekt angewendet; Unternehmen und Projekt 
+werden ebenfalls in diesem Kapitel vorgestellt.
+Das Grundlagenkapitel schließt mit der Vorstellung des Fünf-Phasen-Modells, das 
+als Basis und Orientierung für das in dieser Arbeit entwickelte Modell dient.
 
 Kapitel~\ref{cha:method} beschreibt die Literaturrecherche mit der die 
-Forschungsfragen beantwortet wurden. Um Erfahrungen aus der Praxis in der 
-Modell einzubeziehen, wurde das entwickelte Modell in Zusammenarbeit mit einem 
-Beratungsunternehmen auf ein reales Projekt angewendet. In diesem Rahmen wurden 
-Gespräche mit erfahrenen Mitarbeitern geführt, deren Ablauf ebenfalls in diesem 
-Kapitel geschildert werden.
+Forschungsfragen beantwortet wurden. Um praktische Erfahrungen einfließen zu 
+lassen wurden Gespräche mit Mitarbeitern geführt, deren Ablauf ebenfalls in 
+diesem Kapitel geschildert werden.
 
-Die Zusammenführung von Modell und Praxis in Kapitel~\ref{cha:result} beginnt 
-mit einer Vorstellung des Projekt und stellt im Hauptteil Übereinstimmungen und 
-Unterschiede zwischen vorgeschlagenem und tatsächlichen Vorgehen heraus, die in 
-Kapitel~\ref{cha:diskussion} diskutiert werden.
+In Kapitel~\ref{cha:result} wird das Vorgehensmodell beispielhaft auf das zu 
+migrierende Projekt aus der Praxis angewendet; es werden Möglichkeiten 
+dargestellt, um Chancen der Cloud zu realisieren und Risiken zu meiden -- auch 
+in Bezug auf das Geschäftsmodell.
+
+In Kapitel~\ref{cha:diskussion} werden die Unterschiede zwischen 
+vorgeschlagenem und tatsächlichem Vorgehen herausgearbeitet und diskutiert.
 
 Die Ergebnisse dieser Diskussion werden anschließend in Kapitel~\ref{cha:fazit} 
 zusammengefasst, offene Fragestellungen, Herausforderungen und Forschungsfragen 
