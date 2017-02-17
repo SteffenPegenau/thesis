@@ -900,6 +900,16 @@
    type = {Journal Article}
 }
 
+@article{10_tips_for_writing_good_user_stories,
+   author = {Pichler, Roman},
+   title = {10 tips for writing good user stories},
+   volume = {2017},
+   number = {17.02.2017},
+   url = {http://www.romanpichler.com/blog/10-tips-writing-good-user-stories/},
+   year = {2016},
+   type = {Journal Article}
+}
+
 @article{
    author = {Prasad, Acklesh and Green, Peter and Heales, Jon and Finau, Glen},
    title = {On cloud computing service considerations for the small and medium enterprises},

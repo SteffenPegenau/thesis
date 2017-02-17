@@ -7,29 +7,57 @@ An dieser Stelle nehmen Sie noch keine Interpretation oder Erläuterung der
 Ergebnisse vor, sondern beschreiben rein deskriptiv ihre Befunde. Eine 
 Auswertung findet im nachfolgenden Kapitel statt.
 \end{comment}
+Mit dem entwickelten 
+Vorgehensmodell soll nun 
+beispielthaft die Cloud-Migration 
+des in Kapitel~\ref{cha:replyundifms} vorgestellten iFMS theoretisch geplant 
+werden. In Kapitel~\ref{cha:diskussion} wird der entstandene Plan mit dem 
+Vorgehen in der Praxis verglichen und diskutiert.
 
-Mit dem entwickelten Vorgehensmodell soll nun beispielhaft ein Geschäftsmodell 
-und eine Vision für die Migration des in Kapitel~\ref{cha:replyundifms} 
-vorgestellten iFMS entstehen. Die Cloudversion dieser Software wird hier 
-"`iFMS@Salesforce"' genannt und von iFMS abgegrenzt. Aus dem Namen geht die 
-gewählte Cloud-Plattform hervor -- eine strategische Entscheidung, die im selben 
+Die Cloudversion dieser Software wird hier "`iFMS@Salesforce"' genannt und von 
+iFMS abgegrenzt. Aus dem Namen geht die gewählte Cloud-Plattform hervor -- eine 
+strategische Entscheidung, die im selben 
 Kapitel begründet wurde.
 
-\subsection{Realisierung von Chancen}
+\subsection{Phase I: Entwickeln einer Vision}
+Um zu der Produktvision zu gelangen, dienen die in 
+Kapitel~\ref{cha:entwicklung_vorgehensmodell} identifizierten Chancen und 
+Risiken als Checkliste bei einem Brainstorming. Das Ergebnis sind Epics, 
+grobgranulare, funktionale und nicht-funktionale Anforderungen an die neue 
+Software. \pcite{}{}{10_tips_for_writing_good_user_stories}
+Im Wechselspiel mit den gesammelten Epics werden Geschäftsmodell und Strategie 
+definiert. Einige Chancen und Risiken ziehen strategische Implikationen mit 
+sich, andere Chancen werden durch eine gewählte Strategie ausgeschlossen. Zum 
+Beispiel können Chancen die Erschließung neuer Märkte ermöglichen oder aber 
+eine Realisierung derselben aus strategischen Gründen ausgeschlossen sein. 
+
+In dieser Arbeit liegt der Schwerpunkt auf dem Modell, das den Weg zur Vision 
+beschreibt -- nicht auf der iFMS@Salesforce-Vision selbst, die aus Sicht des 
+Autors  keinen allgemeinen Mehrwert besitzt. Deshalb wird dieser Weg 
+hier dargestellt, auf eine vollständige Beschreibung der Vision jedoch 
+verzichtet. 
+\subsubsection{Realisierung von Chancen}
 \begin{description}
 	\item[Soziales Element: Vernetzung und Einbeziehung von Nutzern] Die 
 Vernetzung zwischen den Nutzern einer Firma erfolgt über Chatter, dem 
 Salesforce Äquivalent von Facebook. Der ISV bietet Kundensupport über die 
 Salesforce Service Cloud. Entwickler sind für Kunden direkter erreichbar. Durch 
 die dort gesammelten Erfahrung können zukünftige Entwicklungsarbeiten 
-zielgerichteter erfolgen.
+zielgerichteter erfolgen. Mitarbeiter des Kunden sollen das Gefühl bekommen, 
+dass ihre Anliegen durch den Support schnell und zufriedenstellend gelöst 
+werden. Durch die schnelle Umsetzung von eingebrachten 
+Verbesserungsvorschlägen, soll sich der Eindruck festigen, dass jeder 
+Mitarbeiter am Produkt mitentwickeln kann und sich selbst im Produkt wieder 
+findet.
 	\item[Analysemöglichkeiten] Der ISV hat Zugriff auf die 
 Salesforceinstanzen seiner Kunden. Dadurch kann er Fehlkonfigurationen 
 und Fehlbedienungen erkennen, Supportangebote verbessern oder 
-Benutzeroberflächen intuitiver gestalten.
+Benutzeroberflächen intuitiver gestalten. Der ISV kann ebenfalls analysieren, 
+welche Funktionen besonders häufig genutzt werden und die zugehörigen Abläufe 
+verbessern oder automatisieren.
 	\item[Mobile Nutzung] Mit der Mobile App Salesforce1 ist die Salesforce 
-Anwendung auch auf Mobilgeräten nutzbar. Damit ein echter Mehrwert entsteht, 
-sollen sich
+Anwendung auch auf Mobilgeräten nutzbar. Damit ein echter Mehrwert für 
+den Kunden und seine Mitarbeiter entsteht, sollen sich
 \begin{itemize}
 	\item Rauminformationen wie Belegungen und Ansprechpartner abrufen 
 lassen.
@@ -41,61 +69,130 @@ resultieren.
 	\item Räume über ein Indoornavigationssystem finden lassen.
 	\item Reiningungspläne einsehen und ändern sowie Sonderreinigungen 
 anfordern lassen.
+	\item erfolgte Dienstleistungen wie Reinigungen, Reparaturen oder 
+Caterings bewerten lassen, um die Auswahl künftiger Dienstleister besser zu 
+gestalten.
 \end{itemize}
 
 	\item[Reduzierte Markteintrittskosten \& Skalierte Märkte] Um die 
 Hürden für potentielle Kunden gering zu halten und das Produkt auf diese Weise 
 auch für kleine und mittlere Unternehmen attraktiv zu machen, ist die 
-SAP-Anbindung optional. Durch die Nutzung des Salesforce Marktplatzes für Apps 
-können Kunden das Produkt leicht beziehen und testen.
+SAP- und CAD-Anbindung optional. Durch die Nutzung des Salesforce Marktplatzes 
+für Apps können Kunden das Produkt leicht beziehen und in einer Basisversion 
+testen beziehungsweise nutzen. \\
+Die Erschließung globaler Märkte erfolgt einerseits über den Marktplatz, 
+andererseits über die gezielte Ansprache großer, internationaler Unternehmen, 
+um iFMS@Salesforce langfristig international zu etablieren.
+
 	\item[Skalierung der Leistung] Raumbelegungen lassen sich über die 
-verfügbare Leistung in akzeptabler Zeit optimieren. CAD-Pläne werden nicht 
-mehr lokal sondern in der Cloud konvertiert.
-	\item[Time to market \& kürzere Releasezyklen] Ein vermarktbares 
-Minimum mit einem Bruchteil der Funktionalitäten der komplexen Altsoftware soll 
-rasch entwickelt und vermarktet werden. Indem weitere Entwicklung auf den 
-Markterfahrungen beruht, wird schnell viel Wert für Kunden geschaffen.
-	\item[Alternativen am Kunden testen] 
-	\item[Wartung einer einzigen Version] Es gibt einen einzigen 
-Softwarestand auf Salesforce der in besonderem Service für Kunden angepasst 
-wird. 
+verfügbare Leistung in akzeptabler Zeit in verschiedenen 
+Dimensionen optimieren. \\
+CAD-Pläne werden nicht mehr lokal sondern in der Cloud 
+konvertiert.
+
+	\item[Time to market \& kürzere Releasezyklen] Eine vermarktbare 
+Basisversion mit einem Bruchteil der Funktionalitäten der komplexen 
+Altsoftware soll rasch entwickelt, vermarktet und genutzt werden um bei 
+Verhandlungen mit Neu- und Altkunden Interesse zu wecken. \\
+Du die langjährige Erfahrung mit CAD und SAP sollen in Zusammenarbeit mit in 
+Salesforce erfahrenen Kollegen die Kernkompetenzen zügig in die Cloud 
+übertragen werden.
+	\item[Alternativen am Kunden testen] Die Kultur 
+des Mitentwickelns (siehe Abschnitt zur Einbeziehung von Nutzern oben) soll 
+genutzt werden, um es interessierten Powerusern in Sandboxes den aktuellen 
+Entwicklungsstand zu testen und direktes Feedback zu geben, das in die nächsten 
+Sprintplanungen einfließen kann.
+	\item[Wartung einer einzigen Version] Der Wartungsaufwand soll 
+reduziert werden, indem es jeweils nur eine Version der Basis-, SAP- und 
+CAD-Komponenten gibt. Anpassungen werden dem Kunden als Zusatzdienstleistung 
+verkauft, sodass zusätzlicher Wartungsaufwand zu zusätzlichen Umsätzen für den 
+ ISV führt.
 	\item[Standardisierte Komponenten] Standardisierte Komponenten lassen 
 sich auf dem Salesforce App Marktplatz beziehen. Beispiel dafür ist die 
-nahtlose Anbindung an Amazons Dateispeicher S3. Zu prüfen ist auch, ob sich 
-Import, Anzeige, Veränderung, Export von CAD Dateien über eine eingekaufte 
-Komponente realisieren lassen, da das Unternehmen in diesem Bereich keine 
-Kernkompetenz besitzt.
+nahtlose Anbindung an Amazons Dateispeicher S3, um es Kunden zu ermöglichen 
+Dateien zu Liegenschaften oder Verträgen zu hinterlegen. Da der ISV keine 
+Kernkompetenz beim Bearbeiten von CAD-Plänen besitzt, soll eine entsprechende 
+Komponente aus dem Marktplatz bezogen werden, sodass der Kunde für keinen 
+Prozess iFMS@Salesforce verlassen muss.
 	\item[Stetige Umsätze] Durch ein Preismodell in dem pro Nutzer und 
-Monat abgerechnet wird, lassen sich stetige Umsätze generieren.
+Monat bei einer Mindestlaufzeit von einem Jahr abgerechnet wird, lassen sich 
+stetige Umsätze generieren, die dem ISV mehr Planungssicherheit geben.
 	\item[Verkauf an Fachabteilungen] Im Marketing soll ein Schwerpunkt 
 darauf gelegt werden, Fachabteilungen direkt zu erreichen, zum Beispiel bei 
 Fachtagungen einschlägiger Themen. Idealerweise lassen sich kleine Firmen 
 erreichen, die das Thema Liegenschaftsmanagement bisher ohne 
 Softwareunterstützung bewältigt haben. Sind Fachabteilungen überzeugt lässt 
-sich das Produkt ohne Eingriffe in die IT-Landschaft vor Ort nutzen.
+sich das Produkt ohne Eingriffe in die IT-Landschaft vor Ort nutzen; eine 
+Einbeziehung der IT-Abteilung ist nicht mehr oder nur in geringem Umfang nötig.
 \end{description}
-
-\subsection{Vermeidung von Risiken}
+\subsubsection{Vermeidung von Risiken}
 \begin{description}
 	\item[Hohe Kosten durch Pay-per-Use] Salesforce rechnet pro Nutzer und 
-Monat ab, sodass weder für Arlanis Reply noch für den Kunden mit unerwartet 
+Monat ab, sodass weder für den ISV noch für den Kunden mit unerwartet 
 hohen Kosten zu rechnen ist.
 	\item[Lock-in Effekte] Arlanis Reply hat sich strategisch an Salesforce 
 gebunden; der Lock-in Effekt wird in Kauf genommen.
-	\item[Komplexität unbedacht gekoppelter Komponenten]
-	\item[Datenmigration]
-	\item[Leistungstransparenz]
-	\item[Geringere Umsätze] Stetige, aber geringere Umsätze werden durch 
-einmalige Zahlungen für Anpassungen ergänzt. 
-	\item[Geringere Anpassbarkeit] Mit Heroku wird Salesforce um PaaS 
-ergänzt; Features, die sich nicht mit der Kernfunktionalität oder Erweiterungen 
-umsetzen lassen, lassen sich auf diese Weise nahezu ohne Einschränkungen 
-realisieren.
-	\item[Organisatorische und strukturelle Umbrüche] Da
-	\item[Updatefrequenz erfordert Agilität] 
+	\item[Komplexität unbedacht gekoppelter Komponenten] Bei Bezug 
+von Komponenten aus dem Salesforce Marktplatz wird darauf geachtet nur aktiv 
+gepflegte Komponenten mit einem hohen Reifegrad auszuwählen. Außerdem soll vor 
+der Wahl einer bestimmten Komponente die Komplexität des Gesamtsystems in einer 
+Kosten-Nutzen-Analyse betrachtet werden.
+	\item[Datenmigration] Zahlen- und Mengenmäßige Zugriffsbeschränkungen 
+auf die Datenbank durch Salesforce könnten eine Schrittweise Migration der 
+Daten erforderlich machen. Um den Parallelbetrieb mit Altsystemen so kurz wie 
+möglich zu halten, soll ein leicht zu verstehendes Konzept erarbeitet und 
+implementiert werden, mit dem ein zügiger Umzug von logischen Teilkomponenten, 
+wie Etagen, Standorten oder Ländern ermöglicht wird.
+	\item[Leistungstransparenz] Um potentielle Kunden, die iFMS@Salesforce 
+in der Basisversion testen vom Produkt zu überzeugen, sollen bei der 
+Entwicklung Schwerpunkte auf eine intuitive Bedienung und begeisternde Features 
+gelegt werden.
+	\item[Geringere Umsätze] Auch das bisherige Geschäftsmodell sah 
+einmalige Zahlungen für Installation und Anpassung und fortlaufende Zahlungen 
+für die Nutzung vor. Daher besteht dieses Risiko nicht. 
+	\item[Geringere Anpassbarkeit] Mit Force.com und Heroku wird Salesforce 
+zu einem PaaS-Dienstleister; Features, die sich mit der 
+Kernfunktionalität oder Erweiterungen von Salesforce nicht umsetzen lassen, 
+lassen sich auf diese Weise nahezu ohne Einschränkungen realisieren.
+	\item[Organisatorische und strukturelle Umbrüche] Die Einarbeitungszeit 
+des alten iFMS-Teams in die Cloud-Technologie soll durch eine 
+Team-Zusammensetzung mit erfahrenen Salesforce-Entwicklern und -Beratern 
+reduziert werden. \\
+Da sowohl Arlanis Reply und Syskoplan Reply als Tochtergesellschaften bereits 
+eng vernetzt sind, ergeben sich wenige strukturelle Änderungen. Es muss 
+allerdings darauf geachtet werden, dass das alte iFMS-Team trotz totaler Abkehr 
+von der bisher genutzten Technologie im neuen Team und im neuen Produkt 
+aufgeht.
+	\item[Updatefrequenz erfordert Agilität] Bisherige Ansätze der agilen 
+Entwicklung werden systematisch mit neuen Entwicklungen im Bereich des Software 
+Engineerings und des Projektmanagements verglichen und gegebenenfalls 
+angepasst. Die Einbeziehung der Nutzer in die Entwicklung macht eine 
+Berücksichtigung ihrer Anliegen in der Springplanung in besonderem Maße 
+erforderlich.
 \end{description}
 
-\subsection{Geschäftsmodell \& Strategie}
+\subsubsection{Geschäftsmodell \& Strategie}
+Die stratetischen Implikationen einzelner Chancen und Risiken treten deutlich 
+hervor; sie beeinflussen die klassischen "`Vier Ps"' des Marketingmixes und 
+spiegeln sie wider \pcite{}{1003}{marketingmanagement}:
+\begin{description}
+	\item[Product -- Produktpolitik] Wie soll das 
+zukünftige Produkt iFMS@Salesforce aussehen? Mit welcher Technik, in welcher 
+Qualtität und in Verbindung mit welchen zusätzlichen Dienstleistungen soll es 
+umgesetzt und angeboten werden?
+	\item[Price -- Preispolitik] Welchen Preis sind die 
+Kunden für die Basis-Version, welchen für CAD- und SAP-Unterstützung zu zahlen? 
+Welches Preismodell wird gewählt (Siehe Kapitel~\ref{cha:isv})? 
+	\item[Promotion -- Kommunikationspolitik] Wie werden (Neu-)Kunden 
+erreicht und dauerhaft gewonnen? Wie wird die Kommunikationspolitik durch das 
+soziale Element der Cloud unterstützt?
+	\item[Place --  Distributionspolitik] Gelangt iFMS@Salesforce über den 
+Salesforce Marktplatz zum Kunden oder wird das Produkt für den Kunden in seiner 
+Salesforce-Instanz aufgesetzt und angepasst?
+\end{description}
+Die Festlegung von Strategie, Marketing und Geschäftsmodell muss daher unter 
+besonderer Beachtung der genannten Aspekte erfolgen. 
+
 \begin{comment}
 In Orientierung an Abbildung~\ref{fig:einfluss_des_preises_auf_business} soll 
 in Tabelle~\ref{} zunächst iFMS in Preis und davon abhängigen Dimensionen 
@@ -130,7 +227,7 @@ KMU \\
 auf die Zielgruppe.}
 \label{tab:analyse_preis}
 \end{table}
-\end{comment}
+
 Die Bedeutung für das Geschäftsmodell und die Strategie soll beispielhaft an 
 einem Aspekt gezeigt werden, der Zielgruppe. Die Zielgruppe von iFMS bestand 
 aus großen Unternehmen mit einer bestimmten 
@@ -146,6 +243,38 @@ aus. Dabei wäre darauf zu achten, den persönlichen Kontakt zu Kunden nicht zu
 verlieren: Das Verarbeiten von CAD-Plänen mit sicherheitsrelevanten Daten oder 
 Finanzdaten aus SAP mit personenbezogenen Daten in der Cloud und macht es 
 erforderlich, dass der Kunde Salesforce und dem ISV vertraut.
+\end{comment}
+\subsection{Phase II: Machbarkeitsstudie}
+Die Machbarkeitsstudie untersucht die Vision, die ein strategisches Ziel und 
+eine weitgehend ungeordnete Menge von Anforderungen beinhaltet. Dabei sollen 
+die Epics, die im Sinne der Strategie ausgewählt wurden, auf ihre technische 
+und wirtschaftliche Machbarkeit geprüft werden.
+
+iFMS@Salesforce soll aus drei Versionen bestehen: der Basis-Version mit CAD- 
+und SAP-Erweiterungen. Aus der strategischen Ausrichtung heraus werden nun den 
+Versionen Epics zugeordnet, sowie Funktionen die unbedingt notwendig sind um 
+die jeweilige Version zu vermarkten. Der Preis -- ob Verkaufspreis oder 
+Lizenzierungskosten -- kann aufgrund der langjährigen Erfahrung im 
+On-Premise-Geschäft gut abgeschätzt werden. Aus dieser Erfahrung oder direkten 
+Gesprächen heraus können die im Vertrieb tätigen Mitarbeiter auch die 
+Bereitschaft der Kunden abschätzen, den Weg in die Cloud mitzugehen. Die 
+Salesforce- und iFMS-Entwickler bei Reply schätzen nun in einem ersten Schritt 
+die grundsätzliche technische Umsetzbarkeit ein. Falls die bescheinigt wird, 
+erfolgt im zweiten Schritt eine grobe Aufwandsschätzung der einzelnen 
+Anforderungen. Mit den geschätzten Aufwänden lässt sich nun die 
+Wirtschaftlichkeit des Projektes abschätzen. Einerseits um zu überprüfen, ob 
+die vom Marketing erwarteten Gewinne erzielt werden können. Andererseits können 
+Anforderungen auf ihr Kosten-Nutzen-Verhältnis hin analysiert werden. Dazu 
+können in einer Kosten-Nutzen-Matrix wie in Abbildung~\ref{fig:kosten-nutzen} 
+positioniert werden. Gerade Punkte aus dem linken, oberen Quadraten sind 
+potentiell geeignet in der Basis-Version Kunden zu begeistern, ohne hohe Kosten 
+zu erzeugen. 
+	\input{grafiken/kosten-nutzen}
+Andererseits kann es vertretbar sein, dass die Basis-Version keine Gewinne 
+abwirft, wenn mit ihr Kunden von den Erweiterungen oder 
+Anpassungsdienstleistungen überzeugt werden sollen.
+
+\subsection{Phase III: Agiler, iterativer Entwicklungsprozess}
 
 \begin{comment}
 Um mögliche Strategien, Geschäftsmodelle und 
