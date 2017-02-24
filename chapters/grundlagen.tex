@@ -6,21 +6,18 @@
 %mehrerer verschiedener Quellen, um die Ausführungen zu belegen.
 
 %Nachfolgend werden einige Formalitäten der Arbeit dargestellt.
-
-
-In dieser Arbeit soll für "`Independent Software Vendors"', also unabhängige
-Softwarehersteller ein Vorgehensmodell für Cloud-Migrationen zu Salesforce
-entwickelt werden. Aus diesem Ziel ergeben sich grundlegende Fragen, die in
-diesem Kapitel beantwortet werden sollen:
+In dieser Arbeit soll ein Vorgehensmodell für Migrationen herkömmlicher 
+Software in die Cloud entwickelt werden, das sich an unabhängige 
+Softwarehersteller richtet. Aus diesem Ziel ergeben sich grundlegende Fragen, 
+die in diesem Kapitel beantwortet werden sollen:
 \begin{itemize}
 	\item Welche Vorteile bietet die Cloud und wie lassen sie sich
 erzielen? Inwiefern unterscheiden sich Cloud-Migrationen von herkömmlichen
 Migrationen in der IT und wie lassen sie sich zum Outsourcing abgrenzen? 
-	\item Was wird in dieser Arbeit unter "`Independent Software Vendors"'
+	\item Was wird in dieser Arbeit unter unabhängigen 
+Softwareherstellern ("`Independent Software Vendors"' -- ISV)  
 verstanden? Welche Besonderheiten weisen sie und ihre Projekte auf und welchen
 Einfluss haben diese Besonderheiten auf Cloud-Migrationen?
-	\item Warum ist Salesforce als Zielplattform für Migrationen
-geeignet?
 	\item Welche Faktoren beeinflussen die Cloud-Migration und ihren
 Erfolg?
 \end{itemize}
@@ -240,7 +237,7 @@ Dreiecksbeziehung. Er entwickelt Software für die Plattform des Betreibers,
 veröffentlich sie gegebenenfalls auf einem Marktplatz der Plattform. 
 Beispielhaft dafür seien hier Apples App Store oder AppExchange von Salesforce 
 genannt. Die Wahl der passenden Plattform ist essentiell für den 
-Unternehmenserfolg, da Funktionsausfälle und Performanzprobleme können auf den 
+Unternehmenserfolg, da Funktionsausfälle und Performanzprobleme auf den 
 ISV zurückfallen können. Um den passenden Betreiber zu wählen, schlägt 
 \citeflow{how_saas_changes_an_isvs_business} vier zu berücksichtigende Aspekte 
 vor: Anbietergröße, geografische Lage, Zuverlässigkeit und gesetzliche 
@@ -319,27 +316,32 @@ Anwendungen. Aus
 	\item[Verkauf] Bei On-Premise-Anwendungen kann der Kunde die Anwendung
 häufig erst nach dem Kauf in seiner Unternehmensumgebung testen und damit den
 wahren Produktwert festellen, weil die Inbetriebnahme für Tests vor dem Kauf zu
-aufwändig wäre. Bei Cloud-Anwendungen ist ein ausführliches Testen schon vor
-Abschluss eines großen Lizenzvertrages möglich. Für den ISV kann dies ein
-Vorteil sein, da die Einstiegshürden für Kunden vermindert sind: Mögliche
-Fehlinvestitionen lassen sich reduzieren oder vermeiden, weshalb
-Nutzungsentscheidungen vom Kunden von einer kleineren Gruppe von Managern
-getroffen werden können. Ist das Produkt im Unternehmen, lassen sich benötigte
-oder gewünschte Features leichter ermitteln. Der Kunde erhält ein Produkt nach
-seinen Wünschen, der ISV Projektverträge um die Anwendung anzupassen oder
-weiterzuentwickeln. Dieser Ansatz wird als "`land and expand"' bezeichnet.
+aufwändig wäre. Bei Cloud-Anwendungen ist ein ausführliches Testen häufig schon 
+vor Abschluss eines großen und langfristigen Lizenzvertrages möglich. Dies ist 
+ zunächst ein Vorteil für den Kunden des ISV: Mögliche Fehlinvestitionen lassen 
+sich reduzieren oder vermeiden, weshalb Nutzungsentscheidungen vom Kunden von 
+einer kleineren Gruppe von Managern schneller getroffen werden können. Diese 
+reduzierten Einstiegshürden ermöglichen dem ISV eine "`land and 
+expand"'-Strategie. Bei der Nutzung der Software bemerkt der Kunde, dass ihm 
+Funktionen fehlen oder dass Anpassungen nötig sind, die der ISV im Rahmen von 
+Projektverträgen realisieren kann. Für den ISV sinkt das Risiko bei der 
+Umsetzung von Anforderungen, die er nun kennt und nicht mehr vermuten muss. 
+Außerdem steigt die Kundenbindung. Zusammenfassend läuft die Entwicklung agiler 
+und somit vorteilhafter für den Kunden und den ISV ab.
 \end{description}
 
 Die Erschließung der Cloud kann mit drei Organisationsstrukturen erfolgen 
 \pcite{}{}{how_saas_changes_an_isvs_business}. Die erste Option besteht darin, 
 die Struktur nicht zu verändern, womit der organisatorische Aufwand zunächst 
 minimiert wird. Soll das On-Premise-Geschäft jedoch weiter betrieben werden, 
-ist es schwierig, beides gut zu machen. Bei Option zwei wird eine Gruppe im 
-Unternehmen gebildet, die sich ausschließlich mit dem Thema Cloud befasst. Die 
+ist es schwierig, beides gut zu machen, wenn Entwickler, die sich eigentlich in 
+die neue Technologie einarbeiten sollen, weiterhin an der On-Premise-Software 
+arbeiten müssen. Bei Option zwei wird eine Gruppe im Unternehmen gebildet, die 
+sich ausschließlich mit dem Thema Cloud befasst. Die 
 letzte Option besteht darin, diese Gruppe in eine wirtschaftlich selbstständige 
-Einheit auszulagern. Mit dieser letzten Option ist der größte Aufwand 
-verbunden, da mit dem neuen Unternehmen erheblicher Overhead in der Verwaltung 
-(zum Beispiel Personalmanagement und Buchhaltung) einhergeht.
+Einheit auszulagern. Mit dieser letzten Option ist der größte organisatorische 
+Aufwand verbunden, da mit dem neuen Unternehmen erheblicher Overhead in der 
+Verwaltung (zum Beispiel Personalmanagement und Buchhaltung) einhergeht.
 \begin{comment}
 \begin{figure}%[h]
 \begin{center}
@@ -412,15 +414,19 @@ einem "`pay per use"'-Modell \pcite{}{}{elements_of_cloud_adoption}, von einem
 von Fixkosten dominierten Modell zu einem, das von variablen Kosten bestimmt
 ist.
 Um zu verhindern, dass Kosteneinsparungen aufgezehrt werden, ist es nötig
-den Umfang der Anwendungsnutzung und die Migrationskosten abzuschätzen.
+den Umfang der Anwendungsnutzung und die Migrationskosten abzuschätzen und zu 
+überwachen.
 
 
 	\item[Datensicherheit:] Bevor eine Anwendung in die Cloud migriert
 wird, sollte bedacht werden, wie kritisch die zugehörigen Daten für den
-Unternehmenserfolg sind.
+Unternehmenserfolg und wie sicher sie beim Anbieter sind. Ein Vergleich mit 
+Möglichkeiten im Unternehmen ist dabei hilfreich; die Sicherheitskompetenzen 
+des Cloud-Anbieters dürften häufig größer sein.
 	\item[Rechtliche Restriktionen:] Vor der Migration sollte geprüft
 werden, ob rechtliche Bestimmungen auch bei einem Betrieb in der Cloud
-eingehalten werden können.
+eingehalten werden können. Dies kann zum Beispiel bei der Speicherung und 
+Verarbeitung medizinischer Daten relevant sein.
 	\item[Zuteilung von Rechenleistungen:] Anwendungen, die kurzzeitig
 große Rechenleistungen benötigen und gut skalierbar sein sollen, lassen sich in
 der Cloud wahrscheinlich kostengünstiger betreiben als auf eigenen Servern, die
@@ -485,8 +491,8 @@ Die vormalige syskoplan AG, seit dem Erwerb 2010 \pcite{}{12}{replycompprofile}
 Syskoplan Reply, ist ein Spezialist für SAP-Applikationen und 
 -Plattformen \pcite{}{10}{replycompprofile} und entwickelt seit 1999 das 
 integrierte Facility Management System (iFMS). iFMS verbindet die in SAP 
-hinterlegten Daten mit Gebäudeplänen und versucht Prozesse rund um die 
-Verwaltung von Immobilien zu unterstützen. Die gewachsene 
+hinterlegten Daten mit Gebäudeplänen und unterstützt Prozesse rund um die 
+Verwaltung von Immobilien. Die gewachsene 
 Java-Anwendung mit einer Client-Server-Architektur lässt sich inzwischen nur 
 noch schwer um von Kunden gewünschte Funktionen erweitern. Auch die Bedienung 
 über 
@@ -496,7 +502,7 @@ anachronstisch. Beide Aspekte schränken die zukünftige
 Wettbewerbsfähigkeit der Software ein. 
 
 Die ehemalige Arlanis Software AG wurde 2012 von Reply übernommen und ist 
-Spezialist für Lösungen auf Basis des Cloud Anbieters Salesforce. Mit 
+Spezialist für Lösungen auf Basis des Cloud Anbieters Salesforce.com. Mit 
 Salesforce lassen sich Lösungen häufig ganz ohne eigenen Code auf einer 
 SaaS-Basis zusammen klicken. Ist doch Code erforderlich lässt er sich auf der 
 PaaS-Plattform (Force.com und Heroku) entwickeln, wobei auf per SaaS angelegte 
@@ -504,8 +510,8 @@ Datenmodelle und Daten zugegriffen werden kann, auf die externe Anwendungen per
 Web Service zugreifen können. Mit Salesforce1 steht eine App für mobile Geräte 
 zur Verfügung; jede Salesforce-Anwendung lässt sich über diese App bedienen. 
 
-Über das Unternehmensnetzwerk von Reply sollen die Stärken beider 
-Tochterunternehmen verbunden werden; mit dem Know-How im Bereich Facility 
+Über das Unternehmensnetzwerk von Reply werden die Stärken beider 
+Tochterunternehmen verbunden; mit dem Know-How im Bereich Facility 
 Management und SAP soll auf Salesforce eine innovative, wettbewerbsfähige 
 Anwendung geschaffen werden: iFMS@Salesforce.
 
@@ -595,8 +601,9 @@ gegebenenfalls Gegenmaßnahmen einleiten zu können.
 Das Fünf-Phasen-Wasserfallmodell, eine Weiterentwicklung des allgemeinen 
 Wasserfallmodells, wird in dieser Arbeit als eine dem Leser vermutlich bekannte 
 Grundlage genutzt; durch Vergleiche lassen sich die Ideen des in dieser Arbeit 
-entwickelten Modells ordnen. \\ 
-Um in dieses Modell Erfahrungen aus der Praxis einfließen lassen zu können
+entwickelten Modells ordnen. Dabei stehen die einzelnen Tätigkeiten und 
+Aufgaben im Vordergrund, nicht die sequentielle Anordnung, da sie auch Teil 
+von agilen Vorgehensweisen sind.\\ 
 \begin{comment}
 \subsection{Cloud-Computing}
 Da die Definition von "`Cloud-Computing"' des National Institute of Standards
