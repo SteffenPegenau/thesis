@@ -1,0 +1,67 @@
+%\documentclass[border=10pt]{standalone}
+
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,positioning} 
+\pgfmathsetmacro{\cubex}{4}
+\pgfmathsetmacro{\cubey}{2}
+
+\definecolor{light-gray}{gray}{0.80}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=8em,
+           minimum height=2em,
+           
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           very thick,
+           %shorten <=2pt,
+           shorten >=2pt,},
+    sepLine/.style={
+	dashed,
+	very thick
+    }
+}
+
+
+\tikzstyle{b} = [rectangle, draw, node distance=5cm, text 
+width=9em, text centered, rounded corners, minimum height=4em, thick]
+\tikzstyle{c} = [rectangle, draw, minimum height=15em, minimum width=10em, 
+dashed]
+\tikzstyle{l} = [draw,thick]
+
+%\begin{document}
+\begin{figure}[bh]
+\begin{center}
+\scalebox{1.0}{
+\begin{tikzpicture}[auto]
+    \node[b] (S) {Strategie};
+    \node[b,below left of=ISV] (G) {Geschäftsmodell};
+    \node[b,below right of=ISV] (M) {Cloud-Merkmale, -Chancen und -Risiken};
+    
+    
+   \draw (S)
+   edge[pil,<->] (G)
+   edge[pil,<->] (M);
+   
+   \draw (M) edge[pil,<->] (G);
+    
+ 
+\end{tikzpicture}
+}
+\caption{Wechselseitige Einflüsse zwischen Strategie, Geschäftsmodell und 
+Cloud-Merkmalen}
+\label{fig:wechselseitige_einfluesse}
+\end{center}
+\end{figure}
