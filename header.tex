@@ -1,6 +1,6 @@
-\documentclass[accentcolor=tud1c,longdoc,nopartpage,table,oneside,bibtotoc, 
+\documentclass[accentcolor=tud1c,longdoc,nopartpage,table,oneside,bibtotoc,
 liststotoc,openright,colorbacktitle,iverride,dvipsnames,inverttitle,
-numbersubsubsec , noresetcounter , 
+numbersubsubsec , noresetcounter ,
 11pt,noheadingspace,numbers=noenddot,article,parskip=half]{tudreport}
 \usepackage{xcolor}
 % Babel-Paket f. neue deutsche Rechtschreibung
@@ -39,7 +39,7 @@ numbersubsubsec , noresetcounter ,
 % Tiefe des Inhaltsverzeichnis (paragraphen werden mit aufgenommen)
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
-%Überschriften 
+%Überschriften
 %\addtokomafont{subsection}{\normalsize\bf}
 \addtokomafont{subsection}{\normalsize\normalfont\bfseries}
 \addtokomafont{subsubsection}{\normalsize\normalfont\bfseries}
@@ -55,7 +55,7 @@ numbersubsubsec , noresetcounter ,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Anpassungen von Literaturverzeichnis und Zitierweise%
 \usepackage[hyphens]{url}
-\usepackage[commabeforerest,authorformat=year,see,dotafter=bibentry,pages=format]{jurabib} % , ibidem=strict 
+\usepackage[commabeforerest,authorformat=year,see,dotafter=bibentry,pages=format]{jurabib} % , ibidem=strict
 %\AddTo\bibsgerman{%
 %\renewcommand*{\ibidemname}{ebd.}
 %\renewcommand*{\ibidemmidname}{ebd.}
@@ -95,7 +95,7 @@ numbersubsubsec , noresetcounter ,
 \renewcommand*{\bibjtsep}{In: }
 
 %Vor- und Nachname des Herausgebers werden nicht fett gedruckt
-\renewcommand*{\biblnfont}{} 
+\renewcommand*{\biblnfont}{}
 \renewcommand*{\bibfnfont}{}
 
 %�ndert bei urldate das Pr�fix von "Zugriff am" zu "Abruf am"
@@ -126,7 +126,7 @@ numbersubsubsec , noresetcounter ,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% Eigene Pakete hier 
+% Eigene Pakete hier
 \usepackage{rotating}
 \usepackage{booktabs,dcolumn}
 \usepackage{longtable}
@@ -140,7 +140,9 @@ numbersubsubsec , noresetcounter ,
 \usepackage{etex}
 
 \usepackage{tikz}
+\usepackage{pgf-umlsd}
 \usetikzlibrary{patterns}
+\usepgflibrary{arrows} % for pgf-umlsd
 \usepackage{pgfplots}
 %	\pgfplotsset{compat=1.11}
 %	\usepgfplotslibrary{fillbetween}
@@ -218,30 +220,30 @@ numbersubsubsec , noresetcounter ,
 \newtocstyle[KOMAlike][leaders]{alldotted}{}
 \usetocstyle{alldotted}
 
-%Kein Einzug in Verzeichnissen, Abbildung:/Tabelle: als Präfix vor Nummern            
-\usepackage[titles]{tocloft}                                         
-\setlength{\cftfigindent}{0cm}                                                     
-\setlength{\cfttabindent}{0cm} 
+%Kein Einzug in Verzeichnissen, Abbildung:/Tabelle: als Präfix vor Nummern
+\usepackage[titles]{tocloft}
+\setlength{\cftfigindent}{0cm}
+\setlength{\cfttabindent}{0cm}
 
-\usepackage{tocstyle} 
+\usepackage{tocstyle}
 
-\makeatletter 
-\AfterTOCHead[lof]{% 
-	\let\SAVEDNUMBERLINE\tocstyle@numberline 
-	\renewcommand*{\tocstyle@numberline}[1]{% 
-		\SAVEDNUMBERLINE{\figurename\ #1}% 
-	}% 
-} 
-\AfterTOCHead[lot]{% 
-	\let\SAVEDNUMBERLINE\tocstyle@numberline 
-	\renewcommand*{\tocstyle@numberline}[1]{% 
-		\SAVEDNUMBERLINE{\tablename\ #1}% 
-	}% 
-} 
-\makeatother 
+\makeatletter
+\AfterTOCHead[lof]{%
+	\let\SAVEDNUMBERLINE\tocstyle@numberline
+	\renewcommand*{\tocstyle@numberline}[1]{%
+		\SAVEDNUMBERLINE{\figurename\ #1}%
+	}%
+}
+\AfterTOCHead[lot]{%
+	\let\SAVEDNUMBERLINE\tocstyle@numberline
+	\renewcommand*{\tocstyle@numberline}[1]{%
+		\SAVEDNUMBERLINE{\tablename\ #1}%
+	}%
+}
+\makeatother
 
-\renewcaptionname{ngerman}\figurename{Abbildung} 
+\renewcaptionname{ngerman}\figurename{Abbildung}
 \renewcaptionname{ngerman}\tablename{Tabelle}
 
 \addtocontents{lof}{\protect\def\protect\autodot{: }}
-\addtocontents{lot}{\protect\def\protect\autodot{: }}  
+\addtocontents{lot}{\protect\def\protect\autodot{: }}
