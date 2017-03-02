@@ -5,21 +5,47 @@ Im vorletzten Abschnitt diskutieren Sie Ihre Ergebnisse und stellen den Beitrag
 für die Praxis und für die Forschung dar. Gehen Sie auch auf die Einschränkungen 
 Ihrer Arbeit ein.
 \end{comment}
-Im folgenden werden die in den durchgeführten Einzelgesprächen identifizierten 
-Unterschiede zwischen dem tatsächlichen und dem aus dem Modell heraus 
-vorgeschlagenen Vorgehen vorgestellt und aufgezeigt, an welchen Stellen und in 
-welche Richtungen das Modell erweitert werden müsste.
+In diesem Kapitel soll der Beitrag des entwickelten Modell für die Praxis und 
+die Forschung dargestellt werden. Dazu sollen zunächst exemplarisch drei 
+Aspekte der tatsächlichen Umsetzung durch Arlanis Reply betrachtet werden: das 
+Geschäftsmodell, weil Arlanis darin grundsätzlich vom vorgeschlagenen Vorgehen 
+abwich, die Skalierbarkeit, weil dabei die Auswirkungen eines geänderten 
+Geschäftsmodells deutlich werden und die Ermittlung des Leistungsumfangs, weil 
+sie einen blinden Fleck dieses Modells aufzeigt.
 
-\subsection{Vermarktung als Projekt}
-Der wesentlichste Unterschied zwischen dem vorgeschlagenen und 
-tatsächlichen Vorgehen besteht in der Vermarktung. Das mit dem Modell 
-erarbeitete Vorgehen sieht vor, Kunden dauerhaft zu binden und dauerhafte 
-Umsätze zu generieren. Diese dauerhafte Bindung will Arlanis Reply aus 
-strategischen Gründen mittelfristig abbauen, da mit ihr ebenso dauerhafte 
-Verpflichtungen eingehen: Kunden erwarten sich von ihren regelmäßigen Zahlungen 
-auch stetige Verbesserungen, die aus Sicht des Managements einen 
-unverhältnismäßig hohen Aufwand bedeuten. Deshalb will Arlanis iFMS@Salesforce 
-in Form einzelner Projekte verkaufen. Anstatt eine fertige Basisversion und 
+\subsection{Geschäftsmodell: Projekt statt Produkt}
+Arlanis Reply hat sich für eine Vermarktung von iFMS@Salesforce in Form von 
+Projekten anstatt in Form eines Produktes entschieden und folgt damit seiner 
+grundlegenden Strategie: Vermarktung von Anpassungen und Erweiterungen des 
+Standardumfangs von Salesforce in Form von einzelnen Projekten. Dabei zahlt der 
+Auftraggeber für einen vertraglich bestimmten Leistungsumfang. Im Gegensatz 
+dazu müsste Arlanis bei der Entwicklung einer Software ohne konkreten Kunden 
+zunächst investieren. Diese Investition ist mit Risiken verbunden, bietet aber 
+auch die Chancen auf eine beliebige Skalierbarkeit: Die fertige Software lässt 
+sich auf Online-Marktplätzen mit variablen Kosten nahe Null weltweit vertreiben.
+
+Mit der Eingliederung des iFMS-Teams bekam Arlanis ein solches Produkt ins 
+Portfolio, das jedoch nur im deutschsprachigen Raum bei persönlichen 
+Verhandlungen vermarktet wurde. Die persönliche Betreuung setzte sich im 
+Support fort: Für andauernde Umsätze durch Lizenzgebühren müsste Arlanis 
+Mitarbeiter bereitstellen, die Support leisten, spontan auf kritische Fehler 
+reagieren und das Produkt kontinuierlich weiterentwickeln können. Die 
+Geschäftsführung befand daher, dass Arlanis zu wenige Mitarbeiter hat, um auf 
+beiden Märkten -- Projekt- und Produktmarkt -- erfolgreich zu sein.
+
+Aus diesem Grund sollte iFMS auf eine zweite Weise migriert werden: vom Produkt 
+hin zum Projekt. Eine vollständige Migration von iFMS zu Salesforce war zu 
+teuer und -- ohne gesicherte Kundschaft -- zu riskant. Zu dieser 
+Risikoeinschätzung trug auch bei, dass sich die Geschaftsleitung unsicher war, 
+ob sich iFMS@Salesforce verkaufen würde: CAD-Pläne können sicherheitskritische 
+Informationen enthalten, die Kunden womöglich nicht in der Cloud wissen wollen. 
+Ähnliches könnte für die SAP-Anbindung gelten. Unklar war auch, in 
+welchem Umfang sich der Leistungsumfang des bisherigen iFMS auf Salesforce 
+würde nachbauen lassen. Altkunden könnten auf einen Umstieg verzichten, wenn 
+sie danach auf viele bekannte und gewohnte Funktionen verzichten müssen. 
+
+Um das Risiko eines zu geringen Absatzes zu vermeiden, wurde ein Kunde K für 
+ein Projekt iFMS@Salesforce gefunden. Anstatt eine fertige Basisversion und 
 gegebenenfalls CAD-/SAP-Erweiterungen im Salesforce Marktplatz zu kaufen, 
 erhält der Kunde gegen eine einmalige Zahlung eine Software, die von 
 Arlanis-Consultants und -Entwicklern in dessen Salesforceumgebung eingerichtet 
@@ -33,29 +59,42 @@ funktionierende Basisversion geschaffen werden, die Kunden dazu animiert,
 Erweiterungen zu kaufen, da eine monolithische, auf die jeweiligen 
 Kundenbedürfnisse abgestimmte Architektur gewählt wird.
 
-Im Sinne dieser Ausrichtung begann die tatsächliche Entwicklung nicht in der 
-Hoffnung das Produkt einmal vermarkten zu können, sondern mit einem konkreten 
-Kunden (K), der bereit war für die Entwicklung einer auf ihn angepassten 
-Version von iFMS@Salesforce zu zahlen. Bei der künftigen Entwicklung 
-beziehungsweise Anpassung von iFMS@Salesforce für andere Kunden soll auf diese 
-für K entwickelte Basis zurückgegriffen werden. Für andere Kunden getätigte 
-Entwicklungen fließen aber nicht automatisch zurück an K, sondern werden diesem 
-in einem Angebot zum Kauf vorgeschlagen.
-
+Sollten sich in Zukunft weitere Kunden für iFMS@Salesforce finden lassen, so 
+wird für deren Implementierung auf die für K entwickelte Basis zurück 
+gegriffen. Sollten Wünsche der neuen Kunden über die von K hinausgehen, fließen 
+diese Verbesserungen und Erweiterungen jedoch nicht automatisch an K zurück. 
 Aus dieser Einzelvermarktung folgt, dass die gesammelten Ideen dem Kunden zwar 
 vorgeschlagen werden können, die Implementierung aber von dessen 
 Zahlungsbereitschaft abhängt.
 
-Diese Erfahrung bestätigt das enge Wechselspiel zwischen dem Geschäftsmodell, 
-dem geplanten Leistungsumfang sowie der Chancen und Risiken.
-
-\subsection{Skaleneffekte}
+\subsection{Skalierbarkeit}
 Während der Modellvorschlag auf die Erzielung von Skalenerträgen durch die 
-Vermarktung auf dem Salesforce Marktplatz setzt, sind aufgrund der Vermarktung 
-als Projekt Verkauf, Anpassung und Training der Endnutzer weiterhin sehr 
-personalintensiv, die Skalierbarkeit des Geschäftsmodells dadurch 
-eingeschränkt. 
+Vermarktung auf dem Salesforce Marktplatz setzt, wäre dies bei der von Arlanis 
+gewählten Strategie womöglich kontraproduktiv: Das Projektmodell rentiert sich 
+aufgrund der höheren Preise, die man für individuelle Beratung, Implementierung 
+und Anpassung verlangen kann -- höhere Preise, die Kunden eventuell nicht mehr 
+bereit zu zahlen sind, wenn sie an der auf dem Salesforce Marktplatz 
+bereitgestellten Variante feststellen, dass sie ein Standardprodukt erwerben.
 
+Die Vermarktung in Form von einzelnen Projekten reduziert zunächst das Risiko, 
+aber auch die Möglichkeiten dauerhaften, gleichmäßigen Umsatz zu generieren. 
+Zudem erfordert die Neukundengewinnung erhebliche personelle Ressourcen bis ins 
+Management hinein. Der persönliche Kontakt bei Beratung und Vertragsabschluss 
+passt zum zu erzielenden hohen Preis (Vgl. 
+Abbildung~\ref{fig:einfluss_des_preises_auf_business}); der Kunde erwartet den 
+Kontakt zum Management. Die Einbeziehung größerer Personenkreise zieht die 
+Vertragsverhandlungen in die Länge. Dadurch ist die Skalierbarkeit begrenzt. 
+Sollte Arlanis nach erfolgtem Projekt mit K feststellen, dass ein Markt für ein 
+Produkt iFMS@Salesforce existiert, kann auf Basis der für K entwickelten 
+Umsetzung eine Version für den Marktplatz implementiert werden. Aufgrund des 
+niedrigeren Preises und der kürzeren Bindungsdauer ist das Risiko für 
+potentielle Kunden von Arlanis geringer. Entscheidungen für iFMS@Salesforce 
+können von der nutzenden Fachabteilung getroffen werden, sodass der personelle 
+Einsatz reduziert und die Implementierung besser skaliert werden kann. Der 
+direktere Kontakt zu den eigentlichen Nutzern der Software kann zu mehr 
+Agilität und Zufriedenheit führen.
+
+\begin{comment}
 Durch die Vermarktung als Projekt steigt für den Kunden die Investition und mit 
 ihr das Risiko. In Folge werden -- anstatt das Produkt direkt an die 
 Fachabteilungen zu vermarkten -- weiterhin in vielen Gremien langwierige 
@@ -69,8 +108,9 @@ Während eine personalintensive Wertschöpfung charakteristisch für
 Beratungsunternehmen ist, könnte Arlanis überdenken, ob der direkte Verkauf an 
 Fachabteilungen durch Minderung des Risikos für den Kunden durch die 
 Realisierung von Cloud-Vorteilen forciert werden könnte. 
+\end{comment}
 
-\subsection{Anforderungsermittlung und -umfang}
+\subsection{Leistungsumfang und Anforderungsermittlung}
 Im Zuge der Anforderungsermittlung für iFMS@Salesforce traten 
 unterschiedlichen Ansichten zwischen den Entwicklern (des alten iFMS) und 
 dem Management zu Tage. Während den Entwicklern eine möglichst elegante 
@@ -80,17 +120,20 @@ allem eine schnelle und den Kunden K zufriedenstellende Lösung (Minimum viable
 product) wichtig. Eine allgemeine Lösung würde -- da K dafür nicht zahlt -- 
 zunächst auf Kosten für Arlanis Reply hinauslaufen. Man war nicht bereit für 
 eventuelle zukünftige Kunden in Vorleistung zu treten. Eine Entscheidung die vom 
-Modell dieser Arbeit gestützt wird, um das Risiko für den ISV zu minimieren.
+Modell dieser Arbeit gestützt wird, um das Risiko für Arlanis zu minimieren.
 
 Ein ähnlich gelagertes Problem entstand aus der sentimentalen Bindung der 
 Entwickler zu ihrer bisherigen Arbeit. Mit dem Übergang zu Salesforce wird der 
 größte Teil ihrer bisherigen Arbeit nicht mehr benötigt. Aufgrund des im 
 Vergleich zum alten iFMS reduzierten Leistungsumfangs wird zudem die neue 
-Software viel weniger Fähigkeiten haben. Es zu erreichen, dass die Entwickler 
-trotzdem überzeugt hinter dem neuen Produkt stehen, stellt eine Herausforderung 
-dar, die in dem hier vorgestellten Modell nicht berücksichtigt wird.
+Software viel weniger Fähigkeiten haben. Zu erreichen, dass die 
+Entwickler trotzdem überzeugt hinter dem neuen Produkt stehen, stellt eine 
+Herausforderung dar, die in dem hier vorgestellten Modell nicht berücksichtigt 
+wird.
 
 \subsection{Forschungsbeitrag}
+Diese realen Überlegungen bestätigen das enge Wechselspiel zwischen dem 
+Geschäftsmodell, dem geplanten Leistungsumfang sowie den Chancen und Risiken.
 Diese Arbeit konnte mit Ihren Ergebnissen zeigen
 \begin{enumerate}
 	\item welche Merkmale, Chancen und Risiken bei der Migration in die 
@@ -101,8 +144,7 @@ Geschäftsmodell von Softwareherstellern beeinflussen und
 beeinflusst
 \end{enumerate}
 und damit die in Kapitel~\ref{cha:einleitung} gestellten Forschungsfragen 
-beantworten, sowie wechselseitige Einflüsse zwischen Geschäftsmodell, Strategie 
-und Merkmalen aufzeigen.
+beantworten.
 
 Der Katalog der Cloud-Merkmale half bei einem Projekt aus der Praxis als 
 Checkliste zu bedenkender Aspekte dabei, das geplante Vorgehen systematisch zu 
