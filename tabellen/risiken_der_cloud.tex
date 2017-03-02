@@ -7,29 +7,34 @@ wird aber bedienbar bleibt, was gut für die Kundenzufriedenheit ist und dabei
 hohe Umsätze generiert. Wissenschaftliche Berechnung hingegen sind ein 
 Beispiel, bei dem eine gewisse Wartezeit auf die Ergebnisse vielleicht in Kauf 
 genommen worden wäre, um explodierende Kosten zu 
-vermeiden.}{challenges_and_assessment_in_migrating,
+vermeiden. Dieses Problem betrifft zwar 
+häufig in erster Linie den Kunden des 
+ISV. Im Sinne der Kundenzufriedenheit 
+sollte, dieser Aspekt dennoch vom ISV 
+bedacht werden.}{challenges_and_assessment_in_migrating, 
 migrating_to_or_away_from_the_public_cloud}{Wie lässt 
 sich der Leistungsbedarf der Anwendung charakterisieren? Ist die 
 Bereitstellung der angeforderten Leistung auch bei höheren Kosten für 
 das Unternehmen lukrativ? Bietet der Cloud-Anbieter eine Deckelung der Leistung 
 an, um explodierende Kosten zu vermeiden?
 }
-
-	\cloudFeature{Fehlende Interoperabilität}{Gerade bei Anbindung eigener 
-Anwendungen ist Interoperabilität 
-wichtig. Cloud-Dienste 
-sollten in das bestehende Business integriert werden. Darauf ist auf die 
+	\cloudFeature{Fehlende Interoperabilität / Komplexität 
+gekoppelter Komponenten}{Gerade bei Anbindung eigener Anwendungen ist 
+Interoperabilität wichtig. Cloud-Dienste 
+sollten in das bestehende Business integriert werden. Darauf ist bei der 
 Integration zu achten, da das System mit der steigenden Zahl genutzter Dienste 
 bei verschiedenen Anbietern komplexer wird. Deshalb sollte die Verbindung 
 zwischen Cloud Diensten, aber auch die Verbindung von On-Premise-Anwendungen 
-mit 
-der Cloud langfristig gedacht 
+mit der Cloud langfristig gedacht 
 werden.}{towards_modelling_a_cloud_applications_life_cycle, 
 cloud_based_next_generation_service_and_key_challenges, 
-challenges_and_assessment_in_migrating,
-towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}{Welche 
-eigenen Systeme und Anwendungen müssen an die Cloud-Anwendungen gekoppelt 
-werden? Welche Cloud-Plattform unterstützt diese Anbindung am besten?}
+challenges_and_assessment_in_migrating, 
+towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy,
+cloudward_bound_planning_for_beneficial_migration}{Welche eigenen Systeme und 
+Anwendungen müssen an die Cloud-Anwendungen gekoppelt werden? Welche 
+Cloud-Plattform unterstützt diese Anbindung am besten? Welche
+Kopplungen sind absehbar? Wie sieht eine Architektur aus die (absehbare)
+Kopplungen begünstigt?}
 
 	\cloudFeature{Lock-in Effekte}{Der ISV kann von zwei Seiten vom
 Lock-in-Effekt betroffen sein:
@@ -40,37 +45,43 @@ challenges_and_assessment_in_migrating,
 migrating_to_or_away_from_the_public_cloud}{Wie 
 umfangreich ist der Lock-in auf beiden Seiten? Wie lässt er sich minimieren?}
 
-	\cloudFeature{Komplexität unbedacht gekoppelter Komponenten}{Auch
-wenn die Ankopplung standardisierter Cloud-Komponenten relativ leicht ist,
-erhöht sich mit jeder Komponente die
-Komplexität}{cloud_based_next_generation_service_and_key_challenges,
-cloudward_bound_planning_for_beneficial_migration,
-challenges_and_assessment_in_migrating}{Welche
-Kopplungen sind absehbar? Wie sieht eine Architektur aus die (absehbare)
-Kopplungen begünstigt?}
-
 	\cloudFeature{Datenmigration}{Datenmigrationen oder der parallele
 Betrieb mit der alten Lösung können Inkonsistenzen in den Daten hervorrufen}
-{towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}{}
+{towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}{Welche 
+Daten müssen in welchen Mengen migriert werden? Wie lässt sich ein 
+reibungsloser Ablauf organisieren?}
 
 \cloudFeature{Leistungstransparenz}{Da der Kunde die Cloud-Lösung in der Regel vor
 Vertragsabschluss ausprobieren kann, muss der Anbieter einen echten Wert
-bieten.}{how_saas_changes_an_isvs_business}{}
+bieten.}{how_saas_changes_an_isvs_business}{Wie lässt sich die Bedienung 
+unkompliziert gestalten, um einen guten ersten Eindruck beim Kunden zu 
+hinterlassen? Welche Features sorgen für Begeisterung und sollten besonders 
+prominent platziert werden?}
 
 \cloudFeature{Geringere Umsätze}{Umsätze kommen zwar stetig aber in viel geringerer Höhe als bei
-einem Kauf.}{how_saas_changes_an_isvs_business}{}
+einem Kauf.}{how_saas_changes_an_isvs_business}{Welche Verkaufszahlen sind 
+nötig um auch mit geringerem Umsatz profitabel zu sein? Wurden die Shareholder 
+von der neuen Umsatzstrategie überzeugt?}
 
-\cloudFeature{Geringere Anpassbarkeit}{Durch die in der Cloud übliche Standardisierung kann die Anpassbarkeit leiden}{how_saas_changes_an_isvs_business}{}
+\cloudFeature{Geringere Anpassbarkeit}{Durch die in der Cloud übliche 
+Standardisierung kann die Anpassbarkeit 
+leiden}{how_saas_changes_an_isvs_business}{Bietet der gewählte Cloud-Provider 
+die nötige Anpassbarkeit? Bei welchen Komponenten lässt sich auf 
+standardisierte Lösungen zurückgreifen und welche erfordern eigene 
+Entwicklungen?}
 
 \cloudFeature{Organisatorische/Strukturelle Umbrüche}{Der Wechsel in der Cloud erfordert viele neue Ansätze, zum
 Beispiel bei der Lizenzierung oder dem Verkauf und stellt einen großen Umbruch 
-dar. Höhere Entwicklungs- und  
-Deploymentgeschwindigkeit mit weniger involvierten Menschen, geringeren Kosten 
-und besserer 
-Performance.}{how_saas_changes_an_isvs_business,
-towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}{}
+dar. }{how_saas_changes_an_isvs_business,
+towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}{Wie 
+lässt sich die Organisation auf die höhere Geschwindigkeit zu 
+möglicherweise geringeren Kosten umstellen? Wie lassen sich die neuen 
+organisatorischen Anforderungen möglichst gut im Unternehmen umsetzen?}
 
-\cloudFeature{Updatefrequenz erfordert Agilität}{Da SaaS-Anwendungen werden 
+\cloudFeature{Updatefrequenz erfordert Agilität}{SaaS-Anwendungen werden 
 typischerweise sehr viel häufiger geupdatet, als
-On-Premise-Anwendungen. Die hohe Updatefrequenz macht agile Entwicklungsmodelle erforderlich}{how_saas_changes_an_isvs_business}{}
+On-Premise-Anwendungen. Die hohe Updatefrequenz macht agile Entwicklungsmodelle 
+erforderlich}{how_saas_changes_an_isvs_business}{Inwiefern müssen bestehende 
+(agile) Entwicklungsprozesse angepasst werden? Wie lässt sich eine stetige 
+Verbesserung organisieren?}
 \end{description}
