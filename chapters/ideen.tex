@@ -1,3 +1,4 @@
+\begin{comment}
 \section{Ideen}
 \subsection{Einleitung}
 Benlian SaaS 2010: Chancen und Risiken für diesen Anwendungsfall aus Anwendersicht prüfen. In Softwareindustrie werden die einzelnen Chancen und Risiken genauer ausgeführt. ~S. 236
@@ -7,8 +8,6 @@ Compliance, Ausfallsicherheit \& Vertrauenswürdigkeit). Ab Seite 103. Anforderu
 
 Benlian Opportunities and risks of saas 2011: Sicherheit ein Hauptfaktor bei Entscheidung für oder gegen SaaS. Taxonomy of it security risks als Checkliste zur Identifikation von Risiken in bestimmtren
 Szenarien. \\
-
-Softwareindustrie: Simple Definition für Cloud aus Standard. \\
 
 Ackermann, Tobias: IT Security Risk Management. Kapitel 5 enthält Empfehlungen für Risk Identification, - Quantification, - Treatment, - Review and Evaluation, - Cloud Computing Providers. S. 22-23 enthält
 Beschreibung der Risiken im Cloud Kontext. \\
@@ -26,55 +25,11 @@ beneficial"'
 -- \pcite{}{}{cloud_based_next_generation_service_and_key_challenges}
 
 
-\subsubsection{Lifecycle}
-Aus \citeflow{cloud_based_next_generation_service_and_key_challenges}
-\begin{description}
-	\item[Design] RE und Design des Dienstes.
-	\begin{description}
-	\item[Interoperabilität] Unter anderem Amazon, Google, Microsoft,
-VMWare und Salesforce bieten Cloud-Plattformen zur Anwendungsentwicklung an.
-Bei Nutzung einer solchen Plattform kann nachhaltige Interoperabilität, gerade
-bei Nutzung einer privaten oder hybriden Cloud ein Faktor sein.
-	\item[Information Centric Design] Bei der Nutzung durch Kunden
-anfallende Informationen sollten ständig ausgewertet werden und möglichst in
-Echtzeit in zukünftige Entscheidungen einfließen.
-\end{description}
-	\item[Engineering] Entwicklung, Testen und Operationalisierung \\
-	\item[Deployment]
-	\item[Usage Measurement]
-	\item[Support und Wartung] Informationen, die im Support gesammelt
-werden, werden zur Weiterentwicklung genutzt.
-	\item[Experience] Um Kunden zu halten, muss die User Experience
-verbessert werden
-\end{description}
-
 \subsubsection{Towards Modelling a Cloud Applications Life Cycle}
 Aus \citeflow{towards_modelling_a_cloud_applications_life_cycle}
 \begin{itemize}
 	\item Bisherige Life Cycle Modelle fokussieren die Sicht der IT. Es fehlt
 	ihnen an einer angemessenen Betrachtung wirtschaftlicher Aspekte.
-	\item Schritte im Life-Cycle:
-	\begin{itemize}
-		\item Business Case Definition
-		\item Decision Phase
-		\item Design Phase
-		\item Test-driven Development Phase
-		\item Deployment
-		\item Operations (monitoring, updates, resource adaptions, Decommissioning)
-	\end{itemize}
-	\item Gründe in die Cloud zu gehen:
-	\begin{itemize}
-		\item Finanzielle Vorteile
-		\item Wettbewerbsvorteile
-		\item Flexibilität durch On-Demand und self-service
-		\item Geringere Risiken
-	\end{itemize}
-	\item Identifizierte Risiken
-	\begin{itemize}
-		\item Sicherheit und Haftungsfragen
-		\item Technische Probleme
-		\item Fehlende Standards
-	\end{itemize}
 	\item Literatur zu Cloud und Marketing konzentriert sich auf technische
 	und finanzielle Faktoren im Deployment und vernachlässigt die Supply Chain
 	des Unternehmens und die Auswirkungen auf das Unternehmen selbst
@@ -94,96 +49,6 @@ Aus \citeflow{towards_modelling_a_cloud_applications_life_cycle}
 	\item Unternehmen, die in die Cloud gehen, müssen sich den Auswirkungen auf Strategie, Business Model und Unternehmensstruktur bewusst sein.
 \end{itemize}
 
-
-\subsubsection{Service Migration -- Herausforderungen}
-Aus \citeflow{cloud_based_next_generation_service_and_key_challenges}
-\begin{itemize}
-	\item Was für Auswirkungen hat das neue pay-per-use-Modell?
-	\item
-\end{itemize}
-
-\subsection{Charakteristika Enterprise Applications}
-Aus \citeflow{cloudward_bound_planning_for_beneficial_migration}:\\
-Bestehen in der Regel aus mehreren Layern (MVC -- Datenbanken, Frontend,
-Logik), sind in der Regel aber viel komplexer als dieses dreischichtige Modell,
-da jede Schicht aus mehreren, miteinander interagierenden Komponenten aufgebaut
-sein kann. \\
-Unternehmensanwendungen könnten von zwei verschiedenen Nutzergruppen nutzbar
-sein: Unternehmensinterne und -externe Personengruppen.
-
-\subsection{Assessment und Guidelines}
-Aus \citeflow{challenges_and_assessment_in_migrating}: \\
-\subsubsection{Assessment}
-\begin{description}
-	\item[Gründe für die Migration] Es ist wichtig die Gründe für die
-Migration sowie Anforderungen und Rahmenbedingungen zu kennen, um ihnen zu
-genügen.
-	\item[Analyse der Anwendungsumgebung] Alle Programme, Skripte und
-Interfaces listen, die auf die Anwendung zugreifen.
-	\item[Analyse der neuen Umgebung] Welche Ressourcen werden benötigt?
-	\item[Design und Analyse der Architektur] Analyse der Architektur der
-bestehenden Anwendung mit allen Bibliotheken, Programmen und Plattformen
-	\item[Migrationstools] Kleine Proof-of-Concept-Projekte um
-Migrationstoosl nach Effizienz, Genauigkeit und Optionen testen.
-\end{description}
-\subsubsection{Guidelines}
-\begin{description}
-	\item[Interoperabilität und Zusammenstellen] Nutzen von Schnittstellen
-wie der RESTful API.
-	\item[Vermeiden des Lock-in Effektes]
-	\item[Modellierung des Dienstes und Cloud Deployment Artefakte] Cloud
-Modellierungsnotationen sind nützlich.
-	\item[Legacy Software verpacken] Es ist unter Umständen einfacher,
-praktikabler, sicherer und flexibler Legacy Anwendungen virtualisiert in die
-CLoud zu migrieren und über eine Schnittstelle verfügbar zu machen.
-	\item[Ausbalancieren von Kosten und Reifegrad] Die Risiken junger,
-eventuell unreifer Software sollten in den Aspekt Kosten einbezogen werden.
-\end{description}
-
-
-
-\subsection{Migrating to -- or away from the public cloud}
-Aus \citeflow{migrating_to_or_away_from_the_public_cloud}:
-\begin{itemize}
-	\item Bei ``Cloud migration'' zwischen Migration der Architektur oder der Operationen.
-	\item Migration der Architektur: Migrieren der bestehenden Anwendung zu einer skalierbaren, cloud-bereiten Architektur, häufig unter der Verwendung neuer Programmiersprachen wie Googles Go oder Apples Swift und/oder neuen Komponenten wie NoSQL-Datenbanken.
-	\item Migration der Operationen: Verschieden einer cloud-ready Anwendung von der Private in die Public Cloud oder umgekehrt.
-	\item Umdenken erforderlich: Bestehende Anwendungen besitzen häufig eine monolithische Natur, bei der das Neuschreiben einer Zeile Code die gesamte Anwendung beeinträchtigen kann. Deshalb sind nach der Änderung Tests, Neukompilieren und Deployment nötig. Hingegen bestehen Cloud-Anwendungen aus unabhängigen, verbundenen Komponenten
-	\item Gezogene Lehren:
-	\begin{enumerate}
-		\item Jedes Unternehmen ist anders
-		\item Technologien, architektonische Best-Practice Modelle und wirtschaftliche Rahmenbedingungen ändern sind. Auch aus dieser Sicht kann eine modulare Architektur positiv sein.
-		\item Kosten sind sind der einzige Faktor, nicht mal der wichtigste.
-		\item Je einfacher die Migration durch die Nutzung von spezifischen Schnittstellen wie AWS Lambda wird, desto stärker der Lock-In-Effekt.
-		\item Selbst wenn die Cloud teurer erscheint, können -- gerade bei Firmen im Umbruch, wie Start-ups, bei Wachstum wie bei Regression -- die flexible Skalierbarkeit von Vorteil sein.
-		\item Performancevorteile wiegen
-		\item Die Nachfrage nach Rechenleistung schwankt etwa periodisch, während der Speicherplatzbedarf monoton wächst und daher vorhersagbarer ist. Entsprechend könnte es sich für ein Unternehmen mit einer speicherplatzlastigen Anwendung eher lohnen eigene Infrastruktur zu betreiben.
-	\end{enumerate}
-\end{itemize}
-
-\subsection{Towards an Understanding of Cloud Computing's IMpact on Organizational IT Strategy}
-Aus \citeflow{towards_an_understanding_of_cloud_computings_impact_on_org_it_strategy}
-\begin{itemize}
-	\item Identifizierte Auswirkungen auf die IT Architektur:
-	\begin{description}
-		\item[Entwicklung einer skalierbaren, agilen IT-Architektur] Implementierungen müssen mit Lastspitzen und Leerlauf umgehen können. Um das zu erreichen ist schnelles Lernen erforderlich und der Umstieg von einer lang geplanten, wasserfallartigen Entwicklung und Betrieb zur schnellen Entwicklung und Deployment
-		\item[Langfristige Cloud Integrationsstrategie] Cloud-Dienste sollten in das bestehende Business integriert werden. Darauf ist auf die Integration zu achten, da das System mit der steigenden Zahl genutzter Dienste bei verschiedenen Anbietern komplexer wird. Deshalb sollte die Verbindung zwischen Cloud Diensten, aber auch die Verbindung von On-Premise-Anwendungen mit der Cloud langfristig gedacht werden.
-		\item[Management geht in Richtung Service Oriented Management]
-		\item[Auswirkungen  auf die Datenhaltung] Drei Fragen:
-		\begin{enumerate}
-			\item Was wird migriert und was nicht?
-			\item Welches Tool wird genutzt und wie sieht der Zeitplan aus?
-			\item Was das schlimmste Szenario, das auftreten kann wenn Daten verloren gehen?
-		\end{enumerate}
-		\item[Neue Strategie zur Kontrolle der Daten] Zwei Formen des Kontrollverlustes über Daten: Ort und Zugriffsrechte. Erhöhte Nachfrage nach Transparenz.
-		\item[IT/Business Alignment] Höhere Entwicklungs- und Deploymentgeschwindigkeit mit weniger involvierten Menschen, geringeren Kosten und besserer Performance. \\
-		Sich nicht um technische Details kümmern zu müssen, hilft Unternehmen sich auf ihr Kerngeschäft zu konzentrieren. Diese Perspektive ermöglicht auch bessere IT Investitionen, auch weil Einsparungen an sinnvolleren Stellen reinvestiert werden können.
-	\end{description}
-\end{itemize}
-
-
-
-
 \subsection{Inhaltsbeschreibungen}
 \begin{description}
 
@@ -194,3 +59,6 @@ Cloudbetrieb. Eine Zusammenfassung findet sich auf Seite 9 des PDFs.
 Cloud. Darstellung Charakteristike Enterprise Applications. Sonst extrem
 mathematisch.
 \end{description}
+\end{comment}
+
+
