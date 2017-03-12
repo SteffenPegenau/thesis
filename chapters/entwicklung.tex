@@ -1,29 +1,29 @@
 %\section{Entwicklung eines konzeptuellen Rahmens}
 \section{Vorgehensmodell für Cloud-Migrationen}
 \label{cha:entwicklung_vorgehensmodell}
-In diesem Kapitel wird ein dreistufiges Vorgehensmodell (Vgl. 
+In diesem Kapitel wird ein dreistufiges Vorgehensmodell (vgl. 
 Abbildung~\ref{fig:vorgehensmodell}) für Cloud-Migrationen entwickelt, das sich 
-an Independent Software Vendors mit ihren Bedürfnissen und Anforderungen 
+an ISV mit ihren Bedürfnissen und Anforderungen 
 richtet.
 \input{grafiken/vorgehensmodell2d}
 Das Vorgehen in jeder Phase ist von dem grundlegenden Ziel geprägt, Chancen der 
 Cloud zu realisieren und spezifische Risiken zu vermeiden. Deshalb werden 
-zunächst Chancen und Risiken identifiziert und mit den aus ihnen resultierenden 
+zunächst Chancen und Risiken identifiziert und daraus resultierenden 
 Fragen, Problemstellungen und Herausforderungen vorgestellt, deren 
-Beantwortung dem ISV beim Meistern der Migration unterstützen sollen. Die 
-Reihenfolge, in der Chancen und Risiken vorgestellt werden, hat keine 
+Beantwortung den ISV beim Meistern der Migration unterstützen. Die 
+Reihenfolge, in der Chancen und Risiken betrachtet werden, hat keine 
 Bedeutung. 
 
 Nicht alle Chancen und Risiken entstehen exklusiv und unbedingt 
 bei der Cloud-Nutzung. Deshalb ist auch ein Vergleich mit der Situation in der 
 bestehenden On-Premise Situation erforderlich. Um der Cloud mit ihren Chancen 
 und Risiken bestmöglich zu begegnen sind auch weitreichende Änderungen am 
-Unternehmen selbst zu bedenken.
+Unternehmen selbst zu berücksichtigen.
 
 In Phase I wird anhand des bestehenden On-Premise-Produktes eine Vision 
 geformt, die unter Umständen einen sehr viel kleineren Funktionsumfang als die 
-On-Premise-Software aufweisen wird, dabei aber Chancen und Risiken des 
-Cloud-Marktes berücksichtigt und so Wettbewerbsfähigkeit und einen schnellen 
+On-Premise-Software aufweisen wird. Dabei werden aber Chancen und Risiken des 
+Cloud-Marktes berücksichtigt und so Wettbewerbsfähigkeit und ein schneller 
 Markteintritt zu ermöglicht. 
 
 Anschließend wird in Phase II die Machbarkeit der Vision in technischer und 
@@ -34,7 +34,7 @@ Plattform ein konkurrenzfähiges Produkt geschaffen werden kann.
 Schließlich wird die Vision in Phase III in einem an die Cloud 
 angepassten, agilen, iterativen Entwicklungsprozess realisiert. Es wird 
 gezeigt, in welchen Aspekten bekannte agile Modelle angepasst werden müssen, um 
-mit der besonders hohen Agilität der Cloud Schritt halten zu können. 
+mit der besonders hohen Geschwindigkeit der Cloud Schritt halten zu können. 
 
 Bevor sie im Detail vorgestellt wird, wird jede Phase zunächst begründet 
 und zur Orientierung vom Fünf-Phasen-Modell abgegrenzt.
@@ -54,8 +54,10 @@ wie sich das Unternehmen verändern muss, um dieser Vision zu entsprechen.
 \end{comment}
 
 \subsection{Chancen der Cloud}
+Die folgenden Chancen der Cloud wurden bei der Literaturrecherche identifiziert:
 \input{tabellen/chancen_der_cloud}
 \subsection{Risiken der Cloud}
+Die folgenden Risiken der Cloud wurden bei der Literaturrecherche identifiziert:
 \input{tabellen/risiken_der_cloud}
 
 
@@ -65,23 +67,22 @@ wie sich das Unternehmen verändern muss, um dieser Vision zu entsprechen.
 
 Als "`disruptive innovation"' ist die Cloud auch ein neuer Markt, auf dem 
 qualitativ hochwertige, teilweise hoch spezialisierte IT-Dienstleistungen 
-gehandelt werden. 
-\pcite{}{}{towards_modelling_a_cloud_applications_life_cycle} \\
+gehandelt werden \pcite{}{}{towards_modelling_a_cloud_applications_life_cycle}. \\
 Durch das pay-per-use-Preismodell sind auch kleine Unternehmen in der Lage, 
-diese Technologien und Dienstleistungen zu nutzen. 
-\pcite{}{156}{cloud_migration} Dementsprechend ist die Nutzung der Cloud per se 
-weder  innovativ -- da jeder Mitbewerber die Technologie nutzen kann -- noch 
+diese Technologien und Dienstleistungen zu nutzen 
+\pcite{}{156}{cloud_migration}. Dementsprechend ist die Nutzung der Cloud im Vergleich zum Wettbewerb per se 
+weder  innovativ -- da jeder die Technologie nutzen kann -- noch 
 automatisch ein Wettbewerbsvorteil: Sie ist ein wirtschaftliches Erfordernis, 
-um den Wettbewerb nicht zu verlieren. 
-\pcite{}{}{challenges_of_cloud_computing_in_business} 
+um den Wettbewerb nicht zu verlieren 
+\pcite{}{}{challenges_of_cloud_computing_in_business}.
 
-Um mit der Cloud-Migration nicht nur das Erfordernis zu bewältigen, sondern 
+Um mit der Cloud-Migration nicht nur dieses wirtschaftliche Erfordernis zu bewältigen, sondern 
 einen Wettbewerbsvorteil zu erringen, muss nach der Migration ein Wert für den 
 Kunden geschaffen sein. Die Software muss unter aktuellen und möglichen 
 zukünftigen Konkurrenten einzigartig oder wenigstens selten sein, annähernd 
-unnachahmlich und schwer substituierbar sein.
-\pcite{}{}{theoretical_perspectives_for_strategic_human_resource_management}
-Es bedarf es der geschickten Integration standardisierter, in der Cloud 
+unnachahmlich und schwer substituierbar sein 
+\pcite{}{}{theoretical_perspectives_for_strategic_human_resource_management}.
+Es bedarf der geschickten Integration standardisierter, in der Cloud 
 verfügbarer Komponenten zu einer innovativen Gesamtlösung. 
 %Gelingt dies nicht, ist eine Differenzierung von 
 %konkurrierenden, sich gleichenden Produkten nur über einen niedrigeren Preis 
@@ -90,8 +91,8 @@ verfügbarer Komponenten zu einer innovativen Gesamtlösung.
 \citeflow{fivephases} gehen in ihrem Fünf-Phasen-Modell von einer vollständigen 
 Migration mit der Gesamtheit aller Funktionalität aus. Davon wird in dem hier 
 vorgestellten Modell bewusst abgewichen. Bei einer vollständigen Migration 
-dauert es aufgrund der höheren Entwicklungsdauer länger, bis Umsätze generiert 
-werden; benötigte Investitionen steigen immens und mit ihnen das Risiko. Des 
+dauert es, aufgrund der höheren Entwicklungsdauer länger, bis Umsätze generiert 
+werden. Benötigte Investitionen steigen immens und mit ihnen das Risiko. Des 
 Weiteren wäre es mit einer 1:1-Migration weder möglich die Chancen der 
 Cloud zu realisieren, noch die Risiken zu umschiffen. Dies betrifft das 
 Produkt selbst -- so kann es beispielsweise versäumt werden, zu bedenken, wie 
@@ -102,41 +103,30 @@ daraus gewinnen lässt, werden verschenkt.
 
 Aus diesen Gründen wird eine sprintweise Migration und 
 Weiterentwicklung vorgeschlagen, die mit der Vision eines Produktes beginnt. 
-Das Verständnis des Begriffes "`Produktvision"' ist ein Strategisches und wurde 
+Das Verständnis des Begriffes "`Produktvision"' ist ein strategisches und wurde 
 aus den Eigenschaften abgeleitet, die \citeflow{the_power_of_vision} 
-Unternehmensvisionen attestieren.
+Unternehmensvisionen zuschreiben.
 
-Um ein wettbewerbsfähiges Produkt zu schaffen, sollte eine Produktvision...
-\begin{itemize}
-	\item ...die genannten Chancen und Risiken - angelehnt an die 
-Methode der 
-SWOT-Analyse 
-\pcite{}{501}{marketingmanagement}, 
-\pcite{}{6}{cloud-computing_the_business_perspective} - berücksichtigen. 
-	\item ...den Umfang des Produktes so klein wie möglich, doch so 
-umfangreich wie nötig halten, um frühestmöglich einen auslieferbaren Wert zu 
-schaffen.
-	\item ...stabil, zukunftsorientiert und langfristig ausgelegt sein.
-	\item ...herausfordernd aber erreichbar sein.
-	\item ...abstrakt genug sein, um Freiheiten bei der Umsetzung zu 
-lassen.
-	\item ...das Potential haben, Kunden und Mitarbeiter zu begeistern.
-	\item ...klar und deutlich zu verstehen sein.
-\end{itemize}
+Um ein wettbewerbsfähiges Produkt zu schaffen, sollte eine Produktvision die genannten Chancen und Risiken - angelehnt an die Methode der SWOT-Analyse %Seiten 501,6
+\pcite{}{}{marketingmanagement,cloud-computing_the_business_perspective} - berücksichtigen. 
+Sie sollte klar und deutlich sein, den Umfang des Produktes so klein wie möglich, doch so umfangreich wie nötig halten, 
+um frühestmöglich ein auslieferbares, begeisterndes Produkt zu schaffen. Dennoch sollte die Vision dabei stabil, 
+zukunftsorientiert und langfristig ausgelegt sein, sie sollte herausfordernd aber erreichbar sein. Formulierte Produkteigenschaften müssen abstrakt genug sein, um Freiheiten bei der Umsetzung zu lassen. 
+
 Damit die Vision realisiert werden kann, müssen Prozesse und 
-Unternehmensorganisation an ihr ausgerichtet werden; sie muss kommuniziert 
-werden und Mitarbeiter in die Lage versetzt werden, sie zu erreichen. 
-\pcite{}{}{the_power_of_vision}
+Unternehmensorganisation an ihr ausgerichtet werden. Sie muss kommuniziert 
+werden und Mitarbeiter in die Lage versetzt werden, sie zu erreichen 
+\pcite{}{}{the_power_of_vision}.
 
 Die Vision muss auch Einfluss auf das Geschäftsmodell nehmen. Gerade beim 
 Auftreten von "`disruptives innovations"' scheitern viele Unternehmen, 
 weil sie nicht in der Lage oder willens sind, ihr Geschäftsmodell in 
-ausreichendem Maße zu ändern. 
-\pcite{}{}{disruptive_technologies_a_business_model_perspective} Um ein 
+ausreichendem Maße zu ändern 
+\pcite{}{}{disruptive_technologies_a_business_model_perspective}. Um ein 
 wirtschaftlich nachhaltiges, an die Realitäten des Marktes angepasstes, 
 wettbewerbsfähiges Geschäftsmodell für den Cloud-Markt zu entwickeln, sollte 
 der ISV unter Berücksichtigung der Chancen und Risiken die folgenden Fragen 
-beantworten \citeflow{disruptive_technologies_a_business_model_perspective}:
+beantworten \pcite{}{}{disruptive_technologies_a_business_model_perspective}:
 \begin{enumerate}
 	\item Wie entsteht für den Kunden Wert in Form eines Produktes oder 
 		einer Dienstleistung?
@@ -293,9 +283,9 @@ vermarktet. Dieser 1:1-Ansatz versteht -- zugespitzt formuliert -- unter einer
 Migration eine Um­eti­ket­tie­rung des bestehenden Produktes.
 
 Zumindest die Chance, eine agile Cloud-Lösung zu schaffen, die 
-bereits früh einen Wert für Kunden schafft und sich schnell und an 
+bereits früh einen Wert für den Kunden schafft und sich schnell an den 
 Kundenwünschen orientiert weiterentwickelt, wird verschenkt. Der ISV 
-läuft aber auch Gefahr weitere Vorteile nicht zu realisieren, wenn er bei der 
+läuft aber auch Gefahr weitere Vorteile nicht zu realisieren: Wenn er bei der 
 Migration zunächst die Herstellung aller Funktionalitäten der Altsoftware in 
 den Vordergrund stellt und dabei vernachlässigt, über Möglichkeiten 
 nachzudenken, die Vorteile und Chancen der Cloud umzusetzen. Deshalb ist die 
@@ -305,30 +295,29 @@ ihrer nicht bewusst ist und sie daher nicht vermeiden kann.
 
 \input{grafiken/funktionsumfang_agil}
 Abbildung~\ref{fig:funktionsumfang_agil} zeigt die in dieser Arbeit 
-vorgeschlagene Vorgehensweise. Hier ist die Cloud-Lösung in ihrem Umfang kleiner 
+vorgeschlagene Vorgehensweise. Hier ist die Cloud-Lösung in ihrem Umfang kleiner, 
 als die bestehende On-Premise-Software, sodass sie gerade das 
 enthält, was für die Vermarktung nötig ist. Die Beschränkung des Umfangs 
 begünstigt eine schnelle Fertigstellung und Vermarktung. Fehlende Features 
 werden agil nachentwickelt und in kurzen Abständen freigegeben. In der 
-Cloud-Lösung werden von Anfang an Chancen und Risiken berücksichtigt und 
-maximiert beziehungsweise minimiert. 
+Cloud-Lösung werden von Anfang an Chancen maximiert und Risiken minimiert.
 
 Im Ergebnis ist das hier vorgestellte Vorgehen weniger riskant, da nötige 
 Investitionen geringer sind und Fehler wie Erfolge frühzeitig sichtbar werden. 
-Da in diesem Modell zudem nicht die Kosteneinsparungen sondern strategische 
-Ziele im Vordergrund stehen und der zeitliche Horizont viel kleiner ist, kann 
+Darüber hinaus stehen in diesem Modell nicht die Kosteneinsparungen sondern strategische 
+Ziele im Vordergrund. Da der zeitliche Horizont viel kleiner ist, kann 
 die Wirtschaftlichkeitsprüfung weniger detailliert ausfallen. Es sollte 
 lediglich geprüft geprüft werden, ob nötige Umsätze mit dem Funktionsumfang der 
 Vision generiert werden können. 
 
 Auf diesen letztgenannten Aspekt sollte ebenfalls die technische 
-Machbarkeitsstudie abzielen: Ist mit der gewählten Cloud-Plattform die 
-Umsetzung eines vermarktbaren Leistungsumfangs der Vision möglich? Dabei soll 
-gerade nicht die gesamte Vision direkt umgesetzt werden. Sobald Kunden eine 
+Machbarkeitsstudie abzielen: Kann auf der gewählten Cloud-Plattform ein vermarktbarer Teil des 
+von der Produktvision vorgeschlagenen Leistungsumfangs implementiert werden? Dabei soll 
+gerade nicht die gesamte Vision direkt umgesetzt werden. Sobald eine 
 erste Version der Cloud-Lösung von Kunden genutzt wird, lässt sich erfragen 
 oder ermitteln, wie die Entwicklung weitergehen soll; womöglich wird 
 festgestellt, dass ein in der Vision vorgesehenes Feature gar keinen Anklang 
-fände oder aber, dass die Vision in eine neue Richtung weiter gedacht werden 
+findet oder aber, dass die Vision in eine neue Richtung weiter gedacht werden 
 muss.
 
 
@@ -352,8 +341,7 @@ die Höhe der Kostenreduktion und die Verbesserung des Servicelevels zeigt."'
 Die dritte Phase dieses Modells fasst die Phasen zwei bis fünf 
 (Anforderungsanalyse und -Planung, Migration, Testen und Go-Live sowie 
 Überwachung und Wartung) aus dem Fünf-Phasen-Modell zu einer Phase zusammen. In 
-dieser Phase wird anstatt eines iterativen Wasserfallmodells ein agiles, 
-sprintweise iteratives Modell verfolgt. Der Modellwechsel wird 
+dieser Phase wird anstatt eines iterativen Wasserfallmodells ein agiles Modell verfolgt. Der Modellwechsel wird 
 notwendig, weil sich in der Cloud die Art und Weise sowie der Rhythmus ändern, 
 in der neue Versionen und Updates ausgeliefert werden. Bei konventioneller 
 Software wurden Fehlerbehebungen häufig in Form kleiner Updates in festen 
@@ -362,9 +350,8 @@ hingegen in Form von neuen Softwareversionen (Upgrades) zum Kunden, für die
 erneut gezahlt werden musste. Im Cloud-Betrieb gibt es regelmäßig  nur eine 
 Version der Software, in der nicht nur kontinuierlich Fehler behoben 
 sondern auch neue Funktionen ergänzt werden, ohne, dass dies für die Nutzer mit 
-Unterbrechungen verbunden wäre. 
-\pcite{}{}{changes_in_requirements_engineering,transitioning_to_saas} Unter 
-dieser Anforderung ist ein agiles Vorgehen im Sinne der Wettbewerbsfähigkeit 
+Unterbrechungen verbunden wäre 
+\pcite{}{}{changes_in_requirements_engineering,transitioning_to_saas}. Unter dieser Anforderung ist ein agiles Vorgehen im Sinne der Wettbewerbsfähigkeit 
 besonders wichtig.
 
 Der agile, iterative Entwicklungsprozess beginnt, wie in 
@@ -375,39 +362,23 @@ Das Requirements Engineering (Anforderungsmanagement) hat das Ziel
 Anforderungen eines Softwaresystem oder eines Features zu erheben, zu 
 strukturieren, priorisieren und zu 
 koordinieren. \pcite{}{}{changes_in_requirements_engineering} Auch die 
-Identifizierung von Diskrepanzen zwischen Ergebnis und Ziel gehört dazu. 
-\pcite{}{}{requirements_engineering_process_for_saas_cloud_env} Auch wenn sich 
+Identifizierung von Diskrepanzen zwischen Ergebnis und Ziel gehört dazu 
+\pcite{}{}{requirements_engineering_process_for_saas_cloud_env}. Auch wenn sich 
 an dieser Definition bei der Entwicklung in der Cloud nichts Grundsätzliches 
 ändert, machen die Charakterisitika der Cloud doch ein Überdenken der Prozesse 
-im Rahmen des Requirements Engineering notwendig. 
-\pcite{}{}{changes_in_requirements_engineering,transitioning_to_saas}
+im Rahmen des Requirements Engineering notwendig 
+\pcite{}{}{changes_in_requirements_engineering,transitioning_to_saas}.
 Die Unterschiede zwischen Requirements Engineering bei On-Premise-Projekten im 
 Vergleich zu SaaS-Projekten ist in Tabelle~\ref{tab:unterschiede_im_re} 
 aufgeführt.
 \input{tabellen/unterschiede_im_re}
 
-Um die Änderungen im Requirements Engineering zu reagieren, empfehlen 
-\citeflow{changes_in_requirements_engineering} die folgenden Schritte:
-\begin{enumerate}
-	\item Paradigma sich schnell ändernder Anforderungen etablieren. Die 
-Nähe zur agilen Entwicklung und neuen Methoden der Anforderungsermittlung 
-sorgen für eine Volatilität der Anforderungen.
-	\item Integrieren der Anforderungsermittlung in einen iterativen, 
-inkrementellen Software Engineering Prozess. Nicht typisch für die Cloud, aber 
-besonders erforderlich aufgrund der volatilen Anforderungen.
-	\item Identifizierung und Priorisierung der Stakeholder mit 
-systematischen Methoden
-	\item Einbeziehung der Kunden in die Anforderungsermittlung mittels 
-Feature Requests und Bug Reports sind essentiell um Vorteil aus der 
-Cloud-Migration zu ziehen. Nutzer müssen das Gefühl bekommen, Einfluss auf die 
-Entwicklung nehmen zu können.
-	\item Implementierung von Feedbackmöglichkeiten. Entweder automatisiert 
-über die Auswertung von Daten oder über Formulare. 
-	\item Nutzen von Mechanismen für unterbrechungsfreie Updates. Nicht 
-Administratoren, sondern Entwickler bestimmen den Updatezeitpunkt.
-	\item Entwicklung von Möglichkeiten, Software an kleineren 
-Nutzergruppen zu testen.
-\end{enumerate}
+Um auf die Änderungen im Requirements Engineering zu reagieren, sprechen 
+\citeflow{changes_in_requirements_engineering} die folgenden Empfehlungen aus: Um auf sich schnell
+ändernde Anforderungen reagieren zu können, sollte sich das Unternehmen intensiv mit aktuellen
+Entwicklungen im Bereich agiler Methoden und der Anforderungsermittlung beschäftigen. Agile Methoden 
+sind zwar keine besonderen Neuerungen der Cloud, sind aber aufgrund der vom Markt geforderten hohen Entwicklungsgeschwindigkeit geboten. Technisch kann die beschleunigte Entwicklung durch Mechanismen zur unterbrechungsfreien Auslieferung von Updates unterstützt werden. 
+Bei der Anforderungsermittlung sollten Stakeholder mit systematischen Methoden identifiziert und priorisiert werden. Außerdem ist die Einbeziehung der Kunden mittels Feature Requests und Bug Reports essentiell um Vorteile aus der Cloud-Migration zu ziehen. Die Kunden sollen dabei das Gefühl bekommen, Einfluss auf die Entwicklung nehmen zu können. Dabei ebenfalls hilfreich ist Erhebung von Feedback. Dies kann entweder automatisch über gewonnene Nutzungsdaten geschehen, oder aber über Fragebögen. Ein Beispiel für das Potential der Cloud in diesem Bereich ist das Testen einer neuen Funktionalität an einer Testgruppe, die nichts von ihrer Teilnahme weiß. Anhand des Nutzungsverhaltens zeigt sich, ob die Neuerung intuitiv umgesetzt wurde. 
 
 
 \begin{comment}
