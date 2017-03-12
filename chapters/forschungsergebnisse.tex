@@ -12,24 +12,23 @@ Vorgehensmodell soll nun
 beispielthaft die Cloud-Migration 
 des in Kapitel~\ref{cha:replyundifms} vorgestellten iFMS theoretisch geplant 
 werden. In Kapitel~\ref{cha:diskussion} wird der entstandene Plan mit dem 
-Vorgehen in der Praxis verglichen und diskutiert.
+Vorgehen aus der Praxis verglichen und diskutiert.
 
 Die Cloudversion dieser Software wird hier "`iFMS@Salesforce"' genannt und von 
 iFMS abgegrenzt. Aus dem Namen geht die gewählte Cloud-Plattform hervor -- eine 
-strategische Entscheidung, die im selben 
-Kapitel begründet wurde.
+strategische Entscheidung, die ebenfalls im Kapitel~\ref{cha:replyundifms} begründet wurde.
 
 \subsection{Phase I: Entwickeln einer Vision}
 Um zu der Produktvision zu gelangen, dienen die in 
 Kapitel~\ref{cha:entwicklung_vorgehensmodell} identifizierten Chancen und 
 Risiken als Checkliste bei einem Brainstorming. Das Ergebnis sind Epics, 
 grobgranulare, funktionale und nicht-funktionale Anforderungen an die neue 
-Software. \pcite{}{}{10_tips_for_writing_good_user_stories}
+Software \pcite{}{}{10_tips_for_writing_good_user_stories}.
 Im Wechselspiel mit den gesammelten Epics werden Geschäftsmodell und Strategie 
 definiert. Einige Chancen und Risiken ziehen strategische Implikationen mit 
 sich, andere Chancen werden durch eine gewählte Strategie ausgeschlossen. Zum 
-Beispiel können Chancen die Erschließung neuer Märkte ermöglichen oder aber 
-eine Realisierung derselben aus strategischen Gründen ausgeschlossen sein. 
+Beispiel können gewisse Chancen die Erschließung neuer Märkte ermöglichen oder aber 
+eine Realisierung derselben aus strategischen Gründen ausschließen. 
 
 In dieser Arbeit liegt der Schwerpunkt auf dem Modell, das den Weg zur Vision 
 beschreibt -- nicht auf der iFMS@Salesforce-Vision selbst, die aus Sicht des 
@@ -43,11 +42,11 @@ Vernetzung zwischen den Nutzern einer Firma erfolgt über Chatter, dem
 Salesforce Äquivalent von Facebook. Der ISV bietet Kundensupport über die 
 Salesforce Service Cloud. Entwickler sind für Kunden direkter erreichbar. Durch 
 die dort gesammelten Erfahrung können zukünftige Entwicklungsarbeiten 
-zielgerichteter erfolgen. Mitarbeiter des Kunden sollen das Gefühl bekommen, 
-dass ihre Anliegen durch den Support schnell und zufriedenstellend gelöst 
-werden. Durch die schnelle Umsetzung von eingebrachten 
+zielgerichteter erfolgen. Kunden sollen das Gefühl bekommen, 
+dass ihr Anliegen durch den Support schnell und zufriedenstellend gelöst 
+wird. Durch die schnelle Umsetzung von eingebrachten 
 Verbesserungsvorschlägen, soll sich der Eindruck festigen, dass jeder 
-Mitarbeiter am Produkt mitentwickeln kann und sich selbst im Produkt wieder 
+Kunde aktiv am Produkt mitentwickeln kann und sich selbst im Produkt wieder 
 findet.
 	\item[Analysemöglichkeiten] Der ISV hat Zugriff auf die 
 Salesforceinstanzen seiner Kunden. Dadurch kann er Fehlkonfigurationen 
@@ -57,17 +56,17 @@ welche Funktionen besonders häufig genutzt werden und die zugehörigen Abläufe
 verbessern oder automatisieren.
 	\item[Mobile Nutzung] Mit der Mobile App Salesforce1 ist die Salesforce 
 Anwendung auch auf Mobilgeräten nutzbar. Damit ein echter Mehrwert für 
-den Kunden und seine Mitarbeiter entsteht, sollen sich
+den Kunden entsteht, sollen sich
 \begin{itemize}
 	\item Rauminformationen wie Belegungen und Ansprechpartner abrufen 
 lassen.
 	\item Räume buchen lassen.
-	\item Schadensmeldungen eingeben lassen und nach Freigabe durch einen 
-verantwortlichen Mitarbeiter in einem Auftrag an einen Dienstleister 
-resultieren.
+	\item Schadensmeldungen eingeben lassen. Die Freigabe durch den 
+verantwortlichen Mitarbeiter resultiert in einem Auftrag an einen Dienstleister 
+zur Schadensbehebung.
 	\item über Anwesenheitserkennung Raumtemperatur und Licht regeln lassen.
 	\item Räume über ein Indoornavigationssystem finden lassen.
-	\item Reiningungspläne einsehen und ändern sowie Sonderreinigungen 
+	\item Reiningungspläne einsehen und ändern, sowie Sonderreinigungen 
 anfordern lassen.
 	\item erfolgte Dienstleistungen wie Reinigungen, Reparaturen oder 
 Caterings bewerten lassen, um die Auswahl künftiger Dienstleister besser zu 
@@ -92,14 +91,14 @@ konvertiert.
 
 	\item[Time to market \& kürzere Releasezyklen] Eine vermarktbare 
 Basisversion mit einem Bruchteil der Funktionalitäten der komplexen 
-Altsoftware soll rasch entwickelt, vermarktet und genutzt werden um bei 
+Altsoftware soll rasch entwickelt, vermarktet und genutzt werden, um bei 
 Verhandlungen mit Neu- und Altkunden Interesse zu wecken. \\
-Du die langjährige Erfahrung mit CAD und SAP sollen in Zusammenarbeit mit in 
-Salesforce erfahrenen Kollegen die Kernkompetenzen zügig in die Cloud 
+Durch die langjährige Erfahrung mit CAD und SAP sollen in Zusammenarbeit mit in 
+Salesforce erfahrenen Kollegen, die Kernkompetenzen zügig in die Cloud 
 übertragen werden.
 	\item[Alternativen am Kunden testen] Die Kultur 
 des Mitentwickelns (siehe Abschnitt zur Einbeziehung von Nutzern oben) soll 
-genutzt werden, um es interessierten Powerusern in Sandboxes den aktuellen 
+genutzt werden, um es interessierten Powerusern in Sandboxes zu ermöglichen den aktuellen 
 Entwicklungsstand zu testen und direktes Feedback zu geben, das in die nächsten 
 Sprintplanungen einfließen kann.
 	\item[Wartung einer einzigen Version] Der Wartungsaufwand soll 
@@ -138,20 +137,20 @@ gepflegte Komponenten mit einem hohen Reifegrad auszuwählen. Außerdem soll vor
 der Wahl einer bestimmten Komponente die Komplexität des Gesamtsystems in einer 
 Kosten-Nutzen-Analyse betrachtet werden.
 	\item[Datenmigration] Zahlen- und Mengenmäßige Zugriffsbeschränkungen 
-auf die Datenbank durch Salesforce könnten eine Schrittweise Migration der 
-Daten erforderlich machen. Um den Parallelbetrieb mit Altsystemen so kurz wie 
+auf die Datenbank durch Salesforce könnten eine schrittweise Migration der 
+Daten erforderlich machen. Um den Parallelbetrieb mit dem Altsystem so kurz wie 
 möglich zu halten, soll ein leicht zu verstehendes Konzept erarbeitet und 
 implementiert werden, mit dem ein zügiger Umzug von logischen Teilkomponenten, 
 wie Etagen, Standorten oder Ländern ermöglicht wird.
 	\item[Leistungstransparenz] Um potentielle Kunden, die iFMS@Salesforce 
-in der Basisversion testen vom Produkt zu überzeugen, sollen bei der 
+in der Basisversion testen, vom Produkt zu überzeugen, sollen bei der 
 Entwicklung Schwerpunkte auf eine intuitive Bedienung und begeisternde Features 
 gelegt werden.
 	\item[Geringere Umsätze] Auch das bisherige Geschäftsmodell sah 
-einmalige Zahlungen für Installation und Anpassung und fortlaufende Zahlungen 
+einmalige Zahlungen für die Installation und Anpassung sowie fortlaufende Zahlungen 
 für die Nutzung vor. Daher besteht dieses Risiko nicht. 
 	\item[Geringere Anpassbarkeit] Mit Force.com und Heroku wird Salesforce 
-zu einem PaaS-Dienstleister; Features, die sich mit der 
+zu einem PaaS-Dienstleister. Features, die sich mit der 
 Kernfunktionalität oder Erweiterungen von Salesforce nicht umsetzen lassen, 
 lassen sich auf diese Weise nahezu ohne Einschränkungen realisieren.
 	\item[Organisatorische und strukturelle Umbrüche] Die Einarbeitungszeit 
@@ -167,7 +166,7 @@ aufgeht.
 Entwicklung werden systematisch mit neuen Entwicklungen im Bereich des Software 
 Engineerings und des Projektmanagements verglichen und gegebenenfalls 
 angepasst. Die Einbeziehung der Nutzer in die Entwicklung macht eine 
-Berücksichtigung ihrer Anliegen in der Springplanung in besonderem Maße 
+Berücksichtigung ihrer Anliegen in der Sprintplanung in besonderem Maße 
 erforderlich.
 \end{description}
 
@@ -181,8 +180,8 @@ zukünftige Produkt iFMS@Salesforce aussehen? Mit welcher Technik, in welcher
 Qualtität und in Verbindung mit welchen zusätzlichen Dienstleistungen soll es 
 umgesetzt und angeboten werden?
 	\item[Price -- Preispolitik] Welchen Preis sind die 
-Kunden für die Basis-Version, welchen für CAD- und SAP-Unterstützung zu zahlen? 
-Welches Preismodell wird gewählt (Siehe Kapitel~\ref{cha:isv})? 
+Kunden bereit für die Basis-Version, welchen für CAD- und SAP-Unterstützung zu zahlen? 
+Welches Preismodell wird gewählt (siehe Kapitel~\ref{cha:isv})? 
 	\item[Promotion -- Kommunikationspolitik] Wie werden (Neu-)Kunden 
 erreicht und dauerhaft gewonnen? Wie wird die Kommunikationspolitik durch das 
 soziale Element der Cloud unterstützt?
@@ -251,24 +250,24 @@ die Epics, die im Sinne der Strategie ausgewählt wurden, auf ihre technische
 und wirtschaftliche Machbarkeit geprüft werden.
 \input{grafiken/epics_to_components}
 Wie in Abbildung~\ref{fig:epics_to_components} dargestellt soll iFMS@Salesforce 
-aus drei Versionen bestehen: der Basis-Version sowie der CAD- und 
+aus drei Versionen bestehen: der Basis-Version sowie der CAD- und der 
 SAP-Erweiterung. Aus der strategischen Ausrichtung heraus werden nun den 
 Versionen Epics zugeordnet, sowie Funktionen die unbedingt notwendig sind um die 
 jeweilige Version zu vermarkten. Der Preis -- ob Verkaufspreis oder 
 Lizenzierungskosten -- kann aufgrund der langjährigen Erfahrung im 
-On-Premise-Geschäft gut abgeschätzt werden. Aus dieser Erfahrung oder direkten 
-Gesprächen heraus können die im Vertrieb tätigen Mitarbeiter auch die 
+On-Premise-Geschäft gut abgeschätzt werden. Aus dieser Erfahrung oder den direkten 
+Gesprächen heraus können die im Vertrieb tätigen Mitarbeiter, auch die 
 Bereitschaft der Kunden abschätzen, den Weg in die Cloud mitzugehen. Die 
 Salesforce- und iFMS-Entwickler bei Reply schätzen nun in einem ersten Schritt 
 die grundsätzliche technische Umsetzbarkeit ein.
 \input{grafiken/kosten-nutzen}
-Falls die bescheinigt wird, erfolgt im zweiten Schritt eine grobe 
+Falls die Umsetzbarkeit bescheinigt wird, erfolgt im zweiten Schritt eine grobe 
 Aufwandsschätzung der einzelnen Anforderungen. Mit den geschätzten Aufwänden 
 lässt sich nun die Wirtschaftlichkeit des Projektes abschätzen. Einerseits um zu 
 überprüfen, ob die vom Marketing erwarteten Gewinne erzielt werden können. 
 Andererseits können Anforderungen auf ihr Kosten-Nutzen-Verhältnis hin 
-analysiert werden. Dazu können in einer Kosten-Nutzen-Matrix wie in 
-Abbildung~\ref{fig:kosten-nutzen} positioniert werden. Gerade Punkte aus dem 
+analysiert werden. Zum Beispiel indem sie in einer Kosten-Nutzen-Matrix, wie in 
+Abbildung~\ref{fig:kosten-nutzen} dargestellt, positioniert werden. Gerade Punkte aus dem 
 linken, oberen Quadraten sind potentiell geeignet in der Basis-Version Kunden zu 
 begeistern, ohne hohe Kosten zu erzeugen.
 Andererseits kann es vertretbar sein, dass die Basis-Version keine Gewinne 
@@ -285,5 +284,5 @@ Aspekt der Kundengewinnung besser gerecht zu werden, könnte es hilfreich sein,
 die CAD-Erweiterung früh ins Auge zu fassen, da bei ihr -- im Gegensatz zu der 
 SAP-Erweiterung -- optisch ansprechende Resultate zu erwarten sind. 
 Neben kurzen Sprintzyklen soll eine Feedbackkultur und eine möglichst direkte, 
-wenig formalisierte Kommunikation zwischen Entwicklern und Anwendern beim 
+wenig formalisierte Kommunikation zwischen Entwicklern und dem 
 Kunden etabliert werden.
