@@ -1,0 +1,105 @@
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,positioning}
+
+\begin{figure}[h]
+\begin{center}
+
+\newcommand{\hdist}{2.8cm}
+\newcommand{\vDistH}{0.3cm}
+\newcommand{\youManage}{Eigene Verantwortung}
+\definecolor{youM}{HTML}{FFE658}%{217, 133, 59}
+\definecolor{theyM}{HTML}{A8DFD6}
+
+\newcommand{\ueberschrift}[1]{\textbf{#1}}
+
+\scalebox{.95}{
+\begin{tikzpicture}[node distance=0.15cm,
+auto,
+pile/.style={
+  very thick,
+  <->,
+  >=stealth',
+  shorten <=2pt,
+  shorten >=2pt,
+  xshift=3cm
+},
+knoten/.style={
+  text width=3.2cm,
+  text centered,
+  rectangle,
+  very thick,
+  draw=black,
+  rounded corners,
+},
+eigVerantwortung/.style={
+  fill=youM
+},
+fremdVerantwortung/.style={
+  fill=theyM
+}]
+\node[heading] (TRADITIONAL) [] {\ueberschrift{Traditionelle IT}};
+\node[knoten,eigVerantwortung] (ANW1) [below=\vDistH of TRADITIONAL] {Anwendungen};
+\node[knoten,eigVerantwortung] (DATEN1) [below=of ANW1] {Daten};
+\node[knoten,eigVerantwortung] (LAUF1) [below=of DATEN1] {Laufzeitumgebung};
+\node[knoten,eigVerantwortung] (MIDDLE1) [below=of LAUF1] {Middleware};
+\node[knoten,eigVerantwortung] (OS1) [below=of MIDDLE1] {Betriebssystem};
+\node[knoten,eigVerantwortung] (VIRT1) [below=of OS1] {Virtualisierung};
+\node[knoten,eigVerantwortung] (SERV1) [below=of VIRT1] {Server};
+\node[knoten,eigVerantwortung] (SPEICHER1) [below=of SERV1] {Speicher};
+\node[knoten,eigVerantwortung] (NETZ1) [below=of SPEICHER1] {Netzwerk};
+
+\node[heading] (IAAS) [right=\hdist of TRADITIONAL] {\ueberschrift{IaaS}};
+\node[knoten,eigVerantwortung] (ANW2) [below=\vDistH of IAAS] {Anwendungen};
+\node[knoten,eigVerantwortung] (DATEN2) [below=of ANW2] {Daten};
+\node[knoten,eigVerantwortung] (LAUF2) [below=of DATEN2] {Laufzeitumgebung};
+\node[knoten,eigVerantwortung] (MIDDLE2) [below=of LAUF2] {Middleware};
+\node[knoten,shading = axis,rectangle, top color=youM, bottom color=theyM,shading angle=0] (OS2) [below=of MIDDLE2] {Betriebssystem};
+\node[knoten,fremdVerantwortung] (VIRT2) [below=of OS2] {Virtualisierung};
+\node[knoten,fremdVerantwortung] (SERV2) [below=of VIRT2] {Server};
+\node[knoten,fremdVerantwortung] (SPEICHER2) [below=of SERV2] {Speicher};
+\node[knoten,fremdVerantwortung] (NETZ2) [below=of SPEICHER2] {Netzwerk};
+
+\node[heading] (PAAS) [right=\hdist of IAAS] {\ueberschrift{PaaS}};
+\node[knoten,eigVerantwortung] (ANW3) [below=\vDistH of PAAS] {Anwendungen};
+\node[knoten,eigVerantwortung] (DATEN3) [below=of ANW3] {Daten};
+\node[knoten,fremdVerantwortung] (LAUF3) [below=of DATEN3] {Laufzeitumgebung};
+\node[knoten,fremdVerantwortung] (MIDDLE3) [below=of LAUF3] {Middleware};
+\node[knoten,fremdVerantwortung] (OS3) [below=of MIDDLE3] {Betriebssystem};
+\node[knoten,fremdVerantwortung] (VIRT3) [below=of OS3] {Virtualisierung};
+\node[knoten,fremdVerantwortung] (SERV3) [below=of VIRT3] {Server};
+\node[knoten,fremdVerantwortung] (SPEICHER3) [below=of SERV3] {Speicher};
+\node[knoten,fremdVerantwortung] (NETZ3) [below=of SPEICHER3] {Netzwerk};
+
+\node[heading] (SAAS) [right=\hdist of PAAS] {\ueberschrift{SaaS}};
+\node[knoten,fremdVerantwortung] (ANW4) [below=\vDistH of SAAS] {Anwendungen};
+\node[knoten,fremdVerantwortung] (DATEN4) [below=of ANW4] {Daten};
+\node[knoten,fremdVerantwortung] (LAUF4) [below=of DATEN4] {Laufzeitumgebung};
+\node[knoten,fremdVerantwortung] (MIDDLE4) [below=of LAUF4] {Middleware};
+\node[knoten,fremdVerantwortung] (OS4) [below=of MIDDLE4] {Betriebssystem};
+\node[knoten,fremdVerantwortung] (VIRT4) [below=of OS4] {Virtualisierung};
+\node[knoten,fremdVerantwortung] (SERV4) [below=of VIRT4] {Server};
+\node[knoten,fremdVerantwortung] (SPEICHER4) [below=of SERV4] {Speicher};
+\node[knoten,fremdVerantwortung] (NETZ4) [below=of SPEICHER4] {Netzwerk};
+
+\node[heading,anchor=north west,font=\fontsize{8}{8}\selectfont] (LEG) [below=3*\vDistH of NETZ1] {\textbf{Legende:}};
+\node[knoten,eigVerantwortung,text width=2.5cm,font=\fontsize{8}{8}\selectfont] (EIG) [right=of LEG] {In eigener Hand};
+\node[knoten,fremdVerantwortung,text width=2.5cm,font=\fontsize{8}{8}\selectfont] (FREMD) [right=of EIG] {Als Service bezogen};
+
+% Pfeile
+%\draw[pile] ($ (NETZ1.south west) + (\pfeilDist,0) $) -- ($ (ANW1.north west) + (\pfeilDist,0) $) node [midway, above, %sloped] (yM1) {Eigene Verantwortung};
+
+%\draw[pile] ($ (OS2.west) + (\pfeilDist,0) $) -- ($ (ANW2.north west) + (\pfeilDist,0) $) node [midway, above, sloped] %(yM2) {\youManage};
+
+%\draw[pile] ($ (DATEN3.south west) + (\pfeilDist,0) $) -- ($ (ANW3.north west) + (\pfeilDist,0) $) node [midway, above, %sloped] (yM3) {\youManage};
+
+\end{tikzpicture}}
+\end{center}
+\caption{XaaS im Vergleich: Umfang von
+Dienstleistung und Eigenverantwortung. Aus
+\protect\citeflow{economics_of_the_cloud}}
+\label{fig:xaas_im_vergleich}
+\end{figure}
+
