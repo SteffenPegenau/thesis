@@ -12,7 +12,7 @@ Softwarehersteller richtet. Aus diesem Ziel ergeben sich grundlegende Fragen,
 die in diesem Kapitel beantwortet werden sollen:
 \begin{itemize}
 	\item Welche Vorteile bietet die Cloud, welche Nachteile sind mit ihr verbunden und wie lassen sie sich
-erzielen beziehungsweise vermeiden? 
+erzielen, beziehungsweise vermeiden? 
 	\item Inwiefern unterscheiden sich Cloud-Migrationen von herkömmlichen
 Migrationen in der IT und wie lassen sie sich zum Outsourcing abgrenzen? 
 	\item Was wird in dieser Arbeit unter unabhängigen 
@@ -38,14 +38,14 @@ halten \pcite{}{}{characterizing_software_architecture_changes}. \\
 Beispiel für eine solche Migration ist der Umzug einer Software auf neue
 Hardware mit aktualisiertem Betriebssystem. Grund für den Umzug könnte ein
 technischer sein, wie etwa dass keine Ersatzteile mehr für die vorhandene
-Hardware angeboten werden oder dass der Support des Herstellers für das laufende
+Hardware angeboten werden oder der Support des Herstellers für das laufende
 Betriebssystem ausläuft. Aber auch wirtschaftliche Gründe, wie etwa eine
 geforderte, höhere Leistungsfähigkeit oder ein geringerer Energieverbrauch des
 neuen Systems sind denkbar. \\
-Um die Software weiter zu betreiben, muss sie gegebenenfalls an das
+Um die Software weiter zu betreiben muss sie gegebenenfalls an das
 aktualisierte Betriebssystem oder die Laufzeitumgebung angepasst werden.
 Je standardisierter und verbreiteter die Anforderung der zu migrierenden
-Software, desto geringer werden die nötigen Anpassungen an der
+Software sind, desto geringer werden die nötigen Anpassungen an der
 Software ausfallen, womit die Migration einfacher und kostengünstiger wird.
 Eventuell wird lediglich eine virtuelle Maschine auf einem neuen Server
 gestartet. 
@@ -70,7 +70,7 @@ aus \protect\citeflow{economics_of_the_cloud}}
  Hauptsächlich geschieht dies über die Faktoren Energie-, Lohn- und
 Hardwarekosten. Energiekosten lassen sich durch die Wahl eines Standortes
 mit günstigem Strom und niedrigen Umgebungstemperaturen senken. Durch
-Automatisierungstechniken lassen sich die Zahl der Server, die ein Administrator
+Automatisierungstechniken lässt sie die Zahl der Server, die ein Administrator
 betreibt, verzehnfachen, wodurch die Lohnkosten sinken. Hardwarekosten fallen
 durch bessere Verhandlungspositionen großer Cloud-Anbieter niedriger aus 
 \pcite{}{}{cloud_migration}.
@@ -108,8 +108,8 @@ Flexibilität und die "`Time to Market"' beachtlich gesteigert werden
 decision-making_in_cloud_computing_environments, cloud_migration}.
 
 	\item[Geringerer Wartungsaufwand] Die Cloud treibt die Standardisierung
-von Schnittstellen voran, sodass bestehende Funktionalitäten leichter
-wiederverwendet werden können. Dadurch wird die Weiterentwicklung und Wartung
+von Schnittstellen voran. Damit können bestehende Funktionalitäten leichter
+wiederverwendet werden. Dadurch wird die Weiterentwicklung und Wartung
 von Software reduziert \pcite{}{}{economics_of_the_cloud}.
 \end{description}
 
@@ -169,7 +169,7 @@ Vorteile der Cloud besser auszuschöpfen, müsste die Anwendung entweder so
 angepasst werden, dass sie auf einer zur Verfügung gestellten, fremdverwalteten
 Laufzeitumgebung läuft (PaaS). Oder es wird eine bestehende Anwendung in der
 Cloud genutzt und gegebenenfalls angepasst (SaaS). Beide Optimierungen
-machen das Treffen konsequenzenreicher, kritischer Entscheidungen nötig, die 
+machen das Treffen konsequenzenreicher kritischer Entscheidungen nötig, die 
 nicht nur technische, sondern auch betriebswirtschaftliche und 
 strategische Aspekte betreffen \pcite{}{}{migration_to_paas_clouds}.
 Aus diesem Grund ist eine Cloud-Migration\footnote{Der Vollständigkeit halber
@@ -281,7 +281,7 @@ bewusst zu sein.
 folgenden Modelle als Grundlage:
 	\begin{itemize}
 		\item Abonnement -- Zahlung pro Nutzer oder Monat oder pro Gerät und Jahr. Dies
-ist das verbreitetste Modell. Durch Vergünstigungen bei Vorauszahlung für einen
+ist das verbreiteste Modell. Durch Vergünstigungen bei Vorauszahlung für einen
 längeren Zeitraum, können früh höhere Umsätze generiert werden.
 		\item Pro Einheit -- Zahlung für jede Transaktion, jedes
 gespeichertes/übertragenes Gigabyte oder für eine andere messbare Einheit, die
@@ -291,10 +291,10 @@ wird durch Werbeeinblendungen finanziert; Premiumfunktionen müssen bezahlt
 werden.
 	\end{itemize}
 	Die Wahl der Preisgestaltung hat bedeutenden Einfluss auf den Cashflow
-des Unternehmens. Gerade die Anfangsinvestition ist bei Cloud-Anwendungen 
-häufig größer als bei On-Premise-Anwendungen, gerade wenn das Unternehmen noch 
+des Unternehmens. Bei Cloud-Anwendungen ist die Anfangsinvestition häufig größer als bei On-Premise-Anwendungen,
+gerade wenn das Unternehmen noch 
 keine Erfahrungen mit der Umsetzung hat. Diese Anfangsinvestition müssen ISV 
-häufig leisten, bevor Kunden akquiriert wurden. \\
+häufig leisten, bevor Kunden akquiriert werden. \\
 Der Einfluss, den die Höhe des Preises auf das Geschäft hat, ist in
 Abbildung~\ref{fig:einfluss_des_preises_auf_business} dargestellt. Bei der
 Migration in die Cloud sollte darauf geachtet werden, dass der Preis und die
